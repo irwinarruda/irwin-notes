@@ -32,7 +32,7 @@ function isLegacyPathname(pathname: string): boolean {
   return LEGACY_REDIRECT_PATTERN.test(pathname);
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
   const pathnameLocale = getLocaleFromPathname(pathname);
 

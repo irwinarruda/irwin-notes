@@ -69,7 +69,7 @@ bun run lint
 ## Internationalization
 
 - Localized routes are served under `/<locale>/*` (for example `/en/posts`, `/pt-BR/about`)
-- Locale detection uses cookie first, then `Accept-Language`, and redirects via `middleware.ts`
+- Locale detection uses cookie first, then `Accept-Language`, and redirects via `src/proxy.ts`
 - UI strings are loaded on the server from `src/content/texts/*.json` (no client translation hooks)
 - Language switching UI is rendered in the terminal chrome and links to the same path in other locales
 - Example localized posts are available in `src/content/posts/pt-BR`

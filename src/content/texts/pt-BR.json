@@ -26,7 +26,13 @@
   "postsPage": {
     "windowTitle": "irwin@notes: ~/posts",
     "heading": "Irwin Notes",
-    "subtitleItems": ["Desenvolvedor de Software", "React", "Next.js", "TypeScript", "Vim"],
+    "subtitleItems": [
+      "Desenvolvedor de Software",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Vim"
+    ],
     "readLabel": "de leitura"
   },
   "postPage": {
@@ -37,8 +43,8 @@
     "windowTitle": "irwin@notes: ~/sobre.md",
     "photoAlt": "Irwin Arruda",
     "name": "Irwin Arruda",
-    "role": "Engenheiro de Software",
-    "location": "Goiania, Brazil",
+    "role": "Desenvolvedor de Software",
+    "location": "Goiania, Brasil",
     "openInNewTabLabel": "(abre em nova aba)",
     "whoamiHeading": "quem-sou",
     "whoamiBody": "Engenheiro de software focado em construir aplicacoes web rapidas e bem-acabadas. React e minha principal ferramenta ha anos, mas gosto de explorar outras abordagens - Solid.js, Svelte e Vue - qualquer coisa que torne o frontend melhor. Eu valorizo experiencia do desenvolvedor, gerenciamento de estado limpo e ferramentas que nao atrapalham.",
@@ -52,7 +58,14 @@
     "techStack": {
       "primary": ["React", "Next.js", "TypeScript", "Node.js"],
       "exploring": ["Solid.js", "Svelte", "Vue", "Rust", "Kotlin"],
-      "tools": ["Neovim", "Git", "Docker", "Tailwind CSS", "Vitest", "Webpack/Turbopack"]
+      "tools": [
+        "Neovim",
+        "Git",
+        "Docker",
+        "Tailwind CSS",
+        "Vitest",
+        "Webpack/Turbopack"
+      ]
     },
     "projects": [
       {

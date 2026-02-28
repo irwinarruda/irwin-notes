@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import LocaleLayoutScreen from "@/layout/locale-layout";
+import { notFound } from "next/navigation";
+import RootLayoutScreen from "@/layout/root-layout";
 import {
   buildLanguageAlternates,
   isLocale,
   LOCALES,
   getDictionary,
 } from "@/utils/i18n";
+import "@/styles/globals.css";
 
 type LocaleLayoutProps = {
   children: React.ReactNode;
@@ -15,6 +17,8 @@ type LocaleLayoutProps = {
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
 }
+
+export const dynamicParams = false;
 
 export async function generateMetadata(
   props: LocaleLayoutProps,
@@ -29,16 +33,23 @@ export async function generateMetadata(
   return {
     title: dictionary.meta.siteTitle,
     description: dictionary.meta.siteDescription,
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
+    },
     alternates: {
       languages: buildLanguageAlternates(""),
     },
   };
 }
 
-export default function LocaleLayout(props: Readonly<LocaleLayoutProps>) {
+export default async function LocaleLayout(props: Readonly<LocaleLayoutProps>) {
+  const params = await props.params;
+  if (!isLocale(params.locale)) {
+    notFound();
+  }
+
   return (
-    <LocaleLayoutScreen params={props.params}>
-      {props.children}
-    </LocaleLayoutScreen>
+    <RootLayoutScreen locale={params.locale}>{props.children}</RootLayoutScreen>
   );
 }

@@ -13,6 +13,55 @@ export const LOCALE_COOKIE = "locale";
 
 const LOCALE_SET = new Set<string>(LOCALES);
 
+type LocaleCandidate = {
+  value: string;
+  quality: number;
+  order: number;
+};
+
+function parseAcceptLanguage(headerValue: string): string[] {
+  return headerValue
+    .split(",")
+    .map((entry, order) => {
+      const [rawValue, ...rawParams] = entry.trim().split(";");
+      const value = rawValue?.toLowerCase();
+      if (!value) {
+        return null;
+      }
+
+      let quality = 1;
+      for (const rawParam of rawParams) {
+        const [key, rawQuality] = rawParam.trim().split("=");
+        if (key !== "q" || !rawQuality) {
+          continue;
+        }
+
+        const parsedQuality = Number.parseFloat(rawQuality);
+        if (!Number.isNaN(parsedQuality)) {
+          quality = Math.max(0, Math.min(parsedQuality, 1));
+        }
+      }
+
+      return {
+        value,
+        quality,
+        order,
+      } satisfies LocaleCandidate;
+    })
+    .filter(
+      (candidate): candidate is LocaleCandidate =>
+        candidate !== null && candidate.quality > 0,
+    )
+    .sort((a, b) => {
+      if (a.quality !== b.quality) {
+        return b.quality - a.quality;
+      }
+
+      return a.order - b.order;
+    })
+    .map((candidate) => candidate.value);
+}
+
 const DICTIONARIES = {
   en: enDictionary,
   "pt-BR": ptBrDictionary,
@@ -60,13 +109,13 @@ export function detectLocaleFromAcceptLanguage(
   }
 
   const loweredLocales = LOCALES.map((locale) => locale.toLowerCase());
-
-  const candidates = headerValue
-    .split(",")
-    .map((entry) => entry.trim().split(";")[0]?.toLowerCase())
-    .filter((entry): entry is string => Boolean(entry));
+  const candidates = parseAcceptLanguage(headerValue);
 
   for (const candidate of candidates) {
+    if (candidate === "*") {
+      return DEFAULT_LOCALE;
+    }
+
     const exactIndex = loweredLocales.indexOf(candidate);
     if (exactIndex !== -1) {
       return LOCALES[exactIndex];

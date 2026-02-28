@@ -8,11 +8,12 @@ const jetbrainsMono = JetBrains_Mono({
 
 type RootLayoutProps = {
   children: React.ReactNode;
+  locale: string;
 };
 
 export default function RootLayoutScreen(props: Readonly<RootLayoutProps>) {
   return (
-    <html lang="en" className={jetbrainsMono.variable} data-theme="dark">
+    <html lang={props.locale} className={jetbrainsMono.variable} data-theme="dark">
       <body className="bg-term-bg font-mono antialiased min-h-screen">
         {props.children}
       </body>

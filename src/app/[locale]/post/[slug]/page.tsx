@@ -12,6 +12,8 @@ type BlogPostPageProps = {
   params: Promise<{ locale: string; slug: string }>;
 };
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const entries = await Promise.all(
     LOCALES.map(async (locale) => {

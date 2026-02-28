@@ -26,7 +26,13 @@
   "postsPage": {
     "windowTitle": "irwin@notes: ~/posts",
     "heading": "Irwin Notes",
-    "subtitleItems": ["Software Developer", "React", "Next.js", "TypeScript", "Vim"],
+    "subtitleItems": [
+      "Software Developer",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Vim"
+    ],
     "readLabel": "read"
   },
   "postPage": {
@@ -37,7 +43,7 @@
     "windowTitle": "irwin@notes: ~/about.md",
     "photoAlt": "Irwin Arruda",
     "name": "Irwin Arruda",
-    "role": "Software Engineer",
+    "role": "Software Developer",
     "location": "Goiania, Brazil",
     "openInNewTabLabel": "(opens in new tab)",
     "whoamiHeading": "whoami",
@@ -52,7 +58,14 @@
     "techStack": {
       "primary": ["React", "Next.js", "TypeScript", "Node.js"],
       "exploring": ["Solid.js", "Svelte", "Vue", "Rust", "Kotlin"],
-      "tools": ["Neovim", "Git", "Docker", "Tailwind CSS", "Vitest", "Webpack/Turbopack"]
+      "tools": [
+        "Neovim",
+        "Git",
+        "Docker",
+        "Tailwind CSS",
+        "Vitest",
+        "Webpack/Turbopack"
+      ]
     },
     "projects": [
       {

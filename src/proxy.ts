@@ -23,6 +23,8 @@ function getLocaleFromCookie(request: NextRequest) {
 function setLocaleCookie(response: NextResponse, locale: string): void {
   response.cookies.set(LOCALE_COOKIE, locale, {
     path: "/",
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
     sameSite: "lax",
     maxAge: ONE_YEAR_IN_SECONDS,
   });

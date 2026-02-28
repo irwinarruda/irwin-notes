@@ -1,8 +1,12 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-
-type Theme = "dark" | "light";
+import {
+  DEFAULT_THEME,
+  getThemeFromDocumentCookie,
+  setThemeCookie,
+  type Theme,
+} from "@/utils/theme";
 
 export type ThemeToggleLabels = {
   light: string;
@@ -21,13 +25,7 @@ const DEFAULT_THEME_TOGGLE_LABELS: ThemeToggleLabels = {
 const THEME_CHANGE_EVENT = "themechange";
 
 function getThemeSnapshot(): Theme {
-  if (typeof document === "undefined") {
-    return "dark";
-  }
-
-  return document.documentElement.getAttribute("data-theme") === "light"
-    ? "light"
-    : "dark";
+  return getThemeFromDocumentCookie();
 }
 
 function subscribeToTheme(onStoreChange: () => void): () => void {
@@ -39,18 +37,10 @@ function subscribeToTheme(onStoreChange: () => void): () => void {
     onStoreChange();
   };
 
-  const handleStorage = (event: StorageEvent) => {
-    if (event.key === "theme") {
-      onStoreChange();
-    }
-  };
-
   window.addEventListener(THEME_CHANGE_EVENT, handleThemeChange);
-  window.addEventListener("storage", handleStorage);
 
   return () => {
     window.removeEventListener(THEME_CHANGE_EVENT, handleThemeChange);
-    window.removeEventListener("storage", handleStorage);
   };
 }
 
@@ -62,14 +52,14 @@ export function ThemeToggle({
   const theme = useSyncExternalStore(
     subscribeToTheme,
     getThemeSnapshot,
-    () => "dark",
+    () => DEFAULT_THEME,
   );
 
   const toggle = () => {
     const next = theme === "dark" ? "light" : "dark";
 
+    setThemeCookie(next);
     document.documentElement.setAttribute("data-theme", next);
-    localStorage.setItem("theme", next);
 
     window.dispatchEvent(new Event(THEME_CHANGE_EVENT));
   };

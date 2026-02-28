@@ -1,4 +1,14 @@
 import { JetBrains_Mono } from "next/font/google";
+import { THEME_COOKIE } from "@/utils/theme";
+
+const THEME_INIT_SCRIPT = `(() => {
+  const match = document.cookie.match(/(?:^|; )${THEME_COOKIE}=(dark|light)(?:;|$)/);
+  if (!match) {
+    return;
+  }
+
+  document.documentElement.setAttribute("data-theme", match[1]);
+})();`;
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -13,8 +23,14 @@ type RootLayoutProps = {
 
 export default function RootLayoutScreen(props: Readonly<RootLayoutProps>) {
   return (
-    <html lang={props.locale} className={jetbrainsMono.variable} data-theme="dark">
+    <html
+      lang={props.locale}
+      className={jetbrainsMono.variable}
+      data-theme="dark"
+      suppressHydrationWarning
+    >
       <body className="bg-term-bg font-mono antialiased min-h-screen">
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         {props.children}
       </body>
     </html>

@@ -68,11 +68,12 @@ export function ThemeToggle({
     <button
       type="button"
       onClick={toggle}
-      className="text-term-muted hover:text-term-bright text-[11px] tracking-wide transition-colors duration-200 cursor-pointer select-none"
+      className="inline-flex min-h-6 min-w-6 items-center gap-1 rounded px-1.5 text-xs text-term-muted tracking-wide transition-colors duration-200 hover:text-term-bright cursor-pointer select-none focus-visible:outline-offset-1"
       aria-label={theme === "dark" ? labels.switchToLight : labels.switchToDark}
+      aria-pressed={theme === "light"}
       title={theme === "dark" ? labels.switchToLight : labels.switchToDark}
     >
-      <span aria-hidden="true">{theme === "dark" ? "☀" : "☾"}</span>{" "}
+      <span aria-hidden="true">{theme === "dark" ? "☀" : "☾"}</span>
       {theme === "dark" ? labels.light : labels.dark}
     </button>
   );

@@ -60,20 +60,24 @@ export function TerminalWindow({
           <span className="text-term-muted text-xs tracking-wide mx-auto select-none">
             {title}
           </span>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-3">
             {localeSwitcher ? (
               <nav
                 aria-label={localeSwitcher.ariaLabel}
-                className="flex items-center gap-2 text-[11px]"
+                className="flex items-center gap-2 text-xs"
               >
                 <span className="text-term-muted select-none">{localeSwitcher.label}</span>
-                <div className="flex items-center gap-1.5">
+                <div className="flex items-center gap-1">
                   {localeSwitcher.links.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      aria-current={link.isActive ? "true" : undefined}
-                      className={link.isActive ? "text-term-green" : "text-term-blue hover:text-term-cyan transition-colors duration-200"}
+                      aria-current={link.isActive ? "page" : undefined}
+                      className={`inline-flex min-h-6 items-center rounded px-1.5 transition-colors duration-200 focus-visible:outline-offset-1 ${
+                        link.isActive
+                          ? "text-term-bright font-medium"
+                          : "text-term-text hover:text-term-bright"
+                      }`}
                     >
                       {link.label}
                     </Link>

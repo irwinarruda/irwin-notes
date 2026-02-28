@@ -53,12 +53,12 @@ export default async function AboutScreen(props: AboutScreenProps) {
           <p className="text-term-muted text-xs sm:text-sm mt-1">
             {about.role} <span aria-hidden="true">&middot;</span> {about.location}
           </p>
-          <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-[11px] sm:text-xs">
+          <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs">
             <a
               href="https://github.com/irwinarruda"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-term-blue hover:text-term-cyan transition-colors duration-200"
+              className="inline-flex min-h-6 items-center text-term-blue transition-colors duration-200 hover:text-term-cyan"
             >
               github/irwinarruda
               <span className="sr-only"> {about.openInNewTabLabel}</span>
@@ -67,14 +67,14 @@ export default async function AboutScreen(props: AboutScreenProps) {
               href="https://linkedin.com/in/irwinarruda"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-term-blue hover:text-term-cyan transition-colors duration-200"
+              className="inline-flex min-h-6 items-center text-term-blue transition-colors duration-200 hover:text-term-cyan"
             >
               linkedin/irwinarruda
               <span className="sr-only"> {about.openInNewTabLabel}</span>
             </a>
             <a
               href="mailto:arruda.irwin@gmail.com"
-              className="text-term-blue hover:text-term-cyan transition-colors duration-200"
+              className="inline-flex min-h-6 items-center text-term-blue transition-colors duration-200 hover:text-term-cyan"
             >
               arruda.irwin@gmail.com
             </a>
@@ -95,14 +95,14 @@ export default async function AboutScreen(props: AboutScreenProps) {
         <h2>{about.stackHeading}</h2>
         <div className="space-y-3">
           <div>
-            <span className="text-term-muted text-[11px] sm:text-xs uppercase tracking-wider">
+            <span className="text-term-muted text-xs uppercase tracking-wider">
               {about.stackLabels.primary}
             </span>
             <div className="flex flex-wrap gap-2 mt-1.5">
               {about.techStack.primary.map((tech) => (
                 <span
                   key={tech}
-                  className="text-term-cyan text-[11px] sm:text-xs bg-term-cyan/8 px-2 py-0.5 rounded border border-term-cyan/15"
+                  className="text-term-cyan-strong text-xs bg-term-cyan/8 px-2 py-0.5 rounded border border-term-cyan/15"
                 >
                   {tech}
                 </span>
@@ -110,14 +110,14 @@ export default async function AboutScreen(props: AboutScreenProps) {
             </div>
           </div>
           <div>
-            <span className="text-term-muted text-[11px] sm:text-xs uppercase tracking-wider">
+            <span className="text-term-muted text-xs uppercase tracking-wider">
               {about.stackLabels.exploring}
             </span>
             <div className="flex flex-wrap gap-2 mt-1.5">
               {about.techStack.exploring.map((tech) => (
                 <span
                   key={tech}
-                  className="text-term-magenta text-[11px] sm:text-xs bg-term-magenta/8 px-2 py-0.5 rounded border border-term-magenta/15"
+                  className="text-term-magenta-strong text-xs bg-term-magenta/8 px-2 py-0.5 rounded border border-term-magenta/15"
                 >
                   {tech}
                 </span>
@@ -125,14 +125,14 @@ export default async function AboutScreen(props: AboutScreenProps) {
             </div>
           </div>
           <div>
-            <span className="text-term-muted text-[11px] sm:text-xs uppercase tracking-wider">
+            <span className="text-term-muted text-xs uppercase tracking-wider">
               {about.stackLabels.tools}
             </span>
             <div className="flex flex-wrap gap-2 mt-1.5">
               {about.techStack.tools.map((tech) => (
                 <span
                   key={tech}
-                  className="text-term-amber text-[11px] sm:text-xs bg-term-amber/8 px-2 py-0.5 rounded border border-term-amber/15"
+                  className="text-term-amber-strong text-xs bg-term-amber/8 px-2 py-0.5 rounded border border-term-amber/15"
                 >
                   {tech}
                 </span>
@@ -155,17 +155,17 @@ export default async function AboutScreen(props: AboutScreenProps) {
               href={project.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group p-3 rounded-lg border border-term-border/60 hover:border-term-green/30 bg-term-chrome/30 hover:bg-term-chrome/50 transition-all duration-300"
+              className="group rounded-lg border border-term-border/60 bg-term-chrome/30 p-3 transition-all duration-300 hover:border-term-green/30 hover:bg-term-chrome/50 focus-visible:border-term-green/30 focus-visible:bg-term-chrome/50"
             >
               <div className="flex items-baseline justify-between gap-2 mb-1">
                 <span className="text-term-bright text-xs sm:text-sm font-medium group-hover:text-term-green transition-colors duration-300">
                   {project.name}
                 </span>
-                <span className="text-term-cyan text-[10px] sm:text-[11px] shrink-0">
+                <span className="text-term-cyan-strong text-xs shrink-0">
                   {project.tech}
                 </span>
               </div>
-              <p className="text-term-muted text-[11px] sm:text-xs leading-relaxed">
+              <p className="text-term-muted text-xs leading-relaxed">
                 {project.description}
               </p>
               <span className="sr-only"> {about.openInNewTabLabel}</span>

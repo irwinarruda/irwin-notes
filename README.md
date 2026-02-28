@@ -1,75 +1,39 @@
 # Irwin Notes
 
-Terminal-style blog built with Next.js App Router, local markdown/MDX posts, and Shiki-powered syntax highlighting.
+> Fully vibecoded. No plan, no roadmap — just thoughts on code landing somewhere.
 
-## Development
+A terminal-style personal blog where I dump whatever is on my mind about software engineering. Built on Next.js, styled like a terminal, written whenever the mood strikes.
+
+## Stack
+
+- **Next.js 16** App Router + React 19
+- **Tailwind CSS v4** with custom theme tokens
+- **MDX** posts with Shiki syntax highlighting
+- **Bun** as package manager and runtime
+
+## Running locally
 
 ```bash
+bun install
 bun dev
 ```
 
-Open http://localhost:3000.
+Open [http://localhost:3000](http://localhost:3000).
 
-## Blog content
+## Writing a post
 
-Posts live in locale folders under `src/content/posts` and can be either `.md` or `.mdx`.
-
-- English source posts live in `src/content/posts/en`
-- Locale overrides can live in `src/content/posts/<locale>` (for example `src/content/posts/pt-BR`)
-- When a localized post is missing, the app falls back to the `src/content/posts/en` version
-
-### Required frontmatter
+Drop a `.md` or `.mdx` file into `src/content/posts/en/` with this frontmatter:
 
 ```yaml
 ---
-title: Post title
-description: Short post description
-date: 2026-02-10
+title: Your title
+description: One sentence.
+date: 2026-02-28
 tags:
-  - tag-one
-  - tag-two
-readTime: 8 min
+  - tag
+readTime: 5 min
 draft: false
 ---
 ```
 
-- `draft` is optional and defaults to `false`
-- posts are sorted by `date` descending
-
-### MDX features
-
-- `.mdx` posts can import and render React components
-- `.md` posts stay plain markdown
-- both file types are automatically listed on the home page
-
-### Code blocks
-
-Syntax highlighting is handled at compile time with `rehype-pretty-code` + `shiki`.
-
-Examples:
-
-````md
-```ts
-const answer = 42;
-```
-
-```lua {3-6} title="plugin.lua"
--- highlighted lines 3-6
-```
-````
-
-## Useful scripts
-
-```bash
-bun dev
-bun run build
-bun run lint
-```
-
-## Internationalization
-
-- Localized routes are served under `/<locale>/*` (for example `/en/posts`, `/pt-BR/about`)
-- Locale detection uses cookie first, then `Accept-Language`, and redirects via `src/proxy.ts`
-- UI strings are loaded on the server from `src/content/texts/*.json` (no client translation hooks)
-- Language switching UI is rendered in the terminal chrome and links to the same path in other locales
-- Example localized posts are available in `src/content/posts/pt-BR`
+That's it. It shows up automatically.

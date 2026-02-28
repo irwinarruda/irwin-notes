@@ -1,0 +1,106 @@
+---
+title: Criando um Plugin de Neovim com Lua
+description: Um guia pratico para criar seu proprio plugin de Neovim com Lua, passando por estrutura, APIs, autocommands e boas praticas.
+date: 2026-02-10
+tags:
+  - neovim
+  - lua
+  - tooling
+readTime: 13 min
+---
+
+import { PostCallout } from "@/components/post-callout";
+
+Neovim virou o editor favorito de quem busca velocidade, extensibilidade e controle total do ambiente. Com suporte nativo a Lua, escrever plugins ficou muito mais parecido com desenvolver software de verdade.
+
+<PostCallout>
+Este post usa <strong>MDX</strong>, entao voce pode escrever em markdown normal e ainda incluir componentes React quando precisar.
+</PostCallout>
+
+## Por que Lua?
+
+Vimscript foi importante por muito tempo, mas Lua traz um fluxo moderno de script para o Neovim.
+
+- **Performance** - LuaJIT e mais rapido para tarefas pesadas
+- **Sintaxe familiar** - quem usa JavaScript ou Python pega o jeito rapido
+- **API de primeira classe** - `vim.api`, `vim.fn` e `vim.opt` cobrem quase tudo
+- **Ecossistema alinhado** - plugins como telescope e treesitter sao Lua-first
+
+## Estrutura do projeto
+
+A estrutura de pastas e previsivel e escala bem:
+
+```text title="meu-plugin.nvim"
+meu-plugin.nvim/
+|- lua/
+|  |- meu-plugin/
+|  |  |- init.lua
+|  |  |- config.lua
+|  |  '- core.lua
+|- plugin/
+|  '- meu-plugin.lua
+|- doc/
+|  '- meu-plugin.txt
+'- README.md
+```
+
+`lua/` guarda seus modulos. `plugin/` e carregado automaticamente pelo Neovim e e um bom lugar para comandos e inicializacao.
+
+## Escrevendo o core
+
+Este exemplo monitora variacao de numero de linhas ao salvar:
+
+```lua title="lua/meu-plugin/core.lua" {11-19}
+local M = {}
+
+local state = {}
+
+function M.on_buf_write(bufnr)
+  local lines = vim.api.nvim_buf_line_count(bufnr)
+  local prev = state[bufnr]
+
+  if prev and lines ~= prev then
+    local delta = lines - prev
+    local sign = delta > 0 and "+" or ""
+    vim.notify(
+      string.format("%s%d lines (%d total)", sign, delta, lines),
+      vim.log.levels.INFO
+    )
+  end
+
+  state[bufnr] = lines
+end
+
+function M.setup()
+  vim.api.nvim_create_autocmd("BufWritePost", {
+    callback = function(ev)
+      M.on_buf_write(ev.buf)
+    end,
+  })
+end
+
+return M
+```
+
+## Registrando comandos
+
+Comandos deixam o plugin mais facil de descobrir:
+
+```lua title="plugin/meu-plugin.lua"
+if vim.g.loaded_meu_plugin then
+  return
+end
+
+vim.g.loaded_meu_plugin = true
+
+vim.api.nvim_create_user_command("MeuPluginAtivar", function()
+  require("meu-plugin.core").setup()
+  vim.notify("meu-plugin ativado", vim.log.levels.INFO)
+end, { desc = "Ativa o rastreamento de linhas do meu-plugin" })
+```
+
+## Fechando
+
+O ciclo principal e simples: organizar modulos, conectar eventos do editor e expor comandos. Com isso pronto, evoluir o plugin vira um processo natural.
+
+O codigo completo esta no [GitHub](https://github.com).

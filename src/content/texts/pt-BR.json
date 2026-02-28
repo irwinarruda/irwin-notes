@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "siteTitle": "Irwin Notes",
+    "siteDescription": "Blog em estilo terminal por Irwin Arruda Sales. Desenvolvedor de software, entusiasta do Vim e criador de ferramentas."
+  },
+  "nav": {
+    "ariaLabel": "Navegacao do site",
+    "skipToContent": "Ir para o conteudo",
+    "posts": "posts/",
+    "about": "sobre.md"
+  },
+  "themeToggle": {
+    "light": "claro",
+    "dark": "escuro",
+    "switchToLight": "Mudar para modo claro",
+    "switchToDark": "Mudar para modo escuro"
+  },
+  "localeSwitcher": {
+    "ariaLabel": "Seletor de idioma",
+    "label": "idioma",
+    "locales": {
+      "en": "EN",
+      "pt-BR": "PT-BR"
+    }
+  },
+  "postsPage": {
+    "windowTitle": "irwin@notes: ~/posts",
+    "heading": "Irwin Notes",
+    "subtitleItems": ["Desenvolvedor de Software", "React", "Next.js", "TypeScript", "Vim"],
+    "readLabel": "de leitura"
+  },
+  "postPage": {
+    "windowTitlePrefix": "irwin@notes: ~/post/",
+    "readLabel": "de leitura"
+  },
+  "aboutPage": {
+    "windowTitle": "irwin@notes: ~/sobre.md",
+    "photoAlt": "Irwin Arruda",
+    "name": "Irwin Arruda",
+    "role": "Engenheiro de Software",
+    "location": "Goiania, Brazil",
+    "openInNewTabLabel": "(abre em nova aba)",
+    "whoamiHeading": "quem-sou",
+    "whoamiBody": "Engenheiro de software focado em construir aplicacoes web rapidas e bem-acabadas. React e minha principal ferramenta ha anos, mas gosto de explorar outras abordagens - Solid.js, Svelte e Vue - qualquer coisa que torne o frontend melhor. Eu valorizo experiencia do desenvolvedor, gerenciamento de estado limpo e ferramentas que nao atrapalham.",
+    "stackHeading": "stack",
+    "projectsHeading": "projetos",
+    "stackLabels": {
+      "primary": "principal",
+      "exploring": "explorando",
+      "tools": "ferramentas"
+    },
+    "techStack": {
+      "primary": ["React", "Next.js", "TypeScript", "Node.js"],
+      "exploring": ["Solid.js", "Svelte", "Vue", "Rust", "Kotlin"],
+      "tools": ["Neovim", "Git", "Docker", "Tailwind CSS", "Vitest", "Webpack/Turbopack"]
+    },
+    "projects": [
+      {
+        "name": "Mobx Simple Store",
+        "description": "Uma alternativa performatica ao MobX State Tree para criar stores reativos em arvore. Remove recursos que causam gargalos de performance com grandes volumes de dados",
+        "tech": "TypeScript",
+        "href": "https://github.com/irwinarruda/mobx-simple-store"
+      },
+      {
+        "name": "The Chatbot",
+        "description": "Assistente digital de uso geral com integracao com WhatsApp, Google Sheets para gastos e MCP para invocacao de ferramentas de IA",
+        "tech": "C# / .NET",
+        "href": "https://github.com/irwinarruda/the-chatbot"
+      },
+      {
+        "name": "Paper Brick",
+        "description": "Aplicativo de tray para macOS para trocar wallpaper rapidamente. Escaneia um diretorio de imagens e aplica com um clique. Feito com Tauri e Solid.js",
+        "tech": "TypeScript / macOS",
+        "href": "https://github.com/irwinarruda/paper-brick"
+      },
+      {
+        "name": "Pro Cris App",
+        "description": "Aplicativo React Native que ajuda professores a organizar agenda, precos e cadastro de alunos com rotina diaria e geracao de recibos",
+        "tech": "React Native",
+        "href": "https://github.com/irwinarruda/pro-cris-app-v2"
+      },
+      {
+        "name": "Study on Micro-frontends",
+        "description": "Estudo pratico integrando React, Vue e Svelte no mesmo app com Webpack Module Federation e estado global compartilhado com MobX",
+        "tech": "JavaScript",
+        "href": "https://github.com/irwinarruda/study-on-micro-frontends"
+      },
+      {
+        "name": "Goals Tracker",
+        "description": "Aplicativo React Native para acompanhar habitos diarios com cards de metas, sistema de cheat day por moedas e notas de dias concluidos ou perdidos",
+        "tech": "TypeScript",
+        "href": "https://github.com/irwinarruda/goals-tracker-v2"
+      }
+    ]
+  }
+}

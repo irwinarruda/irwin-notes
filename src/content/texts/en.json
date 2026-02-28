@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "siteTitle": "Irwin Notes",
+    "siteDescription": "Terminal-style blog by Irwin Arruda Sales. Software Developer, Vim enthusiast, tool builder."
+  },
+  "nav": {
+    "ariaLabel": "Site navigation",
+    "skipToContent": "Skip to content",
+    "posts": "posts/",
+    "about": "about.md"
+  },
+  "themeToggle": {
+    "light": "light",
+    "dark": "dark",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
+  },
+  "localeSwitcher": {
+    "ariaLabel": "Language switcher",
+    "label": "lang",
+    "locales": {
+      "en": "EN",
+      "pt-BR": "PT-BR"
+    }
+  },
+  "postsPage": {
+    "windowTitle": "irwin@notes: ~/posts",
+    "heading": "Irwin Notes",
+    "subtitleItems": ["Software Developer", "React", "Next.js", "TypeScript", "Vim"],
+    "readLabel": "read"
+  },
+  "postPage": {
+    "windowTitlePrefix": "irwin@notes: ~/post/",
+    "readLabel": "read"
+  },
+  "aboutPage": {
+    "windowTitle": "irwin@notes: ~/about.md",
+    "photoAlt": "Irwin Arruda",
+    "name": "Irwin Arruda",
+    "role": "Software Engineer",
+    "location": "Goiania, Brazil",
+    "openInNewTabLabel": "(opens in new tab)",
+    "whoamiHeading": "whoami",
+    "whoamiBody": "Software engineer focused on building web applications that feel fast and well-crafted. React has been my primary tool for years, but I genuinely enjoy exploring other approaches - Solid.js, Svelte, Vue - anything that makes the frontend better. I care about developer experience, clean state management, and tools that get out of the way.",
+    "stackHeading": "stack",
+    "projectsHeading": "projects",
+    "stackLabels": {
+      "primary": "primary",
+      "exploring": "exploring",
+      "tools": "tools"
+    },
+    "techStack": {
+      "primary": ["React", "Next.js", "TypeScript", "Node.js"],
+      "exploring": ["Solid.js", "Svelte", "Vue", "Rust", "Kotlin"],
+      "tools": ["Neovim", "Git", "Docker", "Tailwind CSS", "Vitest", "Webpack/Turbopack"]
+    },
+    "projects": [
+      {
+        "name": "Mobx Simple Store",
+        "description": "A performant alternative to MobX State Tree for creating reactive state tree stores. Removes features that cause performance bottlenecks with large datasets",
+        "tech": "TypeScript",
+        "href": "https://github.com/irwinarruda/mobx-simple-store"
+      },
+      {
+        "name": "The Chatbot",
+        "description": "A general-purpose digital assistant that integrates with WhatsApp, Google Sheets for expense tracking, and uses MCP for AI tool invocations",
+        "tech": "C# / .NET",
+        "href": "https://github.com/irwinarruda/the-chatbot"
+      },
+      {
+        "name": "Paper Brick",
+        "description": "A macOS system tray app for changing wallpapers quickly. Scans a directory for images and lets you set one in a single click. Built with Tauri and Solid.js",
+        "tech": "TypeScript / macOS",
+        "href": "https://github.com/irwinarruda/paper-brick"
+      },
+      {
+        "name": "Pro Cris App",
+        "description": "A React Native app that helps teachers manage their work schedule, pricing, and student registration with daily routines and receipt generation",
+        "tech": "React Native",
+        "href": "https://github.com/irwinarruda/pro-cris-app-v2"
+      },
+      {
+        "name": "Study on Micro-frontends",
+        "description": "A hands-on study integrating React, Vue, and Svelte in one app using Webpack Module Federation with shared MobX global state",
+        "tech": "JavaScript",
+        "href": "https://github.com/irwinarruda/study-on-micro-frontends"
+      },
+      {
+        "name": "Goals Tracker",
+        "description": "A React Native app for tracking daily habits with goal cards, a coin-based cheat day system, and notes for completed or missed days",
+        "tech": "TypeScript",
+        "href": "https://github.com/irwinarruda/goals-tracker-v2"
+      }
+    ]
+  }
+}

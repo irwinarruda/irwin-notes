@@ -1,0 +1,126 @@
+import Link from "next/link";
+import { ThemeToggle, type ThemeToggleLabels } from "./theme-toggle";
+
+export type TerminalNavLink = {
+  href: string;
+  label: string;
+};
+
+export type TerminalLocaleSwitcherLink = {
+  href: string;
+  label: string;
+  isActive: boolean;
+};
+
+export type TerminalLocaleSwitcher = {
+  ariaLabel: string;
+  label: string;
+  links: TerminalLocaleSwitcherLink[];
+};
+
+const DEFAULT_SKIP_TO_CONTENT_LABEL = "Skip to content";
+
+const DEFAULT_THEME_TOGGLE_LABELS: ThemeToggleLabels = {
+  light: "light",
+  dark: "dark",
+  switchToLight: "Switch to light mode",
+  switchToDark: "Switch to dark mode",
+};
+
+const DEFAULT_TERMINAL_NAV_LINKS: TerminalNavLink[] = [
+  { href: "/posts", label: "posts/" },
+  { href: "/about", label: "about.md" },
+];
+
+export function TerminalWindow({
+  children,
+  title = "irwin@notes: ~/posts",
+  skipToContentLabel = DEFAULT_SKIP_TO_CONTENT_LABEL,
+  themeToggleLabels = DEFAULT_THEME_TOGGLE_LABELS,
+  localeSwitcher,
+}: {
+  children: React.ReactNode;
+  title?: string;
+  skipToContentLabel?: string;
+  themeToggleLabels?: ThemeToggleLabels;
+  localeSwitcher?: TerminalLocaleSwitcher;
+}) {
+  return (
+    <div className="flex min-h-dvh justify-center bg-term-bg p-3 sm:p-6 md:p-10">
+      <div className="flex w-full max-w-4xl flex-col">
+        <a href="#main-content" className="skip-link">
+          {skipToContentLabel}
+        </a>
+        <div className="flex items-center rounded-t-xl border border-term-border border-b-0 bg-term-chrome px-4 py-3">
+          <div className="flex gap-2" aria-hidden="true">
+            <div className="w-3 h-3 rounded-full bg-term-red" />
+            <div className="w-3 h-3 rounded-full bg-term-yellow" />
+            <div className="w-3 h-3 rounded-full bg-term-green-dot" />
+          </div>
+          <span className="text-term-muted text-xs tracking-wide mx-auto select-none">
+            {title}
+          </span>
+          <div className="flex items-center gap-4">
+            {localeSwitcher ? (
+              <nav
+                aria-label={localeSwitcher.ariaLabel}
+                className="flex items-center gap-2 text-[11px]"
+              >
+                <span className="text-term-muted select-none">{localeSwitcher.label}</span>
+                <div className="flex items-center gap-1.5">
+                  {localeSwitcher.links.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      aria-current={link.isActive ? "true" : undefined}
+                      className={link.isActive ? "text-term-green" : "text-term-blue hover:text-term-cyan transition-colors duration-200"}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </nav>
+            ) : null}
+            <ThemeToggle labels={themeToggleLabels} />
+          </div>
+        </div>
+        <main
+          id="main-content"
+          className="terminal-body flex-1 rounded-b-xl border border-term-border border-t-0 bg-term-window p-5 shadow-2xl shadow-black/10 sm:p-7 md:p-9"
+        >
+          {children}
+        </main>
+        <div className="mx-4 h-2 rounded-b-xl bg-black/20 blur-sm" aria-hidden="true" />
+      </div>
+    </div>
+  );
+}
+
+export function TerminalNav({
+  active,
+  ariaLabel = "Site navigation",
+  links = DEFAULT_TERMINAL_NAV_LINKS,
+}: {
+  active?: string;
+  ariaLabel?: string;
+  links?: TerminalNavLink[];
+}) {
+  return (
+    <nav aria-label={ariaLabel} className="flex flex-wrap gap-x-6 gap-y-1 text-sm">
+      {links.map((link) => (
+        <Link
+          key={link.href}
+          href={link.href}
+          aria-current={active === link.href ? "page" : undefined}
+          className={`hover:text-term-cyan transition-colors duration-200 ${
+            active === link.href
+              ? "text-term-green font-medium"
+              : "text-term-blue"
+          }`}
+        >
+          {link.label}
+        </Link>
+      ))}
+    </nav>
+  );
+}

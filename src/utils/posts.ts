@@ -9,6 +9,11 @@ import { DEFAULT_LOCALE, type Locale } from "@/utils/i18n";
 const POSTS_DIRECTORY = path.join(process.cwd(), "src/content/posts");
 const SUPPORTED_EXTENSIONS = [".md", ".mdx"] as const;
 
+export type PostReference = {
+  label: string;
+  url: string;
+};
+
 export type Post = {
   locale: Locale;
   contentLocale: Locale;
@@ -20,6 +25,7 @@ export type Post = {
   tags: string[];
   readTime: string;
   draft: boolean;
+  references: PostReference[];
 };
 
 type PostFileSource = {
@@ -35,6 +41,7 @@ type PostFrontmatter = {
   tags?: unknown;
   readTime?: unknown;
   draft?: unknown;
+  references?: unknown;
 };
 
 function isSupportedPostFile(fileName: string): boolean {
@@ -79,6 +86,20 @@ function estimateReadTime(content: string): string {
   return `${minutes} min`;
 }
 
+function toReferences(value: unknown): PostReference[] {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value.filter(
+    (item): item is PostReference =>
+      typeof item === "object" &&
+      item !== null &&
+      typeof item.label === "string" &&
+      typeof item.url === "string",
+  );
+}
+
 function toDescription(content: string): string {
   const normalized = content.replace(/\s+/g, " ").trim();
   if (normalized.length <= 180) {
@@ -116,6 +137,7 @@ async function readPostFromFile(
         ? frontmatter.readTime
         : estimateReadTime(content),
     draft: frontmatter.draft === true,
+    references: toReferences(frontmatter.references),
   };
 }
 
@@ -173,9 +195,9 @@ export const getAllPosts = cache(async (locale: Locale): Promise<Post[]> => {
     fileSources.map((fileSource) => readPostFromFile(fileSource, locale)),
   );
 
-  return posts
-    .filter((post) => !post.draft)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return posts.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
 });
 
 export const getPostBySlug = cache(

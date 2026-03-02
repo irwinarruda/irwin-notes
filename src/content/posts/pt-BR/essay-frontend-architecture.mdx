@@ -7,16 +7,30 @@ tags:
   - architecture
   - react
 readTime: 12 min
+draft: true
+references:
+  - label: "UI as an afterthought by Michel Weststrate"
+    url: "https://michel.codes/blogs/ui-as-an-afterthought"
 ---
+
+import { PostCallout } from "@/components/post-callout";
 
 Sempre me incomodei com a falta de padrões na criação de aplicações frontend com os frameworks modernos. Quando comecei a desenvolver, já eram 6 anos de vida do React e as pessoas ainda discutiam se deveriam utilizar Redux ou Context API para gerenciar estados. Foi só recentemente que as documentações ficaram melhores, as bibliotecas ficaram estáveis e um caminho claro se abriu para ser seguido.
 
 Os grandes frameworks declarativos parecem estar se convergindo para um padrão "ótimo" no desenvolvimento de aplicações web 2D. O Vue introduziu o `ref` e hooks, Svelte criou Runes e o SolidJS sempre foi muito semelhante ao React. Me parece que a evolução e a estabilização dos principios core do React moveram todo o mercado para um lugar mais aceitável.
 
-Percebendo esses conceitos primitivos e querendo resolver minha dor com padrões de software, corri atrás da literatura sobre Clean Architecture, Domain Driven Design e arquitetura no frontend. Com base nisso, acredito que consigo contribuir com a discussão com uma visão abrangente sobre o tema.
+Olhando de forma macro para o ecosistema, alguns padrões primitivos estão sendo criados, todos os frameworks possuem o conceito de _State_, _Computed_, _Effects_ e _Actions_. Talvez, usando esses "axiomas", é possível pensar em um modelo de arquitetura universal que possa ser utilizado por todas as bibliotcas.
 
-Na literatura, o frontend é sempre tratado como uma camada. Ele é _apenas_ uma parte do sistema, um detalhe de implementação. E de fato, _muitas das vezes_, o frontend é somente uma maneira de conectar um usuário ao que gera valor (à finalidade da aplicação), e isso normalmente fica no backend.
+<PostCallout>
+  <span>Mas arquitetura no frontend é mesmo importante?</span>
+</PostCallout>
 
-Por mais que isso possa ferir o coração de muitos que se consideram desenvolvedores frontend, isso é verdade! Existem muitos sistemas CRUD e que não precisam de uma arquitetura robusta no frontend. Testes e manuteniblidade não são necessários. Amanhã outra interface já estará sendo criada para esse serviço.
+Na literatura, o frontend é normalmente tratado como uma camada. Ele é _apenas_ uma parte do sistema, um detalhe de implementação. E de fato, _muitas das vezes_, o frontend é somente uma maneira de conectar um usuário ao que gera valor (à finalidade da aplicação), que fica num backend.
 
-É claro que esse é um pensamento arcaico sobre o tema, na verdade, frameworks como React e Angular só foram criados pois a UI precisava evoluir para gerar uma boa experiência para os usuários. Nesse ponto da história, o frontend também começou a ter importância negocial, começou a gerar valor. Porém, o preço de uma experiências inovadoras é complexidade no software, e por isso faz sentido se preocupar com arquitetura no frontend. Como devemos gerenciar a complexidade?
+Por mais que possa ferir o coração de muitos _frontenders_, isso é verdade! Existem muitos sistemas CRUD e que não precisam de uma arquitetura robusta no frontend. Testes e manuteniblidade não são necessários. Substituir essa UI por outra não geraria impactos grandes no negócio.
+
+É claro que essa é só uma parte da história, na verdade, frameworks como React e Angular só foram criados pois a UI precisava evoluir para gerar uma boa experiência para os usuários. A partir dai, o frontend começou a ter importância negocial, começou a gerar valor. Porém, o preço de uma experiência inovadora é complexidade no software. Com isso, o frontend para de ser um detalhe de implementação e vira também um fim em si, e por isso faz sentido se preocupar com arquitetura no frontend. 
+
+<PostCallout>
+  <span>Então como devemos gerenciar a complexidade de uma UI interativa com as exigências do mercado?</span>
+</PostCallout>

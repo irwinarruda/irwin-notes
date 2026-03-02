@@ -27,11 +27,15 @@
     "windowTitle": "irwin@notes: ~/posts",
     "heading": "Irwin Notes",
     "subtitleItems": ["Frontend", "React", "Next.js", "TypeScript", "Vim"],
-    "readLabel": "read"
+    "readLabel": "read",
+    "draftLabel": "draft"
   },
   "postPage": {
     "windowTitlePrefix": "irwin@notes: ~/post/",
-    "readLabel": "read"
+    "readLabel": "read",
+    "draftLabel": "draft",
+    "draftNotice": "// This post is a draft — content may change.",
+    "referencesHeading": "References"
   },
   "aboutPage": {
     "windowTitle": "irwin@notes: ~/about.md",

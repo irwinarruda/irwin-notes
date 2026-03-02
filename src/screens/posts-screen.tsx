@@ -64,6 +64,11 @@ export default async function PostsScreen(props: PostsScreenProps) {
               </div>
               <h2 className="text-term-bright text-lg sm:text-xl mt-1 font-medium group-hover:text-term-green transition-colors duration-300">
                 {post.title}
+                {post.draft && (
+                  <span className="ml-2 inline-block align-middle rounded border border-dashed border-term-amber/50 bg-term-amber/8 px-1.5 py-0.5 text-xs font-mono font-normal text-term-amber">
+                    {dictionary.postsPage.draftLabel}
+                  </span>
+                )}
               </h2>
               <p className="text-term-text text-sm sm:text-base mt-1 leading-relaxed max-w-2xl">
                 {post.description}

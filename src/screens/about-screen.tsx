@@ -37,7 +37,7 @@ export default async function AboutScreen(props: AboutScreenProps) {
         <div className="shrink-0">
           <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden border-2 border-term-border ring-1 ring-term-green/20">
             <Image
-              src="/irwin-photo.jpg"
+              src="/profile.png"
               alt={about.photoAlt}
               width={80}
               height={80}
@@ -51,7 +51,8 @@ export default async function AboutScreen(props: AboutScreenProps) {
             {about.name}
           </h1>
           <p className="text-term-muted text-sm sm:text-base mt-1">
-            {about.role} <span aria-hidden="true">&middot;</span> {about.location}
+            {about.role} <span aria-hidden="true">&middot;</span>{" "}
+            {about.location}
           </p>
           <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-sm">
             <a

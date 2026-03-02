@@ -59,6 +59,14 @@ export default async function BlogPostScreen(props: BlogPostScreenProps) {
             <span>
               {post.readTime} {dictionary.postPage.readLabel}
             </span>
+            {post.draft && (
+              <>
+                <span aria-hidden="true">&middot;</span>
+                <span className="rounded border border-dashed border-term-amber/50 bg-term-amber/8 px-1.5 py-0.5 text-xs font-mono text-term-amber">
+                  {dictionary.postPage.draftLabel}
+                </span>
+              </>
+            )}
           </div>
 
           <div className="mt-2 flex flex-wrap gap-2">
@@ -71,11 +79,42 @@ export default async function BlogPostScreen(props: BlogPostScreenProps) {
         </div>
       </header>
 
+      {post.draft && (
+        <div className="mx-2 mb-6 rounded-lg border border-dashed border-term-amber/30 bg-term-amber/5 px-4 py-3 fade-in fade-in-delay-2">
+          <p className="font-mono text-sm text-term-amber">
+            {dictionary.postPage.draftNotice}
+          </p>
+        </div>
+      )}
+
       <div className="mb-6 border-t border-term-border" />
 
       <article className="terminal-prose mb-8 ml-2 fade-in fade-in-delay-3">
         <PostContent />
       </article>
+
+      {post.references.length > 0 && (
+        <footer className="ml-2 mb-8 fade-in fade-in-delay-4">
+          <div className="border-t border-term-border mb-6" />
+          <h2 className="text-xl font-semibold text-term-muted mb-4 font-mono">
+            {dictionary.postPage.referencesHeading}
+          </h2>
+          <ol className="space-y-3 list-decimal list-inside">
+            {post.references.map((ref) => (
+              <li key={ref.url} className="text-term-muted text-base">
+                <a
+                  href={ref.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-term-blue underline underline-offset-2 hover:text-term-cyan transition-colors duration-200"
+                >
+                  {ref.label}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </footer>
+      )}
     </TerminalWindow>
   );
 }

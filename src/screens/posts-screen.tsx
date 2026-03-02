@@ -29,10 +29,10 @@ export default async function PostsScreen(props: PostsScreenProps) {
       localeSwitcher={localeSwitcher}
     >
       <div className="mb-6 fade-in">
-        <h1 className="text-term-green text-lg sm:text-xl md:text-2xl font-bold tracking-tight mb-1">
+        <h1 className="text-term-green text-xl sm:text-2xl md:text-3xl font-bold tracking-tight mb-1">
           {dictionary.postsPage.heading}
         </h1>
-        <p className="text-term-muted text-xs sm:text-sm">
+        <p className="text-term-muted text-sm sm:text-base">
           {dictionary.postsPage.subtitleItems.map((item, index) => (
             <span key={item}>
               {index > 0 ? <span aria-hidden="true"> &middot;</span> : null} {item}
@@ -55,22 +55,22 @@ export default async function PostsScreen(props: PostsScreenProps) {
               href={`/${locale}/post/${post.slug}`}
               className="post-entry group block rounded-r-lg pl-5 py-3.5 transition-all duration-300 hover:bg-term-chrome/50 focus-visible:bg-term-chrome/50"
             >
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs sm:text-sm">
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm sm:text-base">
                 <span className="text-term-amber font-medium">{post.date}</span>
                 <span className="text-term-muted" aria-hidden="true">&middot;</span>
                 <span className="text-term-muted">
                   {post.readTime} {dictionary.postsPage.readLabel}
                 </span>
               </div>
-              <h2 className="text-term-bright text-base sm:text-lg mt-1 font-medium group-hover:text-term-green transition-colors duration-300">
+              <h2 className="text-term-bright text-lg sm:text-xl mt-1 font-medium group-hover:text-term-green transition-colors duration-300">
                 {post.title}
               </h2>
-              <p className="text-term-text text-xs sm:text-sm mt-1 leading-relaxed max-w-2xl">
+              <p className="text-term-text text-sm sm:text-base mt-1 leading-relaxed max-w-2xl">
                 {post.description}
               </p>
               <div className="flex flex-wrap gap-2 mt-2">
                 {post.tags.map((tag) => (
-                  <span key={tag} className="text-term-cyan-strong text-xs">
+                  <span key={tag} className="text-term-cyan-strong text-sm">
                     #{tag}
                   </span>
                 ))}

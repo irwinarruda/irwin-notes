@@ -26,13 +26,7 @@
   "postsPage": {
     "windowTitle": "irwin@notes: ~/posts",
     "heading": "Irwin Notes",
-    "subtitleItems": [
-      "Desenvolvedor de Software",
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Vim"
-    ],
+    "subtitleItems": ["Frontend", "React", "Next.js", "TypeScript", "Vim"],
     "readLabel": "de leitura"
   },
   "postPage": {

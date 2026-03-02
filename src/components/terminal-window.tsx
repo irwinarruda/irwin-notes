@@ -51,7 +51,7 @@ export function TerminalWindow({
         <a href="#main-content" className="skip-link">
           {skipToContentLabel}
         </a>
-        <div className="flex items-center rounded-t-xl border border-term-border border-b-0 bg-term-chrome px-4 py-3">
+        <div className="flex items-center rounded-t-xl border border-term-border border-b-0 bg-term-chrome px-4 py-2">
           <div className="flex gap-2" aria-hidden="true">
             <div className="w-3 h-3 rounded-full bg-term-red" />
             <div className="w-3 h-3 rounded-full bg-term-yellow" />
@@ -66,7 +66,9 @@ export function TerminalWindow({
                 aria-label={localeSwitcher.ariaLabel}
                 className="flex items-center gap-2 text-xs"
               >
-                <span className="text-term-muted select-none">{localeSwitcher.label}</span>
+                <span className="text-term-muted select-none">
+                  {localeSwitcher.label}
+                </span>
                 <div className="flex items-center gap-1">
                   {localeSwitcher.links.map((link) => (
                     <Link
@@ -94,7 +96,10 @@ export function TerminalWindow({
         >
           {children}
         </main>
-        <div className="mx-4 h-2 rounded-b-xl bg-black/20 blur-sm" aria-hidden="true" />
+        <div
+          className="mx-4 h-2 rounded-b-xl bg-black/20 blur-sm"
+          aria-hidden="true"
+        />
       </div>
     </div>
   );
@@ -110,7 +115,10 @@ export function TerminalNav({
   links?: TerminalNavLink[];
 }) {
   return (
-    <nav aria-label={ariaLabel} className="flex flex-wrap gap-x-6 gap-y-1 text-sm">
+    <nav
+      aria-label={ariaLabel}
+      className="flex flex-wrap gap-x-6 gap-y-1 text-base"
+    >
       {links.map((link) => (
         <Link
           key={link.href}

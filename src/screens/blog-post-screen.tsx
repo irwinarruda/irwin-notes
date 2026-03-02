@@ -49,11 +49,11 @@ export default async function BlogPostScreen(props: BlogPostScreenProps) {
 
       <header className="mb-6 fade-in fade-in-delay-2">
         <div className="ml-2 mt-4">
-          <h1 className="mb-3 text-xl font-bold leading-tight text-term-green sm:text-2xl md:text-3xl">
+          <h1 className="mb-3 text-2xl font-bold leading-tight text-term-green sm:text-3xl md:text-4xl">
             {post.title}
           </h1>
 
-          <div className="mb-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-term-muted sm:text-sm">
+          <div className="mb-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-term-muted sm:text-base">
             <span className="text-term-amber">{post.date}</span>
             <span aria-hidden="true">&middot;</span>
             <span>
@@ -63,7 +63,7 @@ export default async function BlogPostScreen(props: BlogPostScreenProps) {
 
           <div className="mt-2 flex flex-wrap gap-2">
             {post.tags.map((tag) => (
-              <span key={tag} className="text-term-cyan-strong text-xs">
+              <span key={tag} className="text-term-cyan-strong text-sm">
                 #{tag}
               </span>
             ))}

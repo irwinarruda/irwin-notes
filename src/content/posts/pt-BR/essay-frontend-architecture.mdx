@@ -1,5 +1,5 @@
 ---
-title: Um ensaio sobre Arquitetura Frontend
+title: Um ensaio sobre arquitetura frontend
 description: Tentando encontrar uma arquitetura de software universal para frameworks de UI web declarativos.
 date: 2026-02-27
 tags:
@@ -9,4 +9,14 @@ tags:
 readTime: 12 min
 ---
 
-### Início
+Sempre me incomodei com a falta de padrões na criação de aplicações frontend com os frameworks modernos. Quando comecei a desenvolver, já eram 6 anos de vida do React e as pessoas ainda discutiam se deveriam utilizar Redux ou Context API para gerenciar estados. Foi só recentemente que as documentações ficaram melhores, as bibliotecas ficaram estáveis e um caminho claro se abriu para ser seguido.
+
+Os grandes frameworks declarativos parecem estar se convergindo para um padrão "ótimo" no desenvolvimento de aplicações web 2D. O Vue introduziu o `ref` e hooks, Svelte criou Runes e o SolidJS sempre foi muito semelhante ao React. Me parece que a evolução e a estabilização dos principios core do React moveram todo o mercado para um lugar mais aceitável.
+
+Percebendo esses conceitos primitivos e querendo resolver minha dor com padrões de software, corri atrás da literatura sobre Clean Architecture, Domain Driven Design e arquitetura no frontend. Com base nisso, acredito que consigo contribuir com a discussão com uma visão abrangente sobre o tema.
+
+Na literatura, o frontend é sempre tratado como uma camada. Ele é _apenas_ uma parte do sistema, um detalhe de implementação. E de fato, _muitas das vezes_, o frontend é somente uma maneira de conectar um usuário ao que gera valor (à finalidade da aplicação), e isso normalmente fica no backend.
+
+Por mais que isso possa ferir o coração de muitos que se consideram desenvolvedores frontend, isso é verdade! Existem muitos sistemas CRUD e que não precisam de uma arquitetura robusta no frontend. Testes e manuteniblidade não são necessários. Amanhã outra interface já estará sendo criada para esse serviço.
+
+É claro que esse é um pensamento arcaico sobre o tema, na verdade, frameworks como React e Angular só foram criados pois a UI precisava evoluir para gerar uma boa experiência para os usuários. Nesse ponto da história, o frontend também começou a ter importância negocial, começou a gerar valor. Porém, o preço de uma experiências inovadoras é complexidade no software, e por isso faz sentido se preocupar com arquitetura no frontend. Como devemos gerenciar a complexidade?

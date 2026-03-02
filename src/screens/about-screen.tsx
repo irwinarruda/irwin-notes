@@ -47,13 +47,13 @@ export default async function AboutScreen(props: AboutScreenProps) {
           </div>
         </div>
         <div className="min-w-0">
-          <h1 className="text-term-green text-xl sm:text-2xl font-bold leading-tight">
+          <h1 className="text-term-green text-2xl sm:text-3xl font-bold leading-tight">
             {about.name}
           </h1>
-          <p className="text-term-muted text-xs sm:text-sm mt-1">
+          <p className="text-term-muted text-sm sm:text-base mt-1">
             {about.role} <span aria-hidden="true">&middot;</span> {about.location}
           </p>
-          <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs">
+          <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-sm">
             <a
               href="https://github.com/irwinarruda"
               target="_blank"
@@ -95,14 +95,14 @@ export default async function AboutScreen(props: AboutScreenProps) {
         <h2>{about.stackHeading}</h2>
         <div className="space-y-3">
           <div>
-            <span className="text-term-muted text-xs uppercase tracking-wider">
+            <span className="text-term-muted text-sm uppercase tracking-wider">
               {about.stackLabels.primary}
             </span>
             <div className="flex flex-wrap gap-2 mt-1.5">
               {about.techStack.primary.map((tech) => (
                 <span
                   key={tech}
-                  className="text-term-cyan-strong text-xs bg-term-cyan/8 px-2 py-0.5 rounded border border-term-cyan/15"
+                  className="text-term-cyan-strong text-sm bg-term-cyan/8 px-2 py-0.5 rounded border border-term-cyan/15"
                 >
                   {tech}
                 </span>
@@ -110,14 +110,14 @@ export default async function AboutScreen(props: AboutScreenProps) {
             </div>
           </div>
           <div>
-            <span className="text-term-muted text-xs uppercase tracking-wider">
+            <span className="text-term-muted text-sm uppercase tracking-wider">
               {about.stackLabels.exploring}
             </span>
             <div className="flex flex-wrap gap-2 mt-1.5">
               {about.techStack.exploring.map((tech) => (
                 <span
                   key={tech}
-                  className="text-term-magenta-strong text-xs bg-term-magenta/8 px-2 py-0.5 rounded border border-term-magenta/15"
+                  className="text-term-magenta-strong text-sm bg-term-magenta/8 px-2 py-0.5 rounded border border-term-magenta/15"
                 >
                   {tech}
                 </span>
@@ -125,14 +125,14 @@ export default async function AboutScreen(props: AboutScreenProps) {
             </div>
           </div>
           <div>
-            <span className="text-term-muted text-xs uppercase tracking-wider">
+            <span className="text-term-muted text-sm uppercase tracking-wider">
               {about.stackLabels.tools}
             </span>
             <div className="flex flex-wrap gap-2 mt-1.5">
               {about.techStack.tools.map((tech) => (
                 <span
                   key={tech}
-                  className="text-term-amber-strong text-xs bg-term-amber/8 px-2 py-0.5 rounded border border-term-amber/15"
+                  className="text-term-amber-strong text-sm bg-term-amber/8 px-2 py-0.5 rounded border border-term-amber/15"
                 >
                   {tech}
                 </span>
@@ -158,14 +158,14 @@ export default async function AboutScreen(props: AboutScreenProps) {
               className="group rounded-lg border border-term-border/60 bg-term-chrome/30 p-3 transition-all duration-300 hover:border-term-green/30 hover:bg-term-chrome/50 focus-visible:border-term-green/30 focus-visible:bg-term-chrome/50"
             >
               <div className="flex items-baseline justify-between gap-2 mb-1">
-                <span className="text-term-bright text-xs sm:text-sm font-medium group-hover:text-term-green transition-colors duration-300">
+                <span className="text-term-bright text-base sm:text-lg font-medium group-hover:text-term-green transition-colors duration-300">
                   {project.name}
                 </span>
-                <span className="text-term-cyan-strong text-xs shrink-0">
+                <span className="text-term-cyan-strong text-sm shrink-0">
                   {project.tech}
                 </span>
               </div>
-              <p className="text-term-muted text-xs leading-relaxed">
+              <p className="text-term-muted text-sm leading-relaxed">
                 {project.description}
               </p>
               <span className="sr-only"> {about.openInNewTabLabel}</span>

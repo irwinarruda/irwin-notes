@@ -9,8 +9,18 @@ tags:
 readTime: 12 min
 draft: true
 references:
+  - label: "The Clean Architecture by Uncle Bob"
+    url: "https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html"
+  - label: "Guide to app architecture by Flutter Docs"
+    url: "https://docs.flutter.dev/app-architecture/guide"
+  - label: "Clean Architecture on Frontend by Alex Bespoyasov"
+    url: "https://dev.to/bespoyasov/clean-architecture-on-frontend-4311"
+  - label: "Client-Side Architecture Basics [Guide] by Khalil Stemmler"
+    url: "https://khalilstemmler.com/articles/client-side-architecture/introduction"
   - label: "UI as an afterthought by Michel Weststrate"
     url: "https://michel.codes/blogs/ui-as-an-afterthought"
+  - label: "A Definitive Guide to Front-end Clean Architecture — Second Edition by Eduardo Ottaviani Aragão"
+    url: "https://eduardo-ottaviani.medium.com/a-definitive-guide-to-front-end-clean-architecture-3a62418becb4"
 ---
 
 import { PostCallout } from "@/components/post-callout";
@@ -19,7 +29,7 @@ Sempre me incomodei com a falta de padrões na criação de aplicações fronten
 
 Os grandes frameworks declarativos parecem estar se convergindo para um padrão "ótimo" no desenvolvimento de aplicações web 2D. O Vue introduziu o `ref` e hooks, Svelte criou Runes e o SolidJS sempre foi muito semelhante ao React. Me parece que a evolução e a estabilização dos principios core do React moveram todo o mercado para um lugar mais aceitável.
 
-Olhando de forma macro para o ecosistema, alguns padrões primitivos estão sendo criados, todos os frameworks possuem o conceito de _State_, _Computed_, _Effects_ e _Actions_. Talvez, usando esses "axiomas", é possível pensar em um modelo de arquitetura universal que possa ser utilizado por todas as bibliotcas.
+Alguns padrões primitivos criados e aperfeiçoados ao longo do tempo, todos os frameworks possuem o conceito de _State_, _Computed_, _Actions_ e _Effects_. Talvez, usando esses **axiomas**, é possível pensar em um modelo de arquitetura universal que possa ser utilizado por todas as bibliotcas.
 
 <PostCallout>
   <span>Mas arquitetura no frontend é mesmo importante?</span>
@@ -29,8 +39,31 @@ Na literatura, o frontend é normalmente tratado como uma camada. Ele é _apenas
 
 Por mais que possa ferir o coração de muitos _frontenders_, isso é verdade! Existem muitos sistemas CRUD e que não precisam de uma arquitetura robusta no frontend. Testes e manuteniblidade não são necessários. Substituir essa UI por outra não geraria impactos grandes no negócio.
 
-É claro que essa é só uma parte da história, na verdade, frameworks como React e Angular só foram criados pois a UI precisava evoluir para gerar uma boa experiência para os usuários. A partir dai, o frontend começou a ter importância negocial, começou a gerar valor. Porém, o preço de uma experiência inovadora é complexidade no software. Com isso, o frontend para de ser um detalhe de implementação e vira também um fim em si, e por isso faz sentido se preocupar com arquitetura no frontend. 
+É claro que essa é só uma parte da história, na verdade, frameworks como React e Angular só foram criados pois a UI precisava evoluir para gerar uma boa experiência para os usuários. A partir dai, o frontend começou a ter importância negocial, começou a gerar valor. Porém, o preço de uma experiência inovadora é complexidade no software. Com isso, o frontend para de ser um detalhe de implementação e vira também um fim em si, e por isso faz sentido se preocupar com sua arquitetura. 
 
 <PostCallout>
   <span>Então como devemos gerenciar a complexidade de uma UI interativa com as exigências do mercado?</span>
 </PostCallout>
+
+Existem muitas formas de organizar um software, e elas foram extensivamente documentadas por grande autores, porém como o Uncle Bob deixa explícito em [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) falando sobre as várias propostas de arquiteturas:
+
+> Embora todas essas arquiteturas variem um pouco em seus detalhes, elas são muito semelhantes. Todas têm o mesmo objetivo, que é a separação de responsabilidades. Todas alcançam essa separação ao dividir o software em camadas. Cada uma tem pelo menos uma camada para regras de negócio e outra para interfaces.
+> Cada uma dessas arquiteturas produz sistemas que são:
+> 1. Independentes de frameworks...
+> 2. Testáveis...
+> 3. **Independentes da UI**...
+> 4. Independentes de banco de dados...
+> 5. Independentes de qualquer agente externo...
+
+Nesse sentido, o nome da arquitetura não é importante. Estamos em busca de um design que respeita a separação das responsabilidades. 
+
+Fazendo uma pesquisa inicial, o canal no YouTube [Coffstack](https://www.youtube.com/watch?v=HxBEuISRp5I) me levou a 2 excelentes artigos que tentaram chegar, de forma genuína, em uma arquitetura de frontend.
+
+- [Clean Architecture on Frontend by Alex Bespoyasov](https://dev.to/bespoyasov/clean-architecture-on-frontend-4311)
+- [Client-Side Architecture Basics [Guide] by Khalil Stemmler](https://khalilstemmler.com/articles/client-side-architecture/introduction)
+
+> **Recorte da pesquisa:** neste ensaio, uso essas abordagens como referência do que o mercado pensa sobre arquitetura. Não é um levantamento completo, reconheço que posso ter deixado propostas relevantes de fora.
+
+Esses são bons exemplos de como modelar o software de forma profissional. Seguir essas arquiteturas com certeza produzirá um software de qualidade. 
+
+Essas abordagens, entretanto, ferem os conceitos da arquitetura limpa. De forma geral, os use cases são criados em hooks, estruturas intrisecamente ligadas ao framework. Por causa disso, a camada Application acaba conhecendo a View quebrando a regra das dependências.

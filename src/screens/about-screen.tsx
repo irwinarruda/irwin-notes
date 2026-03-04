@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { TerminalNav, TerminalWindow } from "@/components/terminal-window";
+import { ProfileLinks } from "@/components/profile-links";
 import { getDictionary, resolveLocale } from "@/utils/i18n";
 import { getLocaleSwitcherConfig } from "@/utils/get-locale-switcher";
 import { getTerminalNavLinks } from "@/utils/get-terminal-nav-links";
@@ -23,74 +24,59 @@ export default async function AboutScreen(props: AboutScreenProps) {
       themeToggleLabels={dictionary.themeToggle}
       localeSwitcher={localeSwitcher}
     >
-      <div className="mb-6 fade-in">
+      <div className="fade-in">
         <TerminalNav
           active={`/${locale}/about`}
           ariaLabel={dictionary.nav.ariaLabel}
           links={navLinks}
         />
       </div>
-
-      <div className="border-t border-term-border my-8" />
-
-      <div className="flex items-start gap-5 ml-2 fade-in fade-in-delay-2">
-        <div className="shrink-0">
-          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden border-2 border-term-border ring-1 ring-term-green/20">
-            <Image
-              src="/profile.png"
-              alt={about.photoAlt}
-              width={80}
-              height={80}
-              className="object-cover w-full h-full"
-              priority
+      <div className="border-t border-term-border mb-6 mt-4" />
+      <div className="ml-2 fade-in fade-in-delay-2">
+        <div className="flex items-start gap-5">
+          <div className="shrink-0">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden border-2 border-term-border ring-1 ring-term-green/20">
+              <Image
+                src="/profile.png"
+                alt={about.photoAlt}
+                width={80}
+                height={80}
+                className="object-cover w-full h-full"
+                priority
+              />
+            </div>
+          </div>
+          <div className="min-w-0">
+            <h1 className="text-term-green text-2xl sm:text-3xl font-bold leading-tight">
+              {about.name}
+            </h1>
+            <p className="text-term-muted text-sm sm:text-base mt-1">
+              {about.role}
+              <span aria-hidden="true" className="mx-1">
+                &middot;
+              </span>
+              {about.location}
+            </p>
+            <ProfileLinks
+              openInNewTabLabel={about.openInNewTabLabel}
+              className="mt-2 hidden sm:flex"
             />
           </div>
         </div>
-        <div className="min-w-0">
-          <h1 className="text-term-green text-2xl sm:text-3xl font-bold leading-tight">
-            {about.name}
-          </h1>
-          <p className="text-term-muted text-sm sm:text-base mt-1">
-            {about.role} <span aria-hidden="true">&middot;</span>{" "}
-            {about.location}
-          </p>
-          <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-sm">
-            <a
-              href="https://github.com/irwinarruda"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-h-6 items-center text-term-blue transition-colors duration-200 hover:text-term-cyan"
-            >
-              github/irwinarruda
-              <span className="sr-only"> {about.openInNewTabLabel}</span>
-            </a>
-            <a
-              href="https://linkedin.com/in/irwinarruda"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-h-6 items-center text-term-blue transition-colors duration-200 hover:text-term-cyan"
-            >
-              linkedin/irwinarruda
-              <span className="sr-only"> {about.openInNewTabLabel}</span>
-            </a>
-            <a
-              href="mailto:arruda.irwin@gmail.com"
-              className="inline-flex min-h-6 items-center text-term-blue transition-colors duration-200 hover:text-term-cyan"
-            >
-              arruda.irwin@gmail.com
-            </a>
-          </div>
-        </div>
+        <ProfileLinks
+          openInNewTabLabel={about.openInNewTabLabel}
+          className="mt-3 flex sm:hidden"
+        />
       </div>
 
-      <div className="border-t border-term-border my-8" />
+      <div className="border-t border-term-border my-6" />
 
       <article className="terminal-prose ml-2 fade-in fade-in-delay-3">
         <h2>{about.whoamiHeading}</h2>
         <p>{about.whoamiBody}</p>
       </article>
 
-      <div className="border-t border-term-border my-8" />
+      <div className="border-t border-term-border my-6" />
 
       <article className="terminal-prose ml-2 fade-in fade-in-delay-4">
         <h2>{about.stackHeading}</h2>
@@ -143,7 +129,7 @@ export default async function AboutScreen(props: AboutScreenProps) {
         </div>
       </article>
 
-      <div className="border-t border-term-border my-8" />
+      <div className="border-t border-term-border my-6" />
 
       <div className="ml-2 fade-in fade-in-delay-5">
         <article className="terminal-prose mb-3">

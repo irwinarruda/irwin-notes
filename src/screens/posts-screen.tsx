@@ -32,32 +32,51 @@ export default async function PostsScreen(props: PostsScreenProps) {
         <h1 className="text-term-green text-xl sm:text-2xl md:text-3xl font-bold tracking-tight mb-1">
           {dictionary.postsPage.heading}
         </h1>
-        <p className="text-term-muted text-sm sm:text-base">
+        <p className="text-term-muted text-sm sm:text-base truncate">
           {dictionary.postsPage.subtitleItems.map((item, index) => (
             <span key={item}>
-              {index > 0 ? <span aria-hidden="true"> &middot;</span> : null} {item}
+              {index > 0 ? (
+                <span aria-hidden="true" className="mx-1">
+                  &middot;
+                </span>
+              ) : null}
+              {item}
             </span>
           ))}
         </p>
       </div>
-      <div className="mb-6 fade-in fade-in-delay-1">
+      <div className="fade-in fade-in-delay-1">
         <TerminalNav
           active={`/${locale}/posts`}
           ariaLabel={dictionary.nav.ariaLabel}
           links={navLinks}
         />
       </div>
-      <div className="border-t border-term-border mb-6" />
+      <div className="border-t border-term-border my-6" />
       <ul className="space-y-1 mb-8">
-        {posts.map((post, i) => (
-          <li key={post.slug} className={`fade-in fade-in-delay-${Math.min(i + 2, 6)}`}>
+        {posts.map((post, i) => {
+          const fadeDelays = [
+            "fade-in-delay-2",
+            "fade-in-delay-3",
+            "fade-in-delay-4",
+            "fade-in-delay-5",
+            "fade-in-delay-6",
+          ];
+          const delay = fadeDelays[Math.min(i, fadeDelays.length - 1)];
+          return (
+          <li
+            key={post.slug}
+            className={`fade-in ${delay}`}
+          >
             <Link
               href={`/${locale}/post/${post.slug}`}
               className="post-entry group block rounded-r-lg pl-5 py-3.5 transition-all duration-300 hover:bg-term-chrome/50 focus-visible:bg-term-chrome/50"
             >
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm sm:text-base">
                 <span className="text-term-amber font-medium">{post.date}</span>
-                <span className="text-term-muted" aria-hidden="true">&middot;</span>
+                <span className="text-term-muted" aria-hidden="true">
+                  &middot;
+                </span>
                 <span className="text-term-muted">
                   {post.readTime} {dictionary.postsPage.readLabel}
                 </span>
@@ -82,7 +101,8 @@ export default async function PostsScreen(props: PostsScreenProps) {
               </div>
             </Link>
           </li>
-        ))}
+          );
+        })}
       </ul>
     </TerminalWindow>
   );

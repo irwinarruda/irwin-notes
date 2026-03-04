@@ -46,21 +46,21 @@ export function TerminalWindow({
   localeSwitcher?: TerminalLocaleSwitcher;
 }) {
   return (
-    <div className="flex min-h-dvh justify-center bg-term-bg p-3 sm:p-6 md:p-10">
+    <div className="flex min-h-dvh justify-center bg-term-bg p-0 sm:p-6 md:p-10">
       <div className="flex w-full max-w-4xl flex-col">
         <a href="#main-content" className="skip-link">
           {skipToContentLabel}
         </a>
-        <div className="flex items-center rounded-t-xl border border-term-border border-b-0 bg-term-chrome px-4 py-2">
-          <div className="flex gap-2" aria-hidden="true">
+        <div className="flex items-center sm:rounded-t-xl border-b-0 sm:border border-term-border bg-term-chrome px-3 py-2 sm:px-4">
+          <div className="flex gap-2 shrink-0" aria-hidden="true">
             <div className="w-3 h-3 rounded-full bg-term-red" />
             <div className="w-3 h-3 rounded-full bg-term-yellow" />
             <div className="w-3 h-3 rounded-full bg-term-green-dot" />
           </div>
-          <span className="text-term-muted text-xs tracking-wide mx-auto select-none">
+          <span className="text-term-muted text-xs tracking-wide mx-auto select-none min-w-0 truncate px-2">
             {title}
           </span>
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             {localeSwitcher ? (
               <nav
                 aria-label={localeSwitcher.ariaLabel}
@@ -92,12 +92,12 @@ export function TerminalWindow({
         </div>
         <main
           id="main-content"
-          className="terminal-body flex-1 rounded-b-xl border border-term-border border-t-0 bg-term-window p-5 shadow-2xl shadow-black/10 sm:p-7 md:p-9"
+          className="terminal-body flex-1 sm:rounded-b-xl sm:border border-term-border border-t-0 bg-term-window p-4 shadow-2xl shadow-black/10 sm:p-7 md:p-9"
         >
           {children}
         </main>
         <div
-          className="mx-4 h-2 rounded-b-xl bg-black/20 blur-sm"
+          className="mx-4 h-2 rounded-b-xl bg-black/20 blur-sm hidden sm:block"
           aria-hidden="true"
         />
       </div>

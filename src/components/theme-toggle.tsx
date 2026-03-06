@@ -46,13 +46,15 @@ function subscribeToTheme(onStoreChange: () => void): () => void {
 
 export function ThemeToggle({
   labels = DEFAULT_THEME_TOGGLE_LABELS,
+  serverTheme = DEFAULT_THEME,
 }: {
   labels?: ThemeToggleLabels;
+  serverTheme?: Theme;
 }) {
   const theme = useSyncExternalStore(
     subscribeToTheme,
     getThemeSnapshot,
-    () => DEFAULT_THEME,
+    () => serverTheme,
   );
 
   const toggle = () => {

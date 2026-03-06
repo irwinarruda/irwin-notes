@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { cookies } from "next/headers";
 import { TerminalNav, TerminalWindow } from "@/components/terminal-window";
 import { getDictionary, resolveLocale } from "@/utils/i18n";
 import { getLocaleSwitcherConfig } from "@/utils/get-locale-switcher";
 import { getTerminalNavLinks } from "@/utils/get-terminal-nav-links";
 import { getAllPosts } from "@/utils/posts";
+import { THEME_COOKIE, resolveTheme } from "@/utils/theme";
 
 type PostsScreenProps = {
   params: Promise<{ locale: string }>;
@@ -20,12 +22,14 @@ export default async function PostsScreen(props: PostsScreenProps) {
 
   const navLinks = getTerminalNavLinks(locale, dictionary);
   const localeSwitcher = getLocaleSwitcherConfig(locale, "/posts", dictionary);
+  const theme = resolveTheme((await cookies()).get(THEME_COOKIE)?.value);
 
   return (
     <TerminalWindow
       title={dictionary.postsPage.windowTitle}
       skipToContentLabel={dictionary.nav.skipToContent}
       themeToggleLabels={dictionary.themeToggle}
+      serverTheme={theme}
       localeSwitcher={localeSwitcher}
     >
       <div className="mb-6 fade-in">

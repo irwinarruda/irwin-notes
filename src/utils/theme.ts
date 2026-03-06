@@ -4,6 +4,10 @@ export const DEFAULT_THEME: Theme = "dark";
 export const THEME_COOKIE = "theme";
 export const THEME_COOKIE_MAX_AGE_SECONDS = 60 * 60 * 24 * 365;
 
+export function resolveTheme(value: string | undefined): Theme {
+  return value === "dark" || value === "light" ? value : DEFAULT_THEME;
+}
+
 export function getThemeFromCookieString(cookieString: string): Theme | null {
   const cookiePrefix = `${THEME_COOKIE}=`;
   const themeCookie = cookieString

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Theme } from "@/utils/theme";
 import { ThemeToggle, type ThemeToggleLabels } from "./theme-toggle";
 
 export type TerminalNavLink = {
@@ -37,12 +38,14 @@ export function TerminalWindow({
   title = "irwin@notes: ~/posts",
   skipToContentLabel = DEFAULT_SKIP_TO_CONTENT_LABEL,
   themeToggleLabels = DEFAULT_THEME_TOGGLE_LABELS,
+  serverTheme,
   localeSwitcher,
 }: {
   children: React.ReactNode;
   title?: string;
   skipToContentLabel?: string;
   themeToggleLabels?: ThemeToggleLabels;
+  serverTheme?: Theme;
   localeSwitcher?: TerminalLocaleSwitcher;
 }) {
   return (
@@ -87,7 +90,7 @@ export function TerminalWindow({
                 </div>
               </nav>
             ) : null}
-            <ThemeToggle labels={themeToggleLabels} />
+            <ThemeToggle labels={themeToggleLabels} serverTheme={serverTheme} />
           </div>
         </div>
         <main

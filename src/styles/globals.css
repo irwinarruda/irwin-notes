@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@source "../../src/content/**/*.mdx";
+
+@utility text-2xs {
+  font-size: 0.625rem;
+  line-height: 0.875rem;
+}
+
 @theme {
   --font-serif:
     Georgia, "Times New Roman", serif;

@@ -11,8 +11,10 @@ draft: true
 references:
   - label: "The Clean Architecture by Uncle Bob"
     url: "https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html"
-  - label: "Guide to app architecture by Flutter Docs"
-    url: "https://docs.flutter.dev/app-architecture/guide"
+  - label: "Architecting Flutter apps by Flutter Docs"
+    url: "https://docs.flutter.dev/app-architecture"
+  - label: "Presentation Model by Martin Fowler"
+    url: "https://martinfowler.com/eaaDev/PresentationModel.html"
   - label: "Clean Architecture on Frontend by Alex Bespoyasov"
     url: "https://dev.to/bespoyasov/clean-architecture-on-frontend-4311"
   - label: "Client-Side Architecture Basics [Guide] by Khalil Stemmler"
@@ -24,12 +26,13 @@ references:
 ---
 
 import { PostCallout } from "@/components/post-callout";
+import { PostImage } from "@/components/post-image";
 
 Sempre me incomodei com a falta de padrões na criação de aplicações frontend com os frameworks modernos. Quando comecei a desenvolver, já eram 6 anos de vida do React e as pessoas ainda discutiam se deveriam utilizar Redux ou Context API para gerenciar estados. Foi só recentemente que as documentações ficaram melhores, as bibliotecas ficaram estáveis e um caminho claro se abriu para ser seguido.
 
-Os grandes frameworks declarativos parecem estar se convergindo para um padrão "ótimo" no desenvolvimento de aplicações web 2D. O Vue introduziu o `ref` e hooks, Svelte criou Runes e o SolidJS sempre foi muito semelhante ao React. Me parece que a evolução e a estabilização dos principios core do React moveram todo o mercado para um lugar mais aceitável.
+Os grandes frameworks parecem estar se convergindo para um padrão "ótimo" no desenvolvimento de aplicações web. O Vue introduziu o `ref` e hooks, Svelte criou Runes e o SolidJS sempre foi muito semelhante ao React. Me parece que a evolução e a estabilização dos principios core do React moveram todo o mercado para um lugar mais aceitável.
 
-Alguns padrões primitivos criados e aperfeiçoados ao longo do tempo, todos os frameworks possuem o conceito de _State_, _Computed_, _Actions_ e _Effects_. Talvez, usando esses **axiomas**, é possível pensar em um modelo de arquitetura universal que possa ser utilizado por todas as bibliotcas.
+Alguns padrões primitivos foram criados e aperfeiçoados ao longo do tempo, todos os frameworks possuem o conceito de _State_, _Computed_, _Actions_ e _Effects_. Esses padrões me fizeram coçar a cabeça e estudar sobre o assunto. Meu pensamento é que, talvez usando esses **axiomas**, seja possível derivar um modelo de arquitetura universal, ou seja, uma arquitetura independente de bibliotecas!
 
 <PostCallout>
   <span>Mas arquitetura no frontend é mesmo importante?</span>
@@ -62,8 +65,29 @@ Fazendo uma pesquisa inicial, o canal no YouTube [Coffstack](https://www.youtube
 - [Clean Architecture on Frontend by Alex Bespoyasov](https://dev.to/bespoyasov/clean-architecture-on-frontend-4311)
 - [Client-Side Architecture Basics [Guide] by Khalil Stemmler](https://khalilstemmler.com/articles/client-side-architecture/introduction)
 
-> **Recorte da pesquisa:** neste ensaio, uso essas abordagens como referência do que o mercado pensa sobre arquitetura. Não é um levantamento completo, reconheço que posso ter deixado propostas relevantes de fora.
-
 Esses são bons exemplos de como modelar o software de forma profissional. Seguir essas arquiteturas com certeza produzirá um software de qualidade. 
 
-Essas abordagens, entretanto, ferem os conceitos da arquitetura limpa. De forma geral, os use cases são criados em hooks, estruturas intrisecamente ligadas ao framework. Por causa disso, a camada Application acaba conhecendo a View quebrando a regra das dependências.
+Ambas abordagens, entretanto, ferem os conceitos da arquitetura limpa. Os Use Cases são criados em hooks, estruturas intrisecamente ligadas ao framework fazendo com que a camada de Aplication conheça a View. 
+
+<div className="flex items-start gap-3">
+  <div className="flex-1">
+    <PostImage>
+      <img className="w-full block" src="/clean-architecture-on-frontend.png" />
+    </PostImage>
+    <span className="text-2xs text-center block mt-2">Clean Architecture on Frontend</span>
+  </div>
+  <div className="flex-1">
+    <PostImage>
+      <img className="w-full block" src="/client-side-architecture-basics.png" />
+    </PostImage>
+    <span className="text-2xs text-center block mt-2">Client-Side Architecture Basics</span>
+  </div>
+</div>
+
+Esse não é bem o modelo que eu estou procurando.
+
+No final de 2024, o time do Flutter definiu sua arquitetura recomendada na doc [Architecting Flutter apps](https://docs.flutter.dev/app-architecture). Essa foi a primeira vez que eu vi algo que parecia com o caminho que tinha pensado, a arquitetura MVVM.
+
+<PostImage>
+<img src="/mvvm.png" />
+</PostImage>

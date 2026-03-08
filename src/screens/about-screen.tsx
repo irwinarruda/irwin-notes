@@ -36,7 +36,7 @@ export default async function AboutScreen(props: AboutScreenProps) {
         />
       </div>
       <div className="border-t border-term-border mb-6 mt-4" />
-      <div className="ml-2 fade-in fade-in-delay-2">
+      <div className="fade-in fade-in-delay-2">
         <div className="flex items-start gap-5">
           <div className="shrink-0">
             <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden border-2 border-term-border ring-1 ring-term-green/20">
@@ -75,14 +75,14 @@ export default async function AboutScreen(props: AboutScreenProps) {
 
       <div className="border-t border-term-border my-6" />
 
-      <article className="terminal-prose ml-2 fade-in fade-in-delay-3">
+      <article className="terminal-prose fade-in fade-in-delay-3">
         <h2>{about.whoamiHeading}</h2>
         <p>{about.whoamiBody}</p>
       </article>
 
       <div className="border-t border-term-border my-6" />
 
-      <article className="terminal-prose ml-2 fade-in fade-in-delay-4">
+      <article className="terminal-prose fade-in fade-in-delay-4">
         <h2>{about.stackHeading}</h2>
         <div className="space-y-3">
           <div>
@@ -135,7 +135,7 @@ export default async function AboutScreen(props: AboutScreenProps) {
 
       <div className="border-t border-term-border my-6" />
 
-      <div className="ml-2 fade-in fade-in-delay-5">
+      <div className="fade-in fade-in-delay-5">
         <article className="terminal-prose mb-3">
           <h2>{about.projectsHeading}</h2>
         </article>

@@ -74,9 +74,10 @@ export default async function BlogPostScreen(props: BlogPostScreenProps) {
           </div>
 
           <div className="mt-2 flex flex-wrap gap-2">
-            {post.tags.map((tag) => (
+            {post.tags.map((tag, index) => (
               <span key={tag} className="text-term-cyan-strong text-sm">
                 #{tag}
+                {index < post.tags.length - 1 ? " " : ""}
               </span>
             ))}
           </div>

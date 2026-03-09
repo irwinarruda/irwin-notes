@@ -263,8 +263,10 @@
 }
 
 .terminal-prose ol {
-  list-style: decimal inside;
+  list-style: none;
+  padding-left: 0;
   margin-bottom: 1em;
+  counter-reset: ol-counter;
 }
 
 .terminal-prose ul li {
@@ -287,6 +289,18 @@
   color: var(--color-term-text);
   font-size: 1.25rem;
   line-height: 1.75;
+  padding-left: 1.25em;
+  position: relative;
+  counter-increment: ol-counter;
+}
+
+.terminal-prose ol li::before {
+  content: counter(ol-counter) ".";
+  position: absolute;
+  left: 0;
+  color: var(--color-term-green);
+  font-weight: 600;
+  font-family: var(--font-mono);
 }
 
 .terminal-prose pre {

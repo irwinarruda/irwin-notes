@@ -38,9 +38,14 @@ export async function generateMetadata(
 
   const dictionary = await getDictionary(locale);
 
+  const titleSuffix = post.draft
+    ? ` (${dictionary.postPage.draftLabel})`
+    : "";
+
   return {
-    title: `${post.title} | ${dictionary.meta.siteTitle}`,
-    description: post.description,
+    title: `${post.title}${titleSuffix} | ${dictionary.meta.siteTitle}`,
+    description: `${post.description}${post.tags.length > 0 ? ` ${post.tags.map((tag) => `#${tag}`).join(" ")}` : ""}`,
+    keywords: post.tags,
     alternates: {
       languages: buildLanguageAlternates(`/post/${post.slug}`),
     },

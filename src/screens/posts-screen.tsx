@@ -97,9 +97,10 @@ export default async function PostsScreen(props: PostsScreenProps) {
                 {post.description}
               </p>
               <div className="flex flex-wrap gap-2 mt-2">
-                {post.tags.map((tag) => (
+                {post.tags.map((tag, index) => (
                   <span key={tag} className="text-term-cyan-strong text-sm">
                     #{tag}
+                    {index < post.tags.length - 1 ? " " : ""}
                   </span>
                 ))}
               </div>

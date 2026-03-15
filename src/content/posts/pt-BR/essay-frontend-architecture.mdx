@@ -32,7 +32,7 @@ Sempre me incomodei com a falta de padrões na criação de aplicações fronten
 
 Os grandes frameworks parecem estar convergindo para um padrão "ótimo" no desenvolvimento de aplicações web. O **Vue** introduziu o _ref_ e _hooks_, **Svelte** criou _Runes_ e o **SolidJS** sempre foi muito semelhante ao **React**. Me parece que a evolução e dos principios core do React moveram todo o mercado para lugares parecidos.
 
-Alguns padrões primitivos foram criados e aperfeiçoados ao longo do tempo, todos os frameworks possuem o conceito de _State_, _Computed_, _Actions_ e _Effects_. Esses padrões me fizeram coçar a cabeça e estudar sobre o assunto. Minha proposição e o motivo desse ensáio é de que, talvez usando esses **axiomas**, seja possível derivar um modelo de arquitetura universal, ou seja, uma arquitetura de frontend independente de bibliotecas!
+Alguns padrões primitivos foram criados e aperfeiçoados ao longo do tempo, todos os frameworks possuem o conceito de _State_, _Computed_, _Actions_ e _Effects_. Esses padrões me deixaram inquieto, e comecei a estudar mais sobre o assunto. Minha proposição e o motivo desse ensáio é de que, talvez usando esses **axiomas**, seja possível derivar um modelo de arquitetura universal, ou seja, uma arquitetura de frontend independente de bibliotecas!
 
 <PostCallout>
   <span>Mas arquitetura no frontend é mesmo importante?</span>
@@ -112,7 +112,7 @@ Então, por mais que essa abordagem ferisse esse ideal de arquitetura, ela me in
   <span>Existe mesmo uma maneira de separar regras de aplicação da UI?</span>
 </PostCallout>
 
-Nesse ponto da história, eu já tinha começado a questionar se realmente existia uma arquitetura de frontend que verdadeiramente separa a camada de Aplication/Use Cases da UI. 
+Nesse ponto da história, eu já tinha começado a questionar se realmente existia uma arquitetura de frontend que verdadeiramente separa a camada de Application da UI. 
 
 Eu já não tinha tanto tempo, pois eu precisava definir a arquitetura dos projetos da empresa que trabalho. Então criei um design similar ao MVVM, mais ou menos na seguinte forma:
 
@@ -196,13 +196,13 @@ test('check selected todo', () => {
 });
 ```
 
-A View Model toma papel de Application Service ou Use Case controlando o fluxo de dados e as necessidades de estado da UI como o `selectedTodo`, a Model é uma clássica entidade de domínio e a View pode ser qualquer coisa inclusive um test runner.
+A View Model toma papel de Application Service controlando o fluxo de dados e as necessidades de estado da UI como o `selectedTodo`, a Model é uma clássica entidade de domínio e a View pode ser qualquer coisa inclusive um test runner.
 
 Uma grande prioridade que tive foi deixar os testes independentes da UI. Perceba que se removermos o ponto de injeção da store (o `getApp`) da equação, o test runner não tem nenhum conhecimento do framework de gerenciamento de estados ou de UI que está sendo utilizado por debaixo dos panos.
 
-Por mais que a arquitetura tenha ficado robusta ela ainda me incomodava em 2 pontos:
+Esse design ficou robusto e recebeu elogios de todos os devs da equipe. Parecia que agora estava mais fácil adicionar novas features e testar o código. Mesmo assim 2 coisas me incomodavam:
 
-1. Estamos presos na biblioteca de gerenciamento de estados (Zustand).
+1. Estamos presos a biblioteca de gerenciamento de estados (Zustand).
 2. A camada Application (View Model) ainda conhece detalhes da UI (`todos`, `selectedTodoId`, `selectedTodo`)
 
 O primeiro ponto foi fácil de esclarecer com um exemplo. Quando criamos uma aplicação backend em que o Controller implementa diretamente um web framework como `ExpressJS`, estamos quebrando com os conceitos de uma arquitetura limpa? 
@@ -217,40 +217,40 @@ Quando essa decisão é deliberada, os desenvolvedores estão assumindo o risco 
 export class TodoViewModel implements ITodoViewModel {
   todos: Todo[] = [];
   selectedTodoId: string | undefined = undefined;
-  constructor(private notifyListeners: () => void) {}
+  constructor(private notifyListeners: (self: this) => void) {}
   get selectedTodo() {
     return this.todos.find(t => t.id === this.selectedTodoId);
   }
   createTodo(name: string, description: string) {
     const todo = TodoModel.create(name, description);
     this.todos = [...this.todos, todo];
-    this.notifyListeners();
+    this.notifyListeners(this);
   }
   selectTodo(id: string) {
     this.selectedTodoId = id;
-    this.notifyListeners();
+    this.notifyListeners(this);
   }
   checkSelectedTodo() {
     this.todos = this.todos.map(t => {
       if (t.id === this.selectedTodoId) t.check();
       return t;
     });
-    this.notifyListeners();
+    this.notifyListeners(this);
   }
 }
 ```
 ```ts
 import { create } from 'zustand';
 export const useApp = create(() => ({
-  todos: viewModel.todos,
-  selectedTodoId: viewModel.selectedTodoId,
-  selectedTodo: viewModel.selectedTodo,
+  todos: [],
+  selectedTodoId: undefined,
+  selectedTodo: undefined,
 }));
-export const todosViewModel = new TodoViewModel(() => {
+export const todosViewModel = new TodoViewModel((self) => {
   useApp.setState({
-    todos: viewModel.todos,
-    selectedTodoId: viewModel.selectedTodoId,
-    selectedTodo: viewModel.selectedTodo,
+    todos: self.todos,
+    selectedTodoId: self.selectedTodoId,
+    selectedTodo: self.selectedTodo,
   });
 });
 ```
@@ -270,11 +270,33 @@ Depois de ler esse artigo, percebi que um sotware frontend possui atributos intr
 - Mantém um estado de apresentação.
 - Utiliza um modelo declarativo para renderização dos componentes.
 
-Como disse no início, a literatura considera o frontend como uma camada, porém essa se tornou muito importante. Mesmo assim ela não deixa de ter suas características. No final das contas, no momento em que decidimos criar uma arquitetura para uma aplicação frontend web, estamos nos vinculando fundamentalmente a um tipo específico de software. **Uma aplicação GUI declarativa 2D**.
+Como disse no início, o frontend valioso é mais do que apenas uma camada. E ele não deixa de ter suas características. No momento em que decidimos criar uma arquitetura para uma aplicação frontend web, estamos nos vinculando fundamentalmente a um tipo específico de software. **Uma aplicação GUI declarativa 2D**.
 
 Essas não são características opcionais, são a essência do que estamos construindo. A arquitetura certa é uma que abraça esses elementos, em vez de tentar abstraí-los.
 
-O MVVM é exatamente essa arquitetura. 
+O **MVVM** é exatamente essa arquitetura. 
+
+### Considerações finais
+
+Ao longo da minha carreira no frontend percebi que pouco importava como os componentes eram criados ou quais bibliotecas de forms, tables e gráficos eram utilizadas. Na verdade, o que tornava o código _intankável_ era uma camada de Application com muitas responsabilidades, muito acoplada e sem organização.
+
+Por essa razão, foquei o ensaio nesse ponto. Minha tese era de que se eu conseguisse criar uma _abstração da View que não depende de um framework de GUI específico_, a View viraria um detalhe de implementação e escolheríamos frameworks com base nas suas reais diferenças.
+
+- VueJS para adoção progressiva em sistemas legado.
+- React Native para mobile.
+- Svelte para JS compilado diminuindo bundle size.
+- SolidJS para aplicações que precisam de performance.
+
+Acho que o **MVVM** cumpre muito bem esse papel.
+
+De qualquer forma, estruturar componentes, integrar com bibliotecas, escolher uma estrutura de pastas e criar um projeto profissional em um framework é também um desafio. Talvez eu escreva sobre isso em outro momento.
 
 ### Conclusão
 
+Tentei resumir uma grande parte da minha jornada aprendendo arquitetura de software. Eu precisava saber qual era a melhor arquitetura de frontend.
+
+Na literatura e nos cursos de _Clean Architecture_, o exemplos são sempre de uma aplicação backend orientada a objetos e eu sentia falta de um modelo mental que aplicasse esse conceitos no contexto que trabalho diariamente.
+
+No final das contas, a arquitetura que criei na correria se provou ser a melhor contra minhas expectativas.
+
+Um pequeno texto desses não conseguiria descrever todos os detalhes dessa arquitetura. Existem muitos outros conceitos a serem explorados: Repositories, Gateways, Enums, DTOs, Parsers, Entities. Mas isso fica para um próximo post. 

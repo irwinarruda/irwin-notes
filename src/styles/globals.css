@@ -467,3 +467,22 @@
 .skip-link:focus {
   top: 0.75rem;
 }
+
+/* ── Review page ── */
+.review-line:hover {
+  background: rgba(255, 255, 255, 0.015);
+}
+
+[data-theme="light"] .review-line:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.review-highlight:focus-visible {
+  outline-offset: 1px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .review-suggestion-card {
+    animation: fade-in-up 0.15s ease-out both;
+  }
+}

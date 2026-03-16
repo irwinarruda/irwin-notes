@@ -30,27 +30,27 @@ import { PostImage } from "@/components/post-image";
 
 Sempre me incomodei com a falta de padrões na criação de aplicações frontend com os frameworks modernos. Quando comecei a desenvolver, já eram 6 anos de vida do React e as pessoas ainda discutiam se deveriam utilizar Redux ou Context API para gerenciar estados. Foi só recentemente que as documentações ficaram melhores, as bibliotecas se estabilizaram e um caminho claro se abriu para ser seguido.
 
-Os grandes frameworks parecem estar convergindo para um padrão "ótimo" no desenvolvimento de aplicações web. O **Vue** introduziu o _ref_ e _hooks_, **Svelte** criou _Runes_ e o **SolidJS** sempre foi muito semelhante ao **React**. Me parece que a evolução e dos principios core do React moveram todo o mercado para lugares parecidos.
+Os grandes frameworks parecem estar convergindo para um padrão "ótimo" no desenvolvimento de aplicações web. O **Vue** introduziu _ref_ e a _Composition API_, **Svelte** criou _Runes_ e o **SolidJS** sempre foi muito semelhante ergonomicamente ao **React**. Me parece que a evolução dos princípios core do React moveu todo o mercado para lugares parecidos.
 
-Alguns padrões primitivos foram criados e aperfeiçoados ao longo do tempo, todos os frameworks possuem o conceito de _State_, _Computed_, _Actions_ e _Effects_. Esses padrões me deixaram inquieto, e comecei a estudar mais sobre o assunto. Minha proposição e o motivo desse ensáio é de que, talvez usando esses **axiomas**, seja possível derivar um modelo de arquitetura universal, ou seja, uma arquitetura de frontend independente de bibliotecas!
+Alguns padrões primitivos foram aperfeiçoados ao longo do tempo, e muitos frameworks passaram a expor conceitos como _State_, _Computed_, _Actions_ e _Effects_. Esses padrões me deixaram inquieto, e comecei a estudar mais sobre o assunto. Minha proposição neste ensaio é que, talvez usando esses **axiomas**, seja possível derivar um modelo de arquitetura universal, ou seja, uma arquitetura de frontend independente de bibliotecas.
 
 <PostCallout>
   <span>Mas arquitetura no frontend é mesmo importante?</span>
 </PostCallout>
 
-Na literatura, o frontend é normalmente tratado como uma camada. Ele é _apenas_ uma parte do sistema, um detalhe de implementação. E de fato, _muitas das vezes_, o frontend é somente uma maneira de conectar um usuário ao que gera valor (à finalidade da aplicação), que fica num backend.
+Na literatura, o frontend é normalmente tratado como uma camada. Ele é _apenas_ uma parte do sistema, um detalhe de implementação. De fato, _muitas vezes_, o frontend é somente uma maneira de conectar o usuário ao que gera valor, que normalmente fica no backend.
 
-Por mais que possa ferir o coração de muitos _frontenders_, isso é verdade! Existem sistemas CRUD e que não precisam de uma arquitetura robusta no frontend. Testes e manuteniblidade não são necessários. Substituir essa UI por outra não geraria impactos grandes no negócio.
+Por mais que possa ferir o coração de muitos _frontenders_, isso é verdade! Existem sistemas CRUD e que não precisam de uma arquitetura robusta no frontend. Testes e manutenibilidade não são necessários. Substituir essa UI por outra não geraria impactos grandes no negócio.
 
-É claro que essa é somente uma parte da história, na verdade, frameworks como React e Angular só foram criados pois a UI precisava evoluir para gerar uma boa experiência aos usuários. A partir dai, o frontend começou a ter importância negocial, começou a gerar valor. Porém, o preço de uma experiência inovadora é complexidade no software. Com isso, o frontend para de ser um detalhe de implementação e vira também um fim em si, e por isso faz sentido se preocupar com sua arquitetura. 
+É claro que essa é somente uma parte da história, na verdade, frameworks como React e Angular só foram criados pois a UI precisava evoluir para gerar uma boa experiência aos usuários. A partir daí, o frontend começou a ter importância negocial, começou a gerar valor. Porém, o preço de uma experiência inovadora é complexidade no software. Com isso, o frontend para de ser um detalhe de implementação e vira também um fim em si, e por isso faz sentido se preocupar com sua arquitetura. 
 
 <PostCallout>
   <span>Então como devemos gerenciar a complexidade de uma UI interativa com as exigências do mercado?</span>
 </PostCallout>
 
-Existem muitas formas de organizar um software, e elas foram extensivamente documentadas por grande autores, porém como o Uncle Bob deixa explícito em [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) falando sobre as várias propostas de arquiteturas:
+Existem muitas formas de organizar um software, e elas foram extensivamente documentadas por grandes autores. Como Uncle Bob deixa explícito em [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html), ao falar sobre várias propostas arquiteturais:
 
-> Embora todas essas arquiteturas variem um pouco em seus detalhes, elas são muito semelhantes. Todas têm o mesmo objetivo, que é a separação de responsabilidades. Todas alcançam essa separação ao dividir o software em camadas. Cada uma tem pelo menos uma camada para regras de negócio e outra para interfaces.
+> Embora todas essas arquiteturas variem um pouco em seus detalhes, elas são muito semelhantes. Todas têm o mesmo objetivo, que é a **separação de responsabilidades**. Todas alcançam essa separação ao dividir o software em camadas. Cada uma tem pelo menos uma camada para regras de negócio e outra para interfaces.
 > Cada uma dessas arquiteturas produz sistemas que são:
 > 1. Independentes de frameworks...
 > 2. Testáveis...
@@ -58,16 +58,16 @@ Existem muitas formas de organizar um software, e elas foram extensivamente docu
 > 4. Independentes de banco de dados...
 > 5. Independentes de qualquer agente externo...
 
-Nesse sentido, o nome da arquitetura não é importante. Estamos em busca de um design que respeita a separação das responsabilidades. 
+Nesse sentido, o nome da arquitetura não é importante. A busca é por um design que respeite a separação de responsabilidades e que seja **independente da UI**.
 
 Fazendo uma pesquisa inicial, o canal no YouTube [Coffstack](https://www.youtube.com/watch?v=HxBEuISRp5I) me levou a 2 excelentes artigos que tentaram chegar, de forma genuína, em uma arquitetura de frontend.
 
 - [Clean Architecture on Frontend by Alex Bespoyasov](https://dev.to/bespoyasov/clean-architecture-on-frontend-4311)
 - [Client-Side Architecture Basics [Guide] by Khalil Stemmler](https://khalilstemmler.com/articles/client-side-architecture/introduction)
 
-Esses são bons exemplos de como modelar o software de forma profissional e parecem estar no caminho certo. Seguir essas arquiteturas com certeza produzirá um software de qualidade. 
+Esses são bons exemplos de como modelar software de forma profissional e parecem apontar para um caminho promissor. Seguir essas arquiteturas provavelmente produzirá um software de qualidade.
 
-Ambas abordagens, entretanto, ferem os conceitos da arquitetura limpa. Os Use Cases são criados em hooks, estruturas intrisecamente ligadas ao framework, fazendo com que a camada de Aplication conheça a View. Testar esses hooks, por exemplo, exige um runner que implemente os ciclos de vida do React.
+Na prática, entretanto, ambas ferem os conceitos da arquitetura limpa. As regras de negócio são criados em hooks, estruturas intrisecamente ligadas ao framework, fazendo com que a camada de Aplicação conheça a interface. Testar esses hooks, por exemplo, exige um runner que implemente os ciclos de vida do React. Por causa disso, decidi continuar procurando.
 
 <div className="flex flex-col sm:flex-row items-start gap-3">
   <div className="flex-1">
@@ -82,9 +82,7 @@ Ambas abordagens, entretanto, ferem os conceitos da arquitetura limpa. Os Use Ca
   </div>
 </div>
 
-Esse não é bem o modelo que eu estou procurando.
-
-No final de 2024, o time do Flutter definiu sua arquitetura recomendada na doc [Architecting Flutter apps](https://docs.flutter.dev/app-architecture). Essa foi a primeira vez que eu vi algo oficial que parecia com o caminho que tinha pensado, a arquitetura **MVVM**.
+No fim de 2024, o time do Flutter definiu sua arquitetura recomendada na documentação [Architecting Flutter apps](https://docs.flutter.dev/app-architecture). Essa foi a primeira vez que vi algo oficial que se aproximava do caminho que eu vinha considerando, a arquitetura **MVVM**.
 
 <PostImage legend="Guide to app architecture">
   <img src="/mvvm-flutter.png" />
@@ -94,27 +92,45 @@ No final de 2024, o time do Flutter definiu sua arquitetura recomendada na doc [
 - **Model**: encapsula regras de negócio e uso de recursos externos.
 - **View Model**: uma camada orquestradora que conecta assuntos de negócio como entidades e chamadas para apis com as necessidades de estado de uma interface.
 
-Mas eu ainda não estava satisfeito. O Flutter é um framework cross-platform utilizado principalmente para aplicações mobile. Ele foi fortemente inspirado no React em sua época pré hooks então o MVVM parece só uma maneira diferente de implementa-los. Perceba que seu nome já deixa explícito a quebra na separação de responsabilidades: 
+Mas eu ainda não estava satisfeito. O Flutter é um framework cross-platform utilizado principalmente para aplicações mobile. Ele foi fortemente inspirado no React em sua época pré hooks então o **MVVM** parece só uma maneira diferente de implementá-los. Perceba que seu nome já deixa explícito a quebra na separação de responsabilidades: 
 
 > **View Model**, uma camada que conhece a **View** e a **Model**.
 
-Para separar as regras de aplicação da UI, a doc ainda recomenda uma camada extra de Use Cases quando a aplicação começa a crescer.
+Para separar as regras de aplicação da UI, a doc ainda recomenda uma camada extra de Use Cases quando a aplicação começa a crescer. EXPLORAR MAIS UM POUCO ISSO AQUI.
 
 <PostImage legend="Guide to app architecture">
   <img src="/mvvm-use-case-flutter.png" />
 </PostImage>
 
-A View Model pareceu muito com a ideia de um gerenciador global de estados. Com os bindings corretos, é possível conectar uma store Redux, por exemplo, a qualquer framework... e isso sim deixa as regras de aplicação separadas da UI (mas nos deixa presos às biblioteca de estados).
+A **View Model** me pareceu muito próxima da ideia de um gerenciador global de estados. Com os bindings corretos, é possível conectar uma store Redux, por exemplo, a qualquer framework. Isso sim deixa as regras de aplicação separadas da UI (mas nos deixa presos às bibliotecas de estados).
 
-Então, por mais que essa abordagem ferisse esse ideal de arquitetura, ela me interessou por cumprir com muitos dos requisitos de um bom design. O MVVM pode produzir uma camada de negócio _testável_, _independente de framework frontend_, e _independente de qualquer agente externo_.
+Então, por mais que essa abordagem ferisse esse ideal de arquitetura, ela me interessou por cumprir com muitos dos requisitos de um bom design. O **MVVM** pode produzir uma camada de negócio _testável_, _independente de framework frontend_, e _independente de qualquer agente externo_.
 
 <PostCallout>
   <span>Existe mesmo uma maneira de separar regras de aplicação da UI?</span>
 </PostCallout>
 
-Nesse ponto da história, eu já tinha começado a questionar se realmente existia uma arquitetura de frontend que verdadeiramente separa a camada de Application da UI. 
+Nesse ponto da história, eu já tinha começado a questionar se realmente existia uma arquitetura de frontend que verdadeiramente separa a camada de Aplicação da UI. 
 
-Eu já não tinha tanto tempo, pois eu precisava definir a arquitetura dos projetos da empresa que trabalho. Então criei um design similar ao MVVM, mais ou menos na seguinte forma:
+Eu já não tinha tanto tempo, pois precisava definir a arquitetura dos projetos da empresa em que trabalho. Então decidi me inspirar no Flutter e criei um design similar ao **MVVM**, mais ou menos na seguinte forma:
+
+
+```ts
+export class TodoModel {
+  constructor(
+    public id: string,
+    public name: string,
+    public description: string,
+    public checked: boolean,
+  ) {}
+  static create(name: string, description: string) {
+    return new TodoModel(uuid(), name, description, false);
+  }
+  check() {
+    this.checked = true;
+  }
+}
+```
 
 ```ts
 export interface ITodoViewModel {
@@ -123,24 +139,7 @@ export interface ITodoViewModel {
   selectedTodo: Todo;
   createTodo(name: string, description: string): void;
   selectTodo(id: string): void;
-  checkSelectedTodo(id: string): void;
-}
-```
-
-```ts
-export class TodoModel {
-  constructor(
-    public id: string,
-    public name: string,
-    public description: string,
-    public checked: string,
-  ) {}
-  static create(name: string, description: string) {
-    return new TodoModel(uuid(), name, description, false);
-  }
-  check() {
-    this.checked = true;
-  }
+  checkSelectedTodo(): void;
 }
 ```
 
@@ -196,22 +195,22 @@ test('check selected todo', () => {
 });
 ```
 
-A View Model toma papel de Application Service controlando o fluxo de dados e as necessidades de estado da UI como o `selectedTodo`, a Model é uma clássica entidade de domínio e a View pode ser qualquer coisa inclusive um test runner.
+Neste desenho, a **View Model** assume o papel da camada de Aplicação e orquestra o fluxo de dados e o estado da UI; a **Model** funciona como uma entidade de domínio; e a **View** pode ser qualquer adaptador capaz de consumir esse contrato, inclusive um test runner.
 
-Uma grande prioridade que tive foi deixar os testes independentes da UI. Perceba que se removermos o ponto de injeção da store (o `getApp`) da equação, o test runner não tem nenhum conhecimento do framework de gerenciamento de estados ou de UI que está sendo utilizado por debaixo dos panos.
+Uma grande prioridade que tive foi manter os testes independentes da UI. Perceba que, se removermos o ponto de injeção da store (o `getApp`) da equação, o test runner não precisa conhecer o framework de gerenciamento de estado nem a tecnologia de UI usada por baixo dos panos.
 
-Esse design ficou robusto e recebeu elogios de todos os devs da equipe. Parecia que agora estava mais fácil adicionar novas features e testar o código. Mesmo assim 2 coisas me incomodavam:
+Esse design ficou robusto e recebeu elogios de todos da equipe. Parecia que agora estava mais fácil adicionar novas features e testar o código. A busca aparentava ter sido finalizada. Mesmo assim, **duas coisas** ainda me incomodavam:
 
-1. Estamos presos a biblioteca de gerenciamento de estados (Zustand).
-2. A camada Application (View Model) ainda conhece detalhes da UI (`todos`, `selectedTodoId`, `selectedTodo`)
+1. Estamos presos à biblioteca de gerenciamento de estados (Zustand).
+2. A camada de Aplicação (**View Model**) ainda conhece detalhes da UI (`todos`, `selectedTodoId`, `selectedTodo`)
 
-O primeiro ponto foi fácil de esclarecer com um exemplo. Quando criamos uma aplicação backend em que o Controller implementa diretamente um web framework como `ExpressJS`, estamos quebrando com os conceitos de uma arquitetura limpa? 
+O primeiro ponto foi fácil de esclarecer com um exemplo. Quando criamos uma aplicação backend em que o Controller implementa diretamente um web framework como `Express`, estamos quebrando os conceitos de uma arquitetura limpa? 
 
 Claro que sim! Entretando, isso é relevante? 
 
-Quando essa decisão é deliberada, os desenvolvedores estão assumindo o risco de fazer o lock-in em uma ferramenta por saber que modifica-la será improvável. Desde que a camada Application esteja isolada, a arquitetura estará coerente.
+Quando essa decisão é deliberada, os desenvolvedores estão assumindo o risco de fazer o lock-in em uma ferramenta por saber que modifica-la será improvável. Desde que a camada de Aplicação esteja isolada, a arquitetura estará coerente.
 
-É possível criar uma View Model independente de framework. Só é burocrático e sem ergonomia.
+É possível criar uma **View Model** independente de framework. Só é burocrático e sem ergonomia.
 
 ```ts
 export class TodoViewModel implements ITodoViewModel {
@@ -255,48 +254,45 @@ export const todosViewModel = new TodoViewModel((self) => {
 });
 ```
 
-O segundo ponto me incomodou por um bom tempo... a View Model conceitualmente só existe conhecendo a View. Em uma arquitetura _purista_, isso não poderia acontecer.
+O segundo ponto me incomodou por um bom tempo... a **View Model** conceitualmente só existe conhecendo a **View**. Em uma arquitetura _purista_, isso não poderia acontecer.
 
-Pesquisei um pouco mais e encontrei a origem do design. Em [Presentation Model](https://martinfowler.com/eaaDev/PresentationModel.html) (mais tarde aprimorado e solidificado como MVVM), o Martin Fowler explica:
+Pesquisei um pouco mais e encontrei a origem do design. Em [Presentation Model](https://martinfowler.com/eaaDev/PresentationModel.html) (mais tarde aprimorado e solidificado como **MVVM**), o Martin Fowler explica:
 
 > Presentation Model extrai o estado e o comportamento da View para uma classe de modelo que faz parte da apresentação. [...]
 
-> Presentation Model pode interagir com vários objetos de domínio, mas Presentation Model não é uma fachada amigável à GUI para um objeto de domínio específico. Em vez disso, é mais fácil considerar o Presentation Model como uma abstração da View que não depende de um framework de GUI específico.
+> Presentation Model pode interagir com vários objetos de domínio, mas Presentation Model não é uma fachada amigável à GUI para um objeto de domínio específico. Em vez disso, é mais fácil considerar o Presentation Model como **uma abstração da View que não depende de um framework de GUI específico**.
 
-Depois de ler esse artigo, percebi que um sotware frontend possui atributos intrínsecos. Não estamos escrevendo um compilador, um sistema de arquivos ou uma API REST. Estamos escrevendo uma aplicação que:
+Lendo esse artigo, percebi algo que sempre esteve na minha cara, entendi que um software frontend possui atributos intrínsecos. Não estamos escrevendo um compilador, um sistema de arquivos ou uma API REST. Estamos escrevendo uma aplicação que:
 
 - Possui uma tela com elementos visuais bidimensionais.
 - Reage a interações do usuário.
 - Mantém um estado de apresentação.
 - Utiliza um modelo declarativo para renderização dos componentes.
 
-Como disse no início, o frontend valioso é mais do que apenas uma camada. E ele não deixa de ter suas características. No momento em que decidimos criar uma arquitetura para uma aplicação frontend web, estamos nos vinculando fundamentalmente a um tipo específico de software. **Uma aplicação GUI declarativa 2D**.
+Essas não são características opcionais. No momento em que decidimos criar uma arquitetura para uma aplicação frontend web, estamos nos vinculando fundamentalmente a um tipo específico de software, **uma aplicação GUI declarativa 2D**. 
 
-Essas não são características opcionais, são a essência do que estamos construindo. A arquitetura certa é uma que abraça esses elementos, em vez de tentar abstraí-los.
-
-O **MVVM** é exatamente essa arquitetura. 
-
-### Considerações finais
-
-Ao longo da minha carreira no frontend percebi que pouco importava como os componentes eram criados ou quais bibliotecas de forms, tables e gráficos eram utilizadas. Na verdade, o que tornava o código _intankável_ era uma camada de Application com muitas responsabilidades, muito acoplada e sem organização.
-
-Por essa razão, foquei o ensaio nesse ponto. Minha tese era de que se eu conseguisse criar uma _abstração da View que não depende de um framework de GUI específico_, a View viraria um detalhe de implementação e escolheríamos frameworks com base nas suas reais diferenças.
-
-- VueJS para adoção progressiva em sistemas legado.
-- React Native para mobile.
-- Svelte para JS compilado diminuindo bundle size.
-- SolidJS para aplicações que precisam de performance.
-
-Acho que o **MVVM** cumpre muito bem esse papel.
-
-De qualquer forma, estruturar componentes, integrar com bibliotecas, escolher uma estrutura de pastas e criar um projeto profissional em um framework é também um desafio. Talvez eu escreva sobre isso em outro momento.
+Depois dessa realização, percebi que talvez não exista uma arquitetura frontend totalmente pura: a camada de Aplicação quase sempre conhecerá a **View** de alguma forma. O que torna o código escalável é como essa interação acontece. A arquitetura certa, então, é a que abraça essa realidade, e o **MVVM** me parece cumprir bem esse papel.
 
 ### Conclusão
 
-Tentei resumir uma grande parte da minha jornada aprendendo arquitetura de software. Eu precisava saber qual era a melhor arquitetura de frontend.
+Ao longo da minha carreira no frontend, percebi que pouco importava como os componentes eram criados ou quais bibliotecas de forms, tables e gráficos eram utilizadas. Na verdade, o que tornava o código _intankável_ era uma camada de Aplicação com muitas responsabilidades, muito acoplada e sem organização.
 
-Na literatura e nos cursos de _Clean Architecture_, o exemplos são sempre de uma aplicação backend orientada a objetos e eu sentia falta de um modelo mental que aplicasse esse conceitos no contexto que trabalho diariamente.
+Por essa razão, foquei o ensaio nesse ponto. Minha tese era de que se eu conseguisse criar uma _abstração da View que não depende de um framework de GUI específico_, a UI viraria um detalhe de implementação e escolheríamos frameworks com base em suas reais diferenças.
 
-No final das contas, a arquitetura que criei na correria se provou ser a melhor contra minhas expectativas.
+- VueJS para adoção progressiva em sistemas legados.
+- React Native para mobile.
+- Svelte para JS compilado diminuindo bundle size.
+- SolidJS para aplicações que precisam de performance.
+- React Ink para softwares no terminal
 
-Um pequeno texto desses não conseguiria descrever todos os detalhes dessa arquitetura. Existem muitos outros conceitos a serem explorados: Repositories, Gateways, Enums, DTOs, Parsers, Entities. Mas isso fica para um próximo post. 
+Acho que o **MVVM** é um modelo mental que torna essa abstração possível.
+
+### Considerações finais
+
+De forma alguma esse texto serve como um guia para **MVVM** ou **Presentation Model**, ele é apenas o início dessa conversa, um resumo da minha jornada aprendendo arquitetura de software. O manual de como EU implemento essa arquitetura fica para um próximo post. 
+
+Outra coisa importante de esclarecer é que estruturar componentes, integrar bibliotecas, escolher a estrutura de pastas e criar um projeto profissional em um framework também é um desafio. Saber como escrever a camada **View** é relevante. Também posso escrever isso em um outro post.
+
+Na literatura e nos cursos de _Clean Architecture_, os exemplos quase sempre são de aplicações backend orientadas a objetos, e eu sentia falta de um modelo mental que aplicasse esses conceitos ao contexto em que trabalho diariamente. Este ensaio foi a síntese da minha busca por essa resposta.
+
+**Obrigado por ler!**

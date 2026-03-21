@@ -32,12 +32,27 @@ export async function generateMetadata(
 
   const dictionary = await getDictionary(params.locale);
 
+  const siteUrl = "https://www.irwinarruda.com";
+
   return {
     title: dictionary.meta.siteTitle,
     description: dictionary.meta.siteDescription,
     icons: {
       icon: "/favicon.ico",
       shortcut: "/favicon.ico",
+    },
+    openGraph: {
+      title: dictionary.meta.siteTitle,
+      description: dictionary.meta.siteDescription,
+      url: `${siteUrl}/${params.locale}`,
+      siteName: dictionary.meta.siteTitle,
+      images: [
+        {
+          url: `${siteUrl}/irwin-notes.png`,
+          alt: dictionary.meta.siteTitle,
+        },
+      ],
+      type: "website",
     },
     alternates: {
       languages: buildLanguageAlternates(""),

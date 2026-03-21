@@ -42,10 +42,27 @@ export async function generateMetadata(
     ? ` (${dictionary.postPage.draftLabel})`
     : "";
 
+  const siteUrl = "https://www.irwinarruda.com";
+  const title = `${post.title}${titleSuffix} | ${dictionary.meta.siteTitle}`;
+  const description = `${post.description}${post.tags.length > 0 ? ` ${post.tags.map((tag) => `#${tag}`).join(" ")}` : ""}`;
+
   return {
-    title: `${post.title}${titleSuffix} | ${dictionary.meta.siteTitle}`,
-    description: `${post.description}${post.tags.length > 0 ? ` ${post.tags.map((tag) => `#${tag}`).join(" ")}` : ""}`,
+    title,
+    description,
     keywords: post.tags,
+    openGraph: {
+      title,
+      description,
+      url: `${siteUrl}/${locale}/post/${post.slug}`,
+      siteName: dictionary.meta.siteTitle,
+      images: [
+        {
+          url: `${siteUrl}/irwin-notes.png`,
+          alt: title,
+        },
+      ],
+      type: "article",
+    },
     alternates: {
       languages: buildLanguageAlternates(`/post/${post.slug}`),
     },

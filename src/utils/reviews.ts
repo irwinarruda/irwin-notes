@@ -83,12 +83,16 @@ export const getReviewData = cache(
 );
 
 export async function getRawPostContent(
+  locale: Locale,
   fileName: string,
 ): Promise<string | null> {
-  const locales = ["pt-BR", "en"];
-  for (const locale of locales) {
+  const candidates =
+    locale === DEFAULT_LOCALE
+      ? [DEFAULT_LOCALE]
+      : [locale, DEFAULT_LOCALE];
+  for (const loc of candidates) {
     try {
-      const filePath = path.join(POSTS_DIRECTORY, locale, fileName);
+      const filePath = path.join(POSTS_DIRECTORY, loc, fileName);
       return await readFile(filePath, "utf8");
     } catch {
       continue;

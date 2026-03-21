@@ -37,6 +37,34 @@
     "draftNotice": "// This post is a draft — content may change.",
     "referencesHeading": "References"
   },
+  "reviewPage": {
+    "reviewBadge": "review",
+    "reviewScoresHeading": "review scores",
+    "avgLabel": "avg",
+    "suggestionsHeading": "suggestions",
+    "pendingLabel": "pending",
+    "appliedLabel": "applied",
+    "totalLabel": "total",
+    "prevButton": "prev",
+    "nextButton": "next",
+    "suggestionLabel": "suggestion",
+    "dismissLabel": "Dismiss",
+    "applyButton": "apply",
+    "suggestionsApplied": "{applied} of {total} suggestions applied",
+    "readOnlyPreview": "read-only preview",
+    "copiedButton": "copied!",
+    "copyRawFileButton": "copy raw file",
+    "noteLabels": {
+      "readability": "Readability",
+      "truthfulness": "Truthfulness",
+      "writing_quality": "Writing Quality",
+      "value": "Value",
+      "grammar": "Grammar",
+      "introduction": "Introduction",
+      "middle": "Body",
+      "conclusion": "Conclusion"
+    }
+  },
   "aboutPage": {
     "windowTitle": "irwin@notes: ~/about.md",
     "photoAlt": "Irwin Arruda",

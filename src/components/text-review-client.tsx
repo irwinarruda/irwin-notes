@@ -33,11 +33,32 @@ type LineHighlight = {
   endCol: number;
 };
 
+type ReviewTexts = {
+  reviewBadge: string;
+  reviewScoresHeading: string;
+  avgLabel: string;
+  suggestionsHeading: string;
+  pendingLabel: string;
+  appliedLabel: string;
+  totalLabel: string;
+  prevButton: string;
+  nextButton: string;
+  suggestionLabel: string;
+  dismissLabel: string;
+  applyButton: string;
+  suggestionsApplied: string;
+  readOnlyPreview: string;
+  copiedButton: string;
+  copyRawFileButton: string;
+  noteLabels: Record<string, string>;
+};
+
 type TextReviewClientProps = {
   initialContent: string;
   notes: ReviewNote[];
   suggestions: ReviewSuggestion[];
   fileName: string;
+  texts: ReviewTexts;
 };
 
 // ─── Diff-Based Highlight Computation ───────────────────────────────
@@ -99,19 +120,8 @@ function getHighlightsForLine(
 
 // ─── Note Labels & Colors ───────────────────────────────────────────
 
-const NOTE_LABELS: Record<string, string> = {
-  readability: "Legibilidade",
-  truthfulness: "Veracidade",
-  writing_quality: "Escrita",
-  value: "Valor",
-  grammar: "Gramática",
-  introduction: "Introdução",
-  middle: "Desenvolvimento",
-  conclusion: "Conclusão",
-};
-
-function formatNoteType(type: string): string {
-  return NOTE_LABELS[type] ?? type.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+function formatNoteType(type: string, noteLabels: Record<string, string>): string {
+  return noteLabels[type] ?? type.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
 function scoreColor(score: number): string {
@@ -132,10 +142,12 @@ function ScoreCard({
   note,
   isExpanded,
   onToggle,
+  noteLabels,
 }: {
   note: ReviewNote;
   isExpanded: boolean;
   onToggle: () => void;
+  noteLabels: Record<string, string>;
 }) {
   const score = parseFloat(note.note);
   const filled = Math.round(score);
@@ -148,7 +160,7 @@ function ScoreCard({
     >
       <div className="flex items-center justify-between gap-2">
         <span className="text-2xs font-mono uppercase tracking-widest text-term-muted">
-          {formatNoteType(note.typeOfNote)}
+          {formatNoteType(note.typeOfNote, noteLabels)}
         </span>
         <span className={`font-mono text-sm font-bold ${scoreColor(score)}`}>
           {note.note}
@@ -175,7 +187,7 @@ function ScoreCard({
 
 // ─── Score Dashboard ────────────────────────────────────────────────
 
-function ScoreDashboard({ notes }: { notes: ReviewNote[] }) {
+function ScoreDashboard({ notes, texts }: { notes: ReviewNote[]; texts: ReviewTexts }) {
   const [expandedNote, setExpandedNote] = useState<string | null>(null);
 
   const averageScore =
@@ -186,11 +198,11 @@ function ScoreDashboard({ notes }: { notes: ReviewNote[] }) {
       <div className="mb-3 flex items-center justify-between">
         <h2 className="font-mono text-sm font-semibold uppercase tracking-widest text-term-green">
           <span className="text-term-muted mr-1">&gt;</span>
-          review scores
+          {texts.reviewScoresHeading}
         </h2>
         <div className="flex items-center gap-2">
           <span className="font-mono text-2xs uppercase tracking-wide text-term-muted">
-            avg
+            {texts.avgLabel}
           </span>
           <span
             className={`font-mono text-lg font-bold ${scoreColor(averageScore)}`}
@@ -210,6 +222,7 @@ function ScoreDashboard({ notes }: { notes: ReviewNote[] }) {
                 expandedNote === note.typeOfNote ? null : note.typeOfNote,
               )
             }
+            noteLabels={texts.noteLabels}
           />
         ))}
       </div>
@@ -278,22 +291,24 @@ function SuggestionDetailCard({
   suggestedText,
   onApply,
   onDismiss,
+  texts,
 }: {
   originalText: string;
   suggestedText: string;
   onApply: () => void;
   onDismiss: () => void;
+  texts: ReviewTexts;
 }) {
   return (
     <div className="review-suggestion-card mx-8 my-1 rounded-lg border border-term-amber/30 bg-term-bg/95 shadow-lg shadow-black/20 overflow-hidden">
       <div className="flex items-center justify-between border-b border-term-border px-3 py-1.5">
         <span className="font-mono text-2xs uppercase tracking-widest text-term-amber">
-          suggestion
+          {texts.suggestionLabel}
         </span>
         <button
           onClick={onDismiss}
           className="flex h-5 w-5 items-center justify-center rounded text-term-muted transition-colors hover:bg-term-border hover:text-term-text"
-          aria-label="Dismiss"
+          aria-label={texts.dismissLabel}
         >
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5">
             <path d="M1 1l8 8M9 1l-8 8" />
@@ -334,7 +349,7 @@ function SuggestionDetailCard({
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
             <path d="M2 6l3 3 5-5" />
           </svg>
-          apply
+          {texts.applyButton}
         </button>
       </div>
     </div>
@@ -441,31 +456,33 @@ function SuggestionNav({
   total,
   onPrev,
   onNext,
+  texts,
 }: {
   pending: number;
   applied: number;
   total: number;
   onPrev: () => void;
   onNext: () => void;
+  texts: ReviewTexts;
 }) {
   return (
     <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-term-border bg-term-bg/60 px-4 py-2.5">
       <div className="flex items-center gap-4">
         <h2 className="font-mono text-sm font-semibold uppercase tracking-widest text-term-green">
           <span className="text-term-muted mr-1">&gt;</span>
-          suggestions
+          {texts.suggestionsHeading}
         </h2>
         <div className="flex items-center gap-3 font-mono text-xs">
           <span className="text-term-amber">
-            {pending} pending
+            {pending} {texts.pendingLabel}
           </span>
           <span className="text-term-muted">/</span>
           <span className="text-term-green">
-            {applied} applied
+            {applied} {texts.appliedLabel}
           </span>
           <span className="text-term-muted">/</span>
           <span className="text-term-muted">
-            {total} total
+            {total} {texts.totalLabel}
           </span>
         </div>
       </div>
@@ -478,14 +495,14 @@ function SuggestionNav({
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5">
             <path d="M7 1L3 5l4 4" />
           </svg>
-          prev
+          {texts.prevButton}
         </button>
         <button
           onClick={onNext}
           disabled={pending === 0}
           className="flex h-7 items-center gap-1 rounded border border-term-border px-2 font-mono text-xs text-term-muted transition-colors hover:border-term-muted hover:text-term-text disabled:opacity-30 disabled:cursor-not-allowed"
         >
-          next
+          {texts.nextButton}
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5">
             <path d="M3 1l4 4-4 4" />
           </svg>
@@ -502,6 +519,7 @@ export function TextReviewClient({
   notes,
   suggestions: rawSuggestions,
   fileName,
+  texts,
 }: TextReviewClientProps) {
   const [content, setContent] = useState(initialContent);
   const [suggestions, setSuggestions] = useState<InternalSuggestion[]>(() =>
@@ -655,14 +673,14 @@ export function TextReviewClient({
           </h1>
         </div>
         <span className="rounded border border-term-cyan/30 bg-term-cyan/8 px-1.5 py-0.5 font-mono text-2xs text-term-cyan">
-          review
+          {texts.reviewBadge}
         </span>
       </div>
 
       <div className="mb-4 border-t border-term-border" />
 
       {/* Score Dashboard */}
-      <ScoreDashboard notes={notes} />
+      <ScoreDashboard notes={notes} texts={texts} />
 
       <div className="mb-4 border-t border-term-border" />
 
@@ -674,6 +692,7 @@ export function TextReviewClient({
           total={suggestions.length}
           onPrev={() => navigateToSuggestion("prev")}
           onNext={() => navigateToSuggestion("next")}
+          texts={texts}
         />
       </div>
 
@@ -722,6 +741,7 @@ export function TextReviewClient({
                     suggestedText={activeSuggestion.suggestedText}
                     onApply={() => applySuggestion(activeSuggestion.id)}
                     onDismiss={() => setActiveSuggestionId(null)}
+                    texts={texts}
                   />
                 )}
               </Fragment>
@@ -734,8 +754,10 @@ export function TextReviewClient({
       <div className="mt-3 flex items-center justify-between">
         <span className="font-mono text-2xs text-term-muted">
           {appliedCount > 0
-            ? `${appliedCount} of ${suggestions.length} suggestions applied`
-            : "read-only preview"}
+            ? texts.suggestionsApplied
+                .replace("{applied}", String(appliedCount))
+                .replace("{total}", String(suggestions.length))
+            : texts.readOnlyPreview}
         </span>
         <button
           onClick={() => {
@@ -751,7 +773,7 @@ export function TextReviewClient({
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M2 6l3 3 5-5" />
               </svg>
-              copied!
+              {texts.copiedButton}
             </>
           ) : (
             <>
@@ -759,7 +781,7 @@ export function TextReviewClient({
                 <rect x="4" y="4" width="7" height="7" rx="1" />
                 <path d="M8 4V2a1 1 0 00-1-1H2a1 1 0 00-1 1v5a1 1 0 001 1h2" />
               </svg>
-              copy raw file
+              {texts.copyRawFileButton}
             </>
           )}
         </button>

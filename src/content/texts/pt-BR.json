@@ -37,6 +37,34 @@
     "draftNotice": "// Este post é um rascunho — o conteúdo pode mudar.",
     "referencesHeading": "Referências"
   },
+  "reviewPage": {
+    "reviewBadge": "review",
+    "reviewScoresHeading": "review scores",
+    "avgLabel": "média",
+    "suggestionsHeading": "sugestões",
+    "pendingLabel": "pendentes",
+    "appliedLabel": "aplicadas",
+    "totalLabel": "total",
+    "prevButton": "ant",
+    "nextButton": "próx",
+    "suggestionLabel": "sugestão",
+    "dismissLabel": "Descartar",
+    "applyButton": "aplicar",
+    "suggestionsApplied": "{applied} de {total} sugestões aplicadas",
+    "readOnlyPreview": "pré-visualização",
+    "copiedButton": "copiado!",
+    "copyRawFileButton": "copiar arquivo",
+    "noteLabels": {
+      "readability": "Legibilidade",
+      "truthfulness": "Veracidade",
+      "writing_quality": "Escrita",
+      "value": "Valor",
+      "grammar": "Gramática",
+      "introduction": "Introdução",
+      "middle": "Desenvolvimento",
+      "conclusion": "Conclusão"
+    }
+  },
   "aboutPage": {
     "windowTitle": "irwin@notes: ~/sobre.md",
     "photoAlt": "Irwin Arruda",

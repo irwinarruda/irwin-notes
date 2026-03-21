@@ -21,7 +21,7 @@ export default async function TextReviewScreen(
     notFound();
   }
 
-  const rawContent = await getRawPostContent(reviewData.name);
+  const rawContent = await getRawPostContent(locale, reviewData.name);
   if (!rawContent) {
     notFound();
   }
@@ -41,6 +41,7 @@ export default async function TextReviewScreen(
         notes={reviewData.notes}
         suggestions={reviewData.suggestions}
         fileName={reviewData.name}
+        texts={dictionary.reviewPage}
       />
     </TerminalWindow>
   );

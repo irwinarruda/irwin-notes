@@ -1,12 +1,12 @@
 ---
 title: Um ensaio sobre arquitetura frontend
-description: Tentando encontrar uma arquitetura de software universal para frameworks de UI web declarativos.
+description: Uma jornada pessoal pela literatura de arquitetura de software em busca de um modelo universal para frameworks frontend declarativos.
 date: 2026-02-27
 tags:
   - frontend
   - architecture
   - react
-readTime: 12 min
+readTime: 10 min
 draft: true
 references:
   - label: "The Clean Architecture by Uncle Bob"
@@ -71,7 +71,7 @@ Fazendo uma pesquisa inicial, o canal no YouTube [Coffstack](https://www.youtube
 
 Esses são bons exemplos de como modelar software de forma profissional e parecem apontar para um caminho promissor. Seguir essas arquiteturas provavelmente produzirá um software de qualidade.
 
-Na prática, entretanto, ambas ferem os conceitos da arquitetura limpa. As regras de negócio são criadas em hooks, estruturas intrinsecamente ligadas ao framework, fazendo com que a camada de Aplicação conheça a interface. Testar esses hooks, por exemplo, exige um runner que implemente os ciclos de vida do React. Por causa disso, decidi continuar procurando.
+Na prática, entretanto, ambas "ferem" os conceitos da separação de responsabilidades. As regras de negócio são criadas em hooks, estruturas intrinsecamente ligadas ao framework, fazendo com que a camada de Aplicação conheça a interface. Testar esses hooks, por exemplo, exige um runner que implemente os ciclos de vida do React. Por causa disso, decidi continuar procurando.
 
 <div className="flex flex-col sm:flex-row items-start gap-3">
   <div className="flex-1">

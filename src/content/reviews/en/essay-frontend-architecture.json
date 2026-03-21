@@ -1,0 +1,87 @@
+{
+  "name": "essay-frontend-architecture.mdx",
+  "notes": [
+    {
+      "typeOfNote": "readability",
+      "note": "7",
+      "explanation": "The essay reads well overall with a conversational tone that guides the reader through a personal journey. Sentence structure varies nicely. However, information density spikes in the middle (lines 95-105, 255-280) without breathing room. Code blocks break reading flow and some lack contextual framing. The essay assumes familiarity with hooks, MVVM, Redux, and Zustand."
+    },
+    {
+      "typeOfNote": "truthfulness",
+      "note": "8",
+      "explanation": "Factual claims are largely sound and internally consistent. The characterizations of Clean Architecture, MVVM, and Presentation Model are accurate. One minor concern: line 33's claim that React 'pushed the entire ecosystem' is presented somewhat as fact when other frameworks had independent motivations. Line 99's description of Flutter is broadly accepted but slightly reductive."
+    },
+    {
+      "typeOfNote": "writing_quality",
+      "note": "7",
+      "explanation": "The writing is competent and frequently engaging. The author's voice — earnest, curious, slightly self-deprecating — makes the subject approachable. Effective rhetorical moments like 'That article made something click' (line 271). Weaknesses: 'felt like the messy' (line 31), 'frontenders' without quotation marks (line 43), 'untankable' (line 288), and occasional listicle-style passages that undercut the essayistic register."
+    },
+    {
+      "typeOfNote": "value",
+      "note": "7",
+      "explanation": "Genuine value in documenting a practitioner's architectural journey — underrepresented in long-form writing. The progression toward accepting that full UI independence may be impossible is a valuable narrative arc. Code grounds the abstract discussion. Value diminished by stopping short of prescriptive recommendation, though 'Final remarks' compensates by framing expectations."
+    },
+    {
+      "typeOfNote": "grammar",
+      "note": "6",
+      "explanation": "Several issues: (1) Line 31: 'felt like the messy' is ungrammatical. (2) Line 43: 'frontenders' should be in quotes or replaced. (3) Line 99: 'I still was not satisfied' — awkward inversion. (4) Line 200: 'got praise' is informal for essay register. (5) Line 288: 'untankable' is unclear. (6) Line 35: ambiguous antecedent for 'These patterns'. (7) Lines 280 and 300: extremely long sentences that should be split."
+    },
+    {
+      "typeOfNote": "introduction",
+      "note": "7",
+      "explanation": "Effectively establishes personal context and terrain. Candid opening is relatable. Framework convergence observation (line 33) is a strong hook. Callout question (line 38) is an excellent orienting device. However, transition from personal frustration to grand thesis happens quickly — one bridging sentence would strengthen it."
+    },
+    {
+      "typeOfNote": "middle",
+      "note": "7",
+      "explanation": "Strongest section. Logical progression builds naturally. Code blocks ground abstract concepts. The pivot at line 271 is a satisfying narrative beat. Weaknesses: lines 99-105 pack too many ideas; Use Cases discussion (lines 257-263) feels rushed."
+    },
+    {
+      "typeOfNote": "conclusion",
+      "note": "8",
+      "explanation": "Best-written section. Opening insight (line 288) is sharp and memorable. Framework list illustrates practical payoff. Final paragraph (lines 298-300) delivers nuanced, honest resolution. 'Final remarks' manages expectations well and circles back to the introduction. Only 'untankable' (line 288) undermines the otherwise polished passage."
+    }
+  ],
+  "suggestions": [
+    {
+      "position": "31",
+      "suggestedText": "Building frontend applications with modern frameworks has always felt messy to me. When I started developing, React was already six years old and people were still debating Redux versus the Context API for state management. Only recently did the documentation improve, libraries stabilize, and a clear path finally emerge."
+    },
+    {
+      "position": "35",
+      "suggestedText": "Certain primitive patterns have been refined over time, and many frameworks now expose concepts like _State_, _Computed_, _Actions_, and _Effects_. These concepts kept me up at night, and I dove deeper into the subject. My proposition in this essay is that, perhaps, these **axioms** can yield a universal architectural model — a frontend architecture independent of libraries."
+    },
+    {
+      "position": "43",
+      "suggestedText": "Painful as it may be for frontend developers to hear, this is true! Plenty of CRUD systems need no robust frontend architecture. Tests and maintainability are beside the point. Swapping that UI for another would be no big problem."
+    },
+    {
+      "position": "99",
+      "suggestedText": "I was still not satisfied. Flutter is a cross-platform framework used mainly for mobile. It drew heavy inspiration from pre-hooks React, so **MVVM** looked like just a different way of implementing hooks. The name itself gives away the break in the separation of concerns:"
+    },
+    {
+      "position": "200",
+      "suggestedText": "The design proved robust and earned praise from the whole team. Adding features and testing felt easier. The search seemed over. Still, **two things** nagged at me:"
+    },
+    {
+      "position": "255",
+      "suggestedText": "The second point stuck with me longer — the **View Model** only exists because it knows the **View**. A _purist_ architecture would not allow that."
+    },
+    {
+      "position": "280",
+      "suggestedText": "That realization led me to accept that a fully pure frontend architecture may not exist: the Application layer will almost always know about the **View** in some way. What makes the code scalable is _how_ that interaction happens. The right architecture embraces this reality, and **MVVM**, **Clean Architecture on Frontend**, and **Client-Side Architecture** all do that well."
+    },
+    {
+      "position": "288",
+      "suggestedText": "Over the course of my frontend career, I realized it barely mattered how components were built or which form, table, and chart libraries were used. What actually made the code _unmaintainable_ was an Application layer carrying too many responsibilities, too much coupling, and no organization."
+    },
+    {
+      "position": "290",
+      "suggestedText": "That is why I focused this essay there. My thesis was that if I could create _an abstraction of the View that does not depend on a specific GUI framework_, the UI would become an implementation detail, and we could pick frameworks based on their real differences."
+    },
+    {
+      "position": "300",
+      "suggestedText": "The library-independent architecture I was looking for does not live in an Application layer completely walled off from the UI. Instead, it lives in a business layer that recognizes the interface as a fundamental part of the software — grounded in the equation `UI = f(state)` and the discipline of keeping presentation state as the single source of truth."
+    }
+  ]
+}

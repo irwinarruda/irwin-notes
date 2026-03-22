@@ -38,12 +38,10 @@ export async function generateMetadata(
 
   const dictionary = await getDictionary(locale);
 
-  const titleSuffix = post.draft
-    ? ` (${dictionary.postPage.draftLabel})`
-    : "";
+  const titleSuffix = post.draft ? ` (${dictionary.postPage.draftLabel})` : "";
 
   const siteUrl = "https://www.irwinarruda.com";
-  const title = `${post.title}${titleSuffix} | ${dictionary.meta.siteTitle}`;
+  const title = `${post.title}${titleSuffix}`;
   const description = `${post.description}${post.tags.length > 0 ? ` ${post.tags.map((tag) => `#${tag}`).join(" ")}` : ""}`;
 
   return {

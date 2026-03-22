@@ -11,6 +11,14 @@ import {
 const ONE_YEAR_IN_SECONDS = 60 * 60 * 24 * 365;
 const LEGACY_REDIRECT_PATTERN = /^\/(?:about|posts|post\/[^/]+)\/?$/;
 
+const OG_CRAWLER_PATTERN =
+  /bot|crawl|spider|slurp|facebookexternalhit|linkedinbot|twitterbot|whatsapp|telegrambot|discordbot|embedly|quora|pinterest|slack|vkshare|redditbot/i;
+
+function isOpenGraphCrawler(request: NextRequest): boolean {
+  const userAgent = request.headers.get("user-agent") ?? "";
+  return OG_CRAWLER_PATTERN.test(userAgent);
+}
+
 function getLocaleFromCookie(request: NextRequest) {
   const cookieValue = request.cookies.get(LOCALE_COOKIE)?.value;
   if (!cookieValue || !isLocale(cookieValue)) {
@@ -39,11 +47,21 @@ export function proxy(request: NextRequest) {
   const pathnameLocale = getLocaleFromPathname(pathname);
 
   if (!pathnameLocale && isLegacyPathname(pathname)) {
-    const redirectUrl = request.nextUrl.clone();
-    redirectUrl.pathname = localizePathname(DEFAULT_LOCALE, pathname);
+    const cookieLocale = getLocaleFromCookie(request);
+    const headerLocale = detectLocaleFromAcceptLanguage(
+      request.headers.get("accept-language"),
+    );
+    const locale = cookieLocale ?? headerLocale;
 
-    const response = NextResponse.redirect(redirectUrl, 308);
-    setLocaleCookie(response, DEFAULT_LOCALE);
+    const localizedUrl = request.nextUrl.clone();
+    localizedUrl.pathname = localizePathname(locale, pathname);
+
+    if (isOpenGraphCrawler(request)) {
+      return NextResponse.rewrite(localizedUrl);
+    }
+
+    const response = NextResponse.redirect(localizedUrl, 308);
+    setLocaleCookie(response, locale);
     return response;
   }
 

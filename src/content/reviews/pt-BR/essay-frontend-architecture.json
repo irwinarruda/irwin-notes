@@ -3,109 +3,101 @@
   "notes": [
     {
       "typeOfNote": "readability",
-      "note": "7.6",
-      "explanation": "O texto é agradável de ler, tem boa cadência entre reflexão, referência e exemplo, e os callouts ajudam a marcar as transições. Pleno e Sênior concordam que a linha geral do argumento é acompanhável; a principal divergência está no nível de exigência: para o Pleno, o problema maior são frases longas e pressupostos prévios, enquanto o Sênior percebe também voltas argumentativas e blocos de código entrando antes de o modelo conceitual estar totalmente estabilizado."
+      "note": 8,
+      "explanation": "O texto é, em geral, fluido e agradável de ler. A progressão por etapas da descoberta intelectual do autor ajuda o leitor a acompanhar um tema abstrato, e os blocos de citação, imagens e callouts contribuem para modular o ritmo. Ainda assim, há trechos com períodos longos e densos, especialmente quando o ensaio passa da crítica às arquiteturas existentes para a formulação da própria tese; nesses momentos, uma segmentação maior e algumas transições mais explícitas melhorariam a legibilidade."
     },
     {
       "typeOfNote": "truthfulness",
-      "note": "5.7",
-      "explanation": "Os dois revisores consideram a tese central interessante e apoiada em boas referências, mas ambos veem exageros. O Pleno aponta afirmações categóricas e inconsistências menores de tipagem; o Sênior é bem mais crítico e destaca simplificações sobre hooks, Clean Architecture, MVVM e a definição de frontend como GUI declarativa 2D, além de problemas objetivos nos exemplos de código, como tipos incompatíveis e testes que compartilham estado singleton. Por isso, a nota mesclada cai mais neste critério."
+      "note": 7,
+      "explanation": "O ensaio se sustenta bem como reflexão argumentativa e pessoal, e as referências citadas dão lastro à discussão. No entanto, algumas afirmações aparecem em tom categórico demais para o grau de demonstração oferecido, como a ideia de que sistemas CRUD não exigem testes ou manutenibilidade, a noção de convergência geral dos frameworks para um mesmo padrão ótimo e a conclusão de que a camada de Aplicação quase sempre conhecerá a View. O texto ganharia em solidez se apresentasse essas passagens com mais qualificação, como hipóteses, tendências ou recortes de contexto."
     },
     {
       "typeOfNote": "writing_quality",
-      "note": "7.5",
-      "explanation": "Há concordância de que a escrita tem voz autoral forte, boa progressão argumentativa e referências bem integradas. O Pleno valoriza o tom envolvente; o Sênior elogia a síntese, mas pede separação mais clara entre tese, observação prática e opinião. Em comum, ambos apontam exageros retóricos, repetição pontual e passagens que poderiam ser mais enxutas e rigorosas."
+      "note": 8,
+      "explanation": "A qualidade de escrita é alta: há voz autoral, bom senso de percurso narrativo e uma articulação eficaz entre experiência prática e debate conceitual. O ensaio evita a aridez excessiva comum em textos de arquitetura e consegue manter interesse ao transformar a argumentação em jornada intelectual. As perdas concentram-se em alguns anglicismos desnecessários, em certas formulações vagas ou repetitivas e em momentos em que a precisão estilística poderia ser refinada para ganhar elegância sem perder informalidade."
     },
     {
       "typeOfNote": "value",
-      "note": "8.0",
-      "explanation": "Os dois revisores veem alto valor no texto por organizar um problema real de arquitetura frontend e propor um modelo mental centrado em estado de apresentação. Para o Pleno, isso ajuda a tornar o tema acionável; para o Sênior, o mérito está na síntese entre Clean Architecture, MVVM e Presentation Model. O ponto de melhoria comum é transformar a tese em critérios mais operacionais e cobrir fronteiras importantes, como efeitos, cache, formulários, roteamento e server state."
+      "note": 9,
+      "explanation": "O texto entrega bastante valor para leitores de frontend que tentam conciliar literatura clássica de arquitetura com a realidade dos frameworks declarativos. Ele não apenas resume referências, mas as põe em confronto com experiência concreta, exemplos de código e critérios de testabilidade, o que amplia sua utilidade. O valor seria ainda maior se algumas conclusões operacionais fossem explicitadas com mais nitidez, mas, como ensaio de investigação, ele é relevante e provocativo."
     },
     {
       "typeOfNote": "grammar",
-      "note": "7.0",
-      "explanation": "Aqui há convergência forte: o texto está compreensível e bem escrito no geral, mas ainda pede lapidação final. O Pleno chama atenção para `apis`, `intankável`, uso enfático de `EU` e algumas frases longas; o Sênior reforça questões de registro, pontuação, capitalização e escolhas menos precisas em frase corrida. Não há erros graves, mas o acabamento ainda não está no mesmo nível da ambição do ensaio."
+      "note": 7,
+      "explanation": "O nível gramatical é bom, mas há um conjunto perceptível de ajustes necessários. Aparecem problemas de pontuação e coordenação, como vírgulas ausentes ou mal resolvidas, períodos com junção frouxa de orações, ausência de ponto final em item enumerado, além de escolhas lexicais menos felizes, como anglicismos e registros híbridos ('ok', 'bundle size', 'forms', 'tables'). Não há comprometimento grave da compreensão, porém a revisão linha a linha melhoraria sensivelmente o acabamento formal do texto."
     },
     {
       "typeOfNote": "introduction",
-      "note": "8.0",
-      "explanation": "Pleno e Sênior concordam que a introdução funciona bem porque parte de uma dor real do frontend, contextualiza o problema e cria interesse rapidamente. O ajuste sugerido pelos dois é parecido: explicitar mais cedo a tese central e delimitar melhor o recorte do texto, especialmente o foco em frontend web declarativo e arquitetura de código."
+      "note": 8,
+      "explanation": "A introdução funciona bem porque parte de uma inquietação concreta e reconhecível para quem trabalha com frontend. Ela apresenta o problema, delimita o campo e insinua a tese de forma orgânica, sem parecer excessivamente acadêmica. O único ponto a fortalecer seria a explicitação mais cedo do que o autor entende por 'modelo universal', para alinhar expectativas e reduzir a sensação inicial de amplitude excessiva."
     },
     {
       "typeOfNote": "middle",
-      "note": "7.5",
-      "explanation": "Ambos consideram o corpo a parte mais forte do ensaio, por reunir referências, crítica comparativa, exemplos e refinamento progressivo da tese. O Pleno destaca que o caminho de raciocínio é didático; o Sênior pondera que algumas críticas são mais assertivas do que demonstradas e que os exemplos de código introduzem dúvidas por causa de tipagem e isolamento de testes. O saldo ainda é positivo, mas com espaço claro para maior rigor."
+      "note": 9,
+      "explanation": "O desenvolvimento é a parte mais forte do ensaio. Há encadeamento lógico entre pesquisa bibliográfica, experimentação prática, impasses encontrados e reformulação da hipótese central; isso dá ao corpo do texto densidade argumentativa e coerência interna. As transições são, na maior parte, boas, embora alguns trechos pudessem comprimir repetições e refinar a passagem entre a crítica ao purismo arquitetural e a aceitação da especificidade do frontend."
     },
     {
       "typeOfNote": "conclusion",
-      "note": "7.6",
-      "explanation": "Os dois revisores concordam que o fechamento encontra uma boa síntese em `UI = f(state)`, uma formulação simples e memorável. Ao mesmo tempo, ambos apontam que a força do encerramento se dilui porque a conclusão é seguida por `Considerações finais`, e sentem falta de próximos passos mais concretos para o leitor. O Pleno pede mais aplicabilidade; o Sênior pede critérios de decisão para times."
+      "note": 8,
+      "explanation": "A conclusão fecha adequadamente o raciocínio ao retomar a tese inicial e convertê-la em uma formulação mais madura, centrada em `UI = f(state)`. O leitor sai com uma impressão clara do ponto defendido e do lugar em que o autor chegou após a investigação. Ainda assim, o fechamento poderia ser ainda mais forte se condensasse, em uma frase de síntese mais assertiva, qual é exatamente o critério prático que o texto propõe para orientar decisões arquiteturais."
     }
   ],
   "suggestions": [
     {
+      "position": "31",
+      "suggestedText": "Sempre me incomodou a falta de padrões na criação de aplicações frontend com os frameworks modernos. Quando comecei a desenvolver, o React já tinha seis anos de existência, e as pessoas ainda discutiam se deveriam usar Redux ou Context API para gerenciar estado. Só recentemente as documentações melhoraram, as bibliotecas se estabilizaram e um caminho mais claro passou a se delinear."
+    },
+    {
+      "position": "35",
+      "suggestedText": "Alguns padrões primitivos foram aperfeiçoados ao longo do tempo, e muitos frameworks passaram a expor conceitos como _State_, _Computed_, _Actions_ e _Effects_. Esses padrões me deixaram inquieto, e comecei a estudar mais o assunto. Minha hipótese, neste ensaio, é que talvez seja possível, a partir desses **axiomas**, derivar um modelo universal de arquitetura frontend, isto é, uma arquitetura independente de bibliotecas."
+    },
+    {
       "position": "43",
-      "suggestedText": "Existem sistemas CRUD simples em que uma arquitetura sofisticada no frontend traz pouco retorno imediato. Nesses casos, o investimento em testes e manutenibilidade pode ser menor, embora raramente seja desnecessário."
+      "suggestedText": "Por mais que isso possa ferir o coração de muitos _frontenders_, há sistemas CRUD em que uma arquitetura robusta no frontend talvez não seja prioritária. Nesses casos, requisitos como testes extensivos, alta manutenibilidade ou mesmo a substituição da UI podem ter baixo impacto para o negócio."
     },
     {
-      "position": "70",
-      "suggestedText": "Na prática, entretanto, ambas se afastam do ideal mais purista da arquitetura limpa. Em vários exemplos, regras de aplicação aparecem em hooks, estruturas ligadas ao framework, o que aproxima a camada de Aplicação da interface e reduz sua portabilidade."
-    },
-    {
-      "position": "91",
-      "suggestedText": "- **View**: uma camada \"burra\" que renderiza a UI e concentra apenas comportamento de interface, sem regras de negócio."
-    },
-    {
-      "position": "93",
-      "suggestedText": "- **View Model**: uma camada orquestradora que conecta assuntos de negócio, como entidades e chamadas para APIs, às necessidades de estado da interface."
+      "position": "67",
+      "suggestedText": "Durante uma pesquisa inicial, o canal no YouTube [Coffstack](https://www.youtube.com/watch?v=HxBEuISRp5I) me levou a dois excelentes artigos que tentavam chegar, de forma genuína, a uma arquitetura de frontend."
     },
     {
       "position": "95",
-      "suggestedText": "Mas eu ainda não estava satisfeito. O Flutter é um framework cross-platform muito usado em aplicações mobile e adota uma árvore reativa inspirada em ideias popularizadas pelo React. Ainda assim, o **MVVM** me parecia apenas uma forma diferente de acomodar as mesmas responsabilidades."
+      "suggestedText": "- **View**: uma camada \"burra\" que renderiza a UI, mas não contém regras de negócio; apenas comportamento."
     },
     {
-      "position": "109",
-      "suggestedText": "Eu já não tinha tanto tempo, pois precisava definir a arquitetura dos projetos da empresa em que trabalho. Então decidi me inspirar no Flutter e criei um design similar ao **MVVM**, aproximadamente assim:"
+      "position": "113",
+      "suggestedText": "Eu já não tinha tanto tempo, pois precisava definir a arquitetura dos projetos da empresa em que trabalho. Então decidi me inspirar no Flutter e criei um design similar ao **MVVM**, mais ou menos assim:"
     },
     {
-      "position": "131",
-      "suggestedText": "  todos: TodoModel[];"
+      "position": "203",
+      "suggestedText": "2. A camada de Aplicação (**View Model**) ainda conhece detalhes da UI (`todos`, `selectedTodoId`, `selectedTodo`)."
     },
     {
-      "position": "132",
-      "suggestedText": "  selectedTodoId: string | undefined;"
+      "position": "211",
+      "suggestedText": "É possível criar uma **View Model** independente de framework. Só que isso é burocrático e pouco ergonômico."
     },
     {
-      "position": "133",
-      "suggestedText": "  selectedTodo: TodoModel | undefined;"
+      "position": "255",
+      "suggestedText": "O segundo ponto me incomodou por um bom tempo: a **View Model**, conceitualmente, só existe porque conhece a **View**. Em uma arquitetura purista, isso não poderia acontecer."
     },
     {
-      "position": "182",
-      "suggestedText": "  useApp.setState({ todos: [], selectedTodoId: undefined }); const app = getApp();"
+      "position": "263",
+      "suggestedText": "Essa abordagem funciona, mas torna a implementação burocrática. Ao tentar aplicá-la em TDD, percebi que testar apenas o **Use Case** era válido, mas o verdadeiro valor do software estava em seu estado. Os testes realmente efetivos passavam primeiro pela **View Model**."
     },
     {
-      "position": "259",
-      "suggestedText": "Essa abordagem funciona, porém deixa a implementação burocrática. Tentando aplicá-la em TDD, percebi que testar apenas os **Use Cases** funcionava, mas o verdadeiro valor do software estava no estado; os testes realmente efetivos passavam primeiro pela **View Model**."
+      "position": "271",
+      "suggestedText": "Lendo esse artigo, percebi algo sobre arquitetura que sempre esteve diante de mim: um software frontend possui atributos intrínsecos. Não estamos escrevendo um compilador, um sistema de arquivos ou uma API REST. Estamos escrevendo uma aplicação que:"
     },
     {
-      "position": "267",
-      "suggestedText": "Lendo esse artigo, percebi algo sobre arquitetura que sempre esteve evidente: um software frontend possui atributos intrínsecos, embora eles variem conforme a plataforma e o modelo de renderização. Neste recorte, estamos escrevendo uma aplicação que:"
+      "position": "288",
+      "suggestedText": "Ao longo da minha carreira no frontend, percebi que pouco importava como os componentes eram criados ou quais bibliotecas de formulários, tabelas e gráficos eram utilizadas. Na verdade, o que tornava o código _insustentável_ era uma camada de Aplicação com responsabilidades demais, alto acoplamento e pouca organização."
     },
     {
-      "position": "274",
-      "suggestedText": "Essas características não são totalmente opcionais no recorte deste texto. Ao criar uma arquitetura para um frontend web declarativo, estamos nos vinculando a um tipo específico de software: uma aplicação GUI majoritariamente bidimensional."
+      "position": "294",
+      "suggestedText": "- Svelte para JavaScript compilado, com redução do tamanho do bundle."
     },
     {
-      "position": "280",
-      "suggestedText": "A maioria das arquiteturas frontend possui esse conceito, que aqui pode ser resumido de forma deliberadamente simplificada em uma única equação: **`UI = f(state)`**."
-    },
-    {
-      "position": "284",
-      "suggestedText": "Ao longo da minha carreira no frontend, percebi que pouco importava como os componentes eram criados ou quais bibliotecas de forms, tables e gráficos eram utilizadas. Na verdade, o que tornava o código difícil de sustentar era uma camada de Aplicação com muitas responsabilidades, muito acoplada e sem organização."
-    },
-    {
-      "position": "300",
-      "suggestedText": "De forma alguma este texto serve como guia de **MVVM** ou **Presentation Model**; ele é apenas o início dessa conversa e um resumo da minha jornada aprendendo arquitetura de software. O manual de como eu implemento essa arquitetura fica para um próximo post."
+      "position": "304",
+      "suggestedText": "De forma alguma, este texto serve como um guia para **MVVM** ou **Presentation Model**; ele é apenas o início dessa conversa, um resumo da minha jornada aprendendo arquitetura de software. O manual de como eu implemento essa arquitetura fica para um próximo post."
     }
   ]
 }

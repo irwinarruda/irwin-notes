@@ -73,7 +73,7 @@
     "location": "Goiania, Brasil",
     "openInNewTabLabel": "(abre em nova aba)",
     "whoamiHeading": "quem-sou",
-    "whoamiBody": "Engenheiro de software focado em construir aplicacoes web rapidas e bem-acabadas. React e minha principal ferramenta ha anos, mas gosto de explorar outras abordagens - Solid.js, Svelte e Vue - qualquer coisa que torne o frontend melhor. Eu valorizo experiencia do desenvolvedor, gerenciamento de estado limpo e ferramentas que nao atrapalham.",
+    "whoamiBody": "Desenvolvedor de software com foco no ecossistema frontend. Tenho um interesse especial por ferramental — bundlers, meta-frameworks, microfrontends — e por criar coisas que facilitam a vida de outros devs, como bibliotecas de design system, CLIs e pipelines de CI. Estudo bastante sobre arquitetura de software e, mais recentemente, tenho me aprofundado cada vez mais no backend.",
     "stackHeading": "stack",
     "projectsHeading": "projetos",
     "stackLabels": {
@@ -83,14 +83,18 @@
     },
     "techStack": {
       "primary": ["React", "Next.js", "TypeScript", "Node.js"],
-      "exploring": ["Solid.js", "Svelte", "Vue", "Rust", "Kotlin"],
+      "exploring": ["Solid.js", "Svelte", "Vue", "C#", "Rust", "Go"],
       "tools": [
         "Neovim",
         "Git",
         "Docker",
         "Tailwind CSS",
+        "Jest",
         "Vitest",
-        "Webpack/Turbopack"
+        "Vite",
+        "Rspack",
+        "Webpack",
+        "Rollup"
       ]
     },
     "projects": [

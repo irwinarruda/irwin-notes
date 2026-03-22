@@ -64,7 +64,7 @@ Nesse sentido, o nome da arquitetura não é importante. A busca é por um desig
   <span>A partir daqui, vou me referir à camada de "regras de negócio" como camada de **Aplicação**.</span>
 </PostCallout>
 
-Fazendo uma pesquisa inicial, o canal no YouTube [Coffstack](https://www.youtube.com/watch?v=HxBEuISRp5I) me levou a 2 excelentes artigos que tentaram chegar, de forma genuína, em uma arquitetura de frontend.
+Fazendo uma pesquisa inicial, o canal no YouTube [Coffstack](https://www.youtube.com/watch?v=HxBEuISRp5I) me levou a dois excelentes artigos que tentaram chegar, de forma genuína, a uma arquitetura de frontend.
 
 - [Clean Architecture on Frontend by Alex Bespoyasov](https://dev.to/bespoyasov/clean-architecture-on-frontend-4311)
 - [Client-Side Architecture Basics [Guide] by Khalil Stemmler](https://khalilstemmler.com/articles/client-side-architecture/introduction)
@@ -108,7 +108,7 @@ Então, por mais que essa abordagem ferisse esse ideal de arquitetura, ela me in
   <span>Existe mesmo uma maneira de separar regras de aplicação da UI?</span>
 </PostCallout>
 
-Nesse ponto da história, eu já tinha começado a questionar se realmente existia uma arquitetura de frontend que verdadeiramente separa a camada de Aplicação da interface. 
+Nesse ponto da história, eu já tinha começado a questionar se realmente existia uma arquitetura de frontend que verdadeiramente separasse a camada de Aplicação da interface.
 
 Eu já não tinha tanto tempo, pois precisava definir a arquitetura dos projetos da empresa em que trabalho. Então decidi me inspirar no Flutter e criei um design similar ao **MVVM**, mais ou menos na seguinte forma:
 
@@ -193,14 +193,14 @@ test('check selected todo', () => {
 });
 ```
 
-Neste desenho, a **View Model** assume o papel da camada de Aplicação e orquestra o fluxo de dados e o estado da UI; a **Model** funciona como uma entidade de domínio; e a **View** pode ser qualquer adaptador capaz de consumir esse contrato, inclusive um test runner.
+Nesse desenho, a **View Model** assume o papel da camada de Aplicação e orquestra o fluxo de dados e o estado da UI; a **Model** funciona como uma entidade de domínio; e a **View** pode ser qualquer adaptador capaz de consumir esse contrato, inclusive um test runner.
 
 Uma grande prioridade que tive foi manter os testes independentes da UI. Perceba que, se removermos o ponto de injeção da store (o `getApp`) da equação, o test runner não precisa conhecer o framework de gerenciamento de estado nem a tecnologia de UI usada por baixo dos panos.
 
 Esse design ficou robusto e recebeu elogios de todos da equipe. Parecia que agora estava mais fácil adicionar novas features e testar o código. A busca aparentava ter sido finalizada. Mesmo assim, **duas coisas** ainda me incomodavam:
 
 1. Estamos presos à biblioteca de gerenciamento de estados (Zustand).
-2. A camada de Aplicação (**View Model**) ainda conhece detalhes da UI (`todos`, `selectedTodoId`, `selectedTodo`)
+2. A camada de Aplicação (**View Model**) ainda conhece detalhes da UI (`todos`, `selectedTodoId`, `selectedTodo`).
 
 O primeiro ponto foi fácil de esclarecer com um exemplo. Quando criamos uma aplicação backend em que o Controller implementa diretamente um web framework como `Express`, estamos quebrando os conceitos de uma arquitetura limpa? 
 
@@ -285,7 +285,7 @@ A maioria das arquiteturas frontend possui esse conceito, que pode ser resumido 
 
 ### Conclusão
 
-Ao longo da minha carreira no frontend, percebi que pouco importava como os componentes eram criados ou quais bibliotecas de forms, tables e gráficos eram utilizadas. Na verdade, o que tornava o código _intankável_ era uma camada de Aplicação com muitas responsabilidades, muito acoplada e sem organização.
+Ao longo da minha carreira no frontend, percebi que pouco importava como os componentes eram criados ou quais bibliotecas de forms, tables e gráficos eram utilizadas. Na verdade, o que tornava o código _insustentável_ era uma camada de Aplicação com muitas responsabilidades, muito acoplada e sem organização.
 
 Por essa razão, foquei o ensaio nesse ponto. Minha tese era de que se eu conseguisse criar uma _abstração da View que não depende de um framework de GUI específico_, a UI viraria um detalhe de implementação e escolheríamos frameworks com base em suas reais diferenças.
 

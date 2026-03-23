@@ -16,6 +16,7 @@
     "diff": "^8.0.3",
     "gray-matter": "^4.0.3",
     "next": "16.1.6",
+    "posthog-js": "^1.363.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "rehype-pretty-code": "^0.14.1",

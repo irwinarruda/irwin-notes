@@ -54,7 +54,7 @@ export function TerminalWindow({
         <a href="#main-content" className="skip-link">
           {skipToContentLabel}
         </a>
-        <div className="flex items-center sm:rounded-t-xl border-b-0 sm:border border-term-border bg-term-chrome px-3 py-2 sm:px-4">
+        <div className="flex items-center sm:rounded-t-xl sm:border sm:border-b-0 border-term-border bg-term-chrome px-3 py-2 sm:px-4">
           <div className="flex gap-2 shrink-0" aria-hidden="true">
             <div className="w-3 h-3 rounded-full bg-term-red" />
             <div className="w-3 h-3 rounded-full bg-term-yellow" />

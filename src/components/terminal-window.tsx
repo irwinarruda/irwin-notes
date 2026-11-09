@@ -63,7 +63,7 @@ export function TerminalWindow({
             className="inline-flex shrink-0 items-center rounded-sm focus-visible:outline-offset-4"
           >
             <Image
-              src="/brand/irwin-arruda-light.svg"
+              src="/brand/irwin-arruda-duo-light.svg"
               alt="Irwin Arruda"
               width={135}
               height={22}
@@ -71,7 +71,7 @@ export function TerminalWindow({
               priority
             />
             <Image
-              src="/brand/irwin-arruda-dark.svg"
+              src="/brand/irwin-arruda-duo-dark.svg"
               alt="Irwin Arruda"
               width={135}
               height={22}

@@ -1,6 +1,6 @@
 # Brand
 
-The Irwin Arruda logo and icons. They are generated in [barro-theme](https://github.com/irwinarruda/barro-theme/blob/main/BRAND.md), which also documents the lettering and its spacing, and copied here: use these files, don't redraw or edit them. The letters are rounded strokes, and the dot of the first `i` is a brick square, `#B64D3F`, the signature.
+The Irwin Arruda logo and icons. They are generated in [irwin-ui](https://github.com/irwinarruda/irwin-ui/blob/main/BRAND.md), which also documents the lettering and its spacing, and copied here: use these files, don't redraw or edit them. The letters are rounded strokes, and the dots are squares that carry the brick, `#B64D3F`. The default has one brick dot, on the first `i`; the `-duo` files have both dots in brick.
 
 A suffix says which background a file is for. `-dark` has light letters, for dark backgrounds. `-light` has dark letters, for light backgrounds. No suffix means mid-gray letters that work on both.
 
@@ -8,8 +8,9 @@ A suffix says which background a file is for. `-dark` has light letters, for dar
 
 | File | What it is | Used in |
 | ---- | ---------- | ------- |
-| `irwin.svg`, `irwin-dark.svg`, `irwin-light.svg` | The short form, `irwin` | Nothing yet |
-| `irwin-arruda.svg`, `irwin-arruda-dark.svg`, `irwin-arruda-light.svg` | The long form, `irwin arruda` | The site's masthead and the repository README (`-dark` and `-light`) |
+| `irwin.svg`, `irwin-dark.svg`, `irwin-light.svg`, and the same three with `-duo` | The short form, `irwin` | Nothing yet |
+| `irwin-arruda.svg`, `irwin-arruda-dark.svg`, `irwin-arruda-light.svg` | The long form, `irwin arruda`, with one brick dot | The repository README (`-dark` and `-light`) |
+| `irwin-arruda-duo.svg`, `irwin-arruda-duo-dark.svg`, `irwin-arruda-duo-light.svg` | The long form with two brick dots | The site's masthead (`-dark` and `-light`), on trial |
 
 ## Monograms
 

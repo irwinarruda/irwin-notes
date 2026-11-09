@@ -21,6 +21,9 @@
 }
 
 @theme {
+  --font-display:
+    var(--font-chakra-petch), "Space Grotesk", system-ui, sans-serif;
+
   --font-serif:
     Georgia, "Times New Roman", serif;
 
@@ -107,7 +110,8 @@
 
 /* ── Terminal Prose (blog post article content) ── */
 .terminal-prose {
-  color: var(--barro-fg);
+  --prose-text: color-mix(in oklab, var(--barro-fg) 45%, var(--barro-fg-muted));
+  color: var(--prose-text);
 }
 
 .terminal-prose p,
@@ -122,10 +126,11 @@
 }
 
 .terminal-prose h2 {
-  color: var(--barro-fg);
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 1.5rem;
+  color: var(--barro-primary-fg);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.625rem;
+  line-height: 1.2;
   margin-top: 2em;
   margin-bottom: 0.75em;
   letter-spacing: -0.01em;
@@ -136,16 +141,17 @@
 }
 
 .terminal-prose h3 {
-  color: var(--barro-fg);
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 1.25rem;
+  color: var(--barro-teal-11);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.375rem;
+  line-height: 1.25;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
 }
 
 .terminal-prose p {
-  color: var(--barro-fg);
+  color: var(--prose-text);
   font-size: 1.25rem;
   line-height: 1.75;
   margin-bottom: 1em;
@@ -153,19 +159,20 @@
 
 .terminal-prose strong {
   color: var(--barro-fg);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .terminal-prose em {
+  color: var(--barro-straw-11);
   font-style: italic;
 }
 
 .terminal-prose a {
-  color: var(--barro-primary-fg);
+  color: var(--barro-sky-11);
   text-decoration: underline;
   text-decoration-color: color-mix(
     in srgb,
-    var(--barro-primary-fg) 40%,
+    var(--barro-sky-11) 40%,
     transparent
   );
   text-decoration-thickness: 1px;
@@ -191,7 +198,7 @@
 }
 
 .terminal-prose ul li {
-  color: var(--barro-fg);
+  color: var(--prose-text);
   font-size: 1.25rem;
   line-height: 1.75;
   padding-left: 1.25em;
@@ -207,7 +214,7 @@
 }
 
 .terminal-prose ol li {
-  color: var(--barro-fg);
+  color: var(--prose-text);
   font-size: 1.25rem;
   line-height: 1.75;
   padding-left: 1.25em;
@@ -314,7 +321,7 @@
   border-left: 2px solid var(--barro-line-strong);
   padding-left: 1rem;
   margin: 1.25em 0;
-  color: var(--barro-fg);
+  color: var(--prose-text);
   font-style: italic;
 }
 

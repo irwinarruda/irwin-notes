@@ -40,7 +40,7 @@ export default async function PostsScreen(props: PostsScreenProps) {
       localeSwitcher={localeSwitcher}
     >
       <div className="fade-in">
-        <h1 className="font-serif text-fg text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-1">
+        <h1 className="font-display text-fg text-[1.625rem] sm:text-[2rem] md:text-[2.375rem] leading-[1.1] font-semibold tracking-tight mb-1">
           {dictionary.postsPage.heading}
         </h1>
         <p className="text-fg-muted text-sm sm:text-base truncate">
@@ -77,7 +77,7 @@ export default async function PostsScreen(props: PostsScreenProps) {
               className="post-entry group block rounded-r-lg pl-5 py-3.5 transition-all duration-300 hover:bg-raised focus-visible:bg-raised"
             >
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm sm:text-base">
-                <span className="text-fg-muted">{post.date}</span>
+                <span className="text-straw-11 font-medium">{post.date}</span>
                 <span className="text-fg-muted" aria-hidden="true">
                   &middot;
                 </span>
@@ -85,7 +85,7 @@ export default async function PostsScreen(props: PostsScreenProps) {
                   {post.readTime} {dictionary.postsPage.readLabel}
                 </span>
               </div>
-              <h2 className="font-serif text-fg text-xl sm:text-2xl mt-1 font-bold">
+              <h2 className="font-display text-fg text-[1.375rem] sm:text-[1.625rem] leading-snug mt-1 font-semibold transition-colors duration-300 group-hover:text-primary-fg group-focus-visible:text-primary-fg">
                 {post.title}
                 {post.draft && (
                   <span className="ml-2 inline-block align-middle rounded border border-dashed border-warning-line bg-warning-soft px-1.5 py-0.5 text-xs font-mono font-normal text-warning">
@@ -98,7 +98,7 @@ export default async function PostsScreen(props: PostsScreenProps) {
               </p>
               <div className="flex flex-wrap gap-2 mt-2">
                 {post.tags.map((tag, index) => (
-                  <span key={tag} className="text-fg-muted text-sm">
+                  <span key={tag} className="text-teal-11 text-sm">
                     #{tag}
                     {index < post.tags.length - 1 ? " " : ""}
                   </span>

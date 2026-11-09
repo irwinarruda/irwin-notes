@@ -30,8 +30,8 @@ const DEFAULT_THEME_TOGGLE_LABELS: ThemeToggleLabels = {
 };
 
 const DEFAULT_TERMINAL_NAV_LINKS: TerminalNavLink[] = [
-  { href: "/posts", label: "notes" },
-  { href: "/about", label: "about" },
+  { href: "/posts", label: "Notes" },
+  { href: "/about", label: "About" },
 ];
 
 export function TerminalWindow({
@@ -57,30 +57,34 @@ export function TerminalWindow({
         <a href="#main-content" className="skip-link">
           {skipToContentLabel}
         </a>
-        <header className="flex items-center gap-4 border-b border-line-subtle bg-surface px-4 py-3 sm:rounded-t-xl sm:border sm:border-line sm:border-b-line-subtle sm:px-7 md:px-9">
+        <header className="flex flex-wrap items-center gap-x-6 gap-y-2 border-b border-line-subtle bg-surface px-4 py-3 sm:rounded-t-xl sm:border sm:border-line sm:border-b-line-subtle sm:px-7 md:px-9">
           <Link
             href={homeHref}
             className="inline-flex shrink-0 items-center rounded-sm focus-visible:outline-offset-4"
           >
             <Image
-              src="/brand/irwin-light.svg"
+              src="/brand/irwin-arruda-light.svg"
               alt="Irwin Arruda"
-              width={55}
+              width={142}
               height={22}
-              className="h-[22px] w-auto dark:hidden"
+              className="h-5 w-auto sm:h-[22px] dark:hidden"
               priority
             />
             <Image
-              src="/brand/irwin-dark.svg"
+              src="/brand/irwin-arruda-dark.svg"
               alt="Irwin Arruda"
-              width={55}
+              width={142}
               height={22}
-              className="hidden h-[22px] w-auto dark:block"
+              className="hidden h-5 w-auto sm:h-[22px] dark:block"
               priority
             />
           </Link>
-          <div className="ml-auto flex items-center gap-3 sm:gap-5">
-            {nav}
+          {nav ? (
+            <div className="order-last -ml-3 w-full sm:order-none sm:ml-0 sm:w-auto">
+              {nav}
+            </div>
+          ) : null}
+          <div className="ml-auto flex items-center gap-3 sm:gap-4">
             {localeSwitcher ? (
               <nav
                 aria-label={localeSwitcher.ariaLabel}
@@ -137,17 +141,17 @@ export function TerminalNav({
   return (
     <nav
       aria-label={ariaLabel}
-      className="flex items-center gap-x-3 text-sm sm:gap-x-5"
+      className="flex items-center gap-1 font-display text-[15px]"
     >
       {links.map((link) => (
         <Link
           key={link.href}
           href={link.href}
           aria-current={active === link.href ? "page" : undefined}
-          className={`inline-flex min-h-6 items-center transition-colors duration-200 ${
+          className={`inline-flex h-8 items-center rounded-md px-3 font-medium transition-colors duration-200 ${
             active === link.href
-              ? "text-primary-fg font-medium"
-              : "text-fg-muted hover:text-fg"
+              ? "bg-primary-soft text-primary-fg"
+              : "text-fg-muted hover:bg-hover hover:text-fg"
           }`}
         >
           {link.label}

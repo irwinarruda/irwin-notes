@@ -50,12 +50,12 @@ export default async function BlogPostScreen(props: BlogPostScreenProps) {
     >
       <header className="mb-6 fade-in fade-in-delay-1">
         <div className="ml-2">
-          <h1 className="mb-3 font-serif text-3xl font-bold leading-tight text-fg sm:text-4xl">
+          <h1 className="mb-3 font-display text-[2rem] font-semibold leading-tight text-fg sm:text-[2.375rem]">
             {post.title}
           </h1>
 
           <div className="mb-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-fg-muted sm:text-base">
-            <span>{post.date}</span>
+            <span className="text-straw-11 font-medium">{post.date}</span>
             <span aria-hidden="true">&middot;</span>
             <span>
               {post.readTime} {dictionary.postPage.readLabel}
@@ -72,7 +72,7 @@ export default async function BlogPostScreen(props: BlogPostScreenProps) {
 
           <div className="mt-2 flex flex-wrap gap-2">
             {post.tags.map((tag, index) => (
-              <span key={tag} className="text-fg-muted text-sm">
+              <span key={tag} className="text-teal-11 text-sm">
                 #{tag}
                 {index < post.tags.length - 1 ? " " : ""}
               </span>
@@ -98,7 +98,7 @@ export default async function BlogPostScreen(props: BlogPostScreenProps) {
       {post.references.length > 0 && (
         <footer className="ml-2 mb-8 fade-in fade-in-delay-4">
           <div className="border-t border-line-subtle mb-6" />
-          <h2 className="text-xl font-bold text-fg mb-4 font-serif">
+          <h2 className="mb-4 font-display text-[1.375rem] leading-snug font-semibold text-primary-fg">
             {dictionary.postPage.referencesHeading}
           </h2>
           <ol className="space-y-3 list-decimal list-inside">

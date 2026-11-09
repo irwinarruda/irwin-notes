@@ -6,8 +6,8 @@
   "nav": {
     "ariaLabel": "Site navigation",
     "skipToContent": "Skip to content",
-    "posts": "notes",
-    "about": "about"
+    "posts": "Notes",
+    "about": "About"
   },
   "themeToggle": {
     "light": "light",
@@ -67,7 +67,7 @@
     "photoAlt": "Irwin Arruda",
     "name": "Irwin Arruda",
     "role": "Software Developer",
-    "location": "Goiania, Brazil",
+    "location": "Goiânia, Brazil",
     "openInNewTabLabel": "(opens in new tab)",
     "whoamiHeading": "whoami",
     "whoamiBody": "Software developer with a deep focus on the frontend ecosystem. I'm especially drawn to tooling — bundlers, meta-frameworks, micro-frontends — and to building things that make other devs' lives easier, like design system libraries, CLIs, and CI pipelines. I spend a lot of time studying software architecture, and lately I've been getting more into backend work.",

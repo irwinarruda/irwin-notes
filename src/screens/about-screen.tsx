@@ -50,7 +50,7 @@ export default async function AboutScreen(props: AboutScreenProps) {
             </div>
           </div>
           <div className="min-w-0">
-            <h1 className="font-serif text-fg text-3xl sm:text-4xl font-bold leading-tight">
+            <h1 className="font-display text-fg text-[2rem] sm:text-[2.375rem] font-semibold leading-tight">
               {about.name}
             </h1>
             <p className="text-fg-muted text-sm sm:text-base mt-1">
@@ -92,7 +92,7 @@ export default async function AboutScreen(props: AboutScreenProps) {
               {about.techStack.primary.map((tech) => (
                 <span
                   key={tech}
-                  className="text-fg-muted text-sm bg-raised px-2 py-0.5 rounded border border-line-subtle"
+                  className="text-teal-11 text-sm bg-teal-3 px-2 py-0.5 rounded border border-teal-6"
                 >
                   {tech}
                 </span>
@@ -107,7 +107,7 @@ export default async function AboutScreen(props: AboutScreenProps) {
               {about.techStack.exploring.map((tech) => (
                 <span
                   key={tech}
-                  className="text-fg-muted text-sm bg-raised px-2 py-0.5 rounded border border-line-subtle"
+                  className="text-lavender-11 text-sm bg-lavender-3 px-2 py-0.5 rounded border border-lavender-6"
                 >
                   {tech}
                 </span>
@@ -122,7 +122,7 @@ export default async function AboutScreen(props: AboutScreenProps) {
               {about.techStack.tools.map((tech) => (
                 <span
                   key={tech}
-                  className="text-fg-muted text-sm bg-raised px-2 py-0.5 rounded border border-line-subtle"
+                  className="text-straw-11 text-sm bg-straw-3 px-2 py-0.5 rounded border border-straw-6"
                 >
                   {tech}
                 </span>
@@ -148,10 +148,10 @@ export default async function AboutScreen(props: AboutScreenProps) {
               className="group rounded-lg border border-line-subtle bg-raised/50 p-3 transition-all duration-300 hover:border-line hover:bg-raised focus-visible:border-line focus-visible:bg-raised"
             >
               <div className="flex items-baseline justify-between gap-2 mb-1">
-                <span className="text-fg text-base sm:text-lg font-medium">
+                <span className="font-display text-fg text-base sm:text-lg font-semibold transition-colors duration-300 group-hover:text-primary-fg">
                   {project.name}
                 </span>
-                <span className="text-fg-muted text-sm shrink-0">
+                <span className="text-teal-11 text-sm shrink-0">
                   {project.tech}
                 </span>
               </div>

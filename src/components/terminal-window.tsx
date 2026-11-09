@@ -65,7 +65,7 @@ export function TerminalWindow({
             <Image
               src="/brand/irwin-arruda-light.svg"
               alt="Irwin Arruda"
-              width={142}
+              width={135}
               height={22}
               className="h-5 w-auto sm:h-[22px] dark:hidden"
               priority
@@ -73,7 +73,7 @@ export function TerminalWindow({
             <Image
               src="/brand/irwin-arruda-dark.svg"
               alt="Irwin Arruda"
-              width={142}
+              width={135}
               height={22}
               className="hidden h-5 w-auto sm:h-[22px] dark:block"
               priority

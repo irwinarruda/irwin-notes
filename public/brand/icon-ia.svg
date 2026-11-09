@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Irwin Arruda">
 <title>Irwin Arruda</title>
 <rect width="512" height="512" rx="112" fill="#111418"/>
-<g transform="translate(256 262) scale(2.05) translate(-91.765 64)"><g fill="none" stroke="#FFFFFF" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
+<g transform="translate(256 262) scale(2.05) translate(-88.77 64)"><g fill="none" stroke="#FFFFFF" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
   <path transform="translate(25 0)" d="M0 0V-100"/>
-  <path transform="translate(65 0)" d="M93.53 -100H28.87L0 -50L28.87 0H93.53M93.53 -100V0"/>
+  <path transform="translate(59 0)" d="M93.53 -100H28.87L0 -50L28.87 0H93.53M93.53 -100V0"/>
 </g>
 <rect x="10" y="-153" width="30" height="30" rx="7" fill="#B64D3F"/></g>
 </svg>

@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -178 243.53 243.53" role="img" aria-label="Irwin Arruda">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -178 237.53 237.53" role="img" aria-label="Irwin Arruda">
 <title>Irwin Arruda</title>
 <g fill="none" stroke="#21272D" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
   <path transform="translate(25 0)" d="M0 0V-100"/>
-  <path transform="translate(65 0)" d="M93.53 -100H28.87L0 -50L28.87 0H93.53M93.53 -100V0"/>
+  <path transform="translate(59 0)" d="M93.53 -100H28.87L0 -50L28.87 0H93.53M93.53 -100V0"/>
 </g>
 <rect x="10" y="-153" width="30" height="30" rx="7" fill="#B64D3F"/>
 </svg>

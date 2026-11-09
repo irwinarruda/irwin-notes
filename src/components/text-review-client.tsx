@@ -125,15 +125,15 @@ function formatNoteType(type: string, noteLabels: Record<string, string>): strin
 }
 
 function scoreColor(score: number): string {
-  if (score >= 7.5) return "text-term-green";
-  if (score >= 6.5) return "text-term-amber";
-  return "text-term-red";
+  if (score >= 7.5) return "text-success";
+  if (score >= 6.5) return "text-warning";
+  return "text-danger";
 }
 
 function scoreBgColor(score: number): string {
-  if (score >= 7.5) return "bg-term-green";
-  if (score >= 6.5) return "bg-term-amber";
-  return "bg-term-red";
+  if (score >= 7.5) return "bg-success";
+  if (score >= 6.5) return "bg-warning";
+  return "bg-danger";
 }
 
 // ─── Score Card Component ───────────────────────────────────────────
@@ -156,10 +156,10 @@ function ScoreCard({
   return (
     <button
       onClick={onToggle}
-      className="group flex flex-col gap-1.5 rounded-lg border border-term-border bg-term-bg/60 px-3 py-2.5 text-left transition-all duration-200 hover:border-term-muted hover:bg-term-bg/90"
+      className="group flex flex-col gap-1.5 rounded-lg border border-line bg-page/60 px-3 py-2.5 text-left transition-all duration-200 hover:border-line-strong hover:bg-page/90"
     >
       <div className="flex items-center justify-between gap-2">
-        <span className="text-2xs font-mono uppercase tracking-widest text-term-muted">
+        <span className="text-2xs font-mono uppercase tracking-widest text-fg-muted">
           {formatNoteType(note.typeOfNote, noteLabels)}
         </span>
         <span className={`font-mono text-sm font-bold ${scoreColor(score)}`}>
@@ -171,13 +171,13 @@ function ScoreCard({
           <div
             key={i}
             className={`h-1 flex-1 rounded-full transition-all duration-300 ${
-              i < filled ? scoreBgColor(score) : "bg-term-border"
+              i < filled ? scoreBgColor(score) : "bg-line"
             } ${i < filled ? "opacity-80" : "opacity-40"}`}
           />
         ))}
       </div>
       {isExpanded && (
-        <p className="mt-1 text-xs leading-relaxed text-term-text font-serif">
+        <p className="mt-1 text-xs leading-relaxed text-fg font-serif">
           {note.explanation}
         </p>
       )}
@@ -196,12 +196,11 @@ function ScoreDashboard({ notes, texts }: { notes: ReviewNote[]; texts: ReviewTe
   return (
     <div className="mb-6">
       <div className="mb-3 flex items-center justify-between">
-        <h2 className="font-mono text-sm font-semibold uppercase tracking-widest text-term-green">
-          <span className="text-term-muted mr-1">&gt;</span>
+        <h2 className="font-mono text-sm font-semibold uppercase tracking-widest text-fg">
           {texts.reviewScoresHeading}
         </h2>
         <div className="flex items-center gap-2">
-          <span className="font-mono text-2xs uppercase tracking-wide text-term-muted">
+          <span className="font-mono text-2xs uppercase tracking-wide text-fg-muted">
             {texts.avgLabel}
           </span>
           <span
@@ -251,14 +250,14 @@ function InlineDiffLine({
         segments.push(
           <span
             key={i}
-            className="bg-term-red/20 text-term-red rounded-sm px-0.5"
+            className="bg-danger-soft text-danger rounded-sm px-0.5"
           >
             {change.value}
           </span>,
         );
       } else if (!change.added) {
         segments.push(
-          <span key={i} className="text-term-muted">
+          <span key={i} className="text-fg-muted">
             {change.value}
           </span>,
         );
@@ -268,14 +267,14 @@ function InlineDiffLine({
         segments.push(
           <span
             key={i}
-            className="bg-term-green/20 text-term-green rounded-sm px-0.5"
+            className="bg-success-soft text-success rounded-sm px-0.5"
           >
             {change.value}
           </span>,
         );
       } else if (!change.removed) {
         segments.push(
-          <span key={i} className="text-term-muted">
+          <span key={i} className="text-fg-muted">
             {change.value}
           </span>,
         );
@@ -300,14 +299,14 @@ function SuggestionDetailCard({
   texts: ReviewTexts;
 }) {
   return (
-    <div className="review-suggestion-card mx-8 my-1 rounded-lg border border-term-amber/30 bg-term-bg/95 shadow-lg shadow-black/20 overflow-hidden">
-      <div className="flex items-center justify-between border-b border-term-border px-3 py-1.5">
-        <span className="font-mono text-2xs uppercase tracking-widest text-term-amber">
+    <div className="review-suggestion-card mx-8 my-1 rounded-lg border border-warning-line bg-overlay shadow-lg shadow-black/20 overflow-hidden">
+      <div className="flex items-center justify-between border-b border-line-subtle px-3 py-1.5">
+        <span className="font-mono text-2xs uppercase tracking-widest text-warning">
           {texts.suggestionLabel}
         </span>
         <button
           onClick={onDismiss}
-          className="flex h-5 w-5 items-center justify-center rounded text-term-muted transition-colors hover:bg-term-border hover:text-term-text"
+          className="flex h-5 w-5 items-center justify-center rounded text-fg-muted transition-colors hover:bg-hover hover:text-fg"
           aria-label={texts.dismissLabel}
         >
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -317,7 +316,7 @@ function SuggestionDetailCard({
       </div>
       <div className="px-3 py-2 space-y-1.5">
         <div className="flex gap-2">
-          <span className="shrink-0 font-mono text-xs text-term-red select-none">
+          <span className="shrink-0 font-mono text-xs text-danger select-none">
             -
           </span>
           <pre className="flex-1 whitespace-pre-wrap break-words font-mono text-xs leading-relaxed">
@@ -329,7 +328,7 @@ function SuggestionDetailCard({
           </pre>
         </div>
         <div className="flex gap-2">
-          <span className="shrink-0 font-mono text-xs text-term-green select-none">
+          <span className="shrink-0 font-mono text-xs text-success select-none">
             +
           </span>
           <pre className="flex-1 whitespace-pre-wrap break-words font-mono text-xs leading-relaxed">
@@ -341,10 +340,10 @@ function SuggestionDetailCard({
           </pre>
         </div>
       </div>
-      <div className="flex justify-end border-t border-term-border px-3 py-1.5">
+      <div className="flex justify-end border-t border-line-subtle px-3 py-1.5">
         <button
           onClick={onApply}
-          className="flex items-center gap-1.5 rounded border border-term-green/30 bg-term-green/10 px-3 py-1 font-mono text-xs text-term-green transition-all duration-200 hover:bg-term-green/20 hover:border-term-green/50"
+          className="flex items-center gap-1.5 rounded bg-primary px-3 py-1 font-mono text-xs text-on-primary transition-all duration-200 hover:bg-primary-hover"
         >
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5">
             <path d="M2 6l3 3 5-5" />
@@ -376,15 +375,15 @@ function ContentLine({
   if (highlights.length === 0) {
     return (
       <div className="review-line group flex">
-        <span className="review-line-number shrink-0 select-none pr-4 text-right font-mono text-xs leading-6 text-term-muted/50 w-10 sm:w-12">
+        <span className="review-line-number shrink-0 select-none pr-4 text-right font-mono text-xs leading-6 text-fg-faint w-10 sm:w-12">
           {lineNum}
         </span>
-        <span className="review-line-sep shrink-0 mr-3 w-px bg-term-border/50 self-stretch" />
+        <span className="review-line-sep shrink-0 mr-3 w-px bg-line-subtle self-stretch" />
         <span
           className={`flex-1 font-mono text-sm leading-6 whitespace-pre-wrap break-words ${
             isFrontmatter
-              ? "text-term-muted/60"
-              : "text-term-text"
+              ? "text-fg-faint"
+              : "text-fg"
           }`}
         >
           {lineContent || "\u00A0"}
@@ -414,8 +413,8 @@ function ContentLine({
         onClick={() => onHighlightClick(h.suggestionId)}
         className={`review-highlight inline text-left whitespace-pre-wrap rounded-sm px-0.5 -mx-0.5 transition-all duration-200 cursor-pointer ${
           isActive
-            ? "bg-term-amber/25 text-term-bright ring-1 ring-term-amber/50"
-            : "bg-term-amber/10 text-term-amber-strong hover:bg-term-amber/20"
+            ? "bg-warning-soft text-fg ring-1 ring-warning-line"
+            : "bg-warning-soft/60 text-warning hover:bg-warning-soft"
         }`}
       >
         {lineContent.slice(startIdx, endIdx)}
@@ -433,13 +432,13 @@ function ContentLine({
 
   return (
     <div className="review-line group flex">
-      <span className="review-line-number shrink-0 select-none pr-4 text-right font-mono text-xs leading-6 text-term-muted/50 w-10 sm:w-12">
+      <span className="review-line-number shrink-0 select-none pr-4 text-right font-mono text-xs leading-6 text-fg-faint w-10 sm:w-12">
         {lineNum}
       </span>
-      <span className="review-line-sep shrink-0 mr-3 w-px bg-term-border/50 self-stretch" />
+      <span className="review-line-sep shrink-0 mr-3 w-px bg-line-subtle self-stretch" />
       <span
         className={`flex-1 font-mono text-sm leading-6 whitespace-pre-wrap break-words ${
-          isFrontmatter ? "text-term-muted/60" : "text-term-text"
+          isFrontmatter ? "text-fg-faint" : "text-fg"
         }`}
       >
         {segments}
@@ -466,22 +465,21 @@ function SuggestionNav({
   texts: ReviewTexts;
 }) {
   return (
-    <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-term-border bg-term-bg/60 px-4 py-2.5">
+    <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-line bg-page/60 px-4 py-2.5">
       <div className="flex items-center gap-4">
-        <h2 className="font-mono text-sm font-semibold uppercase tracking-widest text-term-green">
-          <span className="text-term-muted mr-1">&gt;</span>
+        <h2 className="font-mono text-sm font-semibold uppercase tracking-widest text-fg">
           {texts.suggestionsHeading}
         </h2>
         <div className="flex items-center gap-3 font-mono text-xs">
-          <span className="text-term-amber">
+          <span className="text-warning">
             {pending} {texts.pendingLabel}
           </span>
-          <span className="text-term-muted">/</span>
-          <span className="text-term-green">
+          <span className="text-fg-muted">/</span>
+          <span className="text-success">
             {applied} {texts.appliedLabel}
           </span>
-          <span className="text-term-muted">/</span>
-          <span className="text-term-muted">
+          <span className="text-fg-muted">/</span>
+          <span className="text-fg-muted">
             {total} {texts.totalLabel}
           </span>
         </div>
@@ -490,7 +488,7 @@ function SuggestionNav({
         <button
           onClick={onPrev}
           disabled={pending === 0}
-          className="flex h-7 items-center gap-1 rounded border border-term-border px-2 font-mono text-xs text-term-muted transition-colors hover:border-term-muted hover:text-term-text disabled:opacity-30 disabled:cursor-not-allowed"
+          className="flex h-7 items-center gap-1 rounded border border-line px-2 font-mono text-xs text-fg-muted transition-colors hover:border-line-strong hover:text-fg disabled:opacity-30 disabled:cursor-not-allowed"
         >
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5">
             <path d="M7 1L3 5l4 4" />
@@ -500,7 +498,7 @@ function SuggestionNav({
         <button
           onClick={onNext}
           disabled={pending === 0}
-          className="flex h-7 items-center gap-1 rounded border border-term-border px-2 font-mono text-xs text-term-muted transition-colors hover:border-term-muted hover:text-term-text disabled:opacity-30 disabled:cursor-not-allowed"
+          className="flex h-7 items-center gap-1 rounded border border-line px-2 font-mono text-xs text-fg-muted transition-colors hover:border-line-strong hover:text-fg disabled:opacity-30 disabled:cursor-not-allowed"
         >
           {texts.nextButton}
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -659,7 +657,7 @@ export function TextReviewClient({
             height="16"
             viewBox="0 0 16 16"
             fill="none"
-            className="text-term-green"
+            className="text-fg-muted"
           >
             <path
               d="M3 1h7l3 3v9a2 2 0 01-2 2H3a2 2 0 01-2-2V3a2 2 0 012-2z"
@@ -668,21 +666,21 @@ export function TextReviewClient({
             />
             <path d="M10 1v3h3" stroke="currentColor" strokeWidth="1.2" />
           </svg>
-          <h1 className="font-mono text-base font-semibold text-term-bright">
+          <h1 className="font-mono text-base font-semibold text-fg">
             {fileName}
           </h1>
         </div>
-        <span className="rounded border border-term-cyan/30 bg-term-cyan/8 px-1.5 py-0.5 font-mono text-2xs text-term-cyan">
+        <span className="rounded border border-info-line bg-info-soft px-1.5 py-0.5 font-mono text-2xs text-info">
           {texts.reviewBadge}
         </span>
       </div>
 
-      <div className="mb-4 border-t border-term-border" />
+      <div className="mb-4 border-t border-line-subtle" />
 
       {/* Score Dashboard */}
       <ScoreDashboard notes={notes} texts={texts} />
 
-      <div className="mb-4 border-t border-term-border" />
+      <div className="mb-4 border-t border-line-subtle" />
 
       {/* Suggestion Navigation */}
       <div className="mb-4">
@@ -696,12 +694,12 @@ export function TextReviewClient({
         />
       </div>
 
-      <div className="mb-4 border-t border-term-border" />
+      <div className="mb-4 border-t border-line-subtle" />
 
       {/* Content Viewer */}
       <div
         ref={contentRef}
-        className="review-content overflow-x-auto rounded-lg border border-term-border bg-term-bg/40"
+        className="review-content overflow-x-auto rounded-lg border border-line bg-page/40"
       >
         <div className="py-3">
           {lines.map((line, i) => {
@@ -722,7 +720,7 @@ export function TextReviewClient({
                   }}
                   className={`transition-colors duration-300 ${
                     isFlashing
-                      ? "bg-term-green/10"
+                      ? "bg-success-soft"
                       : ""
                   }`}
                 >
@@ -752,7 +750,7 @@ export function TextReviewClient({
 
       {/* Footer actions */}
       <div className="mt-3 flex items-center justify-between">
-        <span className="font-mono text-2xs text-term-muted">
+        <span className="font-mono text-2xs text-fg-muted">
           {appliedCount > 0
             ? texts.suggestionsApplied
                 .replace("{applied}", String(appliedCount))
@@ -766,7 +764,7 @@ export function TextReviewClient({
               setTimeout(() => setCopied(false), 2000);
             });
           }}
-          className="flex items-center gap-1.5 rounded border border-term-green/30 bg-term-green/10 px-3 py-1.5 font-mono text-xs text-term-green transition-all duration-200 hover:bg-term-green/20 hover:border-term-green/50"
+          className="flex items-center gap-1.5 rounded bg-primary px-3 py-1.5 font-mono text-xs text-on-primary transition-all duration-200 hover:bg-primary-hover"
         >
           {copied ? (
             <>

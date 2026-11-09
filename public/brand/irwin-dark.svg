@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -170 474.87 190" role="img" aria-label="irwin">
+<title>irwin</title>
+<g fill="none" stroke="#E6EAEF" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
+  <path transform="translate(25 0)" d="M0 0V-100"/>
+  <path transform="translate(65 0)" d="M0 0V-65.36L20 -100H50"/>
+  <path transform="translate(155 0)" d="M0 -100L34 0L68 -100L102 0L136 -100"/>
+  <path transform="translate(331 0)" d="M0 0V-100"/>
+  <path transform="translate(371 0)" d="M0 0V-100H50L78.87 -50V0"/>
+</g>
+<rect x="10" y="-153" width="30" height="30" rx="7" fill="#B64D3F"/>
+<rect x="316" y="-153" width="30" height="30" rx="7" fill="#E6EAEF"/>
+</svg>

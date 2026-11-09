@@ -1,4 +1,4 @@
-import { JetBrains_Mono } from "next/font/google";
+import { Chakra_Petch, JetBrains_Mono } from "next/font/google";
 import { THEME_COOKIE, type Theme } from "@/utils/theme";
 
 const THEME_INIT_SCRIPT = `(() => {
@@ -16,21 +16,27 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
+const chakraPetch = Chakra_Petch({
+  subsets: ["latin"],
+  weight: ["500", "600"],
+  variable: "--font-chakra-petch",
+});
+
 type RootLayoutProps = {
   children: React.ReactNode;
   locale: string;
-  theme: Theme;
+  theme?: Theme;
 };
 
 export default function RootLayoutScreen(props: Readonly<RootLayoutProps>) {
   return (
     <html
       lang={props.locale}
-      className={jetbrainsMono.variable}
+      className={`${jetbrainsMono.variable} ${chakraPetch.variable}`}
       data-theme={props.theme}
       suppressHydrationWarning
     >
-      <body className="bg-term-bg font-mono antialiased min-h-screen">
+      <body className="bg-page text-fg font-mono antialiased min-h-screen">
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         {props.children}
       </body>

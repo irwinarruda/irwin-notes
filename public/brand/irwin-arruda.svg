@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -170 1224.33 190" role="img" aria-label="Irwin Arruda">
+<title>Irwin Arruda</title>
+<g fill="none" stroke="#7E848A" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
+  <path transform="translate(25 0)" d="M0 0V-100"/>
+  <path transform="translate(65 0)" d="M0 0V-65.36L20 -100H50"/>
+  <path transform="translate(155 0)" d="M0 -100L34 0L68 -100L102 0L136 -100"/>
+  <path transform="translate(331 0)" d="M0 0V-100"/>
+  <path transform="translate(371 0)" d="M0 0V-100H50L78.87 -50V0"/>
+  <path transform="translate(539.87 0)" d="M93.53 -100H28.87L0 -50L28.87 0H93.53M93.53 -100V0"/>
+  <path transform="translate(673.4 0)" d="M0 0V-65.36L20 -100H50"/>
+  <path transform="translate(763.4 0)" d="M0 0V-65.36L20 -100H50"/>
+  <path transform="translate(853.4 0)" d="M0 -100V-50L28.87 0H78.87V-100"/>
+  <path transform="translate(972.27 0)" d="M93.53 -100H28.87L0 -50L28.87 0H93.53M93.53 -152V0"/>
+  <path transform="translate(1105.8 0)" d="M93.53 -100H28.87L0 -50L28.87 0H93.53M93.53 -100V0"/>
+</g>
+<rect x="10" y="-153" width="30" height="30" rx="7" fill="#B64D3F"/>
+<rect x="316" y="-153" width="30" height="30" rx="7" fill="#7E848A"/>
+</svg>

@@ -1,13 +1,16 @@
-# Irwin Notes
+<p align="center">
+  <img src="public/brand/irwin-arruda-dark.svg#gh-dark-mode-only" alt="Irwin Arruda" width="360">
+  <img src="public/brand/irwin-arruda-light.svg#gh-light-mode-only" alt="Irwin Arruda" width="360">
+</p>
 
-> Fully vibecoded. No plan, no roadmap — just thoughts on code landing somewhere.
+My personal site, [irwinarruda.com](https://www.irwinarruda.com), where I write notes on software, building tools and frontend architecture, in English and Portuguese, whenever the mood strikes.
 
-A terminal-style personal blog where I dump whatever is on my mind about software engineering. Built on Next.js, styled like a terminal, written whenever the mood strikes.
+The colors come from [Barro](https://github.com/irwinarruda/barro-theme): Barro Slate in dark mode and Barro Kaolin in light mode, code blocks included. The logo and icons live in [`public/brand`](public/brand).
 
 ## Stack
 
 - **Next.js 16** App Router + React 19
-- **Tailwind CSS v4** with custom theme tokens
+- **Tailwind CSS v4** with the [Barro](https://github.com/irwinarruda/barro-theme) theme tokens
 - **MDX** posts with Shiki syntax highlighting
 - **Bun** as package manager and runtime
 

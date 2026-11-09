@@ -1,5 +1,7 @@
 import createMDX from "@next/mdx";
 import type { NextConfig } from "next";
+import barroKaolin from "./src/styles/barro/barro-kaolin.json";
+import barroSlate from "./src/styles/barro/barro-slate.json";
 
 const withMDX = createMDX({
   extension: /\.(md|mdx)$/,
@@ -14,8 +16,8 @@ const withMDX = createMDX({
         "rehype-pretty-code",
         {
           theme: {
-            dark: "github-dark",
-            light: "github-light",
+            dark: barroSlate,
+            light: barroKaolin,
           },
           keepBackground: false,
           defaultLang: {

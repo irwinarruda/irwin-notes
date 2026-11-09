@@ -3,8 +3,9 @@
 import { useSyncExternalStore } from "react";
 import {
   DEFAULT_THEME,
-  getThemeFromDocumentCookie,
+  getDocumentTheme,
   setThemeCookie,
+  SYSTEM_DARK_QUERY,
   type Theme,
 } from "@/utils/theme";
 
@@ -25,7 +26,7 @@ const DEFAULT_THEME_TOGGLE_LABELS: ThemeToggleLabels = {
 const THEME_CHANGE_EVENT = "themechange";
 
 function getThemeSnapshot(): Theme {
-  return getThemeFromDocumentCookie();
+  return getDocumentTheme();
 }
 
 function subscribeToTheme(onStoreChange: () => void): () => void {
@@ -33,14 +34,17 @@ function subscribeToTheme(onStoreChange: () => void): () => void {
     return () => {};
   }
 
+  const systemThemeQuery = window.matchMedia(SYSTEM_DARK_QUERY);
   const handleThemeChange = () => {
     onStoreChange();
   };
 
   window.addEventListener(THEME_CHANGE_EVENT, handleThemeChange);
+  systemThemeQuery.addEventListener("change", handleThemeChange);
 
   return () => {
     window.removeEventListener(THEME_CHANGE_EVENT, handleThemeChange);
+    systemThemeQuery.removeEventListener("change", handleThemeChange);
   };
 }
 
@@ -70,13 +74,19 @@ export function ThemeToggle({
     <button
       type="button"
       onClick={toggle}
-      className="inline-flex min-h-6 min-w-6 items-center gap-1 rounded px-1.5 text-xs text-term-muted tracking-wide transition-colors duration-200 hover:text-term-bright cursor-pointer select-none focus-visible:outline-offset-1"
+      className="inline-flex min-h-6 min-w-6 items-center rounded px-1.5 text-xs text-fg-muted tracking-wide transition-colors duration-200 hover:text-fg cursor-pointer select-none focus-visible:outline-offset-1"
       aria-label={theme === "dark" ? labels.switchToLight : labels.switchToDark}
       aria-pressed={theme === "light"}
       title={theme === "dark" ? labels.switchToLight : labels.switchToDark}
     >
-      <span aria-hidden="true">{theme === "dark" ? "☀" : "☾"}</span>
-      {theme === "dark" ? labels.light : labels.dark}
+      <span className="inline-flex items-center gap-1 dark:hidden">
+        <span aria-hidden="true">☾</span>
+        {labels.dark}
+      </span>
+      <span className="hidden items-center gap-1 dark:inline-flex">
+        <span aria-hidden="true">☀</span>
+        {labels.light}
+      </span>
     </button>
   );
 }

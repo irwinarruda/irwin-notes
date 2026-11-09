@@ -26,17 +26,24 @@ export default async function PostsScreen(props: PostsScreenProps) {
 
   return (
     <TerminalWindow
-      title={dictionary.postsPage.windowTitle}
+      homeHref={`/${locale}/posts`}
+      nav={
+        <TerminalNav
+          active={`/${locale}/posts`}
+          ariaLabel={dictionary.nav.ariaLabel}
+          links={navLinks}
+        />
+      }
       skipToContentLabel={dictionary.nav.skipToContent}
       themeToggleLabels={dictionary.themeToggle}
       serverTheme={theme}
       localeSwitcher={localeSwitcher}
     >
-      <div className="mb-6 fade-in">
-        <h1 className="text-term-green text-xl sm:text-2xl md:text-3xl font-bold tracking-tight mb-1">
+      <div className="fade-in">
+        <h1 className="font-display text-fg text-[1.625rem] sm:text-[2rem] md:text-[2.375rem] leading-[1.1] font-semibold tracking-tight mb-1">
           {dictionary.postsPage.heading}
         </h1>
-        <p className="text-term-muted text-sm sm:text-base truncate">
+        <p className="text-fg-muted text-sm sm:text-base truncate">
           {dictionary.postsPage.subtitleItems.map((item, index) => (
             <span key={item}>
               {index > 0 ? (
@@ -49,14 +56,7 @@ export default async function PostsScreen(props: PostsScreenProps) {
           ))}
         </p>
       </div>
-      <div className="fade-in fade-in-delay-1">
-        <TerminalNav
-          active={`/${locale}/posts`}
-          ariaLabel={dictionary.nav.ariaLabel}
-          links={navLinks}
-        />
-      </div>
-      <div className="border-t border-term-border my-6" />
+      <div className="border-t border-line-subtle my-6" />
       <ul className="space-y-1 mb-8">
         {posts.map((post, i) => {
           const fadeDelays = [
@@ -74,31 +74,31 @@ export default async function PostsScreen(props: PostsScreenProps) {
           >
             <Link
               href={`/${locale}/post/${post.slug}`}
-              className="post-entry group block rounded-r-lg pl-5 py-3.5 transition-all duration-300 hover:bg-term-chrome/50 focus-visible:bg-term-chrome/50"
+              className="post-entry group block rounded-r-lg pl-5 py-3.5 transition-all duration-300 hover:bg-raised focus-visible:bg-raised"
             >
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm sm:text-base">
-                <span className="text-term-amber font-medium">{post.date}</span>
-                <span className="text-term-muted" aria-hidden="true">
+                <span className="text-straw-11 font-medium">{post.date}</span>
+                <span className="text-fg-muted" aria-hidden="true">
                   &middot;
                 </span>
-                <span className="text-term-muted">
+                <span className="text-fg-muted">
                   {post.readTime} {dictionary.postsPage.readLabel}
                 </span>
               </div>
-              <h2 className="text-term-bright text-lg sm:text-xl mt-1 font-medium group-hover:text-term-green transition-colors duration-300">
+              <h2 className="font-display text-fg text-[1.375rem] sm:text-[1.625rem] leading-snug mt-1 font-semibold transition-colors duration-300 group-hover:text-primary-fg group-focus-visible:text-primary-fg">
                 {post.title}
                 {post.draft && (
-                  <span className="ml-2 inline-block align-middle rounded border border-dashed border-term-amber/50 bg-term-amber/8 px-1.5 py-0.5 text-xs font-mono font-normal text-term-amber">
+                  <span className="ml-2 inline-block align-middle rounded border border-dashed border-warning-line bg-warning-soft px-1.5 py-0.5 text-xs font-mono font-normal text-warning">
                     {dictionary.postsPage.draftLabel}
                   </span>
                 )}
               </h2>
-              <p className="text-term-text text-sm sm:text-base mt-1 leading-relaxed max-w-2xl">
+              <p className="text-fg-muted text-sm sm:text-base mt-1 leading-relaxed max-w-2xl">
                 {post.description}
               </p>
               <div className="flex flex-wrap gap-2 mt-2">
                 {post.tags.map((tag, index) => (
-                  <span key={tag} className="text-term-cyan-strong text-sm">
+                  <span key={tag} className="text-teal-11 text-sm">
                     #{tag}
                     {index < post.tags.length - 1 ? " " : ""}
                   </span>

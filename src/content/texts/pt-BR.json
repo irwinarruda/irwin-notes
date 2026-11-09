@@ -1,13 +1,13 @@
 {
   "meta": {
-    "siteTitle": "Irwin Notes",
-    "siteDescription": "Blog em estilo terminal por Irwin Arruda Sales. Desenvolvedor de software, entusiasta do Vim e criador de ferramentas."
+    "siteTitle": "Irwin Arruda",
+    "siteDescription": "Notas de Irwin Arruda Sales sobre software, arquitetura frontend e criação de ferramentas. Desenvolvedor de software, entusiasta do Vim e criador de ferramentas."
   },
   "nav": {
-    "ariaLabel": "Navegacao do site",
-    "skipToContent": "Ir para o conteudo",
-    "posts": "posts/",
-    "about": "sobre.md"
+    "ariaLabel": "Navegação do site",
+    "skipToContent": "Ir para o conteúdo",
+    "posts": "Notas",
+    "about": "Sobre"
   },
   "themeToggle": {
     "light": "claro",
@@ -24,14 +24,12 @@
     }
   },
   "postsPage": {
-    "windowTitle": "irwin@notes: ~/posts",
-    "heading": "Irwin Notes",
+    "heading": "Notas",
     "subtitleItems": ["Frontend", "React", "Next.js", "TypeScript", "Vim"],
     "readLabel": "de leitura",
     "draftLabel": "rascunho"
   },
   "postPage": {
-    "windowTitlePrefix": "irwin@notes: ~/post/",
     "readLabel": "de leitura",
     "draftLabel": "rascunho",
     "draftNotice": "// Este post é um rascunho — o conteúdo pode mudar.",
@@ -66,11 +64,10 @@
     }
   },
   "aboutPage": {
-    "windowTitle": "irwin@notes: ~/sobre.md",
     "photoAlt": "Irwin Arruda",
     "name": "Irwin Arruda",
     "role": "Desenvolvedor de Software",
-    "location": "Goiania, Brasil",
+    "location": "Goiânia, Brasil",
     "openInNewTabLabel": "(abre em nova aba)",
     "whoamiHeading": "quem-sou",
     "whoamiBody": "Desenvolvedor de software com foco no ecossistema frontend. Tenho um interesse especial por ferramental — bundlers, meta-frameworks, microfrontends — e por criar coisas que facilitam a vida de outros devs, como bibliotecas de design system, CLIs e pipelines de CI. Estudo bastante sobre arquitetura de software e, mais recentemente, tenho me aprofundado cada vez mais no backend.",
@@ -100,37 +97,37 @@
     "projects": [
       {
         "name": "Mobx Simple Store",
-        "description": "Uma alternativa performatica ao MobX State Tree para criar stores reativos em arvore. Remove recursos que causam gargalos de performance com grandes volumes de dados",
+        "description": "Uma alternativa performática ao MobX State Tree para criar stores reativos em árvore. Remove recursos que causam gargalos de performance com grandes volumes de dados",
         "tech": "TypeScript",
         "href": "https://github.com/irwinarruda/mobx-simple-store"
       },
       {
         "name": "The Chatbot",
-        "description": "Assistente digital de uso geral com integracao com WhatsApp, Google Sheets para gastos e MCP para invocacao de ferramentas de IA",
+        "description": "Assistente digital de uso geral com integração com WhatsApp, Google Sheets para gastos e MCP para invocação de ferramentas de IA",
         "tech": "C# / .NET",
         "href": "https://github.com/irwinarruda/the-chatbot"
       },
       {
         "name": "Paper Brick",
-        "description": "Aplicativo de tray para macOS para trocar wallpaper rapidamente. Escaneia um diretorio de imagens e aplica com um clique. Feito com Tauri e Solid.js",
+        "description": "Aplicativo de tray para macOS para trocar wallpaper rapidamente. Escaneia um diretório de imagens e aplica com um clique. Feito com Tauri e Solid.js",
         "tech": "TypeScript / macOS",
         "href": "https://github.com/irwinarruda/paper-brick"
       },
       {
         "name": "Pro Cris App",
-        "description": "Aplicativo React Native que ajuda professores a organizar agenda, precos e cadastro de alunos com rotina diaria e geracao de recibos",
+        "description": "Aplicativo React Native que ajuda professores a organizar agenda, preços e cadastro de alunos com rotina diária e geração de recibos",
         "tech": "React Native",
         "href": "https://github.com/irwinarruda/pro-cris-app-v2"
       },
       {
         "name": "Study on Micro-frontends",
-        "description": "Estudo pratico integrando React, Vue e Svelte no mesmo app com Webpack Module Federation e estado global compartilhado com MobX",
+        "description": "Estudo prático integrando React, Vue e Svelte no mesmo app com Webpack Module Federation e estado global compartilhado com MobX",
         "tech": "JavaScript",
         "href": "https://github.com/irwinarruda/study-on-micro-frontends"
       },
       {
         "name": "Goals Tracker",
-        "description": "Aplicativo React Native para acompanhar habitos diarios com cards de metas, sistema de cheat day por moedas e notas de dias concluidos ou perdidos",
+        "description": "Aplicativo React Native para acompanhar hábitos diários com cards de metas, sistema de cheat day por moedas e notas de dias concluídos ou perdidos",
         "tech": "TypeScript",
         "href": "https://github.com/irwinarruda/goals-tracker-v2"
       }

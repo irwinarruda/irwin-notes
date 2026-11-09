@@ -45,7 +45,7 @@ export async function generateMetadata(
   const description = `${post.description}${post.tags.length > 0 ? ` ${post.tags.map((tag) => `#${tag}`).join(" ")}` : ""}`;
 
   return {
-    title,
+    title: `${title} · ${dictionary.meta.siteTitle}`,
     description,
     keywords: post.tags,
     openGraph: {
@@ -55,7 +55,7 @@ export async function generateMetadata(
       siteName: dictionary.meta.siteTitle,
       images: [
         {
-          url: `${siteUrl}/irwin-notes.png`,
+          url: `${siteUrl}/brand/icon-ia-512.png`,
           alt: title,
         },
       ],

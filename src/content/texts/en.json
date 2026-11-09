@@ -1,13 +1,13 @@
 {
   "meta": {
-    "siteTitle": "Irwin Notes",
-    "siteDescription": "Terminal-style blog by Irwin Arruda Sales. Software Developer, Vim enthusiast, tool builder."
+    "siteTitle": "Irwin Arruda",
+    "siteDescription": "Notes by Irwin Arruda Sales on software, frontend architecture and building tools. Software Developer, Vim enthusiast, tool builder."
   },
   "nav": {
     "ariaLabel": "Site navigation",
     "skipToContent": "Skip to content",
-    "posts": "posts/",
-    "about": "about.md"
+    "posts": "Notes",
+    "about": "About"
   },
   "themeToggle": {
     "light": "light",
@@ -24,14 +24,12 @@
     }
   },
   "postsPage": {
-    "windowTitle": "irwin@notes: ~/posts",
-    "heading": "Irwin Notes",
+    "heading": "Notes",
     "subtitleItems": ["Frontend", "React", "Next.js", "TypeScript", "Vim"],
     "readLabel": "read",
     "draftLabel": "draft"
   },
   "postPage": {
-    "windowTitlePrefix": "irwin@notes: ~/post/",
     "readLabel": "read",
     "draftLabel": "draft",
     "draftNotice": "// This post is a draft — content may change.",
@@ -66,11 +64,10 @@
     }
   },
   "aboutPage": {
-    "windowTitle": "irwin@notes: ~/about.md",
     "photoAlt": "Irwin Arruda",
     "name": "Irwin Arruda",
     "role": "Software Developer",
-    "location": "Goiania, Brazil",
+    "location": "Goiânia, Brazil",
     "openInNewTabLabel": "(opens in new tab)",
     "whoamiHeading": "whoami",
     "whoamiBody": "Software developer with a deep focus on the frontend ecosystem. I'm especially drawn to tooling — bundlers, meta-frameworks, micro-frontends — and to building things that make other devs' lives easier, like design system libraries, CLIs, and CI pipelines. I spend a lot of time studying software architecture, and lately I've been getting more into backend work.",

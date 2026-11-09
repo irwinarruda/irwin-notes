@@ -26,7 +26,7 @@ export async function generateMetadata(
       siteName: dictionary.meta.siteTitle,
       images: [
         {
-          url: `${siteUrl}/irwin-notes.png`,
+          url: `${siteUrl}/brand/icon-ia-512.png`,
           alt: dictionary.meta.siteTitle,
         },
       ],

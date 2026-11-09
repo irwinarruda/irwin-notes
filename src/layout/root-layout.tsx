@@ -17,8 +17,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 const chakraPetch = Chakra_Petch({
-  subsets: ["latin", "latin-ext"],
-  weight: ["500", "600", "700"],
+  subsets: ["latin"],
+  weight: ["500", "600"],
   variable: "--font-chakra-petch",
 });
 

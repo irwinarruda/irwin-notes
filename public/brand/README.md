@@ -8,12 +8,12 @@ A suffix says which background a file is for. `-dark` has light letters, for dar
 
 | File | What it is | Used in |
 | ---- | ---------- | ------- |
-| `irwin.svg`, `irwin-dark.svg`, `irwin-light.svg` | The `irwin` wordmark | The site's masthead (`-dark` and `-light`) |
-| `irwin-arruda.svg`, `irwin-arruda-dark.svg`, `irwin-arruda-light.svg` | The long form, `irwin arruda` | The repository README (`-dark` and `-light`) |
+| `irwin.svg`, `irwin-dark.svg`, `irwin-light.svg` | The short form, `irwin` | Nothing yet |
+| `irwin-arruda.svg`, `irwin-arruda-dark.svg`, `irwin-arruda-light.svg` | The long form, `irwin arruda` | The site's masthead and the repository README (`-dark` and `-light`) |
 
 ## Monograms
 
-Transparent, for places where the wordmark is too wide.
+Transparent, for places where the wordmark is too wide. Nothing uses them yet.
 
 | File | What it is |
 | ---- | ---------- |

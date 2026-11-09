@@ -232,7 +232,7 @@
 }
 
 .terminal-prose pre {
-  background: var(--barro-page);
+  background: var(--barro-neutral-1);
   border: 1px solid var(--barro-line-subtle);
   border-radius: 0.5rem;
   padding: 1rem 1.25rem;
@@ -257,7 +257,7 @@
   margin: 0;
   border: 1px solid var(--barro-line-subtle);
   border-radius: 0.5rem;
-  background: var(--barro-page);
+  background: var(--barro-neutral-1);
   overflow-x: auto;
   padding: 0.875rem 0;
 }
@@ -337,10 +337,12 @@
 }
 
 /* ── Focus indicators ── */
-:focus-visible {
-  outline: 2px solid var(--barro-focus);
-  outline-offset: 2px;
-  border-radius: 2px;
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--barro-focus);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
 }
 
 /* ── Screen-reader only utility ── */

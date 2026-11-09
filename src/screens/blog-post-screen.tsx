@@ -108,7 +108,7 @@ export default async function BlogPostScreen(props: BlogPostScreenProps) {
                   href={ref.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-mono text-fg underline decoration-line-strong underline-offset-4 hover:decoration-fg transition-colors duration-200"
+                  className="font-mono text-sky-11 underline decoration-sky-11/40 underline-offset-4 hover:decoration-sky-11 transition-colors duration-200"
                 >
                   {ref.label}
                 </a>

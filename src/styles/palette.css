@@ -1,0 +1,153 @@
+@import "./barro/barro.css";
+@import "./favo/favo.css";
+
+/*
+  The site's colors, named by role and mapped once per palette to a theme's
+  tokens (irwin-ui COLOR.md, "More than one theme"). This is the only file that
+  names a theme: screens and globals.css use the roles, as Tailwind colors
+  (`bg-surface`, `text-type`) or as `var(--color-*)`.
+
+  Barro is the default, and `data-palette="favo"` on <html> picks Favo, on its
+  gray neutral. `data-theme` picks dark or light inside either one.
+*/
+
+@theme static {
+  --color-page: var(--barro-page);
+  --color-surface: var(--barro-surface);
+  --color-raised: var(--barro-raised);
+  --color-hover: var(--barro-hover);
+  --color-pressed: var(--barro-pressed);
+  --color-overlay: var(--barro-overlay);
+  --color-line-subtle: var(--barro-line-subtle);
+  --color-line: var(--barro-line);
+  --color-line-strong: var(--barro-line-strong);
+  --color-line-control: var(--barro-line-control);
+  --color-fg: var(--barro-fg);
+  --color-fg-muted: var(--barro-fg-muted);
+  --color-fg-faint: var(--barro-fg-faint);
+  --color-fg-reading: var(--barro-fg-reading);
+  --color-primary: var(--barro-primary);
+  --color-primary-hover: var(--barro-primary-hover);
+  --color-on-primary: var(--barro-on-primary);
+  --color-primary-soft: var(--barro-primary-soft);
+  --color-primary-fg: var(--barro-primary-fg);
+  --color-focus: var(--barro-focus);
+  --color-selection: var(--barro-selection);
+  --color-success: var(--barro-success);
+  --color-success-soft: var(--barro-success-soft);
+  --color-success-line: var(--barro-success-line);
+  --color-success-solid: var(--barro-success-solid);
+  --color-on-success: var(--barro-on-success);
+  --color-warning: var(--barro-warning);
+  --color-warning-soft: var(--barro-warning-soft);
+  --color-warning-line: var(--barro-warning-line);
+  --color-warning-solid: var(--barro-warning-solid);
+  --color-on-warning: var(--barro-on-warning);
+  --color-danger: var(--barro-danger);
+  --color-danger-soft: var(--barro-danger-soft);
+  --color-danger-line: var(--barro-danger-line);
+  --color-danger-solid: var(--barro-danger-solid);
+  --color-on-danger: var(--barro-on-danger);
+  --color-info: var(--barro-info);
+  --color-info-soft: var(--barro-info-soft);
+  --color-info-line: var(--barro-info-line);
+  --color-info-solid: var(--barro-info-solid);
+  --color-on-info: var(--barro-on-info);
+
+  /* Code sits on step 1 of the neutral, the editor's own background */
+  --color-code: var(--barro-neutral-1);
+
+  /* The code roles a reading surface uses; headings are `primary-fg`, the keyword */
+  --color-function: var(--barro-sky-11);
+  --color-type: var(--barro-teal-11);
+  --color-type-soft: var(--barro-teal-3);
+  --color-type-line: var(--barro-teal-6);
+  --color-constant: var(--barro-lavender-11);
+  --color-constant-soft: var(--barro-lavender-3);
+  --color-constant-line: var(--barro-lavender-6);
+  --color-parameter: var(--barro-straw-11);
+  --color-parameter-soft: var(--barro-straw-3);
+  --color-parameter-line: var(--barro-straw-6);
+
+  /* Each palette's brand color, for the dots of the palette switch */
+  --color-swatch-barro: var(--barro-primary);
+  --color-swatch-favo: var(--favo-primary);
+}
+
+:root[data-palette="favo"] {
+  --color-page: var(--favo-page);
+  --color-surface: var(--favo-surface);
+  --color-raised: var(--favo-raised);
+  --color-hover: var(--favo-hover);
+  --color-pressed: var(--favo-pressed);
+  --color-overlay: var(--favo-overlay);
+  --color-line-subtle: var(--favo-line-subtle);
+  --color-line: var(--favo-line);
+  --color-line-strong: var(--favo-line-strong);
+  --color-line-control: var(--favo-line-control);
+  --color-fg: var(--favo-fg);
+  --color-fg-muted: var(--favo-fg-muted);
+  --color-fg-faint: var(--favo-fg-faint);
+  --color-fg-reading: var(--favo-fg-reading);
+  --color-primary: var(--favo-primary);
+  --color-primary-hover: var(--favo-primary-hover);
+  --color-on-primary: var(--favo-on-primary);
+  --color-primary-soft: var(--favo-primary-soft);
+  --color-primary-fg: var(--favo-primary-fg);
+  --color-focus: var(--favo-focus);
+  --color-selection: var(--favo-selection);
+  --color-success: var(--favo-success);
+  --color-success-soft: var(--favo-success-soft);
+  --color-success-line: var(--favo-success-line);
+  --color-success-solid: var(--favo-success-solid);
+  --color-on-success: var(--favo-on-success);
+  --color-warning: var(--favo-warning);
+  --color-warning-soft: var(--favo-warning-soft);
+  --color-warning-line: var(--favo-warning-line);
+  --color-warning-solid: var(--favo-warning-solid);
+  --color-on-warning: var(--favo-on-warning);
+  --color-danger: var(--favo-danger);
+  --color-danger-soft: var(--favo-danger-soft);
+  --color-danger-line: var(--favo-danger-line);
+  --color-danger-solid: var(--favo-danger-solid);
+  --color-on-danger: var(--favo-on-danger);
+  --color-info: var(--favo-info);
+  --color-info-soft: var(--favo-info-soft);
+  --color-info-line: var(--favo-info-line);
+  --color-info-solid: var(--favo-info-solid);
+  --color-on-info: var(--favo-on-info);
+
+  --color-code: var(--favo-neutral-1);
+
+  --color-function: var(--favo-sky-11);
+  --color-type: var(--favo-mint-11);
+  --color-type-soft: var(--favo-mint-3);
+  --color-type-line: var(--favo-mint-6);
+  --color-constant: var(--favo-lavender-11);
+  --color-constant-soft: var(--favo-lavender-3);
+  --color-constant-line: var(--favo-lavender-6);
+  --color-parameter: var(--favo-rose-11);
+  --color-parameter-soft: var(--favo-rose-3);
+  --color-parameter-line: var(--favo-rose-6);
+}
+
+/* Code tokens: rehype-pretty-code writes one variable per editor theme on each one */
+[style*="--shiki-"] {
+  color: var(--shiki-barro-light);
+  font-style: var(--shiki-barro-light-font-style);
+
+  @variant dark {
+    color: var(--shiki-barro-dark);
+    font-style: var(--shiki-barro-dark-font-style);
+  }
+}
+
+[data-palette="favo"] [style*="--shiki-"] {
+  color: var(--shiki-favo-light);
+  font-style: var(--shiki-favo-light-font-style);
+
+  @variant dark {
+    color: var(--shiki-favo-dark);
+    font-style: var(--shiki-favo-dark-font-style);
+  }
+}

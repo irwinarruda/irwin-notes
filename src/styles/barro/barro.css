@@ -46,7 +46,7 @@
   --barro-teal-8: #7EB9B3;
   --barro-teal-9: #00857D;
   --barro-teal-10: #007A72;
-  --barro-teal-11: #007771;
+  --barro-teal-11: #017671;
   --barro-teal-12: #003F3B;
   --barro-sage-1: #F5FDF2;
   --barro-sage-2: #EBF6E6;
@@ -58,7 +58,7 @@
   --barro-sage-8: #8EBC78;
   --barro-sage-9: #408600;
   --barro-sage-10: #3A7A00;
-  --barro-sage-11: #397900;
+  --barro-sage-11: #397800;
   --barro-sage-12: #1B4000;
   --barro-lavender-1: #FBF9FF;
   --barro-lavender-2: #F3EFFF;
@@ -125,6 +125,7 @@
   --barro-line-subtle: var(--barro-neutral-6);
   --barro-line: var(--barro-neutral-7);
   --barro-line-strong: var(--barro-neutral-8);
+  --barro-line-control: var(--barro-neutral-9);
   --barro-fg: var(--barro-neutral-12);
   --barro-fg-muted: var(--barro-neutral-11);
   --barro-fg-faint: var(--barro-neutral-9);
@@ -167,6 +168,7 @@
   --barro-neutral-10: var(--barro-slate-10);
   --barro-neutral-11: var(--barro-slate-11);
   --barro-neutral-12: var(--barro-slate-12);
+  --barro-fg-reading: color-mix(in oklab, var(--barro-fg) 45%, var(--barro-fg-muted));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -297,6 +299,7 @@
     --barro-line-subtle: var(--barro-neutral-6);
     --barro-line: var(--barro-neutral-7);
     --barro-line-strong: var(--barro-neutral-8);
+    --barro-line-control: var(--barro-neutral-9);
     --barro-fg: var(--barro-neutral-12);
     --barro-fg-muted: var(--barro-neutral-11);
     --barro-fg-faint: var(--barro-neutral-9);
@@ -457,6 +460,7 @@
   --barro-line-subtle: var(--barro-neutral-6);
   --barro-line: var(--barro-neutral-7);
   --barro-line-strong: var(--barro-neutral-8);
+  --barro-line-control: var(--barro-neutral-9);
   --barro-fg: var(--barro-neutral-12);
   --barro-fg-muted: var(--barro-neutral-11);
   --barro-fg-faint: var(--barro-neutral-9);

@@ -5,7 +5,7 @@ import { ProfileLinks } from "@/components/profile-links";
 import { getDictionary, resolveLocale } from "@/utils/i18n";
 import { getLocaleSwitcherConfig } from "@/utils/get-locale-switcher";
 import { getTerminalNavLinks } from "@/utils/get-terminal-nav-links";
-import { THEME_COOKIE, resolveTheme } from "@/utils/theme";
+import { THEME_COOKIE, resolveThemeCookie } from "@/utils/theme";
 
 type AboutScreenProps = {
   params: Promise<{ locale: string }>;
@@ -18,7 +18,9 @@ export default async function AboutScreen(props: AboutScreenProps) {
   const about = dictionary.aboutPage;
   const navLinks = getTerminalNavLinks(locale, dictionary);
   const localeSwitcher = getLocaleSwitcherConfig(locale, "/about", dictionary);
-  const theme = resolveTheme((await cookies()).get(THEME_COOKIE)?.value);
+  const { theme, palette } = resolveThemeCookie(
+    (await cookies()).get(THEME_COOKIE)?.value,
+  );
 
   return (
     <TerminalWindow
@@ -33,6 +35,8 @@ export default async function AboutScreen(props: AboutScreenProps) {
       skipToContentLabel={dictionary.nav.skipToContent}
       themeToggleLabels={dictionary.themeToggle}
       serverTheme={theme}
+      paletteToggleLabels={dictionary.paletteToggle}
+      serverPalette={palette}
       localeSwitcher={localeSwitcher}
     >
       <div className="fade-in fade-in-delay-1">
@@ -92,7 +96,7 @@ export default async function AboutScreen(props: AboutScreenProps) {
               {about.techStack.primary.map((tech) => (
                 <span
                   key={tech}
-                  className="text-teal-11 text-sm bg-teal-3 px-2 py-0.5 rounded border border-teal-6"
+                  className="text-type text-sm bg-type-soft px-2 py-0.5 rounded border border-type-line"
                 >
                   {tech}
                 </span>
@@ -107,7 +111,7 @@ export default async function AboutScreen(props: AboutScreenProps) {
               {about.techStack.exploring.map((tech) => (
                 <span
                   key={tech}
-                  className="text-lavender-11 text-sm bg-lavender-3 px-2 py-0.5 rounded border border-lavender-6"
+                  className="text-constant text-sm bg-constant-soft px-2 py-0.5 rounded border border-constant-line"
                 >
                   {tech}
                 </span>
@@ -122,7 +126,7 @@ export default async function AboutScreen(props: AboutScreenProps) {
               {about.techStack.tools.map((tech) => (
                 <span
                   key={tech}
-                  className="text-straw-11 text-sm bg-straw-3 px-2 py-0.5 rounded border border-straw-6"
+                  className="text-parameter text-sm bg-parameter-soft px-2 py-0.5 rounded border border-parameter-line"
                 >
                   {tech}
                 </span>
@@ -151,7 +155,7 @@ export default async function AboutScreen(props: AboutScreenProps) {
                 <span className="font-display text-fg text-base sm:text-lg font-semibold transition-colors duration-300 group-hover:text-primary-fg">
                   {project.name}
                 </span>
-                <span className="text-teal-11 text-sm shrink-0">
+                <span className="text-type text-sm shrink-0">
                   {project.tech}
                 </span>
               </div>

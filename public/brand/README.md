@@ -9,8 +9,8 @@ A suffix says which background a file is for. `-dark` has light letters, for dar
 | File | What it is | Used in |
 | ---- | ---------- | ------- |
 | `irwin.svg`, `irwin-dark.svg`, `irwin-light.svg`, and the same three with `-duo` | The short form, `irwin` | Nothing yet |
-| `irwin-arruda.svg`, `irwin-arruda-dark.svg`, `irwin-arruda-light.svg` | The long form, `irwin arruda`, with one brick dot | The repository README (`-dark` and `-light`) |
-| `irwin-arruda-duo.svg`, `irwin-arruda-duo-dark.svg`, `irwin-arruda-duo-light.svg` | The long form with two brick dots | The site's masthead (`-dark` and `-light`), on trial |
+| `irwin-arruda.svg`, `irwin-arruda-dark.svg`, `irwin-arruda-light.svg` | The long form, `irwin arruda`, with one brick dot | The site's masthead and the repository README (`-dark` and `-light`) |
+| `irwin-arruda-duo.svg`, `irwin-arruda-duo-dark.svg`, `irwin-arruda-duo-light.svg` | The long form with two brick dots | Nothing. It was tried in the masthead and set aside, and stays as an alternative |
 
 ## Monograms
 

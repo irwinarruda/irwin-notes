@@ -5,7 +5,7 @@ import { getDictionary, resolveLocale } from "@/utils/i18n";
 import { getLocaleSwitcherConfig } from "@/utils/get-locale-switcher";
 import { getTerminalNavLinks } from "@/utils/get-terminal-nav-links";
 import { getPostBySlug, getPostComponent } from "@/utils/posts";
-import { THEME_COOKIE, resolveTheme } from "@/utils/theme";
+import { THEME_COOKIE, resolveThemeCookie } from "@/utils/theme";
 
 type BlogPostScreenProps = {
   params: Promise<{ locale: string; slug: string }>;
@@ -31,7 +31,9 @@ export default async function BlogPostScreen(props: BlogPostScreenProps) {
     `/post/${post.slug}`,
     dictionary,
   );
-  const theme = resolveTheme((await cookies()).get(THEME_COOKIE)?.value);
+  const { theme, palette } = resolveThemeCookie(
+    (await cookies()).get(THEME_COOKIE)?.value,
+  );
 
   return (
     <TerminalWindow
@@ -46,6 +48,8 @@ export default async function BlogPostScreen(props: BlogPostScreenProps) {
       skipToContentLabel={dictionary.nav.skipToContent}
       themeToggleLabels={dictionary.themeToggle}
       serverTheme={theme}
+      paletteToggleLabels={dictionary.paletteToggle}
+      serverPalette={palette}
       localeSwitcher={localeSwitcher}
     >
       <header className="mb-6 fade-in fade-in-delay-1">
@@ -55,7 +59,7 @@ export default async function BlogPostScreen(props: BlogPostScreenProps) {
           </h1>
 
           <div className="mb-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-fg-muted sm:text-base">
-            <span className="text-straw-11 font-medium">{post.date}</span>
+            <span className="text-parameter font-medium">{post.date}</span>
             <span aria-hidden="true">&middot;</span>
             <span>
               {post.readTime} {dictionary.postPage.readLabel}
@@ -72,7 +76,7 @@ export default async function BlogPostScreen(props: BlogPostScreenProps) {
 
           <div className="mt-2 flex flex-wrap gap-2">
             {post.tags.map((tag, index) => (
-              <span key={tag} className="text-teal-11 text-sm">
+              <span key={tag} className="text-type text-sm">
                 #{tag}
                 {index < post.tags.length - 1 ? " " : ""}
               </span>
@@ -108,7 +112,7 @@ export default async function BlogPostScreen(props: BlogPostScreenProps) {
                   href={ref.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-mono text-sky-11 underline decoration-sky-11/40 underline-offset-4 hover:decoration-sky-11 transition-colors duration-200"
+                  className="font-mono text-function underline decoration-function/40 underline-offset-4 hover:decoration-function transition-colors duration-200"
                 >
                   {ref.label}
                 </a>

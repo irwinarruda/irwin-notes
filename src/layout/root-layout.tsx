@@ -1,13 +1,21 @@
 import { Chakra_Petch, JetBrains_Mono } from "next/font/google";
-import { THEME_COOKIE, type Theme } from "@/utils/theme";
+import { THEME_COOKIE, type Palette, type Theme } from "@/utils/theme";
 
 const THEME_INIT_SCRIPT = `(() => {
-  const match = document.cookie.match(/(?:^|; )${THEME_COOKIE}=(dark|light)(?:;|$)/);
+  const match = document.cookie.match(/(?:^|; )${THEME_COOKIE}=([^;]*)/);
   if (!match) {
     return;
   }
 
-  document.documentElement.setAttribute("data-theme", match[1]);
+  for (const word of match[1].split("-")) {
+    if (word === "dark" || word === "light") {
+      document.documentElement.setAttribute("data-theme", word);
+    }
+
+    if (word === "barro" || word === "favo") {
+      document.documentElement.setAttribute("data-palette", word);
+    }
+  }
 })();`;
 
 const jetbrainsMono = JetBrains_Mono({
@@ -26,6 +34,7 @@ type RootLayoutProps = {
   children: React.ReactNode;
   locale: string;
   theme?: Theme;
+  palette: Palette;
 };
 
 export default function RootLayoutScreen(props: Readonly<RootLayoutProps>) {
@@ -34,6 +43,7 @@ export default function RootLayoutScreen(props: Readonly<RootLayoutProps>) {
       lang={props.locale}
       className={`${jetbrainsMono.variable} ${chakraPetch.variable}`}
       data-theme={props.theme}
+      data-palette={props.palette}
       suppressHydrationWarning
     >
       <body className="bg-page text-fg font-mono antialiased min-h-screen">

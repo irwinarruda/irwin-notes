@@ -64,7 +64,7 @@ export function ThemeToggle({
   const toggle = () => {
     const next = theme === "dark" ? "light" : "dark";
 
-    setThemeCookie(next);
+    setThemeCookie({ theme: next });
     document.documentElement.setAttribute("data-theme", next);
 
     window.dispatchEvent(new Event(THEME_CHANGE_EVENT));
@@ -81,11 +81,11 @@ export function ThemeToggle({
     >
       <span className="inline-flex items-center gap-1 dark:hidden">
         <span aria-hidden="true">☾</span>
-        {labels.dark}
+        <span className="hidden sm:inline">{labels.dark}</span>
       </span>
       <span className="hidden items-center gap-1 dark:inline-flex">
         <span aria-hidden="true">☀</span>
-        {labels.light}
+        <span className="hidden sm:inline">{labels.light}</span>
       </span>
     </button>
   );

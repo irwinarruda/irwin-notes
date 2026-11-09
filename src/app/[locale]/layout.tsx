@@ -8,7 +8,7 @@ import {
   LOCALES,
   getDictionary,
 } from "@/utils/i18n";
-import { THEME_COOKIE, resolveTheme } from "@/utils/theme";
+import { THEME_COOKIE, resolveThemeCookie } from "@/utils/theme";
 import "@/styles/globals.css";
 
 type LocaleLayoutProps = {
@@ -71,10 +71,12 @@ export default async function LocaleLayout(props: Readonly<LocaleLayoutProps>) {
   }
 
   const cookieStore = await cookies();
-  const theme = resolveTheme(cookieStore.get(THEME_COOKIE)?.value);
+  const { theme, palette } = resolveThemeCookie(
+    cookieStore.get(THEME_COOKIE)?.value,
+  );
 
   return (
-    <RootLayoutScreen locale={params.locale} theme={theme}>
+    <RootLayoutScreen locale={params.locale} theme={theme} palette={palette}>
       {props.children}
     </RootLayoutScreen>
   );

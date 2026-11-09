@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Theme } from "@/utils/theme";
+import type { Palette, Theme } from "@/utils/theme";
+import { PaletteToggle, type PaletteToggleLabels } from "./palette-toggle";
 import { ThemeToggle, type ThemeToggleLabels } from "./theme-toggle";
 
 export type TerminalNavLink = {
@@ -41,6 +42,8 @@ export function TerminalWindow({
   skipToContentLabel = DEFAULT_SKIP_TO_CONTENT_LABEL,
   themeToggleLabels = DEFAULT_THEME_TOGGLE_LABELS,
   serverTheme,
+  paletteToggleLabels,
+  serverPalette,
   localeSwitcher,
 }: {
   children: React.ReactNode;
@@ -49,6 +52,8 @@ export function TerminalWindow({
   skipToContentLabel?: string;
   themeToggleLabels?: ThemeToggleLabels;
   serverTheme?: Theme;
+  paletteToggleLabels?: PaletteToggleLabels;
+  serverPalette?: Palette;
   localeSwitcher?: TerminalLocaleSwitcher;
 }) {
   return (
@@ -63,7 +68,7 @@ export function TerminalWindow({
             className="inline-flex shrink-0 items-center rounded-sm focus-visible:outline-offset-4"
           >
             <Image
-              src="/brand/irwin-arruda-duo-light.svg"
+              src="/brand/irwin-arruda-light.svg"
               alt="Irwin Arruda"
               width={135}
               height={22}
@@ -71,7 +76,7 @@ export function TerminalWindow({
               priority
             />
             <Image
-              src="/brand/irwin-arruda-duo-dark.svg"
+              src="/brand/irwin-arruda-dark.svg"
               alt="Irwin Arruda"
               width={135}
               height={22}
@@ -111,6 +116,10 @@ export function TerminalWindow({
                 </div>
               </nav>
             ) : null}
+            <PaletteToggle
+              labels={paletteToggleLabels}
+              serverPalette={serverPalette}
+            />
             <ThemeToggle labels={themeToggleLabels} serverTheme={serverTheme} />
           </div>
         </header>

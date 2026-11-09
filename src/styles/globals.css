@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "./barro/tailwind.css";
+@import "./palette.css";
 
 @source "../../src/content/**/*.mdx";
 
@@ -35,12 +35,12 @@
 @layer base {
   * {
     scrollbar-width: thin;
-    scrollbar-color: var(--barro-line-strong) transparent;
+    scrollbar-color: var(--color-line-strong) transparent;
   }
 
   ::selection {
-    background: var(--barro-selection);
-    color: var(--barro-fg);
+    background: var(--color-selection);
+    color: var(--color-fg);
   }
 
   body {
@@ -99,19 +99,18 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: var(--barro-line-subtle);
+  background: var(--color-line-subtle);
   transition: background 0.3s ease;
 }
 
 .post-entry:hover::before,
 .post-entry:focus-visible::before {
-  background: var(--barro-fg-faint);
+  background: var(--color-fg-faint);
 }
 
 /* ── Terminal Prose (blog post article content) ── */
 .terminal-prose {
-  --prose-text: color-mix(in oklab, var(--barro-fg) 45%, var(--barro-fg-muted));
-  color: var(--prose-text);
+  color: var(--color-fg-reading);
 }
 
 .terminal-prose p,
@@ -126,7 +125,7 @@
 }
 
 .terminal-prose h2 {
-  color: var(--barro-primary-fg);
+  color: var(--color-primary-fg);
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.625rem;
@@ -141,7 +140,7 @@
 }
 
 .terminal-prose h3 {
-  color: var(--barro-teal-11);
+  color: var(--color-type);
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.375rem;
@@ -151,28 +150,28 @@
 }
 
 .terminal-prose p {
-  color: var(--prose-text);
+  color: var(--color-fg-reading);
   font-size: 1.25rem;
   line-height: 1.75;
   margin-bottom: 1em;
 }
 
 .terminal-prose strong {
-  color: var(--barro-fg);
+  color: var(--color-fg);
   font-weight: 700;
 }
 
 .terminal-prose em {
-  color: var(--barro-straw-11);
+  color: var(--color-parameter);
   font-style: italic;
 }
 
 .terminal-prose a {
-  color: var(--barro-sky-11);
+  color: var(--color-function);
   text-decoration: underline;
   text-decoration-color: color-mix(
     in srgb,
-    var(--barro-sky-11) 40%,
+    var(--color-function) 40%,
     transparent
   );
   text-decoration-thickness: 1px;
@@ -198,7 +197,7 @@
 }
 
 .terminal-prose ul li {
-  color: var(--prose-text);
+  color: var(--color-fg-reading);
   font-size: 1.25rem;
   line-height: 1.75;
   padding-left: 1.25em;
@@ -209,12 +208,12 @@
   content: ">";
   position: absolute;
   left: 0;
-  color: var(--barro-fg-faint);
+  color: var(--color-fg-faint);
   font-weight: 600;
 }
 
 .terminal-prose ol li {
-  color: var(--prose-text);
+  color: var(--color-fg-reading);
   font-size: 1.25rem;
   line-height: 1.75;
   padding-left: 1.25em;
@@ -226,14 +225,14 @@
   content: counter(ol-counter) ".";
   position: absolute;
   left: 0;
-  color: var(--barro-fg-muted);
+  color: var(--color-fg-muted);
   font-weight: 600;
   font-family: var(--font-mono);
 }
 
 .terminal-prose pre {
-  background: var(--barro-neutral-1);
-  border: 1px solid var(--barro-line-subtle);
+  background: var(--color-code);
+  border: 1px solid var(--color-line-subtle);
   border-radius: 0.5rem;
   padding: 1rem 1.25rem;
   margin: 1.25em 0;
@@ -255,9 +254,9 @@
 
 .terminal-prose figure[data-rehype-pretty-code-figure] pre {
   margin: 0;
-  border: 1px solid var(--barro-line-subtle);
+  border: 1px solid var(--color-line-subtle);
   border-radius: 0.5rem;
-  background: var(--barro-neutral-1);
+  background: var(--color-code);
   overflow-x: auto;
   padding: 0.875rem 0;
 }
@@ -273,7 +272,7 @@
 }
 
 .terminal-prose figure[data-rehype-pretty-code-figure] [data-highlighted-line] {
-  background: var(--barro-primary-soft);
+  background: var(--color-primary-soft);
 }
 
 .terminal-prose
@@ -285,7 +284,7 @@
   display: inline-block;
   width: 2rem;
   margin-right: 1rem;
-  color: var(--barro-fg-faint);
+  color: var(--color-fg-faint);
 }
 
 .terminal-prose figure[data-rehype-pretty-code-figure] code[data-line-numbers] {
@@ -293,35 +292,25 @@
 }
 
 .terminal-prose figure[data-rehype-pretty-code-figure] figcaption {
-  color: var(--barro-fg-muted);
+  color: var(--color-fg-muted);
   font-size: 0.75rem;
   margin-bottom: 0.5rem;
 }
 
 .terminal-prose code {
-  color: var(--barro-fg);
-  background: var(--barro-raised);
-  border: 1px solid var(--barro-line-subtle);
+  color: var(--color-fg);
+  background: var(--color-raised);
+  border: 1px solid var(--color-line-subtle);
   padding: 0.1em 0.35em;
   border-radius: 0.25rem;
   font-size: 0.85em;
 }
 
-.terminal-prose [style*="--shiki-light"] {
-  color: var(--shiki-light);
-  font-style: var(--shiki-light-font-style);
-
-  @variant dark {
-    color: var(--shiki-dark);
-    font-style: var(--shiki-dark-font-style);
-  }
-}
-
 .terminal-prose blockquote {
-  border-left: 2px solid var(--barro-line-strong);
+  border-left: 2px solid var(--color-line-strong);
   padding-left: 1rem;
   margin: 1.25em 0;
-  color: var(--prose-text);
+  color: var(--color-fg-reading);
   font-style: italic;
 }
 
@@ -332,14 +321,14 @@
 .terminal-prose hr {
   border: none;
   height: 1px;
-  background: var(--barro-line-subtle);
+  background: var(--color-line-subtle);
   margin: 2em 0;
 }
 
 /* ── Focus indicators ── */
 @layer base {
   :focus-visible {
-    outline: 2px solid var(--barro-focus);
+    outline: 2px solid var(--color-focus);
     outline-offset: 2px;
     border-radius: 2px;
   }
@@ -368,9 +357,9 @@
   padding: 0.5rem 1.25rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--barro-fg);
-  background: var(--barro-overlay);
-  border: 1px solid var(--barro-line);
+  color: var(--color-fg);
+  background: var(--color-overlay);
+  border: 1px solid var(--color-line);
   border-radius: 0.375rem;
   transition: top 0.15s ease;
 }
@@ -381,7 +370,7 @@
 
 /* ── Review page ── */
 .review-line:hover {
-  background: var(--barro-raised);
+  background: var(--color-raised);
 }
 
 .review-highlight:focus-visible {

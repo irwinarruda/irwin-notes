@@ -15,6 +15,10 @@
     "switchToLight": "Switch to light mode",
     "switchToDark": "Switch to dark mode"
   },
+  "paletteToggle": {
+    "switchToBarro": "Switch to the Barro palette",
+    "switchToFavo": "Switch to the Favo palette"
+  },
   "localeSwitcher": {
     "ariaLabel": "Language switcher",
     "label": "lang",

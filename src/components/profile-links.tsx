@@ -15,7 +15,7 @@ export function ProfileLinks({
         href="https://github.com/irwinarruda"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex min-h-6 items-center text-sky-11 underline decoration-sky-11/40 underline-offset-4 transition-colors duration-200 hover:decoration-sky-11"
+        className="inline-flex min-h-6 items-center text-function underline decoration-function/40 underline-offset-4 transition-colors duration-200 hover:decoration-function"
       >
         github/irwinarruda
         <span className="sr-only"> {openInNewTabLabel}</span>
@@ -24,14 +24,14 @@ export function ProfileLinks({
         href="https://linkedin.com/in/irwinarruda"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex min-h-6 items-center text-sky-11 underline decoration-sky-11/40 underline-offset-4 transition-colors duration-200 hover:decoration-sky-11"
+        className="inline-flex min-h-6 items-center text-function underline decoration-function/40 underline-offset-4 transition-colors duration-200 hover:decoration-function"
       >
         linkedin/irwinarruda
         <span className="sr-only"> {openInNewTabLabel}</span>
       </a>
       <a
         href="mailto:arruda.irwin@gmail.com"
-        className="inline-flex min-h-6 items-center text-sky-11 underline decoration-sky-11/40 underline-offset-4 transition-colors duration-200 hover:decoration-sky-11"
+        className="inline-flex min-h-6 items-center text-function underline decoration-function/40 underline-offset-4 transition-colors duration-200 hover:decoration-function"
       >
         arruda.irwin@gmail.com
       </a>

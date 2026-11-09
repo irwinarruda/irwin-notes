@@ -5,7 +5,7 @@ import { getDictionary, resolveLocale } from "@/utils/i18n";
 import { getLocaleSwitcherConfig } from "@/utils/get-locale-switcher";
 import { getTerminalNavLinks } from "@/utils/get-terminal-nav-links";
 import { getAllPosts } from "@/utils/posts";
-import { THEME_COOKIE, resolveTheme } from "@/utils/theme";
+import { THEME_COOKIE, resolveThemeCookie } from "@/utils/theme";
 
 type PostsScreenProps = {
   params: Promise<{ locale: string }>;
@@ -22,7 +22,9 @@ export default async function PostsScreen(props: PostsScreenProps) {
 
   const navLinks = getTerminalNavLinks(locale, dictionary);
   const localeSwitcher = getLocaleSwitcherConfig(locale, "/posts", dictionary);
-  const theme = resolveTheme((await cookies()).get(THEME_COOKIE)?.value);
+  const { theme, palette } = resolveThemeCookie(
+    (await cookies()).get(THEME_COOKIE)?.value,
+  );
 
   return (
     <TerminalWindow
@@ -37,6 +39,8 @@ export default async function PostsScreen(props: PostsScreenProps) {
       skipToContentLabel={dictionary.nav.skipToContent}
       themeToggleLabels={dictionary.themeToggle}
       serverTheme={theme}
+      paletteToggleLabels={dictionary.paletteToggle}
+      serverPalette={palette}
       localeSwitcher={localeSwitcher}
     >
       <div className="fade-in">
@@ -77,7 +81,7 @@ export default async function PostsScreen(props: PostsScreenProps) {
               className="post-entry group block rounded-r-lg pl-5 py-3.5 transition-all duration-300 hover:bg-raised focus-visible:bg-raised"
             >
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm sm:text-base">
-                <span className="text-straw-11 font-medium">{post.date}</span>
+                <span className="text-parameter font-medium">{post.date}</span>
                 <span className="text-fg-muted" aria-hidden="true">
                   &middot;
                 </span>
@@ -98,7 +102,7 @@ export default async function PostsScreen(props: PostsScreenProps) {
               </p>
               <div className="flex flex-wrap gap-2 mt-2">
                 {post.tags.map((tag, index) => (
-                  <span key={tag} className="text-teal-11 text-sm">
+                  <span key={tag} className="text-type text-sm">
                     #{tag}
                     {index < post.tags.length - 1 ? " " : ""}
                   </span>

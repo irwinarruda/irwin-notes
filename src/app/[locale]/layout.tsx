@@ -38,8 +38,12 @@ export async function generateMetadata(
     title: dictionary.meta.siteTitle,
     description: dictionary.meta.siteDescription,
     icons: {
-      icon: "/favicon.ico",
+      icon: [
+        { url: "/favicon.ico", sizes: "32x32" },
+        { url: "/brand/icon-ia.svg", type: "image/svg+xml" },
+      ],
       shortcut: "/favicon.ico",
+      apple: "/brand/icon-ia-180.png",
     },
     openGraph: {
       title: dictionary.meta.siteTitle,
@@ -48,7 +52,7 @@ export async function generateMetadata(
       siteName: dictionary.meta.siteTitle,
       images: [
         {
-          url: `${siteUrl}/irwin-notes.png`,
+          url: `${siteUrl}/brand/icon-ia-512.png`,
           alt: dictionary.meta.siteTitle,
         },
       ],

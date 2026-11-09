@@ -3,9 +3,10 @@ export type Theme = "dark" | "light";
 export const DEFAULT_THEME: Theme = "dark";
 export const THEME_COOKIE = "theme";
 export const THEME_COOKIE_MAX_AGE_SECONDS = 60 * 60 * 24 * 365;
+export const SYSTEM_DARK_QUERY = "(prefers-color-scheme: dark)";
 
-export function resolveTheme(value: string | undefined): Theme {
-  return value === "dark" || value === "light" ? value : DEFAULT_THEME;
+export function resolveTheme(value: string | undefined): Theme | undefined {
+  return value === "dark" || value === "light" ? value : undefined;
 }
 
 export function getThemeFromCookieString(cookieString: string): Theme | null {
@@ -27,12 +28,16 @@ export function getThemeFromCookieString(cookieString: string): Theme | null {
   return theme;
 }
 
-export function getThemeFromDocumentCookie(): Theme {
+export function getDocumentTheme(): Theme {
   if (typeof document === "undefined") {
     return DEFAULT_THEME;
   }
 
-  return getThemeFromCookieString(document.cookie) ?? DEFAULT_THEME;
+  const systemTheme = window.matchMedia(SYSTEM_DARK_QUERY).matches
+    ? "dark"
+    : "light";
+
+  return getThemeFromCookieString(document.cookie) ?? systemTheme;
 }
 
 export function setThemeCookie(theme: Theme): void {

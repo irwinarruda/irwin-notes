@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Theme } from "@/utils/theme";
 import { ThemeToggle, type ThemeToggleLabels } from "./theme-toggle";
@@ -29,47 +30,63 @@ const DEFAULT_THEME_TOGGLE_LABELS: ThemeToggleLabels = {
 };
 
 const DEFAULT_TERMINAL_NAV_LINKS: TerminalNavLink[] = [
-  { href: "/posts", label: "posts/" },
-  { href: "/about", label: "about.md" },
+  { href: "/posts", label: "notes" },
+  { href: "/about", label: "about" },
 ];
 
 export function TerminalWindow({
   children,
-  title = "irwin@notes: ~/posts",
+  homeHref = "/",
+  nav,
   skipToContentLabel = DEFAULT_SKIP_TO_CONTENT_LABEL,
   themeToggleLabels = DEFAULT_THEME_TOGGLE_LABELS,
   serverTheme,
   localeSwitcher,
 }: {
   children: React.ReactNode;
-  title?: string;
+  homeHref?: string;
+  nav?: React.ReactNode;
   skipToContentLabel?: string;
   themeToggleLabels?: ThemeToggleLabels;
   serverTheme?: Theme;
   localeSwitcher?: TerminalLocaleSwitcher;
 }) {
   return (
-    <div className="flex min-h-dvh justify-center bg-term-bg p-0 sm:p-6 md:p-10">
+    <div className="flex min-h-dvh justify-center bg-page p-0 sm:p-6 md:p-10">
       <div className="flex w-full max-w-4xl flex-col">
         <a href="#main-content" className="skip-link">
           {skipToContentLabel}
         </a>
-        <div className="flex items-center sm:rounded-t-xl sm:border sm:border-b-0 border-term-border bg-term-chrome px-3 py-2 sm:px-4">
-          <div className="flex gap-2 shrink-0" aria-hidden="true">
-            <div className="w-3 h-3 rounded-full bg-term-red" />
-            <div className="w-3 h-3 rounded-full bg-term-yellow" />
-            <div className="w-3 h-3 rounded-full bg-term-green-dot" />
-          </div>
-          <span className="text-term-muted text-xs tracking-wide mx-auto select-none min-w-0 truncate px-2">
-            {title}
-          </span>
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+        <header className="flex items-center gap-4 border-b border-line-subtle bg-surface px-4 py-3 sm:rounded-t-xl sm:border sm:border-line sm:border-b-line-subtle sm:px-7 md:px-9">
+          <Link
+            href={homeHref}
+            className="inline-flex shrink-0 items-center rounded-sm focus-visible:outline-offset-4"
+          >
+            <Image
+              src="/brand/irwin-light.svg"
+              alt="Irwin Arruda"
+              width={55}
+              height={22}
+              className="h-[22px] w-auto dark:hidden"
+              priority
+            />
+            <Image
+              src="/brand/irwin-dark.svg"
+              alt="Irwin Arruda"
+              width={55}
+              height={22}
+              className="hidden h-[22px] w-auto dark:block"
+              priority
+            />
+          </Link>
+          <div className="ml-auto flex items-center gap-3 sm:gap-5">
+            {nav}
             {localeSwitcher ? (
               <nav
                 aria-label={localeSwitcher.ariaLabel}
                 className="flex items-center gap-2 text-xs"
               >
-                <span className="text-term-muted select-none">
+                <span className="hidden text-fg-muted select-none sm:inline">
                   {localeSwitcher.label}
                 </span>
                 <div className="flex items-center gap-1">
@@ -80,8 +97,8 @@ export function TerminalWindow({
                       aria-current={link.isActive ? "page" : undefined}
                       className={`inline-flex min-h-6 items-center rounded px-1.5 transition-colors duration-200 focus-visible:outline-offset-1 ${
                         link.isActive
-                          ? "text-term-bright font-medium"
-                          : "text-term-text hover:text-term-bright"
+                          ? "text-fg font-medium"
+                          : "text-fg-muted hover:text-fg"
                       }`}
                     >
                       {link.label}
@@ -92,10 +109,10 @@ export function TerminalWindow({
             ) : null}
             <ThemeToggle labels={themeToggleLabels} serverTheme={serverTheme} />
           </div>
-        </div>
+        </header>
         <main
           id="main-content"
-          className="terminal-body flex-1 sm:rounded-b-xl sm:border border-term-border border-t-0 bg-term-window p-4 shadow-2xl shadow-black/10 sm:p-7 md:p-9"
+          className="flex-1 bg-surface p-4 shadow-2xl shadow-black/10 sm:rounded-b-xl sm:border sm:border-t-0 sm:border-line sm:p-7 md:p-9"
         >
           {children}
         </main>
@@ -120,17 +137,17 @@ export function TerminalNav({
   return (
     <nav
       aria-label={ariaLabel}
-      className="flex flex-wrap gap-x-6 gap-y-1 text-base"
+      className="flex items-center gap-x-3 text-sm sm:gap-x-5"
     >
       {links.map((link) => (
         <Link
           key={link.href}
           href={link.href}
           aria-current={active === link.href ? "page" : undefined}
-          className={`hover:text-term-cyan transition-colors duration-200 ${
+          className={`inline-flex min-h-6 items-center transition-colors duration-200 ${
             active === link.href
-              ? "text-term-green font-medium"
-              : "text-term-blue"
+              ? "text-primary-fg font-medium"
+              : "text-fg-muted hover:text-fg"
           }`}
         >
           {link.label}

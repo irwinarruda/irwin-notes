@@ -1,13 +1,13 @@
 {
   "meta": {
-    "siteTitle": "Irwin Notes",
-    "siteDescription": "Blog em estilo terminal por Irwin Arruda Sales. Desenvolvedor de software, entusiasta do Vim e criador de ferramentas."
+    "siteTitle": "Irwin Arruda",
+    "siteDescription": "Notas de Irwin Arruda Sales sobre software, arquitetura frontend e criação de ferramentas. Desenvolvedor de software, entusiasta do Vim e criador de ferramentas."
   },
   "nav": {
     "ariaLabel": "Navegacao do site",
     "skipToContent": "Ir para o conteudo",
-    "posts": "posts/",
-    "about": "sobre.md"
+    "posts": "notas",
+    "about": "sobre"
   },
   "themeToggle": {
     "light": "claro",
@@ -24,14 +24,12 @@
     }
   },
   "postsPage": {
-    "windowTitle": "irwin@notes: ~/posts",
-    "heading": "Irwin Notes",
+    "heading": "Notas",
     "subtitleItems": ["Frontend", "React", "Next.js", "TypeScript", "Vim"],
     "readLabel": "de leitura",
     "draftLabel": "rascunho"
   },
   "postPage": {
-    "windowTitlePrefix": "irwin@notes: ~/post/",
     "readLabel": "de leitura",
     "draftLabel": "rascunho",
     "draftNotice": "// Este post é um rascunho — o conteúdo pode mudar.",
@@ -66,7 +64,6 @@
     }
   },
   "aboutPage": {
-    "windowTitle": "irwin@notes: ~/sobre.md",
     "photoAlt": "Irwin Arruda",
     "name": "Irwin Arruda",
     "role": "Desenvolvedor de Software",

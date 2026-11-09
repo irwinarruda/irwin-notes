@@ -31,7 +31,7 @@ export default async function TextReviewScreen(
 
   return (
     <TerminalWindow
-      title={`irwin@notes: ~/review/${params.slug}`}
+      homeHref={`/${locale}/posts`}
       skipToContentLabel={dictionary.nav.skipToContent}
       themeToggleLabels={dictionary.themeToggle}
       serverTheme={theme}

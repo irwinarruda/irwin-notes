@@ -1,13 +1,13 @@
 {
   "meta": {
-    "siteTitle": "Irwin Notes",
-    "siteDescription": "Terminal-style blog by Irwin Arruda Sales. Software Developer, Vim enthusiast, tool builder."
+    "siteTitle": "Irwin Arruda",
+    "siteDescription": "Notes by Irwin Arruda Sales on software, frontend architecture and building tools. Software Developer, Vim enthusiast, tool builder."
   },
   "nav": {
     "ariaLabel": "Site navigation",
     "skipToContent": "Skip to content",
-    "posts": "posts/",
-    "about": "about.md"
+    "posts": "notes",
+    "about": "about"
   },
   "themeToggle": {
     "light": "light",
@@ -24,14 +24,12 @@
     }
   },
   "postsPage": {
-    "windowTitle": "irwin@notes: ~/posts",
-    "heading": "Irwin Notes",
+    "heading": "Notes",
     "subtitleItems": ["Frontend", "React", "Next.js", "TypeScript", "Vim"],
     "readLabel": "read",
     "draftLabel": "draft"
   },
   "postPage": {
-    "windowTitlePrefix": "irwin@notes: ~/post/",
     "readLabel": "read",
     "draftLabel": "draft",
     "draftNotice": "// This post is a draft — content may change.",
@@ -66,7 +64,6 @@
     }
   },
   "aboutPage": {
-    "windowTitle": "irwin@notes: ~/about.md",
     "photoAlt": "Irwin Arruda",
     "name": "Irwin Arruda",
     "role": "Software Developer",

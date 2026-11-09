@@ -19,7 +19,7 @@ const jetbrainsMono = JetBrains_Mono({
 type RootLayoutProps = {
   children: React.ReactNode;
   locale: string;
-  theme: Theme;
+  theme?: Theme;
 };
 
 export default function RootLayoutScreen(props: Readonly<RootLayoutProps>) {
@@ -30,7 +30,7 @@ export default function RootLayoutScreen(props: Readonly<RootLayoutProps>) {
       data-theme={props.theme}
       suppressHydrationWarning
     >
-      <body className="bg-term-bg font-mono antialiased min-h-screen">
+      <body className="bg-page text-fg font-mono antialiased min-h-screen">
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         {props.children}
       </body>

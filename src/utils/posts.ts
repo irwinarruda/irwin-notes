@@ -4,7 +4,7 @@ import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { cache } from "react";
 import matter from "gray-matter";
-import { DEFAULT_LOCALE, type Locale } from "@/utils/i18n";
+import { DEFAULT_LOCALE, LOCALES, type Locale } from "@/utils/i18n";
 
 const POSTS_DIRECTORY = path.join(process.cwd(), "src/content/posts");
 const SUPPORTED_EXTENSIONS = [".md", ".mdx"] as const;
@@ -206,6 +206,16 @@ export const getPostBySlug = cache(
     return posts.find((post) => post.slug === slug) ?? null;
   },
 );
+
+export async function getPostLocales(slug: string) {
+  const posts = await Promise.all(
+    LOCALES.map((locale) => getPostBySlug(locale, slug)),
+  );
+
+  return LOCALES.filter(
+    (locale, index) => posts[index]?.contentLocale === locale,
+  );
+}
 
 export async function getPostComponent(
   post: Post,

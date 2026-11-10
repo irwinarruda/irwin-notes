@@ -15,6 +15,12 @@
   }
 }
 
+@custom-variant favo {
+  &:where([data-palette="favo"], [data-palette="favo"] *) {
+    @slot;
+  }
+}
+
 @utility text-2xs {
   font-size: 0.625rem;
   line-height: 0.875rem;

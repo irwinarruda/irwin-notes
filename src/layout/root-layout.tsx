@@ -1,5 +1,5 @@
 import { Chakra_Petch, JetBrains_Mono } from "next/font/google";
-import { THEME_COOKIE, type Palette, type Theme } from "@/utils/theme";
+import { THEME_COOKIE } from "@/utils/theme";
 
 const THEME_INIT_SCRIPT = `(() => {
   const match = document.cookie.match(/(?:^|; )${THEME_COOKIE}=([^;]*)/);
@@ -33,8 +33,6 @@ const chakraPetch = Chakra_Petch({
 type RootLayoutProps = {
   children: React.ReactNode;
   locale: string;
-  theme?: Theme;
-  palette: Palette;
 };
 
 export default function RootLayoutScreen(props: Readonly<RootLayoutProps>) {
@@ -42,8 +40,6 @@ export default function RootLayoutScreen(props: Readonly<RootLayoutProps>) {
     <html
       lang={props.locale}
       className={`${jetbrainsMono.variable} ${chakraPetch.variable}`}
-      data-theme={props.theme}
-      data-palette={props.palette}
       suppressHydrationWarning
     >
       <body className="bg-page text-fg font-mono antialiased min-h-screen">

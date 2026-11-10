@@ -1,8 +1,6 @@
 import { notFound } from "next/navigation";
-import { cookies } from "next/headers";
 import { TerminalWindow } from "@/components/terminal-window";
 import { getDictionary, resolveLocale } from "@/utils/i18n";
-import { THEME_COOKIE, resolveThemeCookie } from "@/utils/theme";
 import { getReviewData, getRawPostContent } from "@/utils/reviews";
 import { TextReviewClient } from "@/components/text-review-client";
 
@@ -27,18 +25,13 @@ export default async function TextReviewScreen(
   }
 
   const dictionary = await getDictionary(locale);
-  const { theme, palette } = resolveThemeCookie(
-    (await cookies()).get(THEME_COOKIE)?.value,
-  );
 
   return (
     <TerminalWindow
       homeHref={`/${locale}/posts`}
       skipToContentLabel={dictionary.nav.skipToContent}
       themeToggleLabels={dictionary.themeToggle}
-      serverTheme={theme}
       paletteToggleLabels={dictionary.paletteToggle}
-      serverPalette={palette}
     >
       <TextReviewClient
         initialContent={rawContent}

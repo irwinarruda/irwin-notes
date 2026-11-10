@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Palette, Theme } from "@/utils/theme";
 import { PaletteToggle, type PaletteToggleLabels } from "./palette-toggle";
 import { ThemeToggle, type ThemeToggleLabels } from "./theme-toggle";
 
@@ -41,9 +40,7 @@ export function TerminalWindow({
   nav,
   skipToContentLabel = DEFAULT_SKIP_TO_CONTENT_LABEL,
   themeToggleLabels = DEFAULT_THEME_TOGGLE_LABELS,
-  serverTheme,
   paletteToggleLabels,
-  serverPalette,
   localeSwitcher,
 }: {
   children: React.ReactNode;
@@ -51,9 +48,7 @@ export function TerminalWindow({
   nav?: React.ReactNode;
   skipToContentLabel?: string;
   themeToggleLabels?: ThemeToggleLabels;
-  serverTheme?: Theme;
   paletteToggleLabels?: PaletteToggleLabels;
-  serverPalette?: Palette;
   localeSwitcher?: TerminalLocaleSwitcher;
 }) {
   return (
@@ -116,11 +111,8 @@ export function TerminalWindow({
                 </div>
               </nav>
             ) : null}
-            <PaletteToggle
-              labels={paletteToggleLabels}
-              serverPalette={serverPalette}
-            />
-            <ThemeToggle labels={themeToggleLabels} serverTheme={serverTheme} />
+            <PaletteToggle labels={paletteToggleLabels} />
+            <ThemeToggle labels={themeToggleLabels} />
           </div>
         </header>
         <main

@@ -3,6 +3,7 @@ import "server-only";
 import { notFound } from "next/navigation";
 import enDictionary from "@/content/texts/en.json";
 import ptBrDictionary from "@/content/texts/pt-BR.json";
+import { SITE_URL } from "@/utils/site";
 
 export const LOCALES = ["en", "pt-BR"] as const;
 export type Locale = (typeof LOCALES)[number];
@@ -136,19 +137,30 @@ export function detectLocaleFromAcceptLanguage(
   return DEFAULT_LOCALE;
 }
 
-export function buildLanguageAlternates(pathname: string): Record<string, string> {
-  const normalizedPathname = pathname.startsWith("/")
-    ? pathname
-    : `/${pathname}`;
+export function buildAlternates(
+  locale: Locale,
+  pathname: string,
+  contentLocales: readonly Locale[] = LOCALES,
+) {
+  const fallbackLocale = contentLocales.includes(DEFAULT_LOCALE)
+    ? DEFAULT_LOCALE
+    : contentLocales[0];
+  const canonicalLocale = contentLocales.includes(locale)
+    ? locale
+    : fallbackLocale;
 
-  return Object.fromEntries(
-    LOCALES.map((locale) => [
-      locale,
-      normalizedPathname === "/"
-        ? `/${locale}`
-        : `/${locale}${normalizedPathname}`,
-    ]),
-  );
+  return {
+    canonical: `${SITE_URL}${localizePathname(canonicalLocale, pathname)}`,
+    languages: {
+      ...Object.fromEntries(
+        contentLocales.map((contentLocale) => [
+          contentLocale,
+          `${SITE_URL}${localizePathname(contentLocale, pathname)}`,
+        ]),
+      ),
+      "x-default": `${SITE_URL}${localizePathname(fallbackLocale, pathname)}`,
+    },
+  };
 }
 
 export async function getDictionary(locale: Locale): Promise<Dictionary> {

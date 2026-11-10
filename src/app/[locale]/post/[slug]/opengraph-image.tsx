@@ -40,6 +40,5 @@ export default async function PostOpenGraphImage(
   return createOpenGraphImage({
     title: post.title,
     details: `${post.date} · ${post.readTime} ${dictionary.postPage.readLabel}`,
-    tags: post.tags,
   });
 }

@@ -1,11 +1,9 @@
 import { notFound } from "next/navigation";
-import { cookies } from "next/headers";
 import { TerminalNav, TerminalWindow } from "@/components/terminal-window";
 import { getDictionary, resolveLocale } from "@/utils/i18n";
 import { getLocaleSwitcherConfig } from "@/utils/get-locale-switcher";
 import { getTerminalNavLinks } from "@/utils/get-terminal-nav-links";
 import { getPostBySlug, getPostComponent } from "@/utils/posts";
-import { THEME_COOKIE, resolveThemeCookie } from "@/utils/theme";
 
 type BlogPostScreenProps = {
   params: Promise<{ locale: string; slug: string }>;
@@ -31,9 +29,6 @@ export default async function BlogPostScreen(props: BlogPostScreenProps) {
     `/post/${post.slug}`,
     dictionary,
   );
-  const { theme, palette } = resolveThemeCookie(
-    (await cookies()).get(THEME_COOKIE)?.value,
-  );
 
   return (
     <TerminalWindow
@@ -47,9 +42,7 @@ export default async function BlogPostScreen(props: BlogPostScreenProps) {
       }
       skipToContentLabel={dictionary.nav.skipToContent}
       themeToggleLabels={dictionary.themeToggle}
-      serverTheme={theme}
       paletteToggleLabels={dictionary.paletteToggle}
-      serverPalette={palette}
       localeSwitcher={localeSwitcher}
     >
       <header className="mb-6 fade-in fade-in-delay-1">

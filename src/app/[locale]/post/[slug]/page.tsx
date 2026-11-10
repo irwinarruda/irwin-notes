@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import BlogPostScreen from "@/screens/blog-post-screen";
 import {
-  buildLanguageAlternates,
+  buildAlternates,
   getDictionary,
   LOCALES,
   resolveLocale,
 } from "@/utils/i18n";
-import { getAllPosts, getPostBySlug } from "@/utils/posts";
+import { getAllPosts, getPostBySlug, getPostLocales } from "@/utils/posts";
 
 type BlogPostPageProps = {
   params: Promise<{ locale: string; slug: string }>;
@@ -40,9 +40,13 @@ export async function generateMetadata(
 
   const titleSuffix = post.draft ? ` (${dictionary.postPage.draftLabel})` : "";
 
-  const siteUrl = "https://www.irwinarruda.com";
   const title = `${post.title}${titleSuffix}`;
   const description = `${post.description}${post.tags.length > 0 ? ` ${post.tags.map((tag) => `#${tag}`).join(" ")}` : ""}`;
+  const alternates = buildAlternates(
+    locale,
+    `/post/${post.slug}`,
+    await getPostLocales(post.slug),
+  );
 
   return {
     title: `${title} · ${dictionary.meta.siteTitle}`,
@@ -51,19 +55,11 @@ export async function generateMetadata(
     openGraph: {
       title,
       description,
-      url: `${siteUrl}/${locale}/post/${post.slug}`,
+      url: alternates.canonical,
       siteName: dictionary.meta.siteTitle,
-      images: [
-        {
-          url: `${siteUrl}/brand/icon-ia-512.png`,
-          alt: title,
-        },
-      ],
       type: "article",
     },
-    alternates: {
-      languages: buildLanguageAlternates(`/post/${post.slug}`),
-    },
+    alternates,
   };
 }
 

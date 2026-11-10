@@ -20,6 +20,10 @@ const DEFAULT_PALETTE_TOGGLE_LABELS: PaletteToggleLabels = {
 
 const PALETTE_CHANGE_EVENT = "palettechange";
 
+function getServerPaletteSnapshot(): Palette {
+  return DEFAULT_PALETTE;
+}
+
 function subscribeToPalette(onStoreChange: () => void): () => void {
   window.addEventListener(PALETTE_CHANGE_EVENT, onStoreChange);
 
@@ -30,15 +34,13 @@ function subscribeToPalette(onStoreChange: () => void): () => void {
 
 export function PaletteToggle({
   labels = DEFAULT_PALETTE_TOGGLE_LABELS,
-  serverPalette = DEFAULT_PALETTE,
 }: {
   labels?: PaletteToggleLabels;
-  serverPalette?: Palette;
 }) {
   const palette = useSyncExternalStore(
     subscribeToPalette,
     getDocumentPalette,
-    () => serverPalette,
+    getServerPaletteSnapshot,
   );
   const next = palette === "favo" ? "barro" : "favo";
   const label = next === "favo" ? labels.switchToFavo : labels.switchToBarro;
@@ -54,17 +56,24 @@ export function PaletteToggle({
     <button
       type="button"
       onClick={onPaletteToggle}
-      className="inline-flex min-h-6 min-w-6 items-center gap-1.5 rounded px-1.5 text-xs text-fg-muted tracking-wide transition-colors duration-200 hover:text-fg cursor-pointer select-none focus-visible:outline-offset-1"
+      className="inline-flex min-h-6 min-w-6 items-center rounded px-1.5 text-xs text-fg-muted tracking-wide transition-colors duration-200 hover:text-fg cursor-pointer select-none focus-visible:outline-offset-1"
       aria-label={label}
       title={label}
     >
-      <span
-        aria-hidden="true"
-        className={`size-1.5 rounded-full ${
-          next === "favo" ? "bg-swatch-favo" : "bg-swatch-barro"
-        }`}
-      />
-      {next}
+      <span className="inline-flex items-center gap-1.5 favo:hidden">
+        <span
+          aria-hidden="true"
+          className="size-1.5 rounded-full bg-swatch-favo"
+        />
+        favo
+      </span>
+      <span className="hidden items-center gap-1.5 favo:inline-flex">
+        <span
+          aria-hidden="true"
+          className="size-1.5 rounded-full bg-swatch-barro"
+        />
+        barro
+      </span>
     </button>
   );
 }

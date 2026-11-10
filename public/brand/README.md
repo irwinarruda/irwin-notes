@@ -31,6 +31,6 @@ The `ia` monogram in white on a slate rounded tile, keeping the brick dot.
 | `icon-ia.svg` | Scalable favicon | `<link rel="icon" type="image/svg+xml">` |
 | `icon-ia-180.png` | 180 px icon on a square tile, because iOS rounds the corners itself | Apple touch icon |
 | `icon-ia-square.svg` | The square tile | The source of the touch icon |
-| `icon-ia-512.png` | 512 px icon | OpenGraph image |
+| `icon-ia-512.png` | 512 px icon | Nothing. Link previews are generated cards now (`src/utils/open-graph-image.tsx`) |
 
 An alternative tile with just the `i` is kept in the set, and nothing uses it yet: `icon-i.ico`, `icon-i.svg`, `icon-i-180.png` and `icon-i-512.png`.

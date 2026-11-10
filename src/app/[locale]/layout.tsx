@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
-import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import RootLayoutScreen from "@/layout/root-layout";
-import {
-  buildLanguageAlternates,
-  isLocale,
-  LOCALES,
-  getDictionary,
-} from "@/utils/i18n";
-import { THEME_COOKIE, resolveThemeCookie } from "@/utils/theme";
+import { isLocale, LOCALES, getDictionary } from "@/utils/i18n";
+import { SITE_URL } from "@/utils/site";
 import "@/styles/globals.css";
 
 type LocaleLayoutProps = {
@@ -32,9 +26,8 @@ export async function generateMetadata(
 
   const dictionary = await getDictionary(params.locale);
 
-  const siteUrl = "https://www.irwinarruda.com";
-
   return {
+    metadataBase: new URL(SITE_URL),
     title: dictionary.meta.siteTitle,
     description: dictionary.meta.siteDescription,
     icons: {
@@ -48,18 +41,9 @@ export async function generateMetadata(
     openGraph: {
       title: dictionary.meta.siteTitle,
       description: dictionary.meta.siteDescription,
-      url: `${siteUrl}/${params.locale}`,
+      url: "./",
       siteName: dictionary.meta.siteTitle,
-      images: [
-        {
-          url: `${siteUrl}/brand/icon-ia-512.png`,
-          alt: dictionary.meta.siteTitle,
-        },
-      ],
       type: "website",
-    },
-    alternates: {
-      languages: buildLanguageAlternates(""),
     },
   };
 }
@@ -70,14 +54,7 @@ export default async function LocaleLayout(props: Readonly<LocaleLayoutProps>) {
     notFound();
   }
 
-  const cookieStore = await cookies();
-  const { theme, palette } = resolveThemeCookie(
-    cookieStore.get(THEME_COOKIE)?.value,
-  );
-
   return (
-    <RootLayoutScreen locale={params.locale} theme={theme} palette={palette}>
-      {props.children}
-    </RootLayoutScreen>
+    <RootLayoutScreen locale={params.locale}>{props.children}</RootLayoutScreen>
   );
 }

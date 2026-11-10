@@ -29,6 +29,10 @@ function getThemeSnapshot(): Theme {
   return getDocumentTheme();
 }
 
+function getServerThemeSnapshot(): Theme {
+  return DEFAULT_THEME;
+}
+
 function subscribeToTheme(onStoreChange: () => void): () => void {
   if (typeof window === "undefined") {
     return () => {};
@@ -50,15 +54,13 @@ function subscribeToTheme(onStoreChange: () => void): () => void {
 
 export function ThemeToggle({
   labels = DEFAULT_THEME_TOGGLE_LABELS,
-  serverTheme = DEFAULT_THEME,
 }: {
   labels?: ThemeToggleLabels;
-  serverTheme?: Theme;
 }) {
   const theme = useSyncExternalStore(
     subscribeToTheme,
     getThemeSnapshot,
-    () => serverTheme,
+    getServerThemeSnapshot,
   );
 
   const toggle = () => {

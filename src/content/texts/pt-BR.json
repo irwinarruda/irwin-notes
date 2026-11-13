@@ -75,7 +75,7 @@
     "location": "Goiânia, Brasil",
     "openInNewTabLabel": "(abre em nova aba)",
     "whoamiHeading": "quem-sou",
-    "whoamiBody": "Gosto de construir o que facilita a vida de outros devs: design systems, CLIs, ferramentas de build e, ultimamente, limites para agentes de código. Passei anos estudando arquitetura de software e testando ideias em projetos de verdade, em especial com microfrontends. Trabalho principalmente com TypeScript e React, com C#/.NET no backend. Hoje, boa parte do meu trabalho é tornar agentes de código confiáveis dentro de um time, com os limites de sempre aplicados com rigor: testes de integração, lint, checagem de tipos, CI e revisão automática, além das specs e skills que ensinam o código ao agente.",
+    "whoamiBody": "Gosto de construir o que facilita a vida de outros devs: design systems, CLIs, ferramentas de build e, ultimamente, guardrails para agentes de código. Passei anos estudando arquitetura de software e testando ideias em projetos de verdade, em especial com microfrontends. Trabalho principalmente com TypeScript e React, com C#/.NET no backend. Hoje, boa parte do meu trabalho é tornar agentes de código confiáveis dentro de um time, com os guardrails de sempre aplicados com rigor: testes de integração, lint, type check, CI e code review automático, além das specs e skills que ensinam o código ao agente.",
     "stackHeading": "stack",
     "projectsHeading": "projetos",
     "stackLabels": {

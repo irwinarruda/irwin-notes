@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-13",
   "records": [
     {
       "date": "2025-08-14",
@@ -2614,8 +2614,20 @@
     {
       "date": "2026-11-12",
       "agent": "claude",
-      "tokens": 270332284,
-      "cost": 152.56
+      "tokens": 318124565,
+      "cost": 189.87
+    },
+    {
+      "date": "2026-11-12",
+      "agent": "codex",
+      "tokens": 284958,
+      "cost": 0.01
+    },
+    {
+      "date": "2026-11-13",
+      "agent": "claude",
+      "tokens": 302513923,
+      "cost": 120.13
     }
   ]
 }

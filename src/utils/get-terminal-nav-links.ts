@@ -10,5 +10,9 @@ export function getTerminalNavLinks(locale: Locale, dictionary: Dictionary) {
       href: `/${locale}/about`,
       label: dictionary.nav.about,
     },
+    {
+      href: `/${locale}/usage`,
+      label: dictionary.nav.usage,
+    },
   ];
 }

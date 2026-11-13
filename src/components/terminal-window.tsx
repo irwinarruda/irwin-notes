@@ -32,6 +32,7 @@ const DEFAULT_THEME_TOGGLE_LABELS: ThemeToggleLabels = {
 const DEFAULT_TERMINAL_NAV_LINKS: TerminalNavLink[] = [
   { href: "/posts", label: "Notes" },
   { href: "/about", label: "About" },
+  { href: "/usage", label: "Usage" },
 ];
 
 export function TerminalWindow({

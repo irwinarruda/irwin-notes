@@ -7,7 +7,8 @@
     "ariaLabel": "Site navigation",
     "skipToContent": "Skip to content",
     "posts": "Notes",
-    "about": "About"
+    "about": "About",
+    "usage": "Usage"
   },
   "themeToggle": {
     "light": "light",
@@ -136,5 +137,31 @@
         "href": "https://github.com/irwinarruda/goals-tracker-v2"
       }
     ]
+  },
+  "usagePage": {
+    "title": "Token usage",
+    "description": "Every token my coding agents have processed, across my machines, since {since}.",
+    "stats": {
+      "tokens": "tokens",
+      "activeDays": "active days",
+      "topDay": "biggest day",
+      "longestStreak": "longest streak",
+      "cost": "at API prices"
+    },
+    "streakDays": "{count} days",
+    "byTool": "by tool",
+    "less": "less",
+    "more": "more",
+    "yearFilter": "year",
+    "yearFilterLabel": "Year shown in the calendar",
+    "yearSummary": "{year}: {tokens} tokens over {days} active days",
+    "dayTokens": "{tokens} tokens",
+    "noTokens": "No tokens",
+    "notes": [
+      "Most of these tokens are cache reads: every step an agent takes re-reads the conversation so far.",
+      "The price is what the same tokens would cost at API list prices. My subscriptions covered them.",
+      "Claude Code deletes its session logs after 30 days, so most of my Claude work before mid-October 2026 is missing or only partly counted."
+    ],
+    "updatedAt": "Counted from my local session logs with favo. Updated {date}."
   }
 }

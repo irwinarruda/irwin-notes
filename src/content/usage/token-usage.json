@@ -1,0 +1,2621 @@
+{
+  "updatedAt": "2026-11-12",
+  "records": [
+    {
+      "date": "2025-08-14",
+      "agent": "opencode",
+      "tokens": 1053535,
+      "cost": 2.25
+    },
+    {
+      "date": "2025-08-29",
+      "agent": "opencode",
+      "tokens": 28589,
+      "cost": 0.1
+    },
+    {
+      "date": "2025-09-05",
+      "agent": "opencode",
+      "tokens": 15503,
+      "cost": 0.06
+    },
+    {
+      "date": "2026-01-17",
+      "agent": "opencode",
+      "tokens": 976886,
+      "cost": 0.94
+    },
+    {
+      "date": "2026-01-22",
+      "agent": "opencode",
+      "tokens": 181123,
+      "cost": 0.34
+    },
+    {
+      "date": "2026-01-23",
+      "agent": "opencode",
+      "tokens": 5597291,
+      "cost": 7.06
+    },
+    {
+      "date": "2026-01-24",
+      "agent": "opencode",
+      "tokens": 11868871,
+      "cost": 15.87
+    },
+    {
+      "date": "2026-01-26",
+      "agent": "opencode",
+      "tokens": 3903436,
+      "cost": 5.3
+    },
+    {
+      "date": "2026-01-27",
+      "agent": "opencode",
+      "tokens": 7039972,
+      "cost": 9.12
+    },
+    {
+      "date": "2026-01-28",
+      "agent": "opencode",
+      "tokens": 7115844,
+      "cost": 10.99
+    },
+    {
+      "date": "2026-01-29",
+      "agent": "opencode",
+      "tokens": 1751878,
+      "cost": 3.67
+    },
+    {
+      "date": "2026-01-30",
+      "agent": "opencode",
+      "tokens": 14183617,
+      "cost": 18.51
+    },
+    {
+      "date": "2026-01-31",
+      "agent": "opencode",
+      "tokens": 14212163,
+      "cost": 14.46
+    },
+    {
+      "date": "2026-02-01",
+      "agent": "opencode",
+      "tokens": 18842713,
+      "cost": 23.4
+    },
+    {
+      "date": "2026-02-02",
+      "agent": "opencode",
+      "tokens": 7650307,
+      "cost": 7.56
+    },
+    {
+      "date": "2026-02-03",
+      "agent": "opencode",
+      "tokens": 1525970,
+      "cost": 1.51
+    },
+    {
+      "date": "2026-02-04",
+      "agent": "opencode",
+      "tokens": 4606011,
+      "cost": 3.2
+    },
+    {
+      "date": "2026-02-05",
+      "agent": "opencode",
+      "tokens": 11028169,
+      "cost": 12.56
+    },
+    {
+      "date": "2026-02-06",
+      "agent": "opencode",
+      "tokens": 28286570,
+      "cost": 25.95
+    },
+    {
+      "date": "2026-02-07",
+      "agent": "opencode",
+      "tokens": 36907467,
+      "cost": 45.99
+    },
+    {
+      "date": "2026-02-08",
+      "agent": "opencode",
+      "tokens": 20913986,
+      "cost": 20.76
+    },
+    {
+      "date": "2026-02-09",
+      "agent": "opencode",
+      "tokens": 4084506,
+      "cost": 4.21
+    },
+    {
+      "date": "2026-02-10",
+      "agent": "opencode",
+      "tokens": 10261271,
+      "cost": 15.94
+    },
+    {
+      "date": "2026-02-11",
+      "agent": "opencode",
+      "tokens": 45402279,
+      "cost": 47.36
+    },
+    {
+      "date": "2026-02-12",
+      "agent": "opencode",
+      "tokens": 4352378,
+      "cost": 13.62
+    },
+    {
+      "date": "2026-02-13",
+      "agent": "opencode",
+      "tokens": 3905817,
+      "cost": 7.71
+    },
+    {
+      "date": "2026-02-14",
+      "agent": "opencode",
+      "tokens": 7571101,
+      "cost": 12.66
+    },
+    {
+      "date": "2026-02-15",
+      "agent": "opencode",
+      "tokens": 28430909,
+      "cost": 36.3
+    },
+    {
+      "date": "2026-02-16",
+      "agent": "opencode",
+      "tokens": 87297281,
+      "cost": 45.04
+    },
+    {
+      "date": "2026-02-17",
+      "agent": "opencode",
+      "tokens": 21771799,
+      "cost": 35.6
+    },
+    {
+      "date": "2026-02-18",
+      "agent": "opencode",
+      "tokens": 20435601,
+      "cost": 25.93
+    },
+    {
+      "date": "2026-02-19",
+      "agent": "opencode",
+      "tokens": 14364758,
+      "cost": 10.16
+    },
+    {
+      "date": "2026-02-20",
+      "agent": "opencode",
+      "tokens": 12275518,
+      "cost": 10.24
+    },
+    {
+      "date": "2026-02-22",
+      "agent": "opencode",
+      "tokens": 10171,
+      "cost": 0.02
+    },
+    {
+      "date": "2026-02-25",
+      "agent": "opencode",
+      "tokens": 613957,
+      "cost": 0.93
+    },
+    {
+      "date": "2026-02-26",
+      "agent": "opencode",
+      "tokens": 4805455,
+      "cost": 6.14
+    },
+    {
+      "date": "2026-02-27",
+      "agent": "opencode",
+      "tokens": 29037355,
+      "cost": 22.72
+    },
+    {
+      "date": "2026-02-28",
+      "agent": "opencode",
+      "tokens": 2824371,
+      "cost": 1.36
+    },
+    {
+      "date": "2026-03-01",
+      "agent": "opencode",
+      "tokens": 1462089,
+      "cost": 1.81
+    },
+    {
+      "date": "2026-03-02",
+      "agent": "opencode",
+      "tokens": 6010214,
+      "cost": 7.26
+    },
+    {
+      "date": "2026-03-03",
+      "agent": "opencode",
+      "tokens": 29340210,
+      "cost": 31.71
+    },
+    {
+      "date": "2026-03-04",
+      "agent": "opencode",
+      "tokens": 2634963,
+      "cost": 4.14
+    },
+    {
+      "date": "2026-03-05",
+      "agent": "opencode",
+      "tokens": 13888060,
+      "cost": 14.49
+    },
+    {
+      "date": "2026-03-06",
+      "agent": "opencode",
+      "tokens": 14874028,
+      "cost": 14.39
+    },
+    {
+      "date": "2026-03-07",
+      "agent": "opencode",
+      "tokens": 3484139,
+      "cost": 3.98
+    },
+    {
+      "date": "2026-03-09",
+      "agent": "opencode",
+      "tokens": 1132956,
+      "cost": 1.38
+    },
+    {
+      "date": "2026-03-10",
+      "agent": "opencode",
+      "tokens": 9914018,
+      "cost": 11.46
+    },
+    {
+      "date": "2026-03-11",
+      "agent": "opencode",
+      "tokens": 1728467,
+      "cost": 2.84
+    },
+    {
+      "date": "2026-03-12",
+      "agent": "opencode",
+      "tokens": 20352097,
+      "cost": 30.85
+    },
+    {
+      "date": "2026-03-13",
+      "agent": "opencode",
+      "tokens": 3903527,
+      "cost": 4.14
+    },
+    {
+      "date": "2026-03-14",
+      "agent": "opencode",
+      "tokens": 1360514,
+      "cost": 1.5
+    },
+    {
+      "date": "2026-03-15",
+      "agent": "opencode",
+      "tokens": 6395750,
+      "cost": 13.93
+    },
+    {
+      "date": "2026-03-16",
+      "agent": "opencode",
+      "tokens": 823306,
+      "cost": 4.55
+    },
+    {
+      "date": "2026-03-18",
+      "agent": "opencode",
+      "tokens": 981454,
+      "cost": 1.74
+    },
+    {
+      "date": "2026-03-22",
+      "agent": "opencode",
+      "tokens": 604035,
+      "cost": 2.17
+    },
+    {
+      "date": "2026-03-23",
+      "agent": "opencode",
+      "tokens": 4023450,
+      "cost": 4.22
+    },
+    {
+      "date": "2026-03-24",
+      "agent": "opencode",
+      "tokens": 16453,
+      "cost": 0.04
+    },
+    {
+      "date": "2026-03-25",
+      "agent": "opencode",
+      "tokens": 4387407,
+      "cost": 8.07
+    },
+    {
+      "date": "2026-03-26",
+      "agent": "opencode",
+      "tokens": 3753065,
+      "cost": 8.89
+    },
+    {
+      "date": "2026-03-27",
+      "agent": "opencode",
+      "tokens": 10392335,
+      "cost": 19.05
+    },
+    {
+      "date": "2026-03-28",
+      "agent": "opencode",
+      "tokens": 19482314,
+      "cost": 8.79
+    },
+    {
+      "date": "2026-03-30",
+      "agent": "opencode",
+      "tokens": 4485265,
+      "cost": 4.64
+    },
+    {
+      "date": "2026-03-31",
+      "agent": "opencode",
+      "tokens": 9455343,
+      "cost": 10.4
+    },
+    {
+      "date": "2026-04-01",
+      "agent": "opencode",
+      "tokens": 7454203,
+      "cost": 7.35
+    },
+    {
+      "date": "2026-04-02",
+      "agent": "opencode",
+      "tokens": 53076,
+      "cost": 0.1
+    },
+    {
+      "date": "2026-04-03",
+      "agent": "opencode",
+      "tokens": 10940426,
+      "cost": 16.53
+    },
+    {
+      "date": "2026-04-04",
+      "agent": "opencode",
+      "tokens": 18990208,
+      "cost": 17.71
+    },
+    {
+      "date": "2026-04-05",
+      "agent": "opencode",
+      "tokens": 131742680,
+      "cost": 148.51
+    },
+    {
+      "date": "2026-04-06",
+      "agent": "opencode",
+      "tokens": 12286092,
+      "cost": 10.21
+    },
+    {
+      "date": "2026-04-07",
+      "agent": "opencode",
+      "tokens": 18075241,
+      "cost": 12.93
+    },
+    {
+      "date": "2026-04-08",
+      "agent": "opencode",
+      "tokens": 37682335,
+      "cost": 53.53
+    },
+    {
+      "date": "2026-04-09",
+      "agent": "opencode",
+      "tokens": 20533237,
+      "cost": 22.2
+    },
+    {
+      "date": "2026-04-10",
+      "agent": "opencode",
+      "tokens": 16956151,
+      "cost": 19.37
+    },
+    {
+      "date": "2026-04-11",
+      "agent": "opencode",
+      "tokens": 42688745,
+      "cost": 37.11
+    },
+    {
+      "date": "2026-04-12",
+      "agent": "opencode",
+      "tokens": 57748587,
+      "cost": 69.55
+    },
+    {
+      "date": "2026-04-13",
+      "agent": "opencode",
+      "tokens": 17165333,
+      "cost": 15.6
+    },
+    {
+      "date": "2026-04-14",
+      "agent": "opencode",
+      "tokens": 10282340,
+      "cost": 7.37
+    },
+    {
+      "date": "2026-04-15",
+      "agent": "opencode",
+      "tokens": 14741240,
+      "cost": 12.82
+    },
+    {
+      "date": "2026-04-16",
+      "agent": "opencode",
+      "tokens": 9660296,
+      "cost": 9.95
+    },
+    {
+      "date": "2026-04-17",
+      "agent": "opencode",
+      "tokens": 30441045,
+      "cost": 33.54
+    },
+    {
+      "date": "2026-04-18",
+      "agent": "opencode",
+      "tokens": 43772927,
+      "cost": 29.25
+    },
+    {
+      "date": "2026-04-19",
+      "agent": "opencode",
+      "tokens": 20398432,
+      "cost": 15.24
+    },
+    {
+      "date": "2026-04-20",
+      "agent": "opencode",
+      "tokens": 14859136,
+      "cost": 7.16
+    },
+    {
+      "date": "2026-04-21",
+      "agent": "codex",
+      "tokens": 11740423,
+      "cost": 6.3
+    },
+    {
+      "date": "2026-04-21",
+      "agent": "opencode",
+      "tokens": 24174934,
+      "cost": 13.71
+    },
+    {
+      "date": "2026-04-22",
+      "agent": "codex",
+      "tokens": 11397806,
+      "cost": 6.75
+    },
+    {
+      "date": "2026-04-22",
+      "agent": "opencode",
+      "tokens": 2636481,
+      "cost": 1
+    },
+    {
+      "date": "2026-04-23",
+      "agent": "codex",
+      "tokens": 11904905,
+      "cost": 11.12
+    },
+    {
+      "date": "2026-04-23",
+      "agent": "opencode",
+      "tokens": 5844697,
+      "cost": 5.29
+    },
+    {
+      "date": "2026-04-24",
+      "agent": "codex",
+      "tokens": 16407326,
+      "cost": 13.45
+    },
+    {
+      "date": "2026-04-24",
+      "agent": "opencode",
+      "tokens": 8521324,
+      "cost": 10.36
+    },
+    {
+      "date": "2026-04-25",
+      "agent": "opencode",
+      "tokens": 23381709,
+      "cost": 19.11
+    },
+    {
+      "date": "2026-04-26",
+      "agent": "codex",
+      "tokens": 8477723,
+      "cost": 9.02
+    },
+    {
+      "date": "2026-04-26",
+      "agent": "opencode",
+      "tokens": 20371906,
+      "cost": 18.97
+    },
+    {
+      "date": "2026-04-27",
+      "agent": "codex",
+      "tokens": 5122615,
+      "cost": 6.78
+    },
+    {
+      "date": "2026-04-27",
+      "agent": "opencode",
+      "tokens": 9832945,
+      "cost": 10.06
+    },
+    {
+      "date": "2026-04-28",
+      "agent": "codex",
+      "tokens": 96379,
+      "cost": 0.45
+    },
+    {
+      "date": "2026-04-28",
+      "agent": "opencode",
+      "tokens": 1836767,
+      "cost": 0.78
+    },
+    {
+      "date": "2026-04-29",
+      "agent": "codex",
+      "tokens": 4118508,
+      "cost": 4.98
+    },
+    {
+      "date": "2026-04-29",
+      "agent": "opencode",
+      "tokens": 2337988,
+      "cost": 3.03
+    },
+    {
+      "date": "2026-04-30",
+      "agent": "codex",
+      "tokens": 236343,
+      "cost": 0.4
+    },
+    {
+      "date": "2026-04-30",
+      "agent": "opencode",
+      "tokens": 20766223,
+      "cost": 20.62
+    },
+    {
+      "date": "2026-05-01",
+      "agent": "codex",
+      "tokens": 11715219,
+      "cost": 12.35
+    },
+    {
+      "date": "2026-05-01",
+      "agent": "opencode",
+      "tokens": 27192915,
+      "cost": 24.37
+    },
+    {
+      "date": "2026-05-02",
+      "agent": "codex",
+      "tokens": 1403327,
+      "cost": 1.72
+    },
+    {
+      "date": "2026-05-02",
+      "agent": "opencode",
+      "tokens": 48149221,
+      "cost": 39.28
+    },
+    {
+      "date": "2026-05-03",
+      "agent": "codex",
+      "tokens": 20069610,
+      "cost": 18.1
+    },
+    {
+      "date": "2026-05-03",
+      "agent": "opencode",
+      "tokens": 15660493,
+      "cost": 13.46
+    },
+    {
+      "date": "2026-05-04",
+      "agent": "codex",
+      "tokens": 732459,
+      "cost": 1.16
+    },
+    {
+      "date": "2026-05-04",
+      "agent": "opencode",
+      "tokens": 24062446,
+      "cost": 24.88
+    },
+    {
+      "date": "2026-05-05",
+      "agent": "codex",
+      "tokens": 12154536,
+      "cost": 12.33
+    },
+    {
+      "date": "2026-05-05",
+      "agent": "opencode",
+      "tokens": 18125649,
+      "cost": 24.41
+    },
+    {
+      "date": "2026-05-06",
+      "agent": "codex",
+      "tokens": 13501944,
+      "cost": 19.33
+    },
+    {
+      "date": "2026-05-06",
+      "agent": "opencode",
+      "tokens": 15551725,
+      "cost": 17.18
+    },
+    {
+      "date": "2026-05-07",
+      "agent": "codex",
+      "tokens": 521925,
+      "cost": 1.68
+    },
+    {
+      "date": "2026-05-08",
+      "agent": "codex",
+      "tokens": 21486600,
+      "cost": 20.94
+    },
+    {
+      "date": "2026-05-08",
+      "agent": "opencode",
+      "tokens": 967335,
+      "cost": 0.9
+    },
+    {
+      "date": "2026-05-10",
+      "agent": "codex",
+      "tokens": 825433,
+      "cost": 1.08
+    },
+    {
+      "date": "2026-05-11",
+      "agent": "codex",
+      "tokens": 36154620,
+      "cost": 33.47
+    },
+    {
+      "date": "2026-05-11",
+      "agent": "opencode",
+      "tokens": 2527423,
+      "cost": 1.94
+    },
+    {
+      "date": "2026-05-12",
+      "agent": "codex",
+      "tokens": 12555231,
+      "cost": 14.99
+    },
+    {
+      "date": "2026-05-12",
+      "agent": "opencode",
+      "tokens": 10399740,
+      "cost": 9.31
+    },
+    {
+      "date": "2026-05-13",
+      "agent": "codex",
+      "tokens": 39050960,
+      "cost": 37.43
+    },
+    {
+      "date": "2026-05-13",
+      "agent": "opencode",
+      "tokens": 10956656,
+      "cost": 8.89
+    },
+    {
+      "date": "2026-05-14",
+      "agent": "codex",
+      "tokens": 28003693,
+      "cost": 27.76
+    },
+    {
+      "date": "2026-05-14",
+      "agent": "opencode",
+      "tokens": 6233795,
+      "cost": 4.69
+    },
+    {
+      "date": "2026-05-15",
+      "agent": "codex",
+      "tokens": 9161695,
+      "cost": 10.09
+    },
+    {
+      "date": "2026-05-15",
+      "agent": "opencode",
+      "tokens": 3609483,
+      "cost": 2.92
+    },
+    {
+      "date": "2026-05-16",
+      "agent": "codex",
+      "tokens": 16893682,
+      "cost": 17.66
+    },
+    {
+      "date": "2026-05-16",
+      "agent": "opencode",
+      "tokens": 6700992,
+      "cost": 5.01
+    },
+    {
+      "date": "2026-05-17",
+      "agent": "codex",
+      "tokens": 25830311,
+      "cost": 22.24
+    },
+    {
+      "date": "2026-05-17",
+      "agent": "opencode",
+      "tokens": 25939593,
+      "cost": 14.85
+    },
+    {
+      "date": "2026-05-18",
+      "agent": "codex",
+      "tokens": 24383215,
+      "cost": 26.62
+    },
+    {
+      "date": "2026-05-18",
+      "agent": "opencode",
+      "tokens": 1838805,
+      "cost": 1.51
+    },
+    {
+      "date": "2026-05-19",
+      "agent": "codex",
+      "tokens": 13618467,
+      "cost": 15.52
+    },
+    {
+      "date": "2026-05-19",
+      "agent": "opencode",
+      "tokens": 16922166,
+      "cost": 11.07
+    },
+    {
+      "date": "2026-05-20",
+      "agent": "codex",
+      "tokens": 24272612,
+      "cost": 26.25
+    },
+    {
+      "date": "2026-05-20",
+      "agent": "opencode",
+      "tokens": 16548177,
+      "cost": 12.85
+    },
+    {
+      "date": "2026-05-21",
+      "agent": "codex",
+      "tokens": 59401319,
+      "cost": 49.51
+    },
+    {
+      "date": "2026-05-21",
+      "agent": "opencode",
+      "tokens": 36574586,
+      "cost": 24.57
+    },
+    {
+      "date": "2026-05-22",
+      "agent": "codex",
+      "tokens": 23843116,
+      "cost": 21.38
+    },
+    {
+      "date": "2026-05-22",
+      "agent": "opencode",
+      "tokens": 6959723,
+      "cost": 5.38
+    },
+    {
+      "date": "2026-05-24",
+      "agent": "codex",
+      "tokens": 6258657,
+      "cost": 7.19
+    },
+    {
+      "date": "2026-05-25",
+      "agent": "codex",
+      "tokens": 27644872,
+      "cost": 29.95
+    },
+    {
+      "date": "2026-05-25",
+      "agent": "opencode",
+      "tokens": 10839360,
+      "cost": 7.79
+    },
+    {
+      "date": "2026-05-26",
+      "agent": "codex",
+      "tokens": 52167822,
+      "cost": 54.72
+    },
+    {
+      "date": "2026-05-26",
+      "agent": "opencode",
+      "tokens": 10256301,
+      "cost": 4.01
+    },
+    {
+      "date": "2026-05-27",
+      "agent": "codex",
+      "tokens": 27250113,
+      "cost": 38.73
+    },
+    {
+      "date": "2026-05-28",
+      "agent": "codex",
+      "tokens": 23613162,
+      "cost": 24.93
+    },
+    {
+      "date": "2026-05-31",
+      "agent": "codex",
+      "tokens": 15472288,
+      "cost": 15.29
+    },
+    {
+      "date": "2026-06-01",
+      "agent": "codex",
+      "tokens": 37951439,
+      "cost": 40.15
+    },
+    {
+      "date": "2026-06-01",
+      "agent": "opencode",
+      "tokens": 4690511,
+      "cost": 4.03
+    },
+    {
+      "date": "2026-06-02",
+      "agent": "codex",
+      "tokens": 6876045,
+      "cost": 9.06
+    },
+    {
+      "date": "2026-06-02",
+      "agent": "opencode",
+      "tokens": 7726905,
+      "cost": 4.27
+    },
+    {
+      "date": "2026-06-03",
+      "agent": "codex",
+      "tokens": 27514806,
+      "cost": 31.39
+    },
+    {
+      "date": "2026-06-03",
+      "agent": "opencode",
+      "tokens": 684701,
+      "cost": 0.67
+    },
+    {
+      "date": "2026-06-04",
+      "agent": "codex",
+      "tokens": 21070088,
+      "cost": 23.14
+    },
+    {
+      "date": "2026-06-05",
+      "agent": "codex",
+      "tokens": 31386757,
+      "cost": 33.83
+    },
+    {
+      "date": "2026-06-06",
+      "agent": "codex",
+      "tokens": 1854408,
+      "cost": 2.82
+    },
+    {
+      "date": "2026-06-07",
+      "agent": "codex",
+      "tokens": 9187459,
+      "cost": 13.25
+    },
+    {
+      "date": "2026-06-08",
+      "agent": "codex",
+      "tokens": 8550252,
+      "cost": 9.76
+    },
+    {
+      "date": "2026-06-09",
+      "agent": "codex",
+      "tokens": 19248790,
+      "cost": 22.64
+    },
+    {
+      "date": "2026-06-10",
+      "agent": "opencode",
+      "tokens": 4213671,
+      "cost": 3.33
+    },
+    {
+      "date": "2026-06-11",
+      "agent": "codex",
+      "tokens": 4069016,
+      "cost": 5.95
+    },
+    {
+      "date": "2026-06-12",
+      "agent": "codex",
+      "tokens": 33851189,
+      "cost": 35.41
+    },
+    {
+      "date": "2026-06-12",
+      "agent": "opencode",
+      "tokens": 47673,
+      "cost": 0.04
+    },
+    {
+      "date": "2026-06-13",
+      "agent": "codex",
+      "tokens": 24059516,
+      "cost": 24.99
+    },
+    {
+      "date": "2026-06-14",
+      "agent": "codex",
+      "tokens": 16374,
+      "cost": 0.06
+    },
+    {
+      "date": "2026-06-14",
+      "agent": "pi",
+      "tokens": 14377085,
+      "cost": 13.23
+    },
+    {
+      "date": "2026-06-15",
+      "agent": "codex",
+      "tokens": 404609,
+      "cost": 0.85
+    },
+    {
+      "date": "2026-06-15",
+      "agent": "pi",
+      "tokens": 8975025,
+      "cost": 9.5
+    },
+    {
+      "date": "2026-06-16",
+      "agent": "codex",
+      "tokens": 113969,
+      "cost": 0.46
+    },
+    {
+      "date": "2026-06-16",
+      "agent": "pi",
+      "tokens": 11926387,
+      "cost": 16.71
+    },
+    {
+      "date": "2026-06-17",
+      "agent": "pi",
+      "tokens": 18841062,
+      "cost": 18.72
+    },
+    {
+      "date": "2026-06-18",
+      "agent": "pi",
+      "tokens": 24171496,
+      "cost": 30.07
+    },
+    {
+      "date": "2026-06-19",
+      "agent": "pi",
+      "tokens": 28708566,
+      "cost": 21.49
+    },
+    {
+      "date": "2026-06-20",
+      "agent": "pi",
+      "tokens": 25784517,
+      "cost": 22.5
+    },
+    {
+      "date": "2026-06-21",
+      "agent": "pi",
+      "tokens": 15129381,
+      "cost": 16.21
+    },
+    {
+      "date": "2026-06-22",
+      "agent": "codex",
+      "tokens": 10445602,
+      "cost": 10.35
+    },
+    {
+      "date": "2026-06-22",
+      "agent": "pi",
+      "tokens": 39895013,
+      "cost": 31.67
+    },
+    {
+      "date": "2026-06-23",
+      "agent": "codex",
+      "tokens": 556164,
+      "cost": 1.49
+    },
+    {
+      "date": "2026-06-23",
+      "agent": "pi",
+      "tokens": 26588090,
+      "cost": 23.85
+    },
+    {
+      "date": "2026-06-24",
+      "agent": "codex",
+      "tokens": 177986,
+      "cost": 0.61
+    },
+    {
+      "date": "2026-06-24",
+      "agent": "pi",
+      "tokens": 175571,
+      "cost": 0.34
+    },
+    {
+      "date": "2026-06-25",
+      "agent": "pi",
+      "tokens": 17498889,
+      "cost": 18.81
+    },
+    {
+      "date": "2026-06-26",
+      "agent": "codex",
+      "tokens": 690989,
+      "cost": 1.74
+    },
+    {
+      "date": "2026-06-26",
+      "agent": "pi",
+      "tokens": 9627841,
+      "cost": 10.05
+    },
+    {
+      "date": "2026-06-27",
+      "agent": "pi",
+      "tokens": 202771,
+      "cost": 0.37
+    },
+    {
+      "date": "2026-06-28",
+      "agent": "codex",
+      "tokens": 8903180,
+      "cost": 10.35
+    },
+    {
+      "date": "2026-06-28",
+      "agent": "pi",
+      "tokens": 14653750,
+      "cost": 15.76
+    },
+    {
+      "date": "2026-06-29",
+      "agent": "pi",
+      "tokens": 3242478,
+      "cost": 4.47
+    },
+    {
+      "date": "2026-06-30",
+      "agent": "opencode",
+      "tokens": 9344,
+      "cost": 0.01
+    },
+    {
+      "date": "2026-06-30",
+      "agent": "pi",
+      "tokens": 1226815,
+      "cost": 2.32
+    },
+    {
+      "date": "2026-07-01",
+      "agent": "codex",
+      "tokens": 3380367,
+      "cost": 4.77
+    },
+    {
+      "date": "2026-07-01",
+      "agent": "pi",
+      "tokens": 39379585,
+      "cost": 6.07
+    },
+    {
+      "date": "2026-07-02",
+      "agent": "codex",
+      "tokens": 13157095,
+      "cost": 13.26
+    },
+    {
+      "date": "2026-07-02",
+      "agent": "pi",
+      "tokens": 7891434,
+      "cost": 7.32
+    },
+    {
+      "date": "2026-07-03",
+      "agent": "codex",
+      "tokens": 9671685,
+      "cost": 9.03
+    },
+    {
+      "date": "2026-07-03",
+      "agent": "pi",
+      "tokens": 9354887,
+      "cost": 10.17
+    },
+    {
+      "date": "2026-07-04",
+      "agent": "pi",
+      "tokens": 5782735,
+      "cost": 7.1
+    },
+    {
+      "date": "2026-07-05",
+      "agent": "codex",
+      "tokens": 5042760,
+      "cost": 6.2
+    },
+    {
+      "date": "2026-07-05",
+      "agent": "pi",
+      "tokens": 69406,
+      "cost": 0.22
+    },
+    {
+      "date": "2026-07-06",
+      "agent": "codex",
+      "tokens": 2479620,
+      "cost": 4.22
+    },
+    {
+      "date": "2026-07-07",
+      "agent": "codex",
+      "tokens": 1586840,
+      "cost": 1.95
+    },
+    {
+      "date": "2026-07-07",
+      "agent": "pi",
+      "tokens": 32012112,
+      "cost": 34.25
+    },
+    {
+      "date": "2026-07-08",
+      "agent": "codex",
+      "tokens": 7319613,
+      "cost": 7.9
+    },
+    {
+      "date": "2026-07-08",
+      "agent": "pi",
+      "tokens": 987510,
+      "cost": 0.92
+    },
+    {
+      "date": "2026-07-09",
+      "agent": "codex",
+      "tokens": 88058355,
+      "cost": 53.2
+    },
+    {
+      "date": "2026-07-09",
+      "agent": "pi",
+      "tokens": 1673732,
+      "cost": 0
+    },
+    {
+      "date": "2026-07-10",
+      "agent": "codex",
+      "tokens": 41496016,
+      "cost": 27.76
+    },
+    {
+      "date": "2026-07-11",
+      "agent": "codex",
+      "tokens": 8031455,
+      "cost": 7.93
+    },
+    {
+      "date": "2026-07-12",
+      "agent": "codex",
+      "tokens": 74234251,
+      "cost": 42.05
+    },
+    {
+      "date": "2026-07-12",
+      "agent": "pi",
+      "tokens": 58933671,
+      "cost": 44.65
+    },
+    {
+      "date": "2026-07-13",
+      "agent": "codex",
+      "tokens": 59462915,
+      "cost": 37.24
+    },
+    {
+      "date": "2026-07-14",
+      "agent": "codex",
+      "tokens": 106753976,
+      "cost": 68.65
+    },
+    {
+      "date": "2026-07-14",
+      "agent": "pi",
+      "tokens": 634650,
+      "cost": 1.01
+    },
+    {
+      "date": "2026-07-15",
+      "agent": "codex",
+      "tokens": 124051791,
+      "cost": 76.92
+    },
+    {
+      "date": "2026-07-15",
+      "agent": "pi",
+      "tokens": 2919199,
+      "cost": 3.18
+    },
+    {
+      "date": "2026-07-16",
+      "agent": "codex",
+      "tokens": 256029043,
+      "cost": 158.89
+    },
+    {
+      "date": "2026-07-16",
+      "agent": "pi",
+      "tokens": 3396600,
+      "cost": 4.2
+    },
+    {
+      "date": "2026-07-17",
+      "agent": "codex",
+      "tokens": 124934231,
+      "cost": 83.45
+    },
+    {
+      "date": "2026-07-17",
+      "agent": "pi",
+      "tokens": 34362337,
+      "cost": 1.8
+    },
+    {
+      "date": "2026-07-18",
+      "agent": "codex",
+      "tokens": 89650430,
+      "cost": 52.28
+    },
+    {
+      "date": "2026-07-18",
+      "agent": "pi",
+      "tokens": 1924262,
+      "cost": 0
+    },
+    {
+      "date": "2026-07-19",
+      "agent": "codex",
+      "tokens": 4822374,
+      "cost": 4.34
+    },
+    {
+      "date": "2026-07-20",
+      "agent": "codex",
+      "tokens": 96222871,
+      "cost": 62.95
+    },
+    {
+      "date": "2026-07-21",
+      "agent": "codex",
+      "tokens": 153526852,
+      "cost": 92.89
+    },
+    {
+      "date": "2026-07-22",
+      "agent": "codex",
+      "tokens": 120132232,
+      "cost": 71.47
+    },
+    {
+      "date": "2026-07-22",
+      "agent": "pi",
+      "tokens": 155276,
+      "cost": 0.37
+    },
+    {
+      "date": "2026-07-23",
+      "agent": "codex",
+      "tokens": 180860431,
+      "cost": 114.95
+    },
+    {
+      "date": "2026-07-24",
+      "agent": "codex",
+      "tokens": 5056148,
+      "cost": 4.37
+    },
+    {
+      "date": "2026-07-24",
+      "agent": "pi",
+      "tokens": 1154490,
+      "cost": 0
+    },
+    {
+      "date": "2026-07-26",
+      "agent": "codex",
+      "tokens": 35170142,
+      "cost": 19.26
+    },
+    {
+      "date": "2026-07-26",
+      "agent": "pi",
+      "tokens": 414404,
+      "cost": 0
+    },
+    {
+      "date": "2026-07-27",
+      "agent": "codex",
+      "tokens": 79991313,
+      "cost": 56.32
+    },
+    {
+      "date": "2026-07-28",
+      "agent": "codex",
+      "tokens": 52996409,
+      "cost": 39.17
+    },
+    {
+      "date": "2026-07-28",
+      "agent": "opencode",
+      "tokens": 495325,
+      "cost": 0.28
+    },
+    {
+      "date": "2026-07-28",
+      "agent": "pi",
+      "tokens": 435938,
+      "cost": 0.51
+    },
+    {
+      "date": "2026-07-29",
+      "agent": "codex",
+      "tokens": 72617721,
+      "cost": 39.95
+    },
+    {
+      "date": "2026-07-30",
+      "agent": "codex",
+      "tokens": 90549361,
+      "cost": 52.43
+    },
+    {
+      "date": "2026-07-30",
+      "agent": "pi",
+      "tokens": 1513556,
+      "cost": 2.06
+    },
+    {
+      "date": "2026-07-31",
+      "agent": "codex",
+      "tokens": 85465866,
+      "cost": 51.59
+    },
+    {
+      "date": "2026-07-31",
+      "agent": "pi",
+      "tokens": 268926,
+      "cost": 0.54
+    },
+    {
+      "date": "2026-08-01",
+      "agent": "codex",
+      "tokens": 95658937,
+      "cost": 51.62
+    },
+    {
+      "date": "2026-08-02",
+      "agent": "codex",
+      "tokens": 246037183,
+      "cost": 162.96
+    },
+    {
+      "date": "2026-08-02",
+      "agent": "pi",
+      "tokens": 620267,
+      "cost": 0.59
+    },
+    {
+      "date": "2026-08-03",
+      "agent": "codex",
+      "tokens": 43765055,
+      "cost": 26.66
+    },
+    {
+      "date": "2026-08-04",
+      "agent": "claude",
+      "tokens": 15268770,
+      "cost": 25.02
+    },
+    {
+      "date": "2026-08-04",
+      "agent": "codex",
+      "tokens": 277180698,
+      "cost": 185.84
+    },
+    {
+      "date": "2026-08-04",
+      "agent": "opencode",
+      "tokens": 899497,
+      "cost": 0.35
+    },
+    {
+      "date": "2026-08-05",
+      "agent": "claude",
+      "tokens": 21239861,
+      "cost": 34.18
+    },
+    {
+      "date": "2026-08-05",
+      "agent": "codex",
+      "tokens": 16940093,
+      "cost": 9.48
+    },
+    {
+      "date": "2026-08-05",
+      "agent": "opencode",
+      "tokens": 5190,
+      "cost": 0.01
+    },
+    {
+      "date": "2026-08-06",
+      "agent": "claude",
+      "tokens": 26179882,
+      "cost": 22.69
+    },
+    {
+      "date": "2026-08-06",
+      "agent": "codex",
+      "tokens": 52301611,
+      "cost": 11.38
+    },
+    {
+      "date": "2026-08-06",
+      "agent": "opencode",
+      "tokens": 2422966,
+      "cost": 1.3
+    },
+    {
+      "date": "2026-08-06",
+      "agent": "pi",
+      "tokens": 2938967,
+      "cost": 0
+    },
+    {
+      "date": "2026-08-07",
+      "agent": "opencode",
+      "tokens": 7044996,
+      "cost": 3.07
+    },
+    {
+      "date": "2026-08-07",
+      "agent": "pi",
+      "tokens": 15187468,
+      "cost": 0
+    },
+    {
+      "date": "2026-08-08",
+      "agent": "codex",
+      "tokens": 297508031,
+      "cost": 164.08
+    },
+    {
+      "date": "2026-08-09",
+      "agent": "codex",
+      "tokens": 586889805,
+      "cost": 315.8
+    },
+    {
+      "date": "2026-08-10",
+      "agent": "claude",
+      "tokens": 49638403,
+      "cost": 55.3
+    },
+    {
+      "date": "2026-08-10",
+      "agent": "codex",
+      "tokens": 112724106,
+      "cost": 54.69
+    },
+    {
+      "date": "2026-08-11",
+      "agent": "claude",
+      "tokens": 18312115,
+      "cost": 40.97
+    },
+    {
+      "date": "2026-08-11",
+      "agent": "codex",
+      "tokens": 125545598,
+      "cost": 49.88
+    },
+    {
+      "date": "2026-08-12",
+      "agent": "claude",
+      "tokens": 1136980,
+      "cost": 4.19
+    },
+    {
+      "date": "2026-08-12",
+      "agent": "codex",
+      "tokens": 289912364,
+      "cost": 155.74
+    },
+    {
+      "date": "2026-08-13",
+      "agent": "codex",
+      "tokens": 119987274,
+      "cost": 63.2
+    },
+    {
+      "date": "2026-08-14",
+      "agent": "codex",
+      "tokens": 305800971,
+      "cost": 156.75
+    },
+    {
+      "date": "2026-08-14",
+      "agent": "opencode",
+      "tokens": 11926058,
+      "cost": 4.5
+    },
+    {
+      "date": "2026-08-14",
+      "agent": "pi",
+      "tokens": 153132,
+      "cost": 0.04
+    },
+    {
+      "date": "2026-08-15",
+      "agent": "codex",
+      "tokens": 14935085,
+      "cost": 7.39
+    },
+    {
+      "date": "2026-08-16",
+      "agent": "claude",
+      "tokens": 447553,
+      "cost": 1.12
+    },
+    {
+      "date": "2026-08-16",
+      "agent": "codex",
+      "tokens": 144404971,
+      "cost": 80.19
+    },
+    {
+      "date": "2026-08-17",
+      "agent": "claude",
+      "tokens": 424957,
+      "cost": 1.92
+    },
+    {
+      "date": "2026-08-17",
+      "agent": "codex",
+      "tokens": 91412400,
+      "cost": 53.27
+    },
+    {
+      "date": "2026-08-18",
+      "agent": "codex",
+      "tokens": 172868987,
+      "cost": 100.95
+    },
+    {
+      "date": "2026-08-19",
+      "agent": "claude",
+      "tokens": 35586790,
+      "cost": 52.01
+    },
+    {
+      "date": "2026-08-19",
+      "agent": "codex",
+      "tokens": 112809180,
+      "cost": 47.51
+    },
+    {
+      "date": "2026-08-19",
+      "agent": "opencode",
+      "tokens": 24191631,
+      "cost": 9.11
+    },
+    {
+      "date": "2026-08-20",
+      "agent": "claude",
+      "tokens": 51117952,
+      "cost": 60.01
+    },
+    {
+      "date": "2026-08-20",
+      "agent": "codex",
+      "tokens": 393981390,
+      "cost": 220.01
+    },
+    {
+      "date": "2026-08-20",
+      "agent": "opencode",
+      "tokens": 497191,
+      "cost": 0.21
+    },
+    {
+      "date": "2026-08-21",
+      "agent": "claude",
+      "tokens": 24102676,
+      "cost": 34.19
+    },
+    {
+      "date": "2026-08-21",
+      "agent": "codex",
+      "tokens": 211111718,
+      "cost": 111.41
+    },
+    {
+      "date": "2026-08-21",
+      "agent": "opencode",
+      "tokens": 114968946,
+      "cost": 0
+    },
+    {
+      "date": "2026-08-22",
+      "agent": "codex",
+      "tokens": 159770815,
+      "cost": 78.08
+    },
+    {
+      "date": "2026-08-23",
+      "agent": "claude",
+      "tokens": 30116004,
+      "cost": 39.69
+    },
+    {
+      "date": "2026-08-23",
+      "agent": "codex",
+      "tokens": 87992311,
+      "cost": 47.27
+    },
+    {
+      "date": "2026-08-24",
+      "agent": "claude",
+      "tokens": 67688410,
+      "cost": 103.87
+    },
+    {
+      "date": "2026-08-24",
+      "agent": "codex",
+      "tokens": 2960487,
+      "cost": 2.4
+    },
+    {
+      "date": "2026-08-25",
+      "agent": "claude",
+      "tokens": 2138007,
+      "cost": 7.19
+    },
+    {
+      "date": "2026-08-25",
+      "agent": "codex",
+      "tokens": 906836416,
+      "cost": 510.69
+    },
+    {
+      "date": "2026-08-26",
+      "agent": "claude",
+      "tokens": 19300842,
+      "cost": 31.02
+    },
+    {
+      "date": "2026-08-26",
+      "agent": "codex",
+      "tokens": 834804255,
+      "cost": 454.34
+    },
+    {
+      "date": "2026-08-26",
+      "agent": "opencode",
+      "tokens": 19745337,
+      "cost": 0.67
+    },
+    {
+      "date": "2026-08-27",
+      "agent": "claude",
+      "tokens": 15782290,
+      "cost": 31.26
+    },
+    {
+      "date": "2026-08-27",
+      "agent": "codex",
+      "tokens": 533131795,
+      "cost": 274.5
+    },
+    {
+      "date": "2026-08-27",
+      "agent": "opencode",
+      "tokens": 35194475,
+      "cost": 2.59
+    },
+    {
+      "date": "2026-08-28",
+      "agent": "codex",
+      "tokens": 140895025,
+      "cost": 72.94
+    },
+    {
+      "date": "2026-08-29",
+      "agent": "claude",
+      "tokens": 40813795,
+      "cost": 82.12
+    },
+    {
+      "date": "2026-08-29",
+      "agent": "codex",
+      "tokens": 214983613,
+      "cost": 119.89
+    },
+    {
+      "date": "2026-08-30",
+      "agent": "claude",
+      "tokens": 2590060,
+      "cost": 3.87
+    },
+    {
+      "date": "2026-08-30",
+      "agent": "codex",
+      "tokens": 25501195,
+      "cost": 16
+    },
+    {
+      "date": "2026-08-31",
+      "agent": "claude",
+      "tokens": 45191845,
+      "cost": 42.88
+    },
+    {
+      "date": "2026-08-31",
+      "agent": "codex",
+      "tokens": 94479494,
+      "cost": 57.05
+    },
+    {
+      "date": "2026-09-01",
+      "agent": "codex",
+      "tokens": 16451622,
+      "cost": 8.76
+    },
+    {
+      "date": "2026-09-02",
+      "agent": "claude",
+      "tokens": 18629446,
+      "cost": 23.04
+    },
+    {
+      "date": "2026-09-02",
+      "agent": "codex",
+      "tokens": 53457460,
+      "cost": 29.92
+    },
+    {
+      "date": "2026-09-03",
+      "agent": "claude",
+      "tokens": 13002275,
+      "cost": 15.14
+    },
+    {
+      "date": "2026-09-03",
+      "agent": "codex",
+      "tokens": 66668281,
+      "cost": 35.63
+    },
+    {
+      "date": "2026-09-04",
+      "agent": "claude",
+      "tokens": 27609420,
+      "cost": 35.63
+    },
+    {
+      "date": "2026-09-04",
+      "agent": "codex",
+      "tokens": 100595894,
+      "cost": 125.53
+    },
+    {
+      "date": "2026-09-05",
+      "agent": "claude",
+      "tokens": 1212302,
+      "cost": 0.88
+    },
+    {
+      "date": "2026-09-05",
+      "agent": "codex",
+      "tokens": 209068902,
+      "cost": 278.73
+    },
+    {
+      "date": "2026-09-06",
+      "agent": "claude",
+      "tokens": 5893642,
+      "cost": 8.16
+    },
+    {
+      "date": "2026-09-06",
+      "agent": "codex",
+      "tokens": 196747160,
+      "cost": 233.53
+    },
+    {
+      "date": "2026-09-07",
+      "agent": "claude",
+      "tokens": 20622717,
+      "cost": 18.64
+    },
+    {
+      "date": "2026-09-07",
+      "agent": "codex",
+      "tokens": 247075389,
+      "cost": 218.5
+    },
+    {
+      "date": "2026-09-07",
+      "agent": "opencode",
+      "tokens": 9705,
+      "cost": 0
+    },
+    {
+      "date": "2026-09-08",
+      "agent": "claude",
+      "tokens": 10473127,
+      "cost": 23.33
+    },
+    {
+      "date": "2026-09-08",
+      "agent": "codex",
+      "tokens": 46047671,
+      "cost": 41.82
+    },
+    {
+      "date": "2026-09-09",
+      "agent": "claude",
+      "tokens": 68780766,
+      "cost": 59.65
+    },
+    {
+      "date": "2026-09-09",
+      "agent": "codex",
+      "tokens": 57465280,
+      "cost": 91.42
+    },
+    {
+      "date": "2026-09-10",
+      "agent": "claude",
+      "tokens": 2837142,
+      "cost": 5.09
+    },
+    {
+      "date": "2026-09-10",
+      "agent": "codex",
+      "tokens": 129158250,
+      "cost": 180.4
+    },
+    {
+      "date": "2026-09-11",
+      "agent": "claude",
+      "tokens": 12882773,
+      "cost": 17.37
+    },
+    {
+      "date": "2026-09-11",
+      "agent": "codex",
+      "tokens": 164687745,
+      "cost": 200.7
+    },
+    {
+      "date": "2026-09-12",
+      "agent": "codex",
+      "tokens": 235290307,
+      "cost": 279.39
+    },
+    {
+      "date": "2026-09-13",
+      "agent": "claude",
+      "tokens": 159060467,
+      "cost": 101.68
+    },
+    {
+      "date": "2026-09-13",
+      "agent": "codex",
+      "tokens": 68632253,
+      "cost": 91.41
+    },
+    {
+      "date": "2026-09-14",
+      "agent": "claude",
+      "tokens": 194900068,
+      "cost": 117.57
+    },
+    {
+      "date": "2026-09-14",
+      "agent": "codex",
+      "tokens": 109087856,
+      "cost": 127.29
+    },
+    {
+      "date": "2026-09-15",
+      "agent": "claude",
+      "tokens": 7376019,
+      "cost": 8.3
+    },
+    {
+      "date": "2026-09-15",
+      "agent": "codex",
+      "tokens": 107238398,
+      "cost": 147.43
+    },
+    {
+      "date": "2026-09-16",
+      "agent": "claude",
+      "tokens": 3056097,
+      "cost": 4.28
+    },
+    {
+      "date": "2026-09-16",
+      "agent": "codex",
+      "tokens": 140366538,
+      "cost": 201.73
+    },
+    {
+      "date": "2026-09-17",
+      "agent": "codex",
+      "tokens": 2097122,
+      "cost": 3.87
+    },
+    {
+      "date": "2026-09-17",
+      "agent": "opencode",
+      "tokens": 216512,
+      "cost": 0.03
+    },
+    {
+      "date": "2026-09-18",
+      "agent": "opencode",
+      "tokens": 85802624,
+      "cost": 2.77
+    },
+    {
+      "date": "2026-09-20",
+      "agent": "claude",
+      "tokens": 21586930,
+      "cost": 22.79
+    },
+    {
+      "date": "2026-09-20",
+      "agent": "codex",
+      "tokens": 64940975,
+      "cost": 82.3
+    },
+    {
+      "date": "2026-09-21",
+      "agent": "claude",
+      "tokens": 17128624,
+      "cost": 17.76
+    },
+    {
+      "date": "2026-09-21",
+      "agent": "codex",
+      "tokens": 52579477,
+      "cost": 72.54
+    },
+    {
+      "date": "2026-09-22",
+      "agent": "codex",
+      "tokens": 91874469,
+      "cost": 111.77
+    },
+    {
+      "date": "2026-09-23",
+      "agent": "codex",
+      "tokens": 51520988,
+      "cost": 83.27
+    },
+    {
+      "date": "2026-09-24",
+      "agent": "claude",
+      "tokens": 7326944,
+      "cost": 3.39
+    },
+    {
+      "date": "2026-09-24",
+      "agent": "codex",
+      "tokens": 57372051,
+      "cost": 88.9
+    },
+    {
+      "date": "2026-09-25",
+      "agent": "codex",
+      "tokens": 19145120,
+      "cost": 33.21
+    },
+    {
+      "date": "2026-09-26",
+      "agent": "codex",
+      "tokens": 50485571,
+      "cost": 78.89
+    },
+    {
+      "date": "2026-09-26",
+      "agent": "opencode",
+      "tokens": 278828,
+      "cost": 0.02
+    },
+    {
+      "date": "2026-09-27",
+      "agent": "codex",
+      "tokens": 219169,
+      "cost": 1.34
+    },
+    {
+      "date": "2026-09-28",
+      "agent": "codex",
+      "tokens": 109507302,
+      "cost": 161.13
+    },
+    {
+      "date": "2026-09-29",
+      "agent": "claude",
+      "tokens": 11542687,
+      "cost": 14.28
+    },
+    {
+      "date": "2026-09-29",
+      "agent": "codex",
+      "tokens": 94294549,
+      "cost": 105.58
+    },
+    {
+      "date": "2026-09-30",
+      "agent": "claude",
+      "tokens": 3932109,
+      "cost": 5.31
+    },
+    {
+      "date": "2026-09-30",
+      "agent": "codex",
+      "tokens": 130591789,
+      "cost": 36.14
+    },
+    {
+      "date": "2026-10-01",
+      "agent": "claude",
+      "tokens": 6948574,
+      "cost": 3.48
+    },
+    {
+      "date": "2026-10-01",
+      "agent": "codex",
+      "tokens": 72588814,
+      "cost": 15.75
+    },
+    {
+      "date": "2026-10-02",
+      "agent": "claude",
+      "tokens": 146283331,
+      "cost": 60.34
+    },
+    {
+      "date": "2026-10-02",
+      "agent": "codex",
+      "tokens": 58805812,
+      "cost": 13.96
+    },
+    {
+      "date": "2026-10-03",
+      "agent": "claude",
+      "tokens": 270428,
+      "cost": 0.21
+    },
+    {
+      "date": "2026-10-03",
+      "agent": "codex",
+      "tokens": 339663,
+      "cost": 0.1
+    },
+    {
+      "date": "2026-10-03",
+      "agent": "opencode",
+      "tokens": 770340,
+      "cost": 0.34
+    },
+    {
+      "date": "2026-10-04",
+      "agent": "claude",
+      "tokens": 403023867,
+      "cost": 177.46
+    },
+    {
+      "date": "2026-10-04",
+      "agent": "codex",
+      "tokens": 12020278,
+      "cost": 2.89
+    },
+    {
+      "date": "2026-10-04",
+      "agent": "opencode",
+      "tokens": 719800,
+      "cost": 0.14
+    },
+    {
+      "date": "2026-10-05",
+      "agent": "claude",
+      "tokens": 2347612,
+      "cost": 1.61
+    },
+    {
+      "date": "2026-10-05",
+      "agent": "codex",
+      "tokens": 13032516,
+      "cost": 3.43
+    },
+    {
+      "date": "2026-10-06",
+      "agent": "claude",
+      "tokens": 2167492,
+      "cost": 1.1
+    },
+    {
+      "date": "2026-10-06",
+      "agent": "codex",
+      "tokens": 137166332,
+      "cost": 33.58
+    },
+    {
+      "date": "2026-10-07",
+      "agent": "claude",
+      "tokens": 69836222,
+      "cost": 32.2
+    },
+    {
+      "date": "2026-10-07",
+      "agent": "codex",
+      "tokens": 80574494,
+      "cost": 109.82
+    },
+    {
+      "date": "2026-10-08",
+      "agent": "claude",
+      "tokens": 48917036,
+      "cost": 16.19
+    },
+    {
+      "date": "2026-10-08",
+      "agent": "codex",
+      "tokens": 103052814,
+      "cost": 82.2
+    },
+    {
+      "date": "2026-10-09",
+      "agent": "claude",
+      "tokens": 72535330,
+      "cost": 26.67
+    },
+    {
+      "date": "2026-10-09",
+      "agent": "codex",
+      "tokens": 145940034,
+      "cost": 30.85
+    },
+    {
+      "date": "2026-10-10",
+      "agent": "claude",
+      "tokens": 77985683,
+      "cost": 29.4
+    },
+    {
+      "date": "2026-10-10",
+      "agent": "codex",
+      "tokens": 5444639,
+      "cost": 1.9
+    },
+    {
+      "date": "2026-10-11",
+      "agent": "claude",
+      "tokens": 929398654,
+      "cost": 333.11
+    },
+    {
+      "date": "2026-10-11",
+      "agent": "codex",
+      "tokens": 427541750,
+      "cost": 410.98
+    },
+    {
+      "date": "2026-10-12",
+      "agent": "claude",
+      "tokens": 4052610416,
+      "cost": 1311.21
+    },
+    {
+      "date": "2026-10-12",
+      "agent": "codex",
+      "tokens": 18519442,
+      "cost": 8.36
+    },
+    {
+      "date": "2026-10-13",
+      "agent": "claude",
+      "tokens": 3710531376,
+      "cost": 1286.46
+    },
+    {
+      "date": "2026-10-13",
+      "agent": "codex",
+      "tokens": 203680566,
+      "cost": 214.07
+    },
+    {
+      "date": "2026-10-14",
+      "agent": "claude",
+      "tokens": 1994069237,
+      "cost": 610.82
+    },
+    {
+      "date": "2026-10-14",
+      "agent": "codex",
+      "tokens": 20702012,
+      "cost": 37.32
+    },
+    {
+      "date": "2026-10-15",
+      "agent": "claude",
+      "tokens": 1801086357,
+      "cost": 601.95
+    },
+    {
+      "date": "2026-10-15",
+      "agent": "codex",
+      "tokens": 1210697,
+      "cost": 0.38
+    },
+    {
+      "date": "2026-10-16",
+      "agent": "claude",
+      "tokens": 1428156290,
+      "cost": 405.5
+    },
+    {
+      "date": "2026-10-16",
+      "agent": "codex",
+      "tokens": 3301271,
+      "cost": 1.08
+    },
+    {
+      "date": "2026-10-17",
+      "agent": "claude",
+      "tokens": 684290998,
+      "cost": 239.38
+    },
+    {
+      "date": "2026-10-18",
+      "agent": "claude",
+      "tokens": 996660554,
+      "cost": 357.04
+    },
+    {
+      "date": "2026-10-18",
+      "agent": "opencode",
+      "tokens": 6556097,
+      "cost": 0.26
+    },
+    {
+      "date": "2026-10-19",
+      "agent": "claude",
+      "tokens": 568230544,
+      "cost": 187.7
+    },
+    {
+      "date": "2026-10-19",
+      "agent": "codex",
+      "tokens": 1190459,
+      "cost": 0.44
+    },
+    {
+      "date": "2026-10-20",
+      "agent": "claude",
+      "tokens": 383699920,
+      "cost": 147.31
+    },
+    {
+      "date": "2026-10-20",
+      "agent": "codex",
+      "tokens": 368501965,
+      "cost": 164.99
+    },
+    {
+      "date": "2026-10-21",
+      "agent": "claude",
+      "tokens": 2352168978,
+      "cost": 759.11
+    },
+    {
+      "date": "2026-10-21",
+      "agent": "codex",
+      "tokens": 80705907,
+      "cost": 39.74
+    },
+    {
+      "date": "2026-10-22",
+      "agent": "claude",
+      "tokens": 849322464,
+      "cost": 427.32
+    },
+    {
+      "date": "2026-10-22",
+      "agent": "codex",
+      "tokens": 84295871,
+      "cost": 44.77
+    },
+    {
+      "date": "2026-10-23",
+      "agent": "claude",
+      "tokens": 949911840,
+      "cost": 314.04
+    },
+    {
+      "date": "2026-10-23",
+      "agent": "codex",
+      "tokens": 5124719,
+      "cost": 1.44
+    },
+    {
+      "date": "2026-10-23",
+      "agent": "opencode",
+      "tokens": 420256,
+      "cost": 0.04
+    },
+    {
+      "date": "2026-10-24",
+      "agent": "claude",
+      "tokens": 864998855,
+      "cost": 280.53
+    },
+    {
+      "date": "2026-10-24",
+      "agent": "codex",
+      "tokens": 9928033,
+      "cost": 12.2
+    },
+    {
+      "date": "2026-10-25",
+      "agent": "claude",
+      "tokens": 78223233,
+      "cost": 29.76
+    },
+    {
+      "date": "2026-10-26",
+      "agent": "codex",
+      "tokens": 154235935,
+      "cost": 58.85
+    },
+    {
+      "date": "2026-10-26",
+      "agent": "opencode",
+      "tokens": 1254675,
+      "cost": 0.47
+    },
+    {
+      "date": "2026-10-27",
+      "agent": "claude",
+      "tokens": 610639081,
+      "cost": 197.62
+    },
+    {
+      "date": "2026-10-27",
+      "agent": "codex",
+      "tokens": 89783998,
+      "cost": 66.55
+    },
+    {
+      "date": "2026-10-27",
+      "agent": "opencode",
+      "tokens": 166515,
+      "cost": 0.07
+    },
+    {
+      "date": "2026-10-28",
+      "agent": "claude",
+      "tokens": 417727005,
+      "cost": 140.4
+    },
+    {
+      "date": "2026-10-28",
+      "agent": "codex",
+      "tokens": 29279095,
+      "cost": 6.05
+    },
+    {
+      "date": "2026-10-29",
+      "agent": "claude",
+      "tokens": 1341308382,
+      "cost": 415.74
+    },
+    {
+      "date": "2026-10-29",
+      "agent": "codex",
+      "tokens": 50140372,
+      "cost": 5.3
+    },
+    {
+      "date": "2026-10-30",
+      "agent": "codex",
+      "tokens": 2109623,
+      "cost": 0.58
+    },
+    {
+      "date": "2026-10-31",
+      "agent": "claude",
+      "tokens": 209477701,
+      "cost": 108.04
+    },
+    {
+      "date": "2026-11-01",
+      "agent": "claude",
+      "tokens": 307139347,
+      "cost": 178.76
+    },
+    {
+      "date": "2026-11-01",
+      "agent": "codex",
+      "tokens": 30317,
+      "cost": 0.03
+    },
+    {
+      "date": "2026-11-02",
+      "agent": "claude",
+      "tokens": 1047753266,
+      "cost": 450.79
+    },
+    {
+      "date": "2026-11-03",
+      "agent": "claude",
+      "tokens": 1127018282,
+      "cost": 376.72
+    },
+    {
+      "date": "2026-11-04",
+      "agent": "claude",
+      "tokens": 1013536762,
+      "cost": 327.59
+    },
+    {
+      "date": "2026-11-05",
+      "agent": "claude",
+      "tokens": 679361494,
+      "cost": 236.31
+    },
+    {
+      "date": "2026-11-05",
+      "agent": "codex",
+      "tokens": 292646,
+      "cost": 0.01
+    },
+    {
+      "date": "2026-11-05",
+      "agent": "opencode",
+      "tokens": 153715,
+      "cost": 0.02
+    },
+    {
+      "date": "2026-11-06",
+      "agent": "claude",
+      "tokens": 1548366522,
+      "cost": 506.56
+    },
+    {
+      "date": "2026-11-06",
+      "agent": "codex",
+      "tokens": 6239269,
+      "cost": 0.18
+    },
+    {
+      "date": "2026-11-06",
+      "agent": "opencode",
+      "tokens": 12724176,
+      "cost": 0.55
+    },
+    {
+      "date": "2026-11-07",
+      "agent": "claude",
+      "tokens": 684374425,
+      "cost": 219.54
+    },
+    {
+      "date": "2026-11-08",
+      "agent": "claude",
+      "tokens": 873920982,
+      "cost": 346.32
+    },
+    {
+      "date": "2026-11-09",
+      "agent": "claude",
+      "tokens": 555228197,
+      "cost": 238.5
+    },
+    {
+      "date": "2026-11-10",
+      "agent": "claude",
+      "tokens": 467984622,
+      "cost": 184.77
+    },
+    {
+      "date": "2026-11-11",
+      "agent": "claude",
+      "tokens": 274347438,
+      "cost": 133.27
+    },
+    {
+      "date": "2026-11-12",
+      "agent": "claude",
+      "tokens": 270332284,
+      "cost": 152.56
+    }
+  ]
+}

@@ -1,8 +1,14 @@
 import type { MetadataRoute } from "next";
 import { buildAlternates, LOCALES } from "@/utils/i18n";
 import { getAllPosts, getPostLocales } from "@/utils/posts";
+import { getPastUsageYears } from "@/utils/token-usage";
 
-const PAGE_PATHNAMES = ["/posts", "/about"];
+const PAGE_PATHNAMES = [
+  "/posts",
+  "/about",
+  "/usage",
+  ...getPastUsageYears().map((year) => `/usage/${year}`),
+];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const pages = LOCALES.flatMap((locale) =>

@@ -75,7 +75,7 @@
     "location": "Goiânia, Brasil",
     "openInNewTabLabel": "(abre em nova aba)",
     "whoamiHeading": "quem-sou",
-    "whoamiBody": "Desenvolvedor de software com foco no ecossistema frontend. Tenho um interesse especial por ferramental — bundlers, meta-frameworks, microfrontends — e por criar coisas que facilitam a vida de outros devs, como bibliotecas de design system, CLIs e pipelines de CI. Estudo bastante sobre arquitetura de software e, mais recentemente, tenho me aprofundado cada vez mais no backend.",
+    "whoamiBody": "Gosto de construir o que facilita a vida de outros devs: design systems, CLIs, ferramentas de build e, ultimamente, limites para agentes de código. Passei anos estudando arquitetura de software e testando ideias em projetos de verdade, em especial com microfrontends. Trabalho principalmente com TypeScript e React, com C#/.NET no backend. Hoje, boa parte do meu trabalho é tornar agentes de código confiáveis dentro de um time, com os limites de sempre aplicados com rigor: testes de integração, lint, checagem de tipos, CI e revisão automática, além das specs e skills que ensinam o código ao agente.",
     "stackHeading": "stack",
     "projectsHeading": "projetos",
     "stackLabels": {
@@ -84,22 +84,54 @@
       "tools": "ferramentas"
     },
     "techStack": {
-      "primary": ["React", "Next.js", "TypeScript", "Node.js"],
-      "exploring": ["Solid.js", "Svelte", "Vue", "C#", "Rust", "Go"],
+      "primary": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+        "Bun",
+        "C#/.NET",
+        "PostgreSQL"
+      ],
+      "exploring": ["Solid.js", "Svelte", "Vue", "Rust", "Go"],
       "tools": [
         "Neovim",
         "Git",
         "Docker",
+        "GitHub Actions",
         "Tailwind CSS",
-        "Jest",
         "Vitest",
         "Vite",
         "Rspack",
-        "Webpack",
-        "Rollup"
+        "Claude Code",
+        "Codex"
       ]
     },
     "projects": [
+      {
+        "name": "favo-cli",
+        "description": "Uma CLI que mantém várias assinaturas de IA em todos os seus computadores, sem ficar fazendo login e logout. O comando de uso dela conta os tokens da página Uso deste site",
+        "tech": "TypeScript",
+        "href": "https://github.com/irwinarruda/favo-cli"
+      },
+      {
+        "name": "Agent Toolkit",
+        "description": "Minhas instruções globais para agentes e sete skills reutilizáveis: revisão de código, diagnóstico de arquitetura, deixar um pull request verde e mais. Várias seguem ideias que Theo Browne publicou no tstack",
+        "tech": "Agent Skills",
+        "href": "https://github.com/irwinarruda/.agents"
+      },
+      {
+        "name": "The Chatbot",
+        "description": "Meu assistente pessoal de IA no WhatsApp e na web: conversa, tarefas, notas e dinheiro em um só lugar, com um loop de ferramentas sobre vários provedores de modelos. A primeira versão era em C#/.NET, com um servidor MCP",
+        "tech": "TypeScript / PostgreSQL",
+        "href": "https://github.com/irwinarruda/the-chatbot-v2"
+      },
+      {
+        "name": "Module Federation for Vite",
+        "description": "Uma correção para pacotes com exports errados, aceita e lançada na versão 1.2.2. Também tenho código aceito no TanStack Form e no Ark UI",
+        "tech": "Contribuição",
+        "href": "https://github.com/module-federation/vite/pull/246"
+      },
       {
         "name": "Mobx Simple Store",
         "description": "Uma alternativa performática ao MobX State Tree para criar stores reativos em árvore. Remove recursos que causam gargalos de performance com grandes volumes de dados",
@@ -107,22 +139,10 @@
         "href": "https://github.com/irwinarruda/mobx-simple-store"
       },
       {
-        "name": "The Chatbot",
-        "description": "Assistente digital de uso geral com integração com WhatsApp, Google Sheets para gastos e MCP para invocação de ferramentas de IA",
-        "tech": "C# / .NET",
-        "href": "https://github.com/irwinarruda/the-chatbot"
-      },
-      {
-        "name": "Paper Brick",
-        "description": "Aplicativo de tray para macOS para trocar wallpaper rapidamente. Escaneia um diretório de imagens e aplica com um clique. Feito com Tauri e Solid.js",
-        "tech": "TypeScript / macOS",
-        "href": "https://github.com/irwinarruda/paper-brick"
-      },
-      {
-        "name": "Pro Cris App",
-        "description": "Aplicativo React Native que ajuda professores a organizar agenda, preços e cadastro de alunos com rotina diária e geração de recibos",
-        "tech": "React Native",
-        "href": "https://github.com/irwinarruda/pro-cris-app-v2"
+        "name": "irwin-ui",
+        "description": "O design system por trás deste site, do The Chatbot e do favo-cli. Os dois temas dele, Favo e Barro, também estão publicados como temas de editor no VS Code Marketplace e no Open VSX",
+        "tech": "Design system",
+        "href": "https://github.com/irwinarruda/irwin-ui"
       },
       {
         "name": "Study on Micro-frontends",
@@ -131,10 +151,10 @@
         "href": "https://github.com/irwinarruda/study-on-micro-frontends"
       },
       {
-        "name": "Goals Tracker",
-        "description": "Aplicativo React Native para acompanhar hábitos diários com cards de metas, sistema de cheat day por moedas e notas de dias concluídos ou perdidos",
-        "tech": "TypeScript",
-        "href": "https://github.com/irwinarruda/goals-tracker-v2"
+        "name": "Pro Cris App",
+        "description": "Um app de agenda e cobrança para as aulas particulares da minha mãe. Registrou 1.700 aulas de 32 alunos entre 2022 e 2024",
+        "tech": "React Native",
+        "href": "https://github.com/irwinarruda/pro-cris-app-v2"
       }
     ]
   },

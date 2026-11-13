@@ -71,11 +71,11 @@
   "aboutPage": {
     "photoAlt": "Irwin Arruda",
     "name": "Irwin Arruda",
-    "role": "Software Developer",
+    "role": "Software Engineer",
     "location": "Goiânia, Brazil",
     "openInNewTabLabel": "(opens in new tab)",
     "whoamiHeading": "whoami",
-    "whoamiBody": "Software developer with a deep focus on the frontend ecosystem. I'm especially drawn to tooling — bundlers, meta-frameworks, micro-frontends — and to building things that make other devs' lives easier, like design system libraries, CLIs, and CI pipelines. I spend a lot of time studying software architecture, and lately I've been getting more into backend work.",
+    "whoamiBody": "I like building things that make other devs' lives easier: design systems, CLIs, build tooling and, lately, guardrails for coding agents. I've spent years studying software architecture and testing ideas on real projects, micro-frontends most of all. I work mostly in TypeScript and React, with C#/.NET on the backend. These days, much of my work is making coding agents reliable inside a team, with ordinary guardrails applied strictly: integration tests, linting, type checks, CI and automated code review, plus the specs and skills that teach an agent the codebase.",
     "stackHeading": "stack",
     "projectsHeading": "projects",
     "stackLabels": {
@@ -84,22 +84,54 @@
       "tools": "tools"
     },
     "techStack": {
-      "primary": ["React", "Next.js", "TypeScript", "Node.js"],
-      "exploring": ["Solid.js", "Svelte", "Vue", "C#", "Rust", "Go"],
+      "primary": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Node.js",
+        "Bun",
+        "C#/.NET",
+        "PostgreSQL"
+      ],
+      "exploring": ["Solid.js", "Svelte", "Vue", "Rust", "Go"],
       "tools": [
         "Neovim",
         "Git",
         "Docker",
+        "GitHub Actions",
         "Tailwind CSS",
-        "Jest",
         "Vitest",
         "Vite",
         "Rspack",
-        "Webpack",
-        "Rollup"
+        "Claude Code",
+        "Codex"
       ]
     },
     "projects": [
+      {
+        "name": "favo-cli",
+        "description": "A CLI that keeps several AI subscriptions on every computer you own, without logging in and out. Its usage command counts the tokens on this site's Usage page",
+        "tech": "TypeScript",
+        "href": "https://github.com/irwinarruda/favo-cli"
+      },
+      {
+        "name": "Agent Toolkit",
+        "description": "My global agent instructions and seven reusable skills: code review, architecture diagnosis, taking a pull request to green and more. Several follow ideas Theo Browne published in tstack",
+        "tech": "Agent Skills",
+        "href": "https://github.com/irwinarruda/.agents"
+      },
+      {
+        "name": "The Chatbot",
+        "description": "My personal AI assistant on WhatsApp and the web: chat, todos, notes and money in one place, with a tool-calling loop over several model providers. The first version was C#/.NET with an MCP server",
+        "tech": "TypeScript / PostgreSQL",
+        "href": "https://github.com/irwinarruda/the-chatbot-v2"
+      },
+      {
+        "name": "Module Federation for Vite",
+        "description": "A fix for packages with wrong exports, merged and released in 1.2.2. I also have code accepted into TanStack Form and Ark UI",
+        "tech": "Contribution",
+        "href": "https://github.com/module-federation/vite/pull/246"
+      },
       {
         "name": "Mobx Simple Store",
         "description": "A performant alternative to MobX State Tree for creating reactive state tree stores. Removes features that cause performance bottlenecks with large datasets",
@@ -107,22 +139,10 @@
         "href": "https://github.com/irwinarruda/mobx-simple-store"
       },
       {
-        "name": "The Chatbot",
-        "description": "A general-purpose digital assistant that integrates with WhatsApp, Google Sheets for expense tracking, and uses MCP for AI tool invocations",
-        "tech": "C# / .NET",
-        "href": "https://github.com/irwinarruda/the-chatbot"
-      },
-      {
-        "name": "Paper Brick",
-        "description": "A macOS system tray app for changing wallpapers quickly. Scans a directory for images and lets you set one in a single click. Built with Tauri and Solid.js",
-        "tech": "TypeScript / macOS",
-        "href": "https://github.com/irwinarruda/paper-brick"
-      },
-      {
-        "name": "Pro Cris App",
-        "description": "A React Native app that helps teachers manage their work schedule, pricing, and student registration with daily routines and receipt generation",
-        "tech": "React Native",
-        "href": "https://github.com/irwinarruda/pro-cris-app-v2"
+        "name": "irwin-ui",
+        "description": "The design system behind this site, The Chatbot and favo-cli. Its two themes, Favo and Barro, are also published as editor themes on the VS Code Marketplace and Open VSX",
+        "tech": "Design system",
+        "href": "https://github.com/irwinarruda/irwin-ui"
       },
       {
         "name": "Study on Micro-frontends",
@@ -131,10 +151,10 @@
         "href": "https://github.com/irwinarruda/study-on-micro-frontends"
       },
       {
-        "name": "Goals Tracker",
-        "description": "A React Native app for tracking daily habits with goal cards, a coin-based cheat day system, and notes for completed or missed days",
-        "tech": "TypeScript",
-        "href": "https://github.com/irwinarruda/goals-tracker-v2"
+        "name": "Pro Cris App",
+        "description": "A scheduling and billing app for my mother's tutoring business. It logged 1,700 lessons for 32 students from 2022 to 2024",
+        "tech": "React Native",
+        "href": "https://github.com/irwinarruda/pro-cris-app-v2"
       }
     ]
   },

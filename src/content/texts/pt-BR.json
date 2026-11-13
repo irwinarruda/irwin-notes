@@ -1,7 +1,7 @@
 {
   "meta": {
     "siteTitle": "Irwin Arruda",
-    "siteDescription": "Notas de Irwin Arruda Sales sobre software, arquitetura frontend e criação de ferramentas. Desenvolvedor de software, entusiasta do Vim e criador de ferramentas."
+    "siteDescription": "Notas de Irwin Arruda, desenvolvedor de software, sobre arquitetura de software, ferramentas para desenvolvedores e guardrails para agentes de código."
   },
   "nav": {
     "ariaLabel": "Navegação do site",
@@ -182,6 +182,6 @@
       "O preço é quanto os mesmos tokens custariam na tabela da API. Minhas assinaturas cobriram tudo.",
       "O Claude Code apaga os logs de sessão depois de 30 dias, então a maior parte do meu uso do Claude antes de meados de outubro de 2026 não aparece ou aparece só em parte."
     ],
-    "updatedAt": "Contado a partir dos meus logs locais de sessão com o favo. Atualizado em {date}."
+    "updatedAt": "Contado a partir dos meus logs locais de sessão com o favo-cli. Atualizado em {date}."
   }
 }

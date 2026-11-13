@@ -1,7 +1,7 @@
 {
   "meta": {
     "siteTitle": "Irwin Arruda",
-    "siteDescription": "Notes by Irwin Arruda Sales on software, frontend architecture and building tools. Software Developer, Vim enthusiast, tool builder."
+    "siteDescription": "Notes by Irwin Arruda, a software engineer in Brazil, on software architecture, developer tools and guardrails for coding agents."
   },
   "nav": {
     "ariaLabel": "Site navigation",
@@ -182,6 +182,6 @@
       "The price is what the same tokens would cost at API list prices. My subscriptions covered them.",
       "Claude Code deletes its session logs after 30 days, so most of my Claude work before mid-October 2026 is missing or only partly counted."
     ],
-    "updatedAt": "Counted from my local session logs with favo. Updated {date}."
+    "updatedAt": "Counted from my local session logs with favo-cli. Updated {date}."
   }
 }

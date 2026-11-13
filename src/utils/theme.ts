@@ -59,6 +59,15 @@ export function getDocumentPalette(): Palette {
   return getThemeChoiceFromCookieString(document.cookie).palette;
 }
 
+export function applyThemeCookie(): void {
+  const choice = getThemeChoiceFromCookieString(document.cookie);
+  if (choice.theme) {
+    document.documentElement.setAttribute("data-theme", choice.theme);
+  }
+
+  document.documentElement.setAttribute("data-palette", choice.palette);
+}
+
 export function setThemeCookie(change: Partial<ThemeChoice>): void {
   if (typeof document === "undefined") {
     return;

@@ -1,4 +1,5 @@
 import { Chakra_Petch, JetBrains_Mono } from "next/font/google";
+import { ThemeRestore } from "@/components/theme-restore";
 import { THEME_COOKIE } from "@/utils/theme";
 
 const THEME_INIT_SCRIPT = `(() => {
@@ -44,6 +45,7 @@ export default function RootLayoutScreen(props: Readonly<RootLayoutProps>) {
     >
       <body className="bg-page text-fg font-mono antialiased min-h-screen">
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+        <ThemeRestore />
         {props.children}
       </body>
     </html>

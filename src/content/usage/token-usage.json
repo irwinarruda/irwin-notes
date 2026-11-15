@@ -1,95 +1,77 @@
 {
-  "updatedAt": "2026-11-13",
+  "updatedAt": "2026-11-15",
   "records": [
-    {
-      "date": "2025-08-14",
-      "agent": "opencode",
-      "tokens": 1053535,
-      "cost": 2.25
-    },
-    {
-      "date": "2025-08-29",
-      "agent": "opencode",
-      "tokens": 28589,
-      "cost": 0.1
-    },
-    {
-      "date": "2025-09-05",
-      "agent": "opencode",
-      "tokens": 15503,
-      "cost": 0.06
-    },
     {
       "date": "2026-01-17",
       "agent": "opencode",
       "tokens": 976886,
-      "cost": 0.94
+      "cost": 0.57
     },
     {
       "date": "2026-01-22",
       "agent": "opencode",
       "tokens": 181123,
-      "cost": 0.34
+      "cost": 0.12
     },
     {
       "date": "2026-01-23",
       "agent": "opencode",
       "tokens": 5597291,
-      "cost": 7.06
+      "cost": 1.53
     },
     {
       "date": "2026-01-24",
       "agent": "opencode",
       "tokens": 11868871,
-      "cost": 15.87
+      "cost": 0.71
     },
     {
       "date": "2026-01-26",
       "agent": "opencode",
       "tokens": 3903436,
-      "cost": 5.3
+      "cost": 0
     },
     {
       "date": "2026-01-27",
       "agent": "opencode",
       "tokens": 7039972,
-      "cost": 9.12
+      "cost": 0
     },
     {
       "date": "2026-01-28",
       "agent": "opencode",
       "tokens": 7115844,
-      "cost": 10.99
+      "cost": 0
     },
     {
       "date": "2026-01-29",
       "agent": "opencode",
       "tokens": 1751878,
-      "cost": 3.67
+      "cost": 0
     },
     {
       "date": "2026-01-30",
       "agent": "opencode",
       "tokens": 14183617,
-      "cost": 18.51
+      "cost": 0.65
     },
     {
       "date": "2026-01-31",
       "agent": "opencode",
       "tokens": 14212163,
-      "cost": 14.46
+      "cost": 0
     },
     {
       "date": "2026-02-01",
       "agent": "opencode",
       "tokens": 18842713,
-      "cost": 23.4
+      "cost": 0
     },
     {
       "date": "2026-02-02",
       "agent": "opencode",
       "tokens": 7650307,
-      "cost": 7.56
+      "cost": 0.99
     },
     {
       "date": "2026-02-03",
@@ -107,97 +89,97 @@
       "date": "2026-02-05",
       "agent": "opencode",
       "tokens": 11028169,
-      "cost": 12.56
+      "cost": 1.3
     },
     {
       "date": "2026-02-06",
       "agent": "opencode",
       "tokens": 28286570,
-      "cost": 25.95
+      "cost": 9.24
     },
     {
       "date": "2026-02-07",
       "agent": "opencode",
       "tokens": 36907467,
-      "cost": 45.99
+      "cost": 7.23
     },
     {
       "date": "2026-02-08",
       "agent": "opencode",
       "tokens": 20913986,
-      "cost": 20.76
+      "cost": 4.56
     },
     {
       "date": "2026-02-09",
       "agent": "opencode",
       "tokens": 4084506,
-      "cost": 4.21
+      "cost": 1.22
     },
     {
       "date": "2026-02-10",
       "agent": "opencode",
-      "tokens": 10261271,
-      "cost": 15.94
+      "tokens": 10156372,
+      "cost": 0.15
     },
     {
       "date": "2026-02-11",
       "agent": "opencode",
-      "tokens": 45402279,
-      "cost": 47.36
+      "tokens": 41443917,
+      "cost": 9.59
     },
     {
       "date": "2026-02-12",
       "agent": "opencode",
-      "tokens": 4352378,
-      "cost": 13.62
+      "tokens": 3666982,
+      "cost": 0.39
     },
     {
       "date": "2026-02-13",
       "agent": "opencode",
       "tokens": 3905817,
-      "cost": 7.71
+      "cost": 0
     },
     {
       "date": "2026-02-14",
       "agent": "opencode",
       "tokens": 7571101,
-      "cost": 12.66
+      "cost": 0
     },
     {
       "date": "2026-02-15",
       "agent": "opencode",
       "tokens": 28430909,
-      "cost": 36.3
+      "cost": 3.07
     },
     {
       "date": "2026-02-16",
       "agent": "opencode",
       "tokens": 87297281,
-      "cost": 45.04
+      "cost": 26.24
     },
     {
       "date": "2026-02-17",
       "agent": "opencode",
       "tokens": 21771799,
-      "cost": 35.6
+      "cost": 0.7
     },
     {
       "date": "2026-02-18",
       "agent": "opencode",
       "tokens": 20435601,
-      "cost": 25.93
+      "cost": 3.41
     },
     {
       "date": "2026-02-19",
       "agent": "opencode",
       "tokens": 14364758,
-      "cost": 10.16
+      "cost": 3.35
     },
     {
       "date": "2026-02-20",
       "agent": "opencode",
       "tokens": 12275518,
-      "cost": 10.24
+      "cost": 3.2
     },
     {
       "date": "2026-02-22",
@@ -209,61 +191,61 @@
       "date": "2026-02-25",
       "agent": "opencode",
       "tokens": 613957,
-      "cost": 0.93
+      "cost": 0
     },
     {
       "date": "2026-02-26",
       "agent": "opencode",
       "tokens": 4805455,
-      "cost": 6.14
+      "cost": 0.81
     },
     {
       "date": "2026-02-27",
       "agent": "opencode",
-      "tokens": 29037355,
-      "cost": 22.72
+      "tokens": 29034616,
+      "cost": 14.35
     },
     {
       "date": "2026-02-28",
       "agent": "opencode",
       "tokens": 2824371,
-      "cost": 1.36
+      "cost": 1.29
     },
     {
       "date": "2026-03-01",
       "agent": "opencode",
       "tokens": 1462089,
-      "cost": 1.81
+      "cost": 0.1
     },
     {
       "date": "2026-03-02",
       "agent": "opencode",
-      "tokens": 6010214,
-      "cost": 7.26
+      "tokens": 6008127,
+      "cost": 1.52
     },
     {
       "date": "2026-03-03",
       "agent": "opencode",
       "tokens": 29340210,
-      "cost": 31.71
+      "cost": 7.69
     },
     {
       "date": "2026-03-04",
       "agent": "opencode",
       "tokens": 2634963,
-      "cost": 4.14
+      "cost": 0.69
     },
     {
       "date": "2026-03-05",
       "agent": "opencode",
-      "tokens": 13888060,
-      "cost": 14.49
+      "tokens": 13877313,
+      "cost": 1.5
     },
     {
       "date": "2026-03-06",
       "agent": "opencode",
       "tokens": 14874028,
-      "cost": 14.39
+      "cost": 14.26
     },
     {
       "date": "2026-03-07",
@@ -293,13 +275,13 @@
       "date": "2026-03-12",
       "agent": "opencode",
       "tokens": 20352097,
-      "cost": 30.85
+      "cost": 0.22
     },
     {
       "date": "2026-03-13",
       "agent": "opencode",
       "tokens": 3903527,
-      "cost": 4.14
+      "cost": 1.17
     },
     {
       "date": "2026-03-14",
@@ -310,14 +292,14 @@
     {
       "date": "2026-03-15",
       "agent": "opencode",
-      "tokens": 6395750,
-      "cost": 13.93
+      "tokens": 6393060,
+      "cost": 3.38
     },
     {
       "date": "2026-03-16",
       "agent": "opencode",
       "tokens": 823306,
-      "cost": 4.55
+      "cost": 3.72
     },
     {
       "date": "2026-03-18",
@@ -335,7 +317,7 @@
       "date": "2026-03-23",
       "agent": "opencode",
       "tokens": 4023450,
-      "cost": 4.22
+      "cost": 0
     },
     {
       "date": "2026-03-24",
@@ -346,44 +328,44 @@
     {
       "date": "2026-03-25",
       "agent": "opencode",
-      "tokens": 4387407,
-      "cost": 8.07
+      "tokens": 4384538,
+      "cost": 0.88
     },
     {
       "date": "2026-03-26",
       "agent": "opencode",
-      "tokens": 3753065,
-      "cost": 8.89
+      "tokens": 3749557,
+      "cost": 5.53
     },
     {
       "date": "2026-03-27",
       "agent": "opencode",
       "tokens": 10392335,
-      "cost": 19.05
+      "cost": 0
     },
     {
       "date": "2026-03-28",
       "agent": "opencode",
       "tokens": 19482314,
-      "cost": 8.79
+      "cost": 3.82
     },
     {
       "date": "2026-03-30",
       "agent": "opencode",
       "tokens": 4485265,
-      "cost": 4.64
+      "cost": 2.91
     },
     {
       "date": "2026-03-31",
       "agent": "opencode",
       "tokens": 9455343,
-      "cost": 10.4
+      "cost": 2.14
     },
     {
       "date": "2026-04-01",
       "agent": "opencode",
       "tokens": 7454203,
-      "cost": 7.35
+      "cost": 2.07
     },
     {
       "date": "2026-04-02",
@@ -395,109 +377,109 @@
       "date": "2026-04-03",
       "agent": "opencode",
       "tokens": 10940426,
-      "cost": 16.53
+      "cost": 1.7
     },
     {
       "date": "2026-04-04",
       "agent": "opencode",
       "tokens": 18990208,
-      "cost": 17.71
+      "cost": 0
     },
     {
       "date": "2026-04-05",
       "agent": "opencode",
       "tokens": 131742680,
-      "cost": 148.51
+      "cost": 9.12
     },
     {
       "date": "2026-04-06",
       "agent": "opencode",
       "tokens": 12286092,
-      "cost": 10.21
+      "cost": 4.19
     },
     {
       "date": "2026-04-07",
       "agent": "opencode",
-      "tokens": 18075241,
-      "cost": 12.93
+      "tokens": 15510976,
+      "cost": 0.73
     },
     {
       "date": "2026-04-08",
       "agent": "opencode",
-      "tokens": 37682335,
-      "cost": 53.53
+      "tokens": 36551783,
+      "cost": 1.01
     },
     {
       "date": "2026-04-09",
       "agent": "opencode",
       "tokens": 20533237,
-      "cost": 22.2
+      "cost": 2.47
     },
     {
       "date": "2026-04-10",
       "agent": "opencode",
       "tokens": 16956151,
-      "cost": 19.37
+      "cost": 4.89
     },
     {
       "date": "2026-04-11",
       "agent": "opencode",
       "tokens": 42688745,
-      "cost": 37.11
+      "cost": 1.66
     },
     {
       "date": "2026-04-12",
       "agent": "opencode",
       "tokens": 57748587,
-      "cost": 69.55
+      "cost": 0.46
     },
     {
       "date": "2026-04-13",
       "agent": "opencode",
       "tokens": 17165333,
-      "cost": 15.6
+      "cost": 0.03
     },
     {
       "date": "2026-04-14",
       "agent": "opencode",
       "tokens": 10282340,
-      "cost": 7.37
+      "cost": 0.05
     },
     {
       "date": "2026-04-15",
       "agent": "opencode",
       "tokens": 14741240,
-      "cost": 12.82
+      "cost": 0.03
     },
     {
       "date": "2026-04-16",
       "agent": "opencode",
       "tokens": 9660296,
-      "cost": 9.95
+      "cost": 4.17
     },
     {
       "date": "2026-04-17",
       "agent": "opencode",
       "tokens": 30441045,
-      "cost": 33.54
+      "cost": 11.76
     },
     {
       "date": "2026-04-18",
       "agent": "opencode",
       "tokens": 43772927,
-      "cost": 29.25
+      "cost": 27.55
     },
     {
       "date": "2026-04-19",
       "agent": "opencode",
       "tokens": 20398432,
-      "cost": 15.24
+      "cost": 22.27
     },
     {
       "date": "2026-04-20",
       "agent": "opencode",
       "tokens": 14859136,
-      "cost": 7.16
+      "cost": 6.75
     },
     {
       "date": "2026-04-21",
@@ -509,7 +491,7 @@
       "date": "2026-04-21",
       "agent": "opencode",
       "tokens": 24174934,
-      "cost": 13.71
+      "cost": 12.48
     },
     {
       "date": "2026-04-22",
@@ -521,7 +503,7 @@
       "date": "2026-04-22",
       "agent": "opencode",
       "tokens": 2636481,
-      "cost": 1
+      "cost": 0
     },
     {
       "date": "2026-04-23",
@@ -533,7 +515,7 @@
       "date": "2026-04-23",
       "agent": "opencode",
       "tokens": 5844697,
-      "cost": 5.29
+      "cost": 4.28
     },
     {
       "date": "2026-04-24",
@@ -545,13 +527,13 @@
       "date": "2026-04-24",
       "agent": "opencode",
       "tokens": 8521324,
-      "cost": 10.36
+      "cost": 9.88
     },
     {
       "date": "2026-04-25",
       "agent": "opencode",
       "tokens": 23381709,
-      "cost": 19.11
+      "cost": 18.73
     },
     {
       "date": "2026-04-26",
@@ -563,7 +545,7 @@
       "date": "2026-04-26",
       "agent": "opencode",
       "tokens": 20371906,
-      "cost": 18.97
+      "cost": 17
     },
     {
       "date": "2026-04-27",
@@ -575,7 +557,7 @@
       "date": "2026-04-27",
       "agent": "opencode",
       "tokens": 9832945,
-      "cost": 10.06
+      "cost": 8.21
     },
     {
       "date": "2026-04-28",
@@ -587,7 +569,7 @@
       "date": "2026-04-28",
       "agent": "opencode",
       "tokens": 1836767,
-      "cost": 0.78
+      "cost": 0
     },
     {
       "date": "2026-04-29",
@@ -611,7 +593,7 @@
       "date": "2026-04-30",
       "agent": "opencode",
       "tokens": 20766223,
-      "cost": 20.62
+      "cost": 20.4
     },
     {
       "date": "2026-05-01",
@@ -623,7 +605,7 @@
       "date": "2026-05-01",
       "agent": "opencode",
       "tokens": 27192915,
-      "cost": 24.37
+      "cost": 23.07
     },
     {
       "date": "2026-05-02",
@@ -635,7 +617,7 @@
       "date": "2026-05-02",
       "agent": "opencode",
       "tokens": 48149221,
-      "cost": 39.28
+      "cost": 23.17
     },
     {
       "date": "2026-05-03",
@@ -647,7 +629,7 @@
       "date": "2026-05-03",
       "agent": "opencode",
       "tokens": 15660493,
-      "cost": 13.46
+      "cost": 4.25
     },
     {
       "date": "2026-05-04",
@@ -659,7 +641,7 @@
       "date": "2026-05-04",
       "agent": "opencode",
       "tokens": 24062446,
-      "cost": 24.88
+      "cost": 14.54
     },
     {
       "date": "2026-05-05",
@@ -671,7 +653,7 @@
       "date": "2026-05-05",
       "agent": "opencode",
       "tokens": 18125649,
-      "cost": 24.41
+      "cost": 18
     },
     {
       "date": "2026-05-06",
@@ -683,7 +665,7 @@
       "date": "2026-05-06",
       "agent": "opencode",
       "tokens": 15551725,
-      "cost": 17.18
+      "cost": 12.38
     },
     {
       "date": "2026-05-07",
@@ -701,7 +683,7 @@
       "date": "2026-05-08",
       "agent": "opencode",
       "tokens": 967335,
-      "cost": 0.9
+      "cost": 0.09
     },
     {
       "date": "2026-05-10",
@@ -719,7 +701,7 @@
       "date": "2026-05-11",
       "agent": "opencode",
       "tokens": 2527423,
-      "cost": 1.94
+      "cost": 1.44
     },
     {
       "date": "2026-05-12",
@@ -731,7 +713,7 @@
       "date": "2026-05-12",
       "agent": "opencode",
       "tokens": 10399740,
-      "cost": 9.31
+      "cost": 8.52
     },
     {
       "date": "2026-05-13",
@@ -743,7 +725,7 @@
       "date": "2026-05-13",
       "agent": "opencode",
       "tokens": 10956656,
-      "cost": 8.89
+      "cost": 7.58
     },
     {
       "date": "2026-05-14",
@@ -755,7 +737,7 @@
       "date": "2026-05-14",
       "agent": "opencode",
       "tokens": 6233795,
-      "cost": 4.69
+      "cost": 4.41
     },
     {
       "date": "2026-05-15",
@@ -779,7 +761,7 @@
       "date": "2026-05-16",
       "agent": "opencode",
       "tokens": 6700992,
-      "cost": 5.01
+      "cost": 4.13
     },
     {
       "date": "2026-05-17",
@@ -791,7 +773,7 @@
       "date": "2026-05-17",
       "agent": "opencode",
       "tokens": 25939593,
-      "cost": 14.85
+      "cost": 7.02
     },
     {
       "date": "2026-05-18",
@@ -815,7 +797,7 @@
       "date": "2026-05-19",
       "agent": "opencode",
       "tokens": 16922166,
-      "cost": 11.07
+      "cost": 9.25
     },
     {
       "date": "2026-05-20",
@@ -827,7 +809,7 @@
       "date": "2026-05-20",
       "agent": "opencode",
       "tokens": 16548177,
-      "cost": 12.85
+      "cost": 12.7
     },
     {
       "date": "2026-05-21",
@@ -839,7 +821,7 @@
       "date": "2026-05-21",
       "agent": "opencode",
       "tokens": 36574586,
-      "cost": 24.57
+      "cost": 16.76
     },
     {
       "date": "2026-05-22",
@@ -880,8 +862,8 @@
     {
       "date": "2026-05-26",
       "agent": "opencode",
-      "tokens": 10256301,
-      "cost": 4.01
+      "tokens": 6651413,
+      "cost": 2.77
     },
     {
       "date": "2026-05-27",
@@ -923,7 +905,7 @@
       "date": "2026-06-02",
       "agent": "opencode",
       "tokens": 7726905,
-      "cost": 4.27
+      "cost": 3.66
     },
     {
       "date": "2026-06-03",
@@ -995,7 +977,7 @@
       "date": "2026-06-12",
       "agent": "opencode",
       "tokens": 47673,
-      "cost": 0.04
+      "cost": 0
     },
     {
       "date": "2026-06-13",
@@ -1151,7 +1133,7 @@
       "date": "2026-06-30",
       "agent": "opencode",
       "tokens": 9344,
-      "cost": 0.01
+      "cost": 0
     },
     {
       "date": "2026-06-30",
@@ -1421,7 +1403,7 @@
       "date": "2026-07-28",
       "agent": "opencode",
       "tokens": 495325,
-      "cost": 0.28
+      "cost": 0
     },
     {
       "date": "2026-07-28",
@@ -1499,7 +1481,7 @@
       "date": "2026-08-04",
       "agent": "opencode",
       "tokens": 899497,
-      "cost": 0.35
+      "cost": 0
     },
     {
       "date": "2026-08-05",
@@ -1517,7 +1499,7 @@
       "date": "2026-08-05",
       "agent": "opencode",
       "tokens": 5190,
-      "cost": 0.01
+      "cost": 0
     },
     {
       "date": "2026-08-06",
@@ -1535,7 +1517,7 @@
       "date": "2026-08-06",
       "agent": "opencode",
       "tokens": 2422966,
-      "cost": 1.3
+      "cost": 0
     },
     {
       "date": "2026-08-06",
@@ -1547,7 +1529,7 @@
       "date": "2026-08-07",
       "agent": "opencode",
       "tokens": 7044996,
-      "cost": 3.07
+      "cost": 0
     },
     {
       "date": "2026-08-07",
@@ -1619,7 +1601,7 @@
       "date": "2026-08-14",
       "agent": "opencode",
       "tokens": 11926058,
-      "cost": 4.5
+      "cost": 0
     },
     {
       "date": "2026-08-14",
@@ -1679,7 +1661,7 @@
       "date": "2026-08-19",
       "agent": "opencode",
       "tokens": 24191631,
-      "cost": 9.11
+      "cost": 0
     },
     {
       "date": "2026-08-20",
@@ -1697,7 +1679,7 @@
       "date": "2026-08-20",
       "agent": "opencode",
       "tokens": 497191,
-      "cost": 0.21
+      "cost": 0
     },
     {
       "date": "2026-08-21",
@@ -1775,7 +1757,7 @@
       "date": "2026-08-26",
       "agent": "opencode",
       "tokens": 19745337,
-      "cost": 0.67
+      "cost": 0
     },
     {
       "date": "2026-08-27",
@@ -1793,7 +1775,7 @@
       "date": "2026-08-27",
       "agent": "opencode",
       "tokens": 35194475,
-      "cost": 2.59
+      "cost": 0
     },
     {
       "date": "2026-08-28",
@@ -2033,13 +2015,13 @@
       "date": "2026-09-17",
       "agent": "opencode",
       "tokens": 216512,
-      "cost": 0.03
+      "cost": 0
     },
     {
       "date": "2026-09-18",
       "agent": "opencode",
       "tokens": 85802624,
-      "cost": 2.77
+      "cost": 0
     },
     {
       "date": "2026-09-20",
@@ -2105,7 +2087,7 @@
       "date": "2026-09-26",
       "agent": "opencode",
       "tokens": 278828,
-      "cost": 0.02
+      "cost": 0
     },
     {
       "date": "2026-09-27",
@@ -2183,7 +2165,7 @@
       "date": "2026-10-03",
       "agent": "opencode",
       "tokens": 770340,
-      "cost": 0.34
+      "cost": 0.32
     },
     {
       "date": "2026-10-04",
@@ -2363,7 +2345,7 @@
       "date": "2026-10-18",
       "agent": "opencode",
       "tokens": 6556097,
-      "cost": 0.26
+      "cost": 0
     },
     {
       "date": "2026-10-19",
@@ -2429,7 +2411,7 @@
       "date": "2026-10-23",
       "agent": "opencode",
       "tokens": 420256,
-      "cost": 0.04
+      "cost": 0
     },
     {
       "date": "2026-10-24",
@@ -2459,7 +2441,7 @@
       "date": "2026-10-26",
       "agent": "opencode",
       "tokens": 1254675,
-      "cost": 0.47
+      "cost": 0
     },
     {
       "date": "2026-10-27",
@@ -2477,7 +2459,7 @@
       "date": "2026-10-27",
       "agent": "opencode",
       "tokens": 166515,
-      "cost": 0.07
+      "cost": 0
     },
     {
       "date": "2026-10-28",
@@ -2528,6 +2510,12 @@
       "cost": 0.03
     },
     {
+      "date": "2026-11-01",
+      "agent": "opencode",
+      "tokens": 1113818,
+      "cost": 0
+    },
+    {
       "date": "2026-11-02",
       "agent": "claude",
       "tokens": 1047753266,
@@ -2561,7 +2549,7 @@
       "date": "2026-11-05",
       "agent": "opencode",
       "tokens": 153715,
-      "cost": 0.02
+      "cost": 0
     },
     {
       "date": "2026-11-06",
@@ -2579,7 +2567,7 @@
       "date": "2026-11-06",
       "agent": "opencode",
       "tokens": 12724176,
-      "cost": 0.55
+      "cost": 0
     },
     {
       "date": "2026-11-07",
@@ -2626,8 +2614,32 @@
     {
       "date": "2026-11-13",
       "agent": "claude",
-      "tokens": 302513923,
-      "cost": 120.13
+      "tokens": 311624957,
+      "cost": 129.66
+    },
+    {
+      "date": "2026-11-13",
+      "agent": "codex",
+      "tokens": 173009,
+      "cost": 0.02
+    },
+    {
+      "date": "2026-11-13",
+      "agent": "opencode",
+      "tokens": 622952,
+      "cost": 0
+    },
+    {
+      "date": "2026-11-14",
+      "agent": "claude",
+      "tokens": 72513247,
+      "cost": 48.12
+    },
+    {
+      "date": "2026-11-15",
+      "agent": "claude",
+      "tokens": 416637986,
+      "cost": 216.66
     }
   ]
 }

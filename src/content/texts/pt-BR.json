@@ -142,7 +142,7 @@
       },
       {
         "name": "irwin-ui",
-        "description": "O design system por trás deste site, do The Chatbot e do favo-cli. Os dois temas dele, Favo e Barro, também estão publicados como temas de editor no VS Code Marketplace e no Open VSX",
+        "description": "O design system por trás deste site, do The Chatbot e do favo-cli. Os três temas dele, Barro, Favo e Lila, também estão publicados como temas de editor no VS Code Marketplace e no Open VSX",
         "tech": "Design system",
         "href": "https://github.com/irwinarruda/irwin-ui"
       },

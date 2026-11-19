@@ -31,7 +31,7 @@ export default async function TextReviewScreen(
       homeHref={`/${locale}/posts`}
       skipToContentLabel={dictionary.nav.skipToContent}
       themeToggleLabels={dictionary.themeToggle}
-      paletteToggleLabels={dictionary.paletteToggle}
+      palettePickerLabels={dictionary.palettePicker}
     >
       <TextReviewClient
         initialContent={rawContent}

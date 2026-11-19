@@ -211,7 +211,7 @@ export default async function UsageScreen(props: UsageScreenProps) {
       }
       skipToContentLabel={dictionary.nav.skipToContent}
       themeToggleLabels={dictionary.themeToggle}
-      paletteToggleLabels={dictionary.paletteToggle}
+      palettePickerLabels={dictionary.palettePicker}
       localeSwitcher={localeSwitcher}
     >
       <div className="fade-in">

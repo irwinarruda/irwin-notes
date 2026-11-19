@@ -1,5 +1,5 @@
 export type Theme = "dark" | "light";
-export type Palette = "barro" | "favo";
+export type Palette = "barro" | "favo" | "lila";
 
 export type ThemeChoice = {
   theme?: Theme;
@@ -17,7 +17,7 @@ function isTheme(value: string): value is Theme {
 }
 
 function isPalette(value: string): value is Palette {
-  return value === "barro" || value === "favo";
+  return value === "barro" || value === "favo" || value === "lila";
 }
 
 export function resolveThemeCookie(value: string | undefined): ThemeChoice {

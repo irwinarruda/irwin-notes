@@ -1,5 +1,6 @@
 @import "./barro/barro.css";
 @import "./favo/favo.css";
+@import "./lila/lila.css";
 
 /*
   The site's colors, named by role and mapped once per palette to a theme's
@@ -7,8 +8,9 @@
   names a theme: screens and globals.css use the roles, as Tailwind colors
   (`bg-surface`, `text-type`) or as `var(--color-*)`.
 
-  Barro is the default, and `data-palette="favo"` on <html> picks Favo, on its
-  gray neutral. `data-theme` picks dark or light inside either one.
+  Barro is the default, `data-palette="favo"` on <html> picks Favo, on its gray
+  neutral, and `data-palette="lila"` picks Lila. `data-theme` picks dark or
+  light inside any of them.
 */
 
 @theme static {
@@ -72,6 +74,7 @@
   /* Each palette's brand color, for the dots of the palette switch */
   --color-swatch-barro: var(--barro-primary);
   --color-swatch-favo: var(--favo-primary);
+  --color-swatch-lila: var(--lila-primary);
 }
 
 :root[data-palette="favo"] {
@@ -131,6 +134,63 @@
   --color-parameter-line: var(--favo-rose-6);
 }
 
+:root[data-palette="lila"] {
+  --color-page: var(--lila-page);
+  --color-surface: var(--lila-surface);
+  --color-raised: var(--lila-raised);
+  --color-hover: var(--lila-hover);
+  --color-pressed: var(--lila-pressed);
+  --color-overlay: var(--lila-overlay);
+  --color-line-subtle: var(--lila-line-subtle);
+  --color-line: var(--lila-line);
+  --color-line-strong: var(--lila-line-strong);
+  --color-line-control: var(--lila-line-control);
+  --color-fg: var(--lila-fg);
+  --color-fg-muted: var(--lila-fg-muted);
+  --color-fg-faint: var(--lila-fg-faint);
+  --color-fg-reading: var(--lila-fg-reading);
+  --color-primary: var(--lila-primary);
+  --color-primary-hover: var(--lila-primary-hover);
+  --color-on-primary: var(--lila-on-primary);
+  --color-primary-soft: var(--lila-primary-soft);
+  --color-primary-fg: var(--lila-primary-fg);
+  --color-focus: var(--lila-focus);
+  --color-selection: var(--lila-selection);
+  --color-success: var(--lila-success);
+  --color-success-soft: var(--lila-success-soft);
+  --color-success-line: var(--lila-success-line);
+  --color-success-solid: var(--lila-success-solid);
+  --color-on-success: var(--lila-on-success);
+  --color-warning: var(--lila-warning);
+  --color-warning-soft: var(--lila-warning-soft);
+  --color-warning-line: var(--lila-warning-line);
+  --color-warning-solid: var(--lila-warning-solid);
+  --color-on-warning: var(--lila-on-warning);
+  --color-danger: var(--lila-danger);
+  --color-danger-soft: var(--lila-danger-soft);
+  --color-danger-line: var(--lila-danger-line);
+  --color-danger-solid: var(--lila-danger-solid);
+  --color-on-danger: var(--lila-on-danger);
+  --color-info: var(--lila-info);
+  --color-info-soft: var(--lila-info-soft);
+  --color-info-line: var(--lila-info-line);
+  --color-info-solid: var(--lila-info-solid);
+  --color-on-info: var(--lila-on-info);
+
+  --color-code: var(--lila-neutral-1);
+
+  --color-function: var(--lila-sky-11);
+  --color-type: var(--lila-teal-11);
+  --color-type-soft: var(--lila-teal-3);
+  --color-type-line: var(--lila-teal-6);
+  --color-constant: var(--lila-apricot-11);
+  --color-constant-soft: var(--lila-apricot-3);
+  --color-constant-line: var(--lila-apricot-6);
+  --color-parameter: var(--lila-gold-11);
+  --color-parameter-soft: var(--lila-gold-3);
+  --color-parameter-line: var(--lila-gold-6);
+}
+
 /* Code tokens: rehype-pretty-code writes one variable per editor theme on each one */
 [style*="--shiki-"] {
   color: var(--shiki-barro-light);
@@ -149,5 +209,15 @@
   @variant dark {
     color: var(--shiki-favo-dark);
     font-style: var(--shiki-favo-dark-font-style);
+  }
+}
+
+[data-palette="lila"] [style*="--shiki-"] {
+  color: var(--shiki-lila-light);
+  font-style: var(--shiki-lila-light-font-style);
+
+  @variant dark {
+    color: var(--shiki-lila-dark);
+    font-style: var(--shiki-lila-dark-font-style);
   }
 }

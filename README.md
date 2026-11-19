@@ -5,12 +5,12 @@
 
 My personal site, [irwinarruda.com](https://www.irwinarruda.com), where I write notes on software, building tools and frontend architecture, in English and Portuguese, whenever the mood strikes.
 
-The colors come from [Barro](https://github.com/irwinarruda/barro-theme): Barro Slate in dark mode and Barro Kaolin in light mode, code blocks included. The logo and icons live in [`public/brand`](public/brand).
+The colors come from [Barro](https://github.com/irwinarruda/barro-theme): Barro Slate in dark mode and Barro Kaolin in light mode, code blocks included. The theme picker in the header switches to [Favo](https://github.com/irwinarruda/favo-theme) or [Lila](https://github.com/irwinarruda/lila-theme), the same picker as The Chatbot's. The logo and icons live in [`public/brand`](public/brand).
 
 ## Stack
 
 - **Next.js 16** App Router + React 19
-- **Tailwind CSS v4** with the [Barro](https://github.com/irwinarruda/barro-theme) theme tokens
+- **Tailwind CSS v4** with the [Barro](https://github.com/irwinarruda/barro-theme), [Favo](https://github.com/irwinarruda/favo-theme) and [Lila](https://github.com/irwinarruda/lila-theme) theme tokens
 - **MDX** posts with Shiki syntax highlighting
 - **Bun** as package manager and runtime
 

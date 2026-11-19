@@ -16,9 +16,11 @@
     "switchToLight": "Mudar para modo claro",
     "switchToDark": "Mudar para modo escuro"
   },
-  "paletteToggle": {
-    "switchToBarro": "Mudar para a paleta Barro",
-    "switchToFavo": "Mudar para a paleta Favo"
+  "palettePicker": {
+    "label": "Tema",
+    "barro": "Tema Barro",
+    "favo": "Tema Favo",
+    "lila": "Tema Lila"
   },
   "localeSwitcher": {
     "ariaLabel": "Seletor de idioma",

@@ -13,7 +13,7 @@ const THEME_INIT_SCRIPT = `(() => {
       document.documentElement.setAttribute("data-theme", word);
     }
 
-    if (word === "barro" || word === "favo") {
+    if (word === "barro" || word === "favo" || word === "lila") {
       document.documentElement.setAttribute("data-palette", word);
     }
   }

@@ -33,7 +33,7 @@ export default async function PostsScreen(props: PostsScreenProps) {
       }
       skipToContentLabel={dictionary.nav.skipToContent}
       themeToggleLabels={dictionary.themeToggle}
-      paletteToggleLabels={dictionary.paletteToggle}
+      palettePickerLabels={dictionary.palettePicker}
       localeSwitcher={localeSwitcher}
     >
       <div className="fade-in">

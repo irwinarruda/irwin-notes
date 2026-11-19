@@ -42,7 +42,7 @@ export default async function BlogPostScreen(props: BlogPostScreenProps) {
       }
       skipToContentLabel={dictionary.nav.skipToContent}
       themeToggleLabels={dictionary.themeToggle}
-      paletteToggleLabels={dictionary.paletteToggle}
+      palettePickerLabels={dictionary.palettePicker}
       localeSwitcher={localeSwitcher}
     >
       <header className="mb-6 fade-in fade-in-delay-1">

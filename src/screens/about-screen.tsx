@@ -29,7 +29,7 @@ export default async function AboutScreen(props: AboutScreenProps) {
       }
       skipToContentLabel={dictionary.nav.skipToContent}
       themeToggleLabels={dictionary.themeToggle}
-      paletteToggleLabels={dictionary.paletteToggle}
+      palettePickerLabels={dictionary.palettePicker}
       localeSwitcher={localeSwitcher}
     >
       <div className="fade-in fade-in-delay-1">

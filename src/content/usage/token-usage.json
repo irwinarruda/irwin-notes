@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15",
+  "updatedAt": "2026-11-21",
   "records": [
     {
       "date": "2026-01-17",
@@ -2638,8 +2638,44 @@
     {
       "date": "2026-11-15",
       "agent": "claude",
-      "tokens": 416637986,
-      "cost": 216.66
+      "tokens": 417368397,
+      "cost": 217.04
+    },
+    {
+      "date": "2026-11-16",
+      "agent": "claude",
+      "tokens": 709690159,
+      "cost": 274.39
+    },
+    {
+      "date": "2026-11-17",
+      "agent": "claude",
+      "tokens": 1478152328,
+      "cost": 503.93
+    },
+    {
+      "date": "2026-11-18",
+      "agent": "claude",
+      "tokens": 536636065,
+      "cost": 235.85
+    },
+    {
+      "date": "2026-11-19",
+      "agent": "claude",
+      "tokens": 198146585,
+      "cost": 79.98
+    },
+    {
+      "date": "2026-11-20",
+      "agent": "claude",
+      "tokens": 181228213,
+      "cost": 47.63
+    },
+    {
+      "date": "2026-11-21",
+      "agent": "claude",
+      "tokens": 127204738,
+      "cost": 56.2
     }
   ]
 }

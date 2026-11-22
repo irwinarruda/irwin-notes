@@ -1,7 +1,7 @@
 {
   "meta": {
     "siteTitle": "Irwin Arruda",
-    "siteDescription": "Notes by Irwin Arruda, a software engineer in Brazil, on software architecture, developer tools and guardrails for coding agents."
+    "siteDescription": "Notes by Irwin Arruda, a software engineer in Brazil, on software architecture, developer tools, and AI coding agents."
   },
   "nav": {
     "ariaLabel": "Site navigation",
@@ -32,7 +32,16 @@
   },
   "postsPage": {
     "heading": "Notes",
-    "subtitleItems": ["Frontend", "React", "Next.js", "TypeScript", "Vim"],
+    "subtitleItems": [
+      "Frontend",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Vim",
+      "Architecture",
+      "Developer Tools",
+      "AI Agents"
+    ],
     "readLabel": "read",
     "draftLabel": "draft"
   },
@@ -112,19 +121,19 @@
     "projects": [
       {
         "name": "favo-cli",
-        "description": "A CLI that keeps several AI subscriptions on every computer you own, without logging in and out. Its usage command counts the tokens on this site's Usage page",
+        "description": "A CLI that syncs multiple AI subscriptions across all your machines without logging in and out (1,800+ tests, 97% line coverage, npm & Homebrew). Its usage command powers this site's Usage page",
         "tech": "TypeScript",
         "href": "https://github.com/irwinarruda/favo-cli"
       },
       {
         "name": "Agent Toolkit",
-        "description": "My global agent instructions and seven reusable skills: code review, architecture diagnosis, taking a pull request to green and more. Several follow ideas Theo Browne published in tstack",
+        "description": "Open-source agent instructions and seven reusable skills: diff review, driving a PR to green, architecture diagnosis to generate project skills, and a three-model UI council. Several build on ideas from Theo Browne's tstack",
         "tech": "Agent Skills",
         "href": "https://github.com/irwinarruda/.agents"
       },
       {
         "name": "The Chatbot",
-        "description": "My personal AI assistant on WhatsApp and the web: chat, todos, notes and money in one place, with a tool-calling loop over several model providers. The first version was C#/.NET with an MCP server",
+        "description": "Personal AI assistant on WhatsApp and the web: chat, tasks, notes, and personal finances in one place, built with a multi-provider LLM tool-calling loop, PostgreSQL, and 500+ tests (v1 in C#/.NET with an MCP server)",
         "tech": "TypeScript / PostgreSQL",
         "href": "https://github.com/irwinarruda/the-chatbot-v2"
       },

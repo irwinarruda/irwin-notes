@@ -1,7 +1,7 @@
 {
   "meta": {
     "siteTitle": "Irwin Arruda",
-    "siteDescription": "Notas de Irwin Arruda, desenvolvedor de software, sobre arquitetura de software, ferramentas para desenvolvedores e guardrails para agentes de código."
+    "siteDescription": "Notas de Irwin Arruda, desenvolvedor de software, sobre arquitetura de software, developer tools e agentes de código com IA."
   },
   "nav": {
     "ariaLabel": "Navegação do site",
@@ -32,7 +32,16 @@
   },
   "postsPage": {
     "heading": "Notas",
-    "subtitleItems": ["Frontend", "React", "Next.js", "TypeScript", "Vim"],
+    "subtitleItems": [
+      "Frontend",
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Vim",
+      "Arquitetura",
+      "Developer Tools",
+      "Agentes de IA"
+    ],
     "readLabel": "de leitura",
     "draftLabel": "rascunho"
   },
@@ -112,19 +121,19 @@
     "projects": [
       {
         "name": "favo-cli",
-        "description": "Uma CLI que mantém várias assinaturas de IA em todos os seus computadores, sem ficar fazendo login e logout. O comando de uso dela conta os tokens da página Uso deste site",
+        "description": "Uma CLI que sincroniza múltiplas assinaturas de IA entre todas as suas máquinas sem ficar entrando e saindo das contas (1.800+ testes, 97% de cobertura, npm e Homebrew). O comando usage alimenta a página Uso deste site",
         "tech": "TypeScript",
         "href": "https://github.com/irwinarruda/favo-cli"
       },
       {
         "name": "Agent Toolkit",
-        "description": "Minhas instruções globais para agentes e sete skills reutilizáveis: revisão de código, diagnóstico de arquitetura, deixar um pull request verde e mais. Várias seguem ideias que Theo Browne publicou no tstack",
+        "description": "Instruções open source para agentes e sete skills reutilizáveis: revisão de diff, levar um PR até ficar verde, diagnóstico de arquitetura para gerar project skills e um conselho de três modelos para UI. Vários fluxos partem de ideias do tstack de Theo Browne",
         "tech": "Agent Skills",
         "href": "https://github.com/irwinarruda/.agents"
       },
       {
         "name": "The Chatbot",
-        "description": "Meu assistente pessoal de IA no WhatsApp e na web: conversa, tarefas, notas e dinheiro em um só lugar, com um loop de ferramentas sobre vários provedores de modelos. A primeira versão era em C#/.NET, com um servidor MCP",
+        "description": "Assistente pessoal de IA no WhatsApp e na web: conversa, tarefas, notas e finanças pessoais em um só lugar, com loop de tool calling sobre múltiplos provedores de LLMs, PostgreSQL e 500+ testes (v1 em C#/.NET com servidor MCP)",
         "tech": "TypeScript / PostgreSQL",
         "href": "https://github.com/irwinarruda/the-chatbot-v2"
       },
